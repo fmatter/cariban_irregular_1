@@ -1,0 +1,91 @@
+\documentclass[a4paper, 12pt]{article}
+
+%FONTS
+\usepackage{fontspec}
+\setmainfont{Linux Libertine}
+
+%LAYOUT
+\usepackage{geometry}
+%
+%\usepackage{setspace}
+%\onehalfspacing
+
+%\usepackage{titling}
+%\setlength{\droptitle}{-3cm}
+
+\renewcommand{\abstractname}{\vspace{-1.5\baselineskip}}
+
+%CAPTIONS
+\usepackage{caption}
+\usepackage{subcaption}
+
+%TABLES
+\input{booktabs_config}
+
+%GLOSSES
+\usepackage{glossingtool}
+\lingset{aboveglftskip=-0.3ex, everygla=\itshape, belowglpreambleskip=-0.5ex, everyglpreamble=\itshape}
+\input{stuff/own_abbreviations.tex}
+
+%CUSTOM COMMANDS
+\input{cariban_language_names.tex}
+\newcommand{\notn}{\obj{i-}/Ø/\obj{t(ɨ)-}\xspace}
+\newcommand{\yesn}{\obj{n(i)-}/\obj{n(ɨ)-}\xspace}
+\newcommand{\setone}{Set I\xspace}
+\newcommand{\settwo}{Set II\xspace}
+\providecommand{\goodtilde}{\char`~\xspace}
+\newcommand{\perscomm}[1]{#1 (p.c.)}
+\newcommand{\perscommpar}[1]{(#1, p.c.)}
+
+%TREES
+\usepackage{tikz-qtree}
+
+%DRAFT MODE
+%\usepackage{draftwatermark}
+%\SetWatermarkLightness{0.95}
+
+%\usepackage{lineno}
+\newcommand{\linenumbers}{}
+
+%STUBBORN BROKEN SUFFIXES IN RUNNING TEXT
+%\usepackage[shortcuts]{extdash}
+
+%HYPHENATION
+\hyphenation{Wa-ya-na}
+
+%BIBLIOGRAPHY
+%For diachronica
+%\usepackage[backend=biber,
+%            bibstyle=biblatex-sp-unified,
+%            citestyle=sp-authoryear-comp,
+%            maxcitenames=2,
+%            mincitenames=1,
+%            maxbibnames=99]{biblatex}
+%For others
+\input{iswbibConfiguration.tex}
+\addbibresource{cariban_references.bib}
+\addbibresource{non_cariban_references.bib}
+
+\newcommand{\glossfootnote}{\footnote{Glossing abbreviations: \glossingAbbrevsComma.}}
+\newcommand{\glosssection}{}
+
+%\input{stuff/diachronica.tex}
+
+\usepackage[edges]{forest}
+
+\usepackage{amsfonts}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+ \fancyhead[L,C]{} \fancyhead[R]{DRAFT} \fancyfoot[L]{} \fancyfoot[C]{\thepage}
+
+%CROSSREFS
+\usepackage{hyperref}
+\usepackage[capitalise,noabbrev]{cleveref}
+\newcommand{\pcref}[1]{(\cref{#1})}
+
+\newlist{inlinelist}{enumerate*}{1}
+\setlist[inlinelist]{label={\alph*)}, itemjoin={{; }}, itemjoin*={{; and }}}
+
+\newcommand{\emp}[1]{\textbf{#1}}
+\newcommand{\subs}[1]{\textsubscript{#1}}

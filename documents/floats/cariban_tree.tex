@@ -1,0 +1,77 @@
+\begin{figure}
+\centering
+\begin{forest}
+for tree={
+s sep = -1ex,
+grow=east,
+forked edges,
+node options={align=center },
+anchor=west,edge path={\noexpand\path[draw, gray, line width=1pt, \forestoption{edge}](!u.parent anchor) |- (.child anchor)\forestoption{edge label};},
+before typesetting nodes={if content={}{shape=coordinate}{}},}
+    [Cariban, tier=4
+        [
+            [{\uxc}, tier=0]
+        ]
+        [
+            [{\waimiri}, tier=0]
+        ]
+        [
+            [{\apalai}, tier=0]
+        ]
+        [
+            [{\wayana}, tier=0]
+        ]
+        [
+            [{\kalina}, tier=0]
+        ]
+        [Yukpan,tier=1
+            [{\yukpa}, tier=0]
+            [{\japreria}, tier=0]
+        ]
+        [Taranoan, tier=2
+            [Tiriyoan
+                [{\trio}, tier=0]
+                [{\akuriyo}, tier=0]
+            ]
+            [{\carijo}, tier=0]
+        ]
+        [Venezuelan, tier=3
+            [{\maqui/\dekwana}, tier=0]
+            [Core Venezuelan, tier=2
+            	[%\pemon-\panare
+            	[{\panare}, tier=0]
+                [Pemongan, tier=1
+                    [{\ingariko}, tier=0]
+                    [{\macushi}, tier=0]
+                    [{\pemon}, tier=0]
+                ]
+            	]
+            	[
+            	  [{\kumana}, tier=0]
+                [{\tamanaku}, tier=0]
+                [
+                [{\mapoyo}, tier=0]
+                [{\yawarana}, tier=0]
+                ]
+            	]
+            ]
+        ]
+        [Pekodian, tier=2
+            [Xinguan, tier=1
+                [{\arara}, tier=0]
+                [{\ikpeng}, tier=0]
+            ]
+            [{\bakairi}, tier=0]
+        ]
+        [Parukotoan, tier=2
+            [Waiwaian, tier=1
+                [{\hixka}, tier=0]
+                [{\waiwai}, tier=0]
+            ]
+            [{\kaxui}, tier=0]
+        ]
+    ]
+\end{forest}
+\caption{The Cariban language family}
+\label{fig:caribantree}
+\end{figure}

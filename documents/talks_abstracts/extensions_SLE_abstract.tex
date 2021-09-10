@@ -1,0 +1,130 @@
+\documentclass[a4paper]{article}
+\usepackage[top=2cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Linux Libertine}
+\input{iswbibConfiguration.tex}
+\addbibresource{cariban_references.bib}
+\addbibresource{non_cariban_references.bib}
+\usepackage{titlesec}
+\input{booktabs_config}
+\titleformat*{\section}{\normalsize\bfseries}
+\usepackage{glossingtool}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\input{cariban_language_names.tex}
+\usepackage[inline]{enumitem}
+\newlist{inlinelist}{enumerate*}{1}
+\setlist[inlinelist]{label={\alph*)}, itemjoin={{; }}, itemjoin*={{; and }}}
+\newcommand{\emp}[1]{\textbf{#1}}
+\usepackage{hyperref}
+\usepackage[capitalise]{cleveref}
+\providecommand{\goodtilde}{\char`~\xspace}
+
+
+\begin{document}
+
+\begin{center}
+\bfseries
+\large{Irregular first person inflections in Cariban}\\
+\vspace{.05cm}
+\normalsize{converging factors for morphological (dis-)similarity}\\
+\vspace{.1cm}
+\normalfont
+Florian Matter\\(University of Bern	)
+\end{center}
+Keywords: Cariban, Morphology, Irregular inflection, Morphological change, Network model
+\vspace{.4cm}
+
+\noindent \PC is reconstructed as having an untypical split-\gl{s} system, where the division between \gl{s_a_} and \gl{s_p_} is not based on any known semantic criteria \parencite{meira2000split}.
+Rather, verbs derived via the detransitivizer \rc{ət(e)-}/\obj{e-} \parencite{meira2010origin} end up in the \gl{s_a_} category, while almost all other intransitive verbs are \gl{s_p_} \parencite{meira2000split}.
+The category of verbs is primarily identified via the person marking prefixes they take (\cref{tab:intr}).
+
+\begin{table}[h]
+	\centering
+	\caption{\PC split-\gl{s} person marking}
+	\label{tab:intr}
+\begin{tabular}{@{}lll@{}}
+\mytoprule
+& \gl{s_a_} & \gl{s_p_}  \\
+\mymidrule
+\gl{1} & \rc{w-} & \rc{uj-} \\
+\gl{2} & \rc{m-} & \rc{əj-}\\
+\gl{1+2} & \rc{kɨt-} & \rc{k-}\\
+\gl{3} & \rc{n-} & \rc{ni-}\\
+\mybottomrule
+\end{tabular}
+\end{table}
+
+Many Cariban languages have modified this system, introducing new person markers \parencite[80--84, 90--92]{gildea1998}.
+These innovations most likely happened via lexical diffusion, as suggested by \textcite{meira2000proto} for the switch of \gl{1}>\gl{3} \rc{t-} and \gl{1}\gl{s_a_} \rc{w-} in \trio and \akuriyo, and as evidenced by the \obj{kɨt͡ʃ-} \goodtilde \obj{k-} \qu{\gl{1+2}\gl{s_p_}} variation attested in \kaxui (Spike Gildea, p.c.).
+Of interest are new prefixes which did not spread completely, leaving over a small group of verbs with synchronically irregular inflection patterns, remnants of old \gl{s_a_} markers.
+This is illustrated in (\getref{hix}--\getref{yuk}), where (a--b) show verbs with regular marking, and (c) shows verbs with irregular marking -- reflexes of \PC \rc{w-} \qu{\gl{1}\gl{s_a_}}.
+
+%\ex<arairr> \arara first person forms \parencite[153]{alves2017arara} \\
+%\begin{tabular}[t]{@{}llll@{}}
+%\obj{k-omomɨlɨ} & \qu{enter} & \obj{wɨ-genɨ} & \qu{say}\\
+%\obj{k-onkulɨ} & \qu{ascend} & \obj{w-it͡ʃinɨ} & \qu{be}\\
+%\obj{k-origulɨ} & \qu{dance} & \obj{w-ebɨnɨ} & \qu{come}\\
+%\obj{k-ot͡ʃimtabriŋelɨ} & \qu{eat} & \obj{w-ibɨnɨ} & \qu{bathe}\\
+%\obj{k-odakpilɨ} & \qu{be drunk} & \obj{w-iptoŋrɨ} & \qu{descend}\\
+%\obj{k-odubulɨ} & \qu{remain} & \obj{w-ɨdolɨ} & \qu{go}\\
+%\end{tabular}
+%\xe
+
+\begin{multicols}{2}
+\pex<hix> \hixka \parencite[188, 209]{hixkaryanaderby1985}
+\a \obj{k-ratano} \qu{I wept}
+\a \obj{kɨ-kɨtano} \qu{I rushed}
+\a \obj{\emp{ɨ-}tono} \qu{I went}
+\xe
+
+\pex<ara> \arara \parencite[153]{alves2017arara}
+\a \obj{k-omomɨlɨ} \qu{I entered}
+\a \obj{k-onkulɨ} \qu{I ascended}
+\a \obj{\emp{w-}ebɨnɨ} \qu{I came}
+\xe
+
+\pex \trio \parencite[293--294]{triomeira1999}
+\a \obj{t-əturu} \qu{I talked}
+\a \obj{t-əənɨkɨ} \qu{I slept}
+\a \obj{\emp{w-}əepɨ} \qu{I came}
+\xe
+
+\pex<yuk> \yukpa \parencites{meira2003primeras}
+\a \obj{j-otɨrɨ} \qu{I stayed}
+\a \obj{jɨ-nke} \qu{I slept}
+\a \emp{Ø-}\obj{to} \qu{I went}
+\xe
+ 
+\end{multicols}
+
+\pex \carijo \parencites[79]{koch1908hiana}[70]{guerrero2016karihona}[5]{guerrero2016carijo}
+\a \obj{j-ehɨhəhjai} \qu{I fight}
+\a \obj{j-ejae} \qu{I come}
+\a \obj{\emp{wɨ-}təe} \qu{I go}
+\xe
+
+
+
+Interestingly, of 18 investigated person marker extensions affecting intransitive verbs, the 6 extensions leaving such irregular verbs all introduced \gl{1}\gl{s}\textsubscript{(A)} markers.
+Three of these innovative markers are reconstructible to intermediate proto-languages: \PPar \rc{k-}, \PWai \rc{k-}, and \PTir \rc{t-}.
+%In the first two cases, some daughter languages further extended the new markers to a previously conservative verb.
+The other three are found in single extant languages: \akuriyo \obj{k-}, \carijo \obj{j-}, and \yukpa \obj{j(ɨ)-}.
+Besides some language-specific irregular verbs, the six innovations show considerable overlap in what verbs they did not affect \exref{irrverb}.
+
+\pex<irrverb> \PC verbs with multiple irregularly inflected reflexes
+\a \rc{a(p)}/\obj{eti} \qu{to be}
+\a \rc{ka(ti)} \qu{to say}
+\a \rc{ɨtə(mɨ)} \qu{to go}
+\a \rc{(ət-)jəpɨ} \qu{to come}
+\a \rc{ɨpɨtə} \qu{to go down}
+\xe
+
+Using \posscite{bybee1985morphology} network model of morphology, I show that some cases of incomplete extension can be argued to be due to lexical connections based on morphology (presence vs absence of the detransitivizing prefix), while the distribution of others reveals phonological connections between verbs with innovative markers (\obj{e}- and/or \obj{ə}-initial vs others).
+While no semantic connections have emerged as relevant, many of the resistant verbs are high frequency verbs, a factor predicting conservativism in Bybee’s model.
+In fact, most cases of resistant verbs are predicted simultaneously by three factors: morphological connections, phonological connections, and frequency.
+Thus, while the network model offers attractive explanations for the (non-)spread of innovative \gl{1}\gl{s_a_} markers, these predicting factors strongly overlap in many of the investigated cases of extension.
+This in turn is largely due to the fact that the most high-frequency \gl{s_a_} verbs were different from normal \gl{s_a_} verbs already at the level of \PC, since they did not contain the detransitivizing prefix \rc{ət(e)-}/\obj{e-}, and were therefore morphologically and phonologically distinct from normal \gl{s_a_} verbs.
+%\renewcommand{\bibfont}{\footnotesize}
+\printbibliography
+\end{document}
