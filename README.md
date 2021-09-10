@@ -1,2 +1,7 @@
 ## Archaic first person markers in Cariban
-This is an investigation of certain Sa verbs keeping their old first person prefix when a new prefix is introduced.
+A comparative study of archaic first person markers in 10 Cariban languages.
+More info can be found here:
+
+* [Abstract](documents/talks_abstracts/extensions_SLE_abstract.pdf)
+* [Slides](documents/talks_abstracts/carib_irreg_SLE.pdf)
+* [Manuscript](documents/talks_abstracts/cariban_underived.pdf)
