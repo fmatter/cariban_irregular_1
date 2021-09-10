@@ -1,0 +1,1 @@
+* [examples.csv](examples.csv): Illustrative example sentences used in the manuscript.
