@@ -4,4 +4,4 @@ More info can be found here:
 
 * [Abstract](documents/talks_abstracts/extensions_SLE_abstract.pdf)
 * [Slides](documents/talks_abstracts/carib_irreg_SLE.pdf)
-* [Manuscript](documents/talks_abstracts/cariban_underived.pdf)
+* [Manuscript](documents/cariban_underived.pdf)
