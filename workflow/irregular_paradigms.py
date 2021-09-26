@@ -13,7 +13,7 @@ pyd.z = []
 verb_list = ["come-1", "go", "say", "go.down", "be-1", "be-2"]
 pyd.y_sort = lg_list
 pyd.filters = {"Inflection": ["1"], "Cognateset_ID": verb_list, "Language_ID": lg_list}
-pyd.content_string = "Prefix_Cognateset_ID"
+# pyd.content_string = "Prefix_Cognateset_ID"
 table = pyd.compose_paradigm(df)
 print(table)
 #
