@@ -1,30 +1,30 @@
 "Language_ID","Form","Source","Cognateset_ID","Class","Comments","Cog_Cert"
-"mac","ipɨ","macushiabbott1991[32]","come-1",,,1
-"pem","jepɨ","alvarez2000construcciones[102]","come-1",,,1
-"aka","jepɨ","akawaiocaesar2003[125]","come-1",,,1
-"ing","jepə","cruz2005fonologia[415]","come-1",,,1
-"ing","jə","cruz2005fonologia[299]","come-1",,,1
-"kax","johɨ","pc[Spike Gildea]","come-1",,,1
-"pat","jəpɨ","pc[Spike Gildea]","come-1",,,1
-"pat","jepɨ","pc[Spike Gildea]","come-1",,,1
-"mak","ehə","maquiritaricaceres2011[438]","come-1",,,1
-"car","ehɨ","robayo2000avance[178]","come-1",,,1
-"aku","eepɨ","meira1998proto[168]","come-1",,"The length is unexpected if the form comes from *epɨ; meira1998proto argues that it comes from *əepɨ",1
-"map","epɨ","muller1975mapoyo[74]","come-1",,,1
-"kax","ehɨ","pc[Spike Gildea]","come-1",,,1
-"tri","epɨ","triomeira1999[294]","come-1",,,1
-"ara","ebɨ","alves2017arara[150]","come-1",,,1
-"apa","oepɨ","koehn1986apalai[37]","come-1",,,1
-"tri","əepɨ","triomeira1999[294]","come-1",,,1
-"ikp","arep","ikpengpacheco2001[265]","come-1",,,1
-"ara","odebɨ","alves2017arara[150]","come-1",,,1
-"aka","əsipɨ","stegeman2014akawaio[160]","come-1",,,1
-"bak","əewɨ","meira2003bakairi[4]","come-1",,,1
-"pan","əpɨ","panarepayne2013[65]","come-1",,,1
-"yab","əpɨ","mendez1959yawarana[68]","come-1",,,1
-"kar","opɨ","courtz2008carib[429]","come-1",,,1
-"uxc","ee","meira2005southern[182]","come-1",,,1
-"kax","oohɨ","pc[Spike Gildea]","come-1",,,1
+"mac","ipɨ","macushiabbott1991[32]","come",,,1
+"pem","jepɨ","alvarez2000construcciones[102]","come",,,1
+"aka","jepɨ","akawaiocaesar2003[125]","come",,,1
+"ing","jepə","cruz2005fonologia[415]","come",,,1
+"ing","jə","cruz2005fonologia[299]","come",,,1
+"kax","johɨ","pc[Spike Gildea]","come",,,1
+"pat","jəpɨ","pc[Spike Gildea]","come",,,1
+"pat","jepɨ","pc[Spike Gildea]","come",,,1
+"mak","ehə","maquiritaricaceres2011[438]","come",,,1
+"car","ehɨ","robayo2000avance[178]","come",,,1
+"aku","eepɨ","meira1998proto[168]","come",,"The length is unexpected if the form comes from *epɨ; meira1998proto argues that it comes from *əepɨ",1
+"map","epɨ","muller1975mapoyo[74]","come",,,1
+"kax","ehɨ","pc[Spike Gildea]","come",,,1
+"tri","epɨ","triomeira1999[294]","come",,,1
+"ara","ebɨ","alves2017arara[150]","come",,,1
+"apa","oepɨ","koehn1986apalai[37]","come",,,1
+"tri","əepɨ","triomeira1999[294]","come",,,1
+"ikp","arep","ikpengpacheco2001[265]","come",,,1
+"ara","odebɨ","alves2017arara[150]","come",,,1
+"aka","əsipɨ","stegeman2014akawaio[160]","come",,,1
+"bak","əewɨ","meira2003bakairi[4]","come",,,1
+"pan","əpɨ","panarepayne2013[65]","come",,,1
+"yab","əpɨ","mendez1959yawarana[68]","come",,,1
+"kar","opɨ","courtz2008carib[429]","come",,,1
+"uxc","ee","meira2005southern[182]","come",,,1
+"kax","oohɨ","pc[Spike Gildea]","come",,,1
 "ing","ətə","cruz2005fonologia[291]","go",,,1
 "tri","tə(n)","triomeira1999[292]","go",,,1
 "way","(ɨ)tə(m)","wayanatavares2005[195]","go",,,1
@@ -63,6 +63,7 @@
 "kap","ka","akawaiocaesar2003[125]","say",,,1
 "pan","ka(h)","mattei1994diccionario[102]","say",,,1
 "kax","ɨhɨto","pc[Spike Gildea]","go.down","S_P_",,1
+"yuk","ewu(h)tu","meira2003primeras","go.down","–",,0.5
 "hix","hto","hixkaryanaderby1979[196]","go.down","?",,1
 "wai","hto","waiwaihawkins1998[55]","go.down","–",,1
 "PPek","ɨptə",,"go.down","S_A_",,1
