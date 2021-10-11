@@ -6,7 +6,7 @@
 "be-1","bak",1,"w-a-","1w","von1892bakairi[130]",,"töre-wakine"
 "be-1","car",1,"w-a-","1w","meira1998proto[115]",,
 "be-1","hix",1,"w-ah-","1w","hixkaryanaderby1985[197]",,"wahko"
-"be-1","ikp",1,"–",,,"Root obj:am does not occur with first person.",
+"be-1","ikp",1,"–",,,"The root am does not occur with first person.",
 "be-1","PPek",1,"w-ap-","1w",,,
 "be-1","PTir",1,"w-a-","1w",,,
 "be-1","tri",1,"w-a-","1w","meira1998proto[115]",,
@@ -23,48 +23,45 @@
 "be-2","tri",1,"w-ei-","1w","triomeira1999[339]",,
 "be-2","wai",1,"w-eeʃi-","1w","pc[Spike Gildea]",,
 "be-2","yuk",1,"j-e-","1sp","meira2006syntactic[143]",,
-"come-1","aku",1,"∅-eepɨ-","1w","meira1998proto[114]",,
-"come-1","aku",2,"m-eepɨ","2sa","meira1998proto[114]",,
-"come-1","aku",3,"n-eepɨ","3sa","meira1998proto[114]",,
-"come-1","aku","1+2","kəʔ-eepɨ; k-eepɨ","1+2","meira1998proto[114]",,
-"come-1","ara",1,"w-ebɨ-","1w","alves2017arara[153]",,"webyny"
-"come-1","ara",2,"m-od-ebɨ-","2sa","alves2017arara[150]",,"modebyny"
-"come-1","ara",3,"t-ebɨ-",,"alves2017arara[156]",,"tebyny"
-"come-1","ara","1+2","kud-ebɨ-","1+2","alves2017arara[113]",,"kudeptome"
-"come-1","ara","IMP","od-ep-ko",,"alves2017arara[150]",,
-"come-1","ara","IMP","od-ep-ko",,"alves2017arara[150]",,
-"come-1","ara","PTCP","to-ep-te",,"alves2017arara[207]",,
-"come-1","bak",1,"k-əewɨ-","k","von1892bakairi[76]",,"kχaewíle"
-"come-1","bak",2,"m-əewɨ-","2sa","von1892bakairi[76]",,"maewile"
-"come-1","bak",3,"∅-əewɨ-; ∅-əwɨ-",,"von1892bakairi[76]",,"aweile; awíle"
-"come-1","car",1,"j-eh-","1sp","guerrero2019carijo[102]",,"ʤehɨ"
-"come-1","car",2,"m-ehɨ","2sa","meira1998proto[114]",,
-"come-1","car",3,"n-ehɨ","3sa","meira1998proto[114]",,
-"come-1","hix",1,"–",,,"Verb not attested",
-"come-1","ikp",1,"k-arep-","k","ikpengpacheco2001[42]",,"k-arep-lɨ"
-"come-1","ikp",2,"m-arep-","2sa","ikpengpacheco2001[283]",,"mareptxan"
-"come-1","ikp",3,"∅-arep-",,"ikpengpacheco2001[118]",,"Ø-arep-lɨ"
-"come-1","ikp","1+2","kut-arep-","1+2","alves2013verbo[205]",,"kut-arep-lï"
-"come-1","kar",1,"w-oʔ-","1w","hoff1968carib[304]",,"woxsakóŋ̑"
-"come-1","kar",2,"m-opɨ-","2sa","hoff1968carib[416]",,"mo:pïi"
-"come-1","kar",3,"kɨn-o-","3sa","hoff1968carib[410]",,"kïno:saŋ̑"
-"come-1","mac","IMP","asiʔ-tɨ",,"macushiabbott1991[51]",,
-"come-1","mak",1,"w-ehə-","1w","maquiritaricaceres2011[216]",,"weʔne"
-"come-1","mak",2,"m-ehə","2sa","maquiritaricaceres2011[158]",,
-"come-1","mak",3,"n-ehə-","3sa","maquiritaricaceres2011[143]",,"nehəa"
-"come-1","mak","1+2","k-ehə-","k","maquiritaricaceres2011[237]","unclear if lengthened or not (rc:kɨt- or rc:k-?)","keʔhəʔtəne"
-"come-1","mak","IMP","əʔ-kə-ʔre",,"maquiritaricaceres2011[161]",,
-"come-1","PPek",1,"w-epɨ-","1w",,,
-"come-1","PPek",1,"k-əd-epɨ-","k",,,
-"come-1","PTir",1,"w-əʔepɨ-","1w",,,
-"come-1","tri",1,"w-əepɨ-","1w","triomeira1999[294]",,
-"come-1","tri",2,"mən-epɨ",,"triomeira1999[294]",,
-"come-1","tri",3,"n-epɨ","3sa","triomeira1999[294]",,
-"come-1","tri","1+2","k-eepɨ","1+2","triomeira1999[294]",,
-"come-1","tri","IMP","oh-kə",,"triomeira1999[628]",,
-"come-1","tri","PTCP","tɨ-əe-se",,"triomeira1999[247]",,
-"come-1","wai",1,"–",,,"Verb not attested",
-"come-1","yuk",1,"–",,,"Verb not attested",
+"come","aku",1,"∅-eepɨ-","1w","meira1998proto[114]",,
+"come","aku",2,"m-eepɨ","2sa","meira1998proto[114]",,
+"come","aku",3,"n-eepɨ","3sa","meira1998proto[114]",,
+"come","aku","1+2","kəʔ-eepɨ; k-eepɨ","1+2","meira1998proto[114]",,
+"come","ara",1,"w-ebɨ-","1w","alves2017arara[153]",,"webyny"
+"come","ara",2,"m-od-ebɨ-","2sa","alves2017arara[150]",,"modebyny"
+"come","ara",3,"t-ebɨ-",,"alves2017arara[156]",,"tebyny"
+"come","ara","1+2","kud-ebɨ-","1+2","alves2017arara[113]",,"kudeptome"
+"come","ara","IMP","od-ep-ko",,"alves2017arara[150]",,
+"come","ara","IMP","od-ep-ko",,"alves2017arara[150]",,
+"come","ara","PTCP","to-ep-te",,"alves2017arara[207]",,
+"come","bak",1,"k-əewɨ-","k","von1892bakairi[76]",,"kχaewíle"
+"come","bak",2,"m-əewɨ-","2sa","von1892bakairi[76]",,"maewile"
+"come","bak",3,"∅-əewɨ-; ∅-əwɨ-",,"von1892bakairi[76]",,"aweile; awíle"
+"come","car",1,"j-eh-","1sp","guerrero2019carijo[102]",,"ʤehɨ"
+"come","car",2,"m-ehɨ","2sa","meira1998proto[114]",,
+"come","car",3,"n-ehɨ","3sa","meira1998proto[114]",,
+"come","ikp",1,"k-arep-","k","ikpengpacheco2001[42]",,"k-arep-lɨ"
+"come","ikp",2,"m-arep-","2sa","ikpengpacheco2001[283]",,"mareptxan"
+"come","ikp",3,"∅-arep-",,"ikpengpacheco2001[118]",,"Ø-arep-lɨ"
+"come","ikp","1+2","kut-arep-","1+2","alves2013verbo[205]",,"kut-arep-lï"
+"come","kar",1,"w-oʔ-","1w","hoff1968carib[304]",,"woxsakóŋ̑"
+"come","kar",2,"m-opɨ-","2sa","hoff1968carib[416]",,"mo:pïi"
+"come","kar",3,"kɨn-o-","3sa","hoff1968carib[410]",,"kïno:saŋ̑"
+"come","mac","IMP","asiʔ-tɨ",,"macushiabbott1991[51]",,
+"come","mak",1,"w-ehə-","1w","maquiritaricaceres2011[216]",,"weʔne"
+"come","mak",2,"m-ehə","2sa","maquiritaricaceres2011[158]",,
+"come","mak",3,"n-ehə-","3sa","maquiritaricaceres2011[143]",,"nehəa"
+"come","mak","1+2","k-ehə-","k","maquiritaricaceres2011[237]","unclear if lengthened or not (rc:kɨt- or rc:k-?)","keʔhəʔtəne"
+"come","mak","IMP","əʔ-kə-ʔre",,"maquiritaricaceres2011[161]",,
+"come","PPek",1,"w-epɨ-","1w",,,
+"come","PPek",1,"k-əd-epɨ-","k",,,
+"come","PTir",1,"w-əʔepɨ-","1w",,,
+"come","tri",1,"w-əepɨ-","1w","triomeira1999[294]",,
+"come","tri",2,"mən-epɨ",,"triomeira1999[294]",,
+"come","tri",3,"n-epɨ","3sa","triomeira1999[294]",,
+"come","tri","1+2","k-eepɨ","1+2","triomeira1999[294]",,
+"come","tri","IMP","oh-kə",,"triomeira1999[628]",,
+"come","tri","PTCP","tɨ-əe-se",,"triomeira1999[247]",,
 "go","aku",1,"wɨ-təemɨ-","1w","gildea1994akuriyo[87]",,
 "go","aku",1,"ə-təmɨ-","1w","meira1998proto[112]",,
 "go","aku",2,"mɨ-təemɨ-","2sa","gildea1994akuriyo[87]",,
@@ -130,13 +127,11 @@
 "go.down","ara",1,"w-iptoŋ-","1w","alves2017arara[153]",,"wiptongry"
 "go.down","bak",1,"k-ɨtəgɨ-","k","von1892bakairi[137]",,
 "go.down","car",1,"j-ehɨtə-","1sp","pc[David Felipe Guerrero]",,
-"go.down","hix",1,"–",,,"Verb not attested",
 "go.down","ikp",1,"?-iptoŋ-","?","pc[Angela Fabíola Alves Chagas]",,
 "go.down","PPek",1,"w-Vptə-","1w",,,
 "go.down","PTir",1,"p-ɨhtə-","1p",,,
 "go.down","tri",1,"p-ɨhtə-","1p","meira1998proto[116]",,
-"go.down","wai",1,"–",,,"Verb not attested",
-"go.down","yuk",1,"–",,,"obj:ew(uh)tu only looks partially cognate, if anything.",
+"go.down","yuk",1,"j-ewtu-","1sp","meira2003primeras","ewu(h)tu only looks partially cognate, if anything.","aw y-éwtu"
 "say","aku",1,"wɨ-ka-","1w","meira1998proto[113]",,
 "say","aku",2,"mɨ-ka-","2sa","meira1998proto[113]",,
 "say","aku",3,"nɨ-ka-","3sa","meira1998proto[113]",,
@@ -185,3 +180,12 @@
 "be-2","PWai",1,"w-eʃi-","1w",,,
 "be-1","PWai",1,"w-ah-","1w",,,
 "go","PWai",1,"wɨ-to-","1w",,,
+"bathe","tri",1,"s-epɨ-","1t","triomeira1999[660]",,
+"bathe","aku",1,"t͡ʃ-epɨ-","1t","gildea1994akuriyo[87]",,
+"bathe","PPek",1,"w-ipɨ-","1w",,,
+"bathe","bak",1,"w-i-","1w","meira2003bakairi[4]",,
+"bathe","wai",1,"k-ejeɸu-","k","waiwaihawkins1998[166]",,
+"bathe","hix",1,"k-ewehɨ-","k","hixkaryanaderby1985[195]",,
+"bathe","PWai",1,"k-eeɸɨ-","k",,"Werikyana has long e in this verb, assuming the same pattern for Proto-Waiwaian helps reconcile the divergent forms.",
+"bathe","PTir",1,"t͡ʃ-epɨ-","1t",,,
+"bathe","car",1,"?-ehə-","?","koch1908hiana[72]","Final vowel may also be ɨ.",
