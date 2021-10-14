@@ -264,13 +264,12 @@ save_float(print_latex(result), "overview", "Overview of extensions and (un-)aff
 dv_df = pd.read_csv("../data/split_s_data.csv")
 dv_df["Language"] = dv_df["Language_ID"].map(print_shorthand)
 dv_df["String"] = dv_df.apply(combine_form_meaning, axis=1)
-
 pyd.content_string = "String"
 pyd.x = ["Class"]
 pyd.y = ["Language"]
 pyd.z = []
 pyd.x_sort = ["S_A_", "S_P_"]
-pyd.y_sort = lg_list
+pyd.y_sort = list(map(print_shorthand, lg_list))
 
 #participles
 pyd.filters={"Construction": ["PTCP"]}
@@ -278,6 +277,7 @@ emp = ["o-", "w-"]
 res = pyd.compose_paradigm(dv_df)
 for em in emp:
     res["S_A_"] = res["S_A_"].str.replace(em, f"\\emp{{{em}}}", regex=False)
+res["S_A_"] = res["S_A_"].str.replace("\emp{o-}se", "o-se", regex=False)
 res.columns = res.columns.map(pynt.get_expex_code)
 save_float(print_latex(res, keep_index=True), "participles", "Participles of \gl{s_a_} and \gl{s_p_} verbs " + get_sources(dv_df), short="Participles of \gl{s_a_} and \gl{s_p_} verbs")
 
