@@ -1,4 +1,4 @@
-Example_ID,Language_ID,Sentence,Segmentation,Gloss,Translation,Source,Orig_Segmentation,Orig_Glossing,Orig_Translation,Comment
+ID,Language_ID,Sentence,Segmentation,Gloss,Translation,Source,Orig_Segmentation,Orig_Glossing,Orig_Translation,Comment
 kar-60,gali1262,mi-kupi-ja,mi-kupi-ja,2>3-bathe-PRS,You bathe him/her.,hoff1968carib[160],,,,
 kar-62,gali1262,a-kupi-ja,a-kupi-ja,3>2-bathe-PRS,S/he bathes you.,yamada2011evidentiality[63],,,,
 kar-59,gali1262,sipi tɨnka-rɨ m-ekema-non hen,sipi tɨnka-rɨ m-ekema-non hen,net pull-NMLZ 2S_A_-be.afraid-PRS.UNCERT eh?,"You're afraid to pull up the net, aren't you? ",courtz2008carib[253],,,,

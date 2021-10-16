@@ -1,178 +1,178 @@
-ID,Language_ID,Form,Source,Comment,Segments,Comments
-ara-form-5,ara,wɨ-ge-,alves2017arara[153],,w ɨ + g e,
-ara-form-9,ara,w-ibɨ-,alves2017arara[153],,w + i b ɨ,
-ara-form-10,ara,w-it͡ʃi-,alves2017arara[153],,w + i t͡ʃ i,
-ara-form-11,ara,w-ebɨ-,alves2017arara[153],,w + e b ɨ,
-ara-form-12,ara,w-ɨdo-,alves2017arara[153],,w + ɨ d o,
-ara-form-14,ara,w-iptoŋ-,alves2017arara[153],,w + i p t o ŋ,
-ara-form-16,ara,w-ap-,alves2017arara[200],,w + a p,
-aku-form-21,aku,p-ɨtə-,gildea1994akuriyo[84],,p + ɨ t ə,
-aku-form-27,aku,t͡ʃ-epɨ-,gildea1994akuriyo[87],,t͡ʃ + e p ɨ,
-car-form-28,car,j-eh-,guerrero2019carijo[82],,j + e h,
-car-form-29,car,∅-ka-,pc[David Felipe Guerrero],,∅ + k a,
-car-form-30,car,j-et͡ʃi-,guerrero2019carijo[92],,j + e t͡ʃ i,
-hix-form-31,hix,ɨ-ka-,hixkaryanaderby1979[4],,ɨ + k a,
-hix-form-34,hix,k-ewehɨ-,hixkaryanaderby1985[195],,k + e w e h ɨ,
-hix-form-35,hix,w-ah-,hixkaryanaderby1985[197],,w + a h,
-hix-form-36,hix,w-eʃe-,hixkaryanaderby1985[198],,w + e ʃ e,
-hix-form-41,hix,ɨ-to-,hixkaryanaderby1985[70],,ɨ + t o,
-kar-form-43,kar,wɨ-ʔ-,hoff1968carib[168],,w ɨ + ʔ,
-kar-form-47,kar,∅-ka-,hoff1968carib[168],,∅ + k a,
-kar-form-55,kar,w-oʔ-,hoff1968carib[304],,w + o ʔ,
-ikp-form-58,ikp,∅-ip-,ikpengpacheco1997[68],,∅ + i p,
-ikp-form-60,ikp,∅-et͡ʃi-,ikpengpacheco2001[139],,∅ + e t͡ʃ i,
-ikp-form-61,ikp,ɨ-ge-,ikpengpacheco2001[209],,ɨ + g e,
-ikp-form-65,ikp,k-arep-,ikpengpacheco2001[42],,k + a r e p,
-ikp-form-67,ikp,k-aran-,ikpengpacheco2001[80],,k + a r a n,
-mak-form-74,mak,w-ɨtə-,maquiritaricaceres2011[160],,w + ɨ t ə,
-mak-form-77,mak,w-ehə-,maquiritaricaceres2011[216],,w + e h ə,
-aku-form-83,aku,ə-təmɨ-,meira1998proto[112],,ə + t ə m ɨ,
-car-form-87,car,wɨ-təmə-,meira1998proto[112],,w ɨ + t ə m ə,
-aku-form-90,aku,wɨ-ka-,meira1998proto[113],,w ɨ + k a,
-aku-form-93,aku,∅-eepɨ-,meira1998proto[114],,∅ + e e p ɨ,
-aku-form-99,aku,∅-a-,meira1998proto[115],,∅ + a,
-car-form-100,car,w-a-,meira1998proto[115],,w + a,
-tri-form-101,tri,w-a-,meira1998proto[115],,w + a,
-tri-form-102,tri,p-ɨhtə-,meira1998proto[116],,p + ɨ h t ə,
-bak-form-103,bak,w-i-,meira2003bakairi[4],,w + i,
-yuk-form-104,yuk,j-ewtu-,meira2003primeras,"ewu(h)tu only looks partially cognate, if anything.",j + e w t u,
-yuk-form-105,yuk,∅-to-,meira2006syntactic[139],,∅ + t o,
-yuk-form-106,yuk,j-a-,meira2006syntactic[142],,j + a,
-yuk-form-107,yuk,j-e-,meira2006syntactic[143],,j + e,
-car-form-109,car,j-ehɨtə-,pc[David Felipe Guerrero],,j + e h ɨ t ə,
-wai-form-110,wai,w-a-,pc[Spike Gildea],,w + a,
-wai-form-111,wai,w-eeʃi-,pc[Spike Gildea],,w + e e ʃ i,
-tri-form-117,tri,wɨ-tən-,triomeira1999[292],,w ɨ + t ə n,
-tri-form-121,tri,w-əepɨ-,triomeira1999[294],,w + ə e p ɨ,
-tri-form-125,tri,wɨ-ka-,triomeira1999[294],,w ɨ + k a,
-tri-form-130,tri,w-ei-,triomeira1999[339],,w + e i,
-tri-form-132,tri,s-epɨ-,triomeira1999[660],,s + e p ɨ,
-bak-form-137,bak,w-a-,von1892bakairi[130],,w + a,
-bak-form-138,bak,u-ge-,von1892bakairi[131],,u + g e,
-bak-form-142,bak,k-ɨtəgɨ-,von1892bakairi[137],,k + ɨ t ə g ɨ,
-bak-form-143,bak,u-tə-,von1892bakairi[374],,u + t ə,
-bak-form-144,bak,w-i-,von1892bakairi[397],,w + i,
-bak-form-145,bak,k-əewɨ-,von1892bakairi[76],,k + ə e w ɨ,
-wai-form-149,wai,k-ejeɸu-,waiwaihawkins1998[166],,k + e j e ɸ u,
-wai-form-155,wai,wɨ-ka-,waiwaihawkins1998[71],,w ɨ + k a,
-wai-form-156,wai,kɨw-tom-,waiwaihawkins1998[85],,k ɨ w + t o m,
-way-form-159,way,wɨ-təm-,wayanatavares2005[195],,w ɨ + t ə m,
-way-form-163,way,wɨ-ka-,wayanatavares2005[195],,w ɨ + k a,
-PPek-form-168,PPek,w-ap-,,,w + a p,
-PTir-form-169,PTir,w-a-,,,w + a,
-PPek-form-171,PPek,w-et͡ʃi-,,,w + e t͡ʃ i,
-PTir-form-172,PTir,w-eʔi-,,,w + e ʔ i,
-PPek-form-173,PPek,w-epɨ-,,,w + e p ɨ,
-PTir-form-174,PTir,w-əʔepɨ-,,,w + ə ʔ e p ɨ,
-PPek-form-175,PPek,wɨ-tən-,,,w ɨ + t ə n,
-PTir-form-176,PTir,wɨ-tə(mɨ)-,,,w ɨ + t ə m ɨ,
-PPek-form-177,PPek,w-Vptə-,,,w + V p t ə,
-PTir-form-178,PTir,p-ɨhtə-,,,p + ɨ h t ə,
-PPek-form-179,PPek,wɨ-ge-,,,w ɨ + g e,
-PTir-form-180,PTir,wɨ-ka-,,,w ɨ + k a,
-PWai-form-181,PWai,wɨ-ka-,,,w ɨ + k a,
-PWai-form-182,PWai,w-eʃi-,,,w + e ʃ i,
-PWai-form-183,PWai,w-ah-,,,w + a h,
-PWai-form-184,PWai,wɨ-to-,,,w ɨ + t o,
-PPek-form-185,PPek,w-ipɨ-,,,w + i p ɨ,
-PWai-form-186,PWai,k-eeɸɨ-,,"Werikyana has long e in this verb, assuming the same pattern for Proto-Waiwaian allows reconciling the divergent Waiwai and Hixkaryána forms.",k + e e ɸ ɨ,
-PTir-form-187,PTir,t͡ʃ-epɨ-,,,t͡ʃ + e p ɨ,
-mac-stem-0,mac,ipɨ,macushiabbott1991[32],,i p ɨ,
-pem-stem-1,pem,jepɨ,alvarez2000construcciones[102],,j e p ɨ,
-aka-stem-2,aka,jepɨ,akawaiocaesar2003[125],,j e p ɨ,
-ing-stem-3,ing,jepə,cruz2005fonologia[415],,j e p ə,
-ing-stem-4,ing,jə,cruz2005fonologia[299],,j ə,
-kax-stem-5,kax,johɨ,pc[Spike Gildea],,j o h ɨ,
-pat-stem-6,pat,jəpɨ,pc[Spike Gildea],,j ə p ɨ,
-pat-stem-7,pat,jepɨ,pc[Spike Gildea],,j e p ɨ,
-mak-stem-8,mak,ehə,maquiritaricaceres2011[438],,e h ə,
-car-stem-9,car,ehɨ,robayo2000avance[178],,e h ɨ,
-aku-stem-10,aku,eepɨ,meira1998proto[168],,e e p ɨ,The length is unexpected if the form comes from *epɨ; meira1998proto argues that it comes from *əepɨ
-map-stem-11,map,epɨ,muller1975mapoyo[74],,e p ɨ,
-kax-stem-12,kax,ehɨ,pc[Spike Gildea],,e h ɨ,
-tri-stem-13,tri,epɨ,triomeira1999[294],,e p ɨ,
-ara-stem-14,ara,ebɨ,alves2017arara[150],,e b ɨ,
-apa-stem-15,apa,oepɨ,koehn1986apalai[37],,o e p ɨ,
-tri-stem-16,tri,əepɨ,triomeira1999[294],,ə e p ɨ,
-ikp-stem-17,ikp,arep,ikpengpacheco2001[265],,a r e p,
-ara-stem-18,ara,odebɨ,alves2017arara[150],,o d e b ɨ,
-aka-stem-19,aka,əsipɨ,stegeman2014akawaio[160],,ə s i p ɨ,
-bak-stem-20,bak,əewɨ,meira2003bakairi[4],,ə e w ɨ,
-pan-stem-21,pan,əpɨ,panarepayne2013[65],,ə p ɨ,
-yab-stem-22,yab,əpɨ,mendez1959yawarana[68],,ə p ɨ,
-kar-stem-23,kar,opɨ,courtz2008carib[429],,o p ɨ,
-uxc-stem-24,uxc,ee,meira2005southern[182],,e e,
-kax-stem-25,kax,oohɨ,pc[Spike Gildea],,o o h ɨ,
-ing-stem-26,ing,ətə,cruz2005fonologia[291],,ə t ə,
-tri-stem-27,tri,tə(n),triomeira1999[292],,t ə n,
-way-stem-28,way,(ɨ)tə(m),wayanatavares2005[195],,ɨ t ə m,
-aku-stem-29,aku,(ə)tə(mɨ),meira1998proto[112]; gildea1994akuriyo[87],,ə t ə m ɨ,
-ara-stem-30,ara,ɨdo,alves2017arara[],,ɨ d o,
-hix-stem-31,hix,(ɨ)to,"hixkaryanaderby1985[27, 248]",,ɨ t o,
-wai-stem-32,wai,(e)to(m),"waiwaihawkins1998[45, 62]",,e t o m,
-ikp-stem-33,ikp,aran,ikpengpacheco2001[54],,a r a n,
-ikp-stem-34,ikp,ero,ikpengpacheco2001[80],,e r o,
-bak-stem-35,bak,(ɨ)tə,"von1892bakairi[112, 374]",,ɨ t ə,
-mak-stem-36,mak,ɨtə(mə),"maquiritaricaceres2011[181, 216]",,ɨ t ə m ə,
-car-stem-37,car,təmə,meira1998proto[112],,t ə m ə,
-kar-stem-38,kar,to,hoff1968carib[168],,t o,
-kar-stem-39,kar,(ɨ)ʔ,hoff1968carib[168],,ɨ ʔ,
-yuk-stem-40,yuk,to,meira2006syntactic[139],,t o,
-yab-stem-41,yab,tə,caceres2018yawarana[4],,t ə,
-map-stem-42,map,tə,muller1975mapoyo[74],,t ə,wɨs-tə-ri. I interpret wɨs- as an allomorph of wɨhɨ ‘1’. /s/ becomes /h/ intervocalically in Mapoyo.
-pan-stem-43,pan,tə(n),mattei1994diccionario[198],,t ə n,
-mac-stem-44,mac,(a)tɨ,"macushiabbott1991[48, 50]",,a t ɨ,
-pem-stem-45,pem,(e)tə,garcia2006diccionario[172],,e t ə,
-kax-stem-46,kax,to(mo),pc[Spike Gildea],,t o m o,
-uxc-stem-47,uxc,(e)te,franchetto2002kuikuro[6],,e t e,
-bak-stem-48,bak,ke,meira2003bakairi[4]; meira2005bakairi[297],,k e,
-uxc-stem-49,uxc,ki,franchetto2008absolutivo[48],,k i,
-ikp-stem-50,ikp,ke,ikpengpacheco2001[209],,k e,
-ara-stem-51,ara,ke,alves2017arara[153],,k e,
-hix-stem-52,hix,ka(h),hixkaryanaderby1985[182],,k a h,
-car-stem-53,car,ka,meira1998proto[113],,k a,
-apa-stem-54,apa,ka,camargo2002lexico[51],,k a,
-wai-stem-55,wai,ka(s),waiwaihawkins1998[26],,k a s,
-kax-stem-56,kax,ka(s),pc[Spike Gildea],,k a s,
-tri-stem-57,tri,ka,meira1998proto[113],,k a,
-way-stem-58,way,ka,camargo2010wayana[66],,k a,
-aku-stem-59,aku,ka,meira1998proto[113],,k a,
-mac-stem-60,mac,ka,macushiabbott1991[59],,k a,
-pem-stem-61,pem,ka,swiggers2010gramatica[123],,k a,
-kar-stem-62,kar,ka,courtz2008carib[430],,k a,
-kap-stem-63,kap,ka,akawaiocaesar2003[125],,k a,
-pan-stem-64,pan,ka(h),mattei1994diccionario[102],,k a h,
-kax-stem-65,kax,ɨhɨto,pc[Spike Gildea],,ɨ h ɨ t o,
-yuk-stem-66,yuk,ewu(h)tu,meira2003primeras,,e w u h t u,
-hix-stem-67,hix,hto,hixkaryanaderby1979[196],,h t o,
-wai-stem-68,wai,hto,waiwaihawkins1998[55],,h t o,
-PPek-stem-69,PPek,ɨptə,,,ɨ p t ə,
-PTir-stem-70,PTir,ɨhtə,,,ɨ h t ə,
-car-stem-71,car,ehɨtə,guerrero2019carijo[118],,e h ɨ t ə,
-way-stem-72,way,ɨptə,camargo2010wayana[44],,ɨ p t ə,
-apa-stem-73,apa,ɨhto,camargo2002lexico[99],,ɨ h t o,
-kar-stem-74,kar,onɨʔto,courtz2008carib[263],,o n ɨ ʔ t o,
-mak-stem-75,mak,əʔtə,maquiritaricaceres2011[450],,ə ʔ t ə,
-kap-stem-76,kap,uʔtə,stegeman2014akawaio[139],,u ʔ t ə,
-pem-stem-77,pem,uʔtə,alvarez2008clausulas[139],,u ʔ t ə,
-mac-stem-78,mac,autɨ,macushiabbott1991[34],,a u t ɨ,
-pan-stem-79,pan,əhtə,mattei1994diccionario[88],,ə h t ə,
-yab-stem-80,yab,əhtə,mendez1959yawarana[68],,ə h t ə,
-wmr-stem-81,wmr,ɨtɨ,bruno1996dictionary[58],,ɨ t ɨ,
-aku-stem-82,aku,ɨhtə,gildea1994akuriyo[84],,ɨ h t ə,
-ara-stem-83,ara,iptoŋ,alves2017arara[153],,i p t o ŋ,
-bak-stem-84,bak,ɨtəgɨ,von1892bakairi[137],,ɨ t ə g ɨ,
-ikp-stem-85,ikp,iptoŋ,pc[Angela Fabíola Alves Chagas],,i p t o ŋ,
-tri-stem-86,tri,ɨhtə,meira1998proto[116],,ɨ h t ə,
-PPar-stem-87,PPar,ɨɸɨto,,,ɨ ɸ ɨ t o,
-kar-stem-88,kar,uweka,courtz2008carib[418],,u w e k a,
-mak-stem-89,mak,weka,maquiritaricaceres2011[455],,w e k a,
-kax-stem-90,kax,weka,pc[Spike Gildea],,w e k a,
-ara-stem-91,ara,watke,souza1993arara[44],,w a t k e,
-ikp-stem-92,ikp,atke,alves2013verbo[118],,a t k e,
-way-stem-93,way,uika,"wayanatavares2005[86, 206]",,u i k a,
-tri-stem-94,tri,weka,triomeira1999[294],,w e k a,
-bak-stem-95,bak,əeke,meira2005bakairi,,ə e k e,
-apa-stem-96,apa,weka,camargo2002lexico[96],,w e k a,
-pan-stem-97,pan,iʔka,mattei1994diccionario[319],,i ʔ k a,Potentially Sp.
-pan-stem-98,pan,aiʔka,mattei1994diccionario[319],,a i ʔ k a,Potentially Sa.
+ID,Language_ID,Form,Source,Comment,Segments
+ara-form-0,ara,wɨ-ge-,alves2017arara[153],,w ɨ + g e
+ara-form-1,ara,w-ibɨ-,alves2017arara[153],,w + i b ɨ
+ara-form-2,ara,w-it͡ʃi-,alves2017arara[153],,w + i t͡ʃ i
+ara-form-3,ara,w-ebɨ-,alves2017arara[153],,w + e b ɨ
+ara-form-4,ara,w-ɨdo-,alves2017arara[153],,w + ɨ d o
+ara-form-5,ara,w-iptoŋ-,alves2017arara[153],,w + i p t o ŋ
+ara-form-6,ara,w-ap-,alves2017arara[200],,w + a p
+aku-form-7,aku,p-ɨtə-,gildea1994akuriyo[84],,p + ɨ t ə
+aku-form-8,aku,t͡ʃ-epɨ-,gildea1994akuriyo[87],,t͡ʃ + e p ɨ
+car-form-9,car,j-eh-,guerrero2019carijo[82],,j + e h
+car-form-10,car,∅-ka-,pc[David Felipe Guerrero],,∅ + k a
+car-form-11,car,j-et͡ʃi-,guerrero2019carijo[92],,j + e t͡ʃ i
+hix-form-12,hix,ɨ-ka-,hixkaryanaderby1979[4],,ɨ + k a
+hix-form-13,hix,k-ewehɨ-,hixkaryanaderby1985[195],,k + e w e h ɨ
+hix-form-14,hix,w-ah-,hixkaryanaderby1985[197],,w + a h
+hix-form-15,hix,w-eʃe-,hixkaryanaderby1985[198],,w + e ʃ e
+hix-form-16,hix,ɨ-to-,hixkaryanaderby1985[70],,ɨ + t o
+kar-form-17,kar,wɨ-ʔ-,hoff1968carib[168],,w ɨ + ʔ
+kar-form-18,kar,∅-ka-,hoff1968carib[168],,∅ + k a
+kar-form-19,kar,w-oʔ-,hoff1968carib[304],,w + o ʔ
+ikp-form-20,ikp,∅-ip-,ikpengpacheco1997[68],,∅ + i p
+ikp-form-21,ikp,∅-et͡ʃi-,ikpengpacheco2001[139],,∅ + e t͡ʃ i
+ikp-form-22,ikp,ɨ-ge-,ikpengpacheco2001[209],,ɨ + g e
+ikp-form-23,ikp,k-ar+ep-,ikpengpacheco2001[42],,k + a r + e p
+ikp-form-24,ikp,k-aran-,ikpengpacheco2001[80],,k + a r a n
+mak-form-27,mak,w-ɨtə-,maquiritaricaceres2011[160],,w + ɨ t ə
+mak-form-28,mak,w-ehə-,maquiritaricaceres2011[216],,w + e h ə
+aku-form-29,aku,ə-təmɨ-,meira1998proto[112],,ə + t ə m ɨ
+car-form-30,car,wɨ-təmə-,meira1998proto[112],,w ɨ + t ə m ə
+aku-form-31,aku,wɨ-ka-,meira1998proto[113],,w ɨ + k a
+aku-form-32,aku,∅-eepɨ-,meira1998proto[114],,∅ + e e p ɨ
+aku-form-33,aku,∅-a-,meira1998proto[115],,∅ + a
+car-form-34,car,w-a-,meira1998proto[115],,w + a
+tri-form-35,tri,w-a-,meira1998proto[115],,w + a
+tri-form-36,tri,p-ɨhtə-,meira1998proto[116],,p + ɨ h t ə
+bak-form-37,bak,w-i-,meira2003bakairi[4],,w + i
+yuk-form-38,yuk,j-ewtu-,meira2003primeras,"ewu(h)tu only looks partially cognate, if anything.",j + e w t u
+yuk-form-39,yuk,∅-to-,meira2006syntactic[139],,∅ + t o
+yuk-form-40,yuk,j-a-,meira2006syntactic[142],,j + a
+yuk-form-41,yuk,j-e-,meira2006syntactic[143],,j + e
+car-form-43,car,j-ehɨtə-,pc[David Felipe Guerrero],,j + e h ɨ t ə
+wai-form-44,wai,w-a-,pc[Spike Gildea],,w + a
+wai-form-45,wai,w-eeʃi-,pc[Spike Gildea],,w + e e ʃ i
+tri-form-46,tri,wɨ-tən-,triomeira1999[292],,w ɨ + t ə n
+tri-form-47,tri,w-ə+epɨ-,triomeira1999[294],,w + ə + e p ɨ
+tri-form-48,tri,wɨ-ka-,triomeira1999[294],,w ɨ + k a
+tri-form-49,tri,w-ei-,triomeira1999[339],,w + e i
+tri-form-50,tri,s-epɨ-,triomeira1999[660],,s + e p ɨ
+bak-form-51,bak,w-a-,von1892bakairi[130],,w + a
+bak-form-52,bak,u-ge-,von1892bakairi[131],,u + g e
+bak-form-53,bak,k-ɨtəgɨ-,von1892bakairi[137],,k + ɨ t ə g ɨ
+bak-form-54,bak,u-tə-,von1892bakairi[374],,u + t ə
+bak-form-55,bak,w-i-,von1892bakairi[397],,w + i
+bak-form-56,bak,k-ə+ewɨ-,von1892bakairi[76],,k + ə + e w ɨ
+wai-form-57,wai,k-ejeɸu-,waiwaihawkins1998[166],,k + e j e ɸ u
+wai-form-58,wai,wɨ-ka-,waiwaihawkins1998[71],,w ɨ + k a
+wai-form-59,wai,kɨ+w-tom-,waiwaihawkins1998[85],,k ɨ + w + t o m
+way-form-60,way,wɨ-təm-,wayanatavares2005[195],,w ɨ + t ə m
+way-form-61,way,wɨ-ka-,wayanatavares2005[195],,w ɨ + k a
+PPek-form-63,PPek,w-ap-,,,w + a p
+PTir-form-64,PTir,w-a-,,,w + a
+PPek-form-66,PPek,w-et͡ʃi-,,,w + e t͡ʃ i
+PTir-form-67,PTir,w-eʔi-,,,w + e ʔ i
+PPek-form-68,PPek,w-epɨ-,,,w + e p ɨ
+PTir-form-69,PTir,w-əʔ+epɨ-,,,w + ə ʔ + e p ɨ
+PPek-form-70,PPek,wɨ-tən-,,,w ɨ + t ə n
+PTir-form-71,PTir,wɨ-tə(mɨ)-,,,w ɨ + t ə m ɨ
+PPek-form-72,PPek,w-Vptə-,,,w + V p t ə
+PTir-form-73,PTir,p-ɨhtə-,,,p + ɨ h t ə
+PPek-form-74,PPek,wɨ-ge-,,,w ɨ + g e
+PTir-form-75,PTir,wɨ-ka-,,,w ɨ + k a
+PWai-form-76,PWai,wɨ-ka-,,,w ɨ + k a
+PWai-form-77,PWai,w-eʃi-,,,w + e ʃ i
+PWai-form-78,PWai,w-ah-,,,w + a h
+PWai-form-79,PWai,wɨ-to-,,,w ɨ + t o
+PPek-form-80,PPek,w-ipɨ-,,,w + i p ɨ
+PWai-form-81,PWai,k-eeɸɨ-,,"Werikyana has long e in this verb, assuming the same pattern for Proto-Waiwaian allows reconciling the divergent Waiwai and Hixkaryána forms.",k + e e ɸ ɨ
+PTir-form-82,PTir,t͡ʃ-epɨ-,,,t͡ʃ + e p ɨ
+mac-stem-0,mac,ipɨ,macushiabbott1991[32],,i p ɨ
+pem-stem-1,pem,jepɨ,alvarez2000construcciones[102],,j e p ɨ
+aka-stem-2,aka,jepɨ,akawaiocaesar2003[125],,j e p ɨ
+ing-stem-3,ing,jepə,cruz2005fonologia[415],,j e p ə
+ing-stem-4,ing,jə,cruz2005fonologia[299],,j ə
+kax-stem-5,kax,johɨ,pc[Spike Gildea],,j o h ɨ
+pat-stem-6,pat,jəpɨ,pc[Spike Gildea],,j ə p ɨ
+pat-stem-7,pat,jepɨ,pc[Spike Gildea],,j e p ɨ
+mak-stem-8,mak,ehə,maquiritaricaceres2011[438],,e h ə
+car-stem-9,car,ehɨ,robayo2000avance[178],,e h ɨ
+aku-stem-10,aku,eepɨ,meira1998proto[168],The length is unexpected if the form comes from *epɨ; meira1998proto argues that it comes from *əepɨ,e e p ɨ
+map-stem-11,map,epɨ,muller1975mapoyo[74],,e p ɨ
+kax-stem-12,kax,ehɨ,pc[Spike Gildea],,e h ɨ
+tri-stem-13,tri,epɨ,triomeira1999[294],,e p ɨ
+ara-stem-14,ara,ebɨ,alves2017arara[150],,e b ɨ
+apa-stem-15,apa,oepɨ,koehn1986apalai[37],,o + e p ɨ
+tri-stem-16,tri,əepɨ,triomeira1999[294],,ə + e p ɨ
+ikp-stem-17,ikp,arep,ikpengpacheco2001[265],,a r + e p
+ara-stem-18,ara,odebɨ,alves2017arara[150],,o d + e b ɨ
+aka-stem-19,aka,əsipɨ,stegeman2014akawaio[160],,ə s + i p ɨ
+bak-stem-20,bak,əewɨ,meira2003bakairi[4],,ə + e w ɨ
+pan-stem-21,pan,əpɨ,panarepayne2013[65],,ə p ɨ
+yab-stem-22,yab,əpɨ,mendez1959yawarana[68],,ə p ɨ
+kar-stem-23,kar,opɨ,courtz2008carib[429],,o p ɨ
+uxc-stem-24,uxc,ee,meira2005southern[182],,e e
+kax-stem-25,kax,oohɨ,pc[Spike Gildea],,o o h ɨ
+ing-stem-26,ing,ətə,cruz2005fonologia[291],,ə t ə
+tri-stem-27,tri,tə(n),triomeira1999[292],,t ə n
+way-stem-28,way,(ɨ)tə(m),wayanatavares2005[195],,ɨ t ə m
+aku-stem-29,aku,(ə)tə(mɨ),meira1998proto[112]; gildea1994akuriyo[87],,ə t ə m ɨ
+ara-stem-30,ara,ɨdo,alves2017arara[],,ɨ d o
+hix-stem-31,hix,(ɨ)to,"hixkaryanaderby1985[27, 248]",,ɨ t o
+wai-stem-32,wai,(e)to(m),"waiwaihawkins1998[45, 62]",,e t o m
+ikp-stem-33,ikp,aran,ikpengpacheco2001[54],,a r a n
+ikp-stem-34,ikp,ero,ikpengpacheco2001[80],,e r o
+bak-stem-35,bak,(ɨ)tə,"von1892bakairi[112, 374]",,ɨ t ə
+mak-stem-36,mak,ɨtə(mə),"maquiritaricaceres2011[181, 216]",,ɨ t ə m ə
+car-stem-37,car,təmə,meira1998proto[112],,t ə m ə
+kar-stem-38,kar,to,hoff1968carib[168],,t o
+kar-stem-39,kar,(ɨ)ʔ,hoff1968carib[168],,ɨ ʔ
+yuk-stem-40,yuk,to,meira2006syntactic[139],,t o
+yab-stem-41,yab,tə,caceres2018yawarana[4],,t ə
+map-stem-42,map,tə,muller1975mapoyo[74],wɨs-tə-ri. I interpret wɨs- as an allomorph of wɨhɨ ‘1’. /s/ becomes /h/ intervocalically in Mapoyo.,t ə
+pan-stem-43,pan,tə(n),mattei1994diccionario[198],,t ə n
+mac-stem-44,mac,(a)tɨ,"macushiabbott1991[48, 50]",,a t ɨ
+pem-stem-45,pem,(e)tə,garcia2006diccionario[172],,e t ə
+kax-stem-46,kax,to(mo),pc[Spike Gildea],,t o m o
+uxc-stem-47,uxc,(e)te,franchetto2002kuikuro[6],,e t e
+bak-stem-48,bak,ke,meira2003bakairi[4]; meira2005bakairi[297],,k e
+uxc-stem-49,uxc,ki,franchetto2008absolutivo[48],,k i
+ikp-stem-50,ikp,ke,ikpengpacheco2001[209],,k e
+ara-stem-51,ara,ke,alves2017arara[153],,k e
+hix-stem-52,hix,ka(h),hixkaryanaderby1985[182],,k a h
+car-stem-53,car,ka,meira1998proto[113],,k a
+apa-stem-54,apa,ka,camargo2002lexico[51],,k a
+wai-stem-55,wai,ka(s),waiwaihawkins1998[26],,k a s
+kax-stem-56,kax,ka(s),pc[Spike Gildea],,k a s
+tri-stem-57,tri,ka,meira1998proto[113],,k a
+way-stem-58,way,ka,camargo2010wayana[66],,k a
+aku-stem-59,aku,ka,meira1998proto[113],,k a
+mac-stem-60,mac,ka,macushiabbott1991[59],,k a
+pem-stem-61,pem,ka,swiggers2010gramatica[123],,k a
+kar-stem-62,kar,ka,courtz2008carib[430],,k a
+kap-stem-63,kap,ka,akawaiocaesar2003[125],,k a
+pan-stem-64,pan,ka(h),mattei1994diccionario[102],,k a h
+kax-stem-65,kax,ɨhɨto,pc[Spike Gildea],,ɨ h ɨ t o
+yuk-stem-66,yuk,ewu(h)tu,meira2003primeras,,e w u h t u
+hix-stem-67,hix,hto,hixkaryanaderby1979[196],,h t o
+wai-stem-68,wai,hto,waiwaihawkins1998[55],,h t o
+PPek-stem-69,PPek,ɨptə,,,ɨ p t ə
+PTir-stem-70,PTir,ɨhtə,,,ɨ h t ə
+car-stem-71,car,ehɨtə,guerrero2019carijo[118],,e h ɨ t ə
+way-stem-72,way,ɨptə,camargo2010wayana[44],,ɨ p t ə
+apa-stem-73,apa,ɨhto,camargo2002lexico[99],,ɨ h t o
+kar-stem-74,kar,onɨʔto,courtz2008carib[263],,o n ɨ ʔ t o
+mak-stem-75,mak,əʔtə,maquiritaricaceres2011[450],,ə ʔ t ə
+kap-stem-76,kap,uʔtə,stegeman2014akawaio[139],,u ʔ t ə
+pem-stem-77,pem,uʔtə,alvarez2008clausulas[139],,u ʔ t ə
+mac-stem-78,mac,autɨ,macushiabbott1991[34],,a u t ɨ
+pan-stem-79,pan,əhtə,mattei1994diccionario[88],,ə h t ə
+yab-stem-80,yab,əhtə,mendez1959yawarana[68],,ə h t ə
+wmr-stem-81,wmr,ɨtɨ,bruno1996dictionary[58],,ɨ t ɨ
+aku-stem-82,aku,ɨhtə,gildea1994akuriyo[84],,ɨ h t ə
+ara-stem-83,ara,iptoŋ,alves2017arara[153],,i p t o ŋ
+bak-stem-84,bak,ɨtəgɨ,von1892bakairi[137],,ɨ t ə g ɨ
+ikp-stem-85,ikp,iptoŋ,pc[Angela Fabíola Alves Chagas],,i p t o ŋ
+tri-stem-86,tri,ɨhtə,meira1998proto[116],,ɨ h t ə
+PPar-stem-87,PPar,ɨɸɨto,,,ɨ ɸ ɨ t o
+kar-stem-88,kar,uweka,courtz2008carib[418],,u w e k a
+mak-stem-89,mak,weka,maquiritaricaceres2011[455],,w e k a
+kax-stem-90,kax,weka,pc[Spike Gildea],,w e k a
+ara-stem-91,ara,watke,souza1993arara[44],,w a t k e
+ikp-stem-92,ikp,atke,alves2013verbo[118],,a t k e
+way-stem-93,way,uika,"wayanatavares2005[86, 206]",,u i k a
+tri-stem-94,tri,weka,triomeira1999[294],,w e k a
+bak-stem-95,bak,əeke,meira2005bakairi,,ə e k e
+apa-stem-96,apa,weka,camargo2002lexico[96],,w e k a
+pan-stem-97,pan,iʔka,mattei1994diccionario[319],Potentially Sp.,i ʔ k a
+pan-stem-98,pan,aiʔka,mattei1994diccionario[319],Potentially Sa.,a i ʔ k a

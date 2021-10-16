@@ -1,4 +1,4 @@
-"Language_ID","Form","Source","Cognateset_ID","Class","Comments","Cog_Cert"
+"Language_ID","Form","Source","Cognateset_ID","Class","Comment","Cog_Cert"
 "mac","ipɨ","macushiabbott1991[32]","come","–",,1
 "pem","jepɨ","alvarez2000construcciones[102]","come","–",,1
 "aka","jepɨ","akawaiocaesar2003[125]","come","–",,1
@@ -14,12 +14,12 @@
 "kax","ehɨ","pc[Spike Gildea]","come","S_A_",,1
 "tri","epɨ","triomeira1999[294]","come","S_A_",,1
 "ara","ebɨ","alves2017arara[150]","come","S_A_",,1
-"apa","oepɨ","koehn1986apalai[37]","come","S_A_",,1
-"tri","əepɨ","triomeira1999[294]","come","S_A_",,1
-"ikp","arep","ikpengpacheco2001[265]","come","S_A_",,1
-"ara","odebɨ","alves2017arara[150]","come","S_A_",,1
-"aka","əsipɨ","stegeman2014akawaio[160]","come","–",,1
-"bak","əewɨ","meira2003bakairi[4]","come","S_A_",,1
+"apa","o+epɨ","koehn1986apalai[37]","DETRZ+come","S_A_",,1
+"tri","ə+epɨ","triomeira1999[294]","DETRZ+come","S_A_",,1
+"ikp","ar+ep","ikpengpacheco2001[265]","DETRZ+come","S_A_",,1
+"ara","od+ebɨ","alves2017arara[150]","DETRZ+come","S_A_",,1
+"aka","əs+ipɨ","stegeman2014akawaio[160]","DETRZ+come","–",,1
+"bak","ə+ewɨ","meira2003bakairi[4]","DETRZ+come","S_A_",,1
 "pan","əpɨ","panarepayne2013[65]","come","S_A_",,1
 "yab","əpɨ","mendez1959yawarana[68]","come","–",,1
 "kar","opɨ","courtz2008carib[429]","come","S_A_",,1
@@ -64,29 +64,29 @@
 "kar","ka","courtz2008carib[430]","say","S_A_",,1
 "kap","ka","akawaiocaesar2003[125]","say","–",,1
 "pan","ka(h)","mattei1994diccionario[102]","say","S_A_",,1
-"kax","ɨhɨto","pc[Spike Gildea]","go.down","S_P_",,1
-"yuk","ewu(h)tu","meira2003primeras","go.down","–",,0.5
-"hix","hto","hixkaryanaderby1979[196]","go.down","?",,1
-"wai","hto","waiwaihawkins1998[55]","go.down","–",,1
-"PPek","ɨptə",,"go.down","S_A_",,1
-"PTir","ɨhtə",,"go.down","S_A_",,1
-"car","ehɨtə","guerrero2019carijo[118]","go.down","–",,1
-"way","ɨptə","camargo2010wayana[44]","go.down","S_P_",,1
-"apa","ɨhto","camargo2002lexico[99]","go.down","S_P_",,1
-"kar","onɨʔto","courtz2008carib[263]","go.down","S_A_",,0
-"mak","əʔtə","maquiritaricaceres2011[450]","go.down","S_P_",,1
-"kap","uʔtə","stegeman2014akawaio[139]","go.down","–",,0.5
-"pem","uʔtə","alvarez2008clausulas[139]","go.down","–",,0.5
-"mac","autɨ","macushiabbott1991[34]","go.down","–",,0.5
-"pan","əhtə","mattei1994diccionario[88]","go.down","S_A_",,1
-"yab","əhtə","mendez1959yawarana[68]","go.down","–",,1
-"wmr","ɨtɨ","bruno1996dictionary[58]","go.down","–",,1
-"aku","ɨhtə","gildea1994akuriyo[84]","go.down","S_A_",,1
-"ara","iptoŋ","alves2017arara[153]","go.down","S_A_",,1
-"bak","ɨtəgɨ","von1892bakairi[137]","go.down","S_A_",,1
-"ikp","iptoŋ","pc[Angela Fabíola Alves Chagas]","go.down","?",,1
-"tri","ɨhtə","meira1998proto[116]","go.down","S_A_",,1
-"PPar","ɨɸɨto",,"go.down","S_P_",,1
+"kax","ɨhɨto","pc[Spike Gildea]","go-down","S_P_",,1
+"yuk","ewu(h)tu","meira2003primeras","go-down","–",,0.5
+"hix","hto","hixkaryanaderby1979[196]","go-down","?",,1
+"wai","hto","waiwaihawkins1998[55]","go-down","–",,1
+"PPek","ɨptə",,"go-down","S_A_",,1
+"PTir","ɨhtə",,"go-down","S_A_",,1
+"car","ehɨtə","guerrero2019carijo[118]","go-down","–",,1
+"way","ɨptə","camargo2010wayana[44]","go-down","S_P_",,1
+"apa","ɨhto","camargo2002lexico[99]","go-down","S_P_",,1
+"kar","onɨʔto","courtz2008carib[263]","go-down","S_A_",,0
+"mak","əʔtə","maquiritaricaceres2011[450]","go-down","S_P_",,1
+"kap","uʔtə","stegeman2014akawaio[139]","go-down","–",,0.5
+"pem","uʔtə","alvarez2008clausulas[139]","go-down","–",,0.5
+"mac","autɨ","macushiabbott1991[34]","go-down","–",,0.5
+"pan","əhtə","mattei1994diccionario[88]","go-down","S_A_",,1
+"yab","əhtə","mendez1959yawarana[68]","go-down","–",,1
+"wmr","ɨtɨ","bruno1996dictionary[58]","go-down","–",,1
+"aku","ɨhtə","gildea1994akuriyo[84]","go-down","S_A_",,1
+"ara","iptoŋ","alves2017arara[153]","go-down","S_A_",,1
+"bak","ɨtəgɨ","von1892bakairi[137]","go-down","S_A_",,1
+"ikp","iptoŋ","pc[Angela Fabíola Alves Chagas]","go-down","?",,1
+"tri","ɨhtə","meira1998proto[116]","go-down","S_A_",,1
+"PPar","ɨɸɨto",,"go-down","S_P_",,1
 "kar","uweka","courtz2008carib[418]","defecate","S_P_",,1
 "mak","weka","maquiritaricaceres2011[455]","defecate","S_P_",,1
 "kax","weka","pc[Spike Gildea]","defecate","S_P_",,1
