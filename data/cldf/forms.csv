@@ -29,7 +29,7 @@ mak_form_28,mak,w-ehə-,maquiritaricaceres2011[216],,1_come,w + e h ə
 aku_form_29,aku,ə-təmɨ-,meira1998proto[112],,1_go,ə + t ə m ɨ
 car_form_30,car,wɨ-təmə-,meira1998proto[112],,1_go,w ɨ + t ə m ə
 aku_form_31,aku,wɨ-ka-,meira1998proto[113],,1_say,w ɨ + k a
-aku_form_32,aku,∅-eepɨ-,meira1998proto[114],,1_come,∅ + e e p ɨ
+aku_form_32,aku,∅-eepɨ-,meira1998proto[114],,1_come,∅ + ee p ɨ
 aku_form_33,aku,∅-a-,meira1998proto[115],,1_be,∅ + a
 car_form_34,car,w-a-,meira1998proto[115],,1_be,w + a
 tri_form_35,tri,w-a-,meira1998proto[115],,1_be,w + a
@@ -41,7 +41,7 @@ yuk_form_40,yuk,j-a-,meira2006syntactic[142],,1_be,j + a
 yuk_form_41,yuk,j-e-,meira2006syntactic[143],,1_be,j + e
 car_form_43,car,j-ehɨtə-,pc[David Felipe Guerrero],,1_go_down,j + e h ɨ t ə
 wai_form_44,wai,w-a-,pc[Spike Gildea],,1_be,w + a
-wai_form_45,wai,w-eeʃi-,pc[Spike Gildea],,1_be,w + e e ʃ i
+wai_form_45,wai,w-eeʃi-,pc[Spike Gildea],,1_be,w + ee ʃ i
 tri_form_46,tri,wɨ-tən-,triomeira1999[292],,1_go,w ɨ + t ə n
 tri_form_47,tri,w-ə+epɨ-,triomeira1999[294],,1_come,w + ə + e p ɨ
 tri_form_48,tri,wɨ-ka-,triomeira1999[294],,1_say,w ɨ + k a
@@ -75,7 +75,7 @@ PWai_form_77,PWai,w-eʃi-,,,1_be,w + e ʃ i
 PWai_form_78,PWai,w-ah-,,,1_be,w + a h
 PWai_form_79,PWai,wɨ-to-,,,1_go,w ɨ + t o
 PPek_form_80,PPek,w-ipɨ-,,,1_bathe,w + i p ɨ
-PWai_form_81,PWai,k-eeɸɨ-,,"Werikyana has long e in this verb, assuming the same pattern for Proto-Waiwaian allows reconciling the divergent Waiwai and Hixkaryána forms.",1_bathe,k + e e ɸ ɨ
+PWai_form_81,PWai,k-eeɸɨ-,,"Werikyana has long e in this verb, assuming the same pattern for Proto-Waiwaian allows reconciling the divergent Waiwai and Hixkaryána forms.",1_bathe,k + ee ɸ ɨ
 PTir_form_82,PTir,t͡ʃ-epɨ-,,,1_bathe,t͡ʃ + e p ɨ
 mac_stem_0,mac,ipɨ,macushiabbott1991[32],,come,i p ɨ
 pem_stem_1,pem,jepɨ,alvarez2000construcciones[102],,come,j e p ɨ
@@ -87,7 +87,7 @@ pat_stem_6,pat,jəpɨ,pc[Spike Gildea],,come,j ə p ɨ
 pat_stem_7,pat,jepɨ,pc[Spike Gildea],,come,j e p ɨ
 mak_stem_8,mak,ehə,maquiritaricaceres2011[438],,come,e h ə
 car_stem_9,car,ehɨ,robayo2000avance[178],,come,e h ɨ
-aku_stem_10,aku,eepɨ,meira1998proto[168],The length is unexpected if the form comes from *epɨ; meira1998proto argues that it comes from *əepɨ,come,e e p ɨ
+aku_stem_10,aku,eepɨ,meira1998proto[168],The length is unexpected if the form comes from *epɨ; meira1998proto argues that it comes from *əepɨ,come,ee p ɨ
 map_stem_11,map,epɨ,muller1975mapoyo[74],,come,e p ɨ
 kax_stem_12,kax,ehɨ,pc[Spike Gildea],,come,e h ɨ
 tri_stem_13,tri,epɨ,triomeira1999[294],,come,e p ɨ
@@ -101,8 +101,8 @@ bak_stem_20,bak,əewɨ,meira2003bakairi[4],,come,ə + e w ɨ
 pan_stem_21,pan,əpɨ,panarepayne2013[65],,come,ə p ɨ
 yab_stem_22,yab,əpɨ,mendez1959yawarana[68],,come,ə p ɨ
 kar_stem_23,kar,opɨ,courtz2008carib[429],,come,o p ɨ
-uxc_stem_24,uxc,ee,meira2005southern[182],,come,e e
-kax_stem_25,kax,oohɨ,pc[Spike Gildea],,come,o o h ɨ
+uxc_stem_24,uxc,ee,meira2005southern[182],,come,ee
+kax_stem_25,kax,oohɨ,pc[Spike Gildea],,come,oo h ɨ
 ing_stem_26,ing,ətə,cruz2005fonologia[291],,go,ə t ə
 tri_stem_27,tri,tə(n),triomeira1999[292],,go,t ə n
 way_stem_28,way,(ɨ)tə(m),wayanatavares2005[195],,go,ɨ t ə m
