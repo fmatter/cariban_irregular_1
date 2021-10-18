@@ -217,6 +217,14 @@ pyd.x = ["Cognateset_ID"]
 pyd.y = ["Orig_Language", "Form", "Language_ID"]
 pyd.content_string = "Affected"
 pyd.x_sort = verb_list
+
+repl_dic = {
+    "DETRZ+come": "come"
+}
+
+overview["Cognateset_ID"] = overview["Cognateset_ID"].replace(repl_dic)
+
+
 result = pyd.compose_paradigm(overview)
 result["Lg"] = pd.Categorical([lvl[2] for lvl in result.index.str.split(".")], lg_list)
 result["Orig"] = pd.Categorical(
@@ -247,12 +255,14 @@ def modify_index(idx):
 
 result.index = result.index.map(modify_index)
 
-# replace cogset ids with reconstructed forms and translations
+# replace cogset ids with reconstructed forms and translationsm
+cs_df["Gloss"] = cs_df["Meaning"].replace(" ", ".")
 t_d = dict(zip(cs_df["ID"], cs_df["Gloss"]))
 f_d = dict(zip(cs_df["ID"], cs_df["Form"]))
+
 result.columns = [
     result.columns.map(lambda x: f"\\rc{{{f_d[x]}}}"),
-    result.columns.map(lambda x: f"\\qu{{{t_d[x]}}}"),
+    result.columns.map(lambda x: f"\\qu{{to {t_d[x]}}}"),
 ]
 
 # add nice-looking checkmarks and stuff

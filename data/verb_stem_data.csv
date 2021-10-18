@@ -1,100 +1,100 @@
-Language_ID,Form,Source,Cognateset_ID,Class,Comment,Cog_Cert
-mac,ipɨ,macushiabbott1991[32],come,–,,1
-pem,jepɨ,alvarez2000construcciones[102],come,–,,1
-aka,jepɨ,akawaiocaesar2003[125],come,–,,1
-ing,jepə,cruz2005fonologia[415],come,–,,1
-ing,jə,cruz2005fonologia[299],come,–,,1
-kax,johɨ,pc[Spike Gildea],come,S_A_,,1
-pat,jəpɨ,pc[Spike Gildea],come,–,,1
-pat,jepɨ,pc[Spike Gildea],come,–,,1
-mak,ehə,maquiritaricaceres2011[438],come,S_A_,,1
-car,ehɨ,robayo2000avance[178],come,–,,1
-aku,eepɨ,meira1998proto[168],come,S_A_,The length is unexpected if the form comes from *epɨ; meira1998proto argues that it comes from *əepɨ,1
-map,epɨ,muller1975mapoyo[74],come,–,,1
-kax,ehɨ,pc[Spike Gildea],come,S_A_,,1
-tri,epɨ,triomeira1999[294],come,S_A_,,1
-ara,ebɨ,alves2017arara[150],come,S_A_,,1
-apa,o+epɨ,koehn1986apalai[37],DETRZ+come,S_A_,,1
-tri,ə+epɨ,triomeira1999[294],DETRZ+come,S_A_,,1
-ikp,ar+ep,ikpengpacheco2001[265],DETRZ+come,S_A_,,1
-ara,od+ebɨ,alves2017arara[150],DETRZ+come,S_A_,,1
-aka,əs+ipɨ,stegeman2014akawaio[160],DETRZ+come,–,,1
-bak,ə+ewɨ,meira2003bakairi[4],DETRZ+come,S_A_,,1
-pan,əpɨ,panarepayne2013[65],come,S_A_,,1
-yab,əpɨ,mendez1959yawarana[68],come,–,,1
-kar,opɨ,courtz2008carib[429],come,S_A_,,1
-uxc,ee,meira2005southern[182],come,–,,1
-kax,oohɨ,pc[Spike Gildea],come,S_A_,,1
-ing,ətə,cruz2005fonologia[291],go,–,,1
-tri,tə(n),triomeira1999[292],go,S_A_,,1
-way,(ɨ)tə(m),wayanatavares2005[195],go,S_A_,,1
-aku,(ə)tə(mɨ),meira1998proto[112]; gildea1994akuriyo[87],go,S_A_,,1
-ara,ɨdo,alves2017arara[],go,S_A_,,1
-hix,(ɨ)to,"hixkaryanaderby1985[27, 248]",go,S_A_,,1
-wai,(e)to(m),"waiwaihawkins1998[45, 62]",go,–,,1
-ikp,aran,ikpengpacheco2001[54],go,S_A_,,1
-ikp,ero,ikpengpacheco2001[80],go,S_A_,,1
-bak,(ɨ)tə,"von1892bakairi[112, 374]",go,S_A_,,1
-mak,ɨtə(mə),"maquiritaricaceres2011[181, 216]",go,S_A_,,1
-car,təmə,meira1998proto[112],go,–,,1
-kar,to,hoff1968carib[168],go,S_A_,,1
-kar,(ɨ)ʔ,hoff1968carib[168],go,S_A_,,1
-yuk,to,meira2006syntactic[139],go,–,,1
-yab,tə,caceres2018yawarana[4],go,–,,1
-map,tə,muller1975mapoyo[74],go,–,wɨs-tə-ri. I interpret wɨs- as an allomorph of wɨhɨ ‘1’. /s/ becomes /h/ intervocalically in Mapoyo.,1
-pan,tə(n),mattei1994diccionario[198],go,S_A_,,1
-mac,(a)tɨ,"macushiabbott1991[48, 50]",go,–,,1
-pem,(e)tə,garcia2006diccionario[172],go,–,,1
-kax,to(mo),pc[Spike Gildea],go,S_A_,,1
-uxc,(e)te,franchetto2002kuikuro[6],go,–,,1
-bak,ke,meira2003bakairi[4]; meira2005bakairi[297],say,S_A_,,1
-uxc,ki,franchetto2008absolutivo[48],say,–,,1
-ikp,ke,ikpengpacheco2001[209],say,S_A_,,1
-ara,ke,alves2017arara[153],say,S_A_,,1
-hix,ka(h),hixkaryanaderby1985[182],say,S_A_,,1
-car,ka,meira1998proto[113],say,–,,1
-apa,ka,camargo2002lexico[51],say,S_A_,,1
-wai,ka(s),waiwaihawkins1998[26],say,–,,1
-kax,ka(s),pc[Spike Gildea],say,S_A_,,1
-tri,ka,meira1998proto[113],say,S_A_,,1
-way,ka,camargo2010wayana[66],say,S_A_,,1
-aku,ka,meira1998proto[113],say,S_A_,,1
-mac,ka,macushiabbott1991[59],say,–,,1
-pem,ka,swiggers2010gramatica[123],say,–,,1
-kar,ka,courtz2008carib[430],say,S_A_,,1
-kap,ka,akawaiocaesar2003[125],say,–,,1
-pan,ka(h),mattei1994diccionario[102],say,S_A_,,1
-kax,ɨhɨto,pc[Spike Gildea],go_down,S_P_,,1
-yuk,ewu(h)tu,meira2003primeras,go_down,–,,0.5
-hix,hto,hixkaryanaderby1979[196],go_down,?,,1
-wai,hto,waiwaihawkins1998[55],go_down,–,,1
-PPek,ɨptə,,go_down,S_A_,,1
-PTir,ɨhtə,,go_down,S_A_,,1
-car,ehɨtə,guerrero2019carijo[118],go_down,–,,1
-way,ɨptə,camargo2010wayana[44],go_down,S_P_,,1
-apa,ɨhto,camargo2002lexico[99],go_down,S_P_,,1
-kar,onɨʔto,courtz2008carib[263],go_down,S_A_,,0
-mak,əʔtə,maquiritaricaceres2011[450],go_down,S_P_,,1
-kap,uʔtə,stegeman2014akawaio[139],go_down,–,,0.5
-pem,uʔtə,alvarez2008clausulas[139],go_down,–,,0.5
-mac,autɨ,macushiabbott1991[34],go_down,–,,0.5
-pan,əhtə,mattei1994diccionario[88],go_down,S_A_,,1
-yab,əhtə,mendez1959yawarana[68],go_down,–,,1
-wmr,ɨtɨ,bruno1996dictionary[58],go_down,–,,1
-aku,ɨhtə,gildea1994akuriyo[84],go_down,S_A_,,1
-ara,iptoŋ,alves2017arara[153],go_down,S_A_,,1
-bak,ɨtəgɨ,von1892bakairi[137],go_down,S_A_,,1
-ikp,iptoŋ,pc[Angela Fabíola Alves Chagas],go_down,?,,1
-tri,ɨhtə,meira1998proto[116],go_down,S_A_,,1
-PPar,ɨɸɨto,,go_down,S_P_,,1
-kar,uweka,courtz2008carib[418],defecate,S_P_,,1
-mak,weka,maquiritaricaceres2011[455],defecate,S_P_,,1
-kax,weka,pc[Spike Gildea],defecate,S_P_,,1
-ara,watke,souza1993arara[44],defecate,S_P_,,1
-ikp,atke,alves2013verbo[118],defecate,S_P_,,1
-way,uika,"wayanatavares2005[86, 206]",defecate,S_A_ / S_P_,,1
-tri,weka,triomeira1999[294],defecate,S_A_,,1
-bak,əeke,meira2005bakairi,defecate,S_A_,,1
-apa,weka,camargo2002lexico[96],defecate,?,,1
-pan,iʔka,mattei1994diccionario[319],defecate,?,Potentially Sp.,1
-pan,aiʔka,mattei1994diccionario[319],defecate,?,Potentially Sa.,
+"Language_ID","Form","Source","Cognateset_ID","Class","Comment","Cog_Cert","Meaning"
+"mac","ipɨ","macushiabbott1991[32]","come","–",,1,"come"
+"pem","jepɨ","alvarez2000construcciones[102]","come","–",,1,"come"
+"aka","jepɨ","akawaiocaesar2003[125]","come","–",,1,"come"
+"ing","jepə","cruz2005fonologia[415]","come","–",,1,"come"
+"ing","jə","cruz2005fonologia[299]","come","–",,1,"come"
+"kax","johɨ","pc[Spike Gildea]","come","S_A_",,1,"come"
+"pat","jəpɨ","pc[Spike Gildea]","come","–",,1,"come"
+"pat","jepɨ","pc[Spike Gildea]","come","–",,1,"come"
+"mak","ehə","maquiritaricaceres2011[438]","come","S_A_",,1,"come"
+"car","ehɨ","robayo2000avance[178]","come","–",,1,"come"
+"aku","eepɨ","meira1998proto[168]","come","S_A_","The length is unexpected if the form comes from *epɨ; meira1998proto argues that it comes from *əepɨ",1,"come"
+"map","epɨ","muller1975mapoyo[74]","come","–",,1,"come"
+"kax","ehɨ","pc[Spike Gildea]","come","S_A_",,1,"come"
+"tri","epɨ","triomeira1999[294]","come","S_A_",,1,"come"
+"ara","ebɨ","alves2017arara[150]","come","S_A_",,1,"come"
+"apa","o+epɨ","koehn1986apalai[37]","DETRZ+come","S_A_",,1,"come"
+"tri","ə+epɨ","triomeira1999[294]","DETRZ+come","S_A_",,1,"come"
+"ikp","ar+ep","ikpengpacheco2001[265]","DETRZ+come","S_A_",,1,"come"
+"ara","od+ebɨ","alves2017arara[150]","DETRZ+come","S_A_",,1,"come"
+"aka","əs+ipɨ","stegeman2014akawaio[160]","DETRZ+come","–",,1,"come"
+"bak","ə+ewɨ","meira2003bakairi[4]","DETRZ+come","S_A_",,1,"come"
+"pan","əpɨ","panarepayne2013[65]","come","S_A_",,1,"come"
+"yab","əpɨ","mendez1959yawarana[68]","come","–",,1,"come"
+"kar","opɨ","courtz2008carib[429]","come","S_A_",,1,"come"
+"uxc","ee","meira2005southern[182]","come","–",,1,"come"
+"kax","oohɨ","pc[Spike Gildea]","come","S_A_",,1,"come"
+"ing","ətə","cruz2005fonologia[291]","go","–",,1,"go"
+"tri","tə(n)","triomeira1999[292]","go","S_A_",,1,"go"
+"way","(ɨ)tə(m)","wayanatavares2005[195]","go","S_A_",,1,"go"
+"aku","(ə)tə(mɨ)","meira1998proto[112]; gildea1994akuriyo[87]","go","S_A_",,1,"go"
+"ara","ɨdo","alves2017arara[]","go","S_A_",,1,"go"
+"hix","(ɨ)to","hixkaryanaderby1985[27, 248]","go","S_A_",,1,"go"
+"wai","(e)to(m)","waiwaihawkins1998[45, 62]","go","–",,1,"go"
+"ikp","aran","ikpengpacheco2001[54]","go","S_A_",,1,"go"
+"ikp","ero","ikpengpacheco2001[80]","go","S_A_",,1,"go"
+"bak","(ɨ)tə","von1892bakairi[112, 374]","go","S_A_",,1,"go"
+"mak","ɨtə(mə)","maquiritaricaceres2011[181, 216]","go","S_A_",,1,"go"
+"car","təmə","meira1998proto[112]","go","–",,1,"go"
+"kar","to","hoff1968carib[168]","go","S_A_",,1,"go"
+"kar","(ɨ)ʔ","hoff1968carib[168]","go","S_A_",,1,"go"
+"yuk","to","meira2006syntactic[139]","go","–",,1,"go"
+"yab","tə","caceres2018yawarana[4]","go","–",,1,"go"
+"map","tə","muller1975mapoyo[74]","go","–","wɨs-tə-ri. I interpret wɨs- as an allomorph of wɨhɨ ‘1’. /s/ becomes /h/ intervocalically in Mapoyo.",1,"go"
+"pan","tə(n)","mattei1994diccionario[198]","go","S_A_",,1,"go"
+"mac","(a)tɨ","macushiabbott1991[48, 50]","go","–",,1,"go"
+"pem","(e)tə","garcia2006diccionario[172]","go","–",,1,"go"
+"kax","to(mo)","pc[Spike Gildea]","go","S_A_",,1,"go"
+"uxc","(e)te","franchetto2002kuikuro[6]","go","–",,1,"go"
+"bak","ke","meira2003bakairi[4]; meira2005bakairi[297]","say","S_A_",,1,"say"
+"uxc","ki","franchetto2008absolutivo[48]","say","–",,1,"say"
+"ikp","ke","ikpengpacheco2001[209]","say","S_A_",,1,"say"
+"ara","ke","alves2017arara[153]","say","S_A_",,1,"say"
+"hix","ka(h)","hixkaryanaderby1985[182]","say","S_A_",,1,"say"
+"car","ka","meira1998proto[113]","say","–",,1,"say"
+"apa","ka","camargo2002lexico[51]","say","S_A_",,1,"say"
+"wai","ka(s)","waiwaihawkins1998[26]","say","–",,1,"say"
+"kax","ka(s)","pc[Spike Gildea]","say","S_A_",,1,"say"
+"tri","ka","meira1998proto[113]","say","S_A_",,1,"say"
+"way","ka","camargo2010wayana[66]","say","S_A_",,1,"say"
+"aku","ka","meira1998proto[113]","say","S_A_",,1,"say"
+"mac","ka","macushiabbott1991[59]","say","–",,1,"say"
+"pem","ka","swiggers2010gramatica[123]","say","–",,1,"say"
+"kar","ka","courtz2008carib[430]","say","S_A_",,1,"say"
+"kap","ka","akawaiocaesar2003[125]","say","–",,1,"say"
+"pan","ka(h)","mattei1994diccionario[102]","say","S_A_",,1,"say"
+"kax","ɨhɨto","pc[Spike Gildea]","go_down","S_P_",,1,"go_down"
+"yuk","ewu(h)tu","meira2003primeras","go_down","–",,0.5,"go_down"
+"hix","hto","hixkaryanaderby1979[196]","go_down","?",,1,"go_down"
+"wai","hto","waiwaihawkins1998[55]","go_down","–",,1,"go_down"
+"PPek","ɨptə",,"go_down","S_A_",,1,"go_down"
+"PTir","ɨhtə",,"go_down","S_A_",,1,"go_down"
+"car","ehɨtə","guerrero2019carijo[118]","go_down","–",,1,"go_down"
+"way","ɨptə","camargo2010wayana[44]","go_down","S_P_",,1,"go_down"
+"apa","ɨhto","camargo2002lexico[99]","go_down","S_P_",,1,"go_down"
+"kar","o+n+ɨʔto","courtz2008carib[263]","DETRZ+CAUS+go_down","S_A_",,0,"go_down"
+"mak","əʔtə","maquiritaricaceres2011[450]","go_down","S_P_",,1,"go_down"
+"kap","uʔtə","stegeman2014akawaio[139]","go_down","–",,0.5,"go_down"
+"pem","uʔtə","alvarez2008clausulas[139]","go_down","–",,0.5,"go_down"
+"mac","autɨ","macushiabbott1991[34]","go_down","–",,0.5,"go_down"
+"pan","əhtə","mattei1994diccionario[88]","go_down","S_A_",,1,"go_down"
+"yab","əhtə","mendez1959yawarana[68]","go_down","–",,1,"go_down"
+"wmr","ɨtɨ","bruno1996dictionary[58]","go_down","–",,1,"go_down"
+"aku","ɨhtə","gildea1994akuriyo[84]","go_down","S_A_",,1,"go_down"
+"ara","iptoŋ","alves2017arara[153]","go_down","S_A_",,1,"go_down"
+"bak","ɨtəgɨ","von1892bakairi[137]","go_down","S_A_",,1,"go_down"
+"ikp","iptoŋ","pc[Angela Fabíola Alves Chagas]","go_down","?",,1,"go_down"
+"tri","ɨhtə","meira1998proto[116]","go_down","S_A_",,1,"go_down"
+"PPar","ɨɸɨto",,"go_down","S_P_",,1,"go_down"
+"kar","uweka","courtz2008carib[418]","defecate","S_P_",,1,"defecate"
+"mak","weka","maquiritaricaceres2011[455]","defecate","S_P_",,1,"defecate"
+"kax","weka","pc[Spike Gildea]","defecate","S_P_",,1,"defecate"
+"ara","watke","souza1993arara[44]","defecate","S_P_",,1,"defecate"
+"ikp","atke","alves2013verbo[118]","defecate","S_P_",,1,"defecate"
+"way","uika","wayanatavares2005[86, 206]","defecate","S_A_ / S_P_",,1,"defecate"
+"tri","weka","triomeira1999[294]","defecate","S_A_",,1,"defecate"
+"bak","ə+eke","meira2005bakairi","DETRZ+defecate","S_A_",,1,"defecate"
+"apa","weka","camargo2002lexico[96]","defecate","?",,1,"defecate"
+"pan","iʔka","mattei1994diccionario[319]","defecate","?","Potentially Sp.",1,"defecate"
+"pan","a+iʔka","mattei1994diccionario[319]","DETRZ+defecate","?","Potentially Sa.",,"defecate"
