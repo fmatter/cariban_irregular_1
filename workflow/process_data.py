@@ -4,9 +4,11 @@ pd.options.mode.chained_assignment = None
 import cariban_helpers as cah
 import cldf_helpers as cldfh
 import pynterlinear as pynt
+import numpy as np
+import re
 
-lg_list = cah.lg_order().keys()
-cognate_list = ["go", "say", "come", "be-1", "be-2", "go.down", "bathe"]
+lg_list = list(cah.lg_order().keys())
+cognate_list = ["go", "say", "come", "be_1", "be_2", "go_down", "bathe_intr"]
 cs_df = pd.read_csv("../data/cognate_sets.csv")
 v_df = pd.read_csv("../data/verb_stem_data.csv")
 
@@ -15,9 +17,10 @@ v_df = pd.read_csv("../data/verb_stem_data.csv")
 def print_latex(df, ex=False, keep_index=False):
     if keep_index:
         df.columns.name = df.index.name
-    df.index.name = None
+        df.index.name = None
+        
     with pd.option_context("max_colwidth", 1000):
-        lines = df.to_latex(escape=False).split("\n")
+        lines = df.to_latex(escape=False, index=keep_index).split("\n")
     lines[0] = lines[0].replace("tabular}{l", "tabular}[t]{@{}l").replace("l}", "l@{}}")
     if ex:
         del lines[1:4]
@@ -102,7 +105,7 @@ def print_cognate_table(df, verb, print_class=False):
     sources = cldfh.cite_a_bunch(src, parens=True)
     #sort by language
     df_v.Language_ID = df_v.Language_ID.astype("category")
-    df_v.Language_ID.cat.set_categories(lg_list)
+    df_v.Language_ID.cat.set_categories(lg_list, ordered=True, inplace=True)
     df_v.sort_values(["Language_ID"], inplace=True)
     if print_class:
         #print verb with class
@@ -129,22 +132,39 @@ def print_cognate_table(df, verb, print_class=False):
 
 # class-switching verbs
 print("\nClass membership of 'to go down':")
-tabular, sources = print_cognate_table(v_df, "go.down", print_class=True)
+tabular, sources = print_cognate_table(v_df, "go_down", print_class=True)
 save_float(tabular, "godown", r"Reflexes of \rc{ɨpɨtə} \qu{to go down} " + sources, short=r"Reflexes of \rc{ɨpɨtə} \qu{to go down}")
 
 print("\nClass membership of 'to defecate':")
 tabular, sources = print_cognate_table(v_df, "defecate", print_class=True)
 save_float(tabular, "defecate", r"\rc{weka} \qu{to defecate} as another class-switching \gl{s_p_} verb " + sources, short=r"\rc{weka} \qu{to defecate} as another class-switching \gl{s_p_} verb")
 
+come_aligned = pd.read_csv("come_aligned.csv", keep_default_na=False)
+# columns = pd.DataFrame(come_aligned.columns.tolist())
+# columns.loc[columns[0].str.startswith('Unnamed:'), 0] = np.nan
+# come_aligned.columns = pd.MultiIndex.from_tuples(columns.to_records(index=False).tolist())
+
 print("\n(Partial) cognates of 'to come':")
-# 'to come'
-tabular, sources = print_cognate_table(v_df, "come")
-save_float(tabular, "come", r"Reflexes of \qu{to come} " + sources, short=r"Reflexes of \qu{to come}")
+come_aligned["Language_ID"] = come_aligned["Language_ID"].astype("category")
+come_aligned["Language_ID"].cat.set_categories(lg_list, ordered=True, inplace=True)
+come_aligned.sort_values(["Language_ID"], inplace=True)
+come_aligned["Language_ID"] = come_aligned["Language_ID"].map(print_shorthand)
+come_aligned["Form"] = come_aligned["Form"].map(objectify)
+come_aligned.rename(columns={"Language_ID": "Language", "Form": "Form", "Unnamed: 3": "Alignment"}, inplace=True)
+come_aligned.rename(columns=lambda x: re.sub(r"Unnamed: [\d]","",x), inplace=True)
+
+
+sources = list(come_aligned["Source"])
+sources = cldfh.cite_a_bunch(sources, parens=True)
+come_aligned.drop(columns=["Source"], inplace=True)
+save_float(print_latex(come_aligned), "come", r"Reflexes of \qu{to come} " + sources, short=r"Reflexes of \qu{to come}")
+
 
 # comparison of intransitive and transitive 'to bathe'
 df_b = pd.read_csv("../data/bathe_data.csv")
 sources = cldfh.cite_a_bunch(list(df_b["Source"]), parens=True)
 df_b.drop(columns=["Source", "Cognateset_ID"], inplace=True)
+df_b["Form"] = df_b["Form"].str.replace("+", "")
 df_b["Form"] = df_b["Form"].apply(objectify)
 pyd.x = ["Transitivity"]
 pyd.y = ["Language_ID"]
@@ -161,8 +181,7 @@ save_float(print_latex(table, keep_index=True), "bathe", "Transitive and intrans
 e_df = pd.read_csv("../data/extensions.csv")
 i_df = pd.read_csv("../data/inflection_data.csv")
 i_df = i_df[i_df["Inflection"] == "1"]
-verb_list = ["say", "go", "be-1", "be-2", "come", "go down", "bathe"]
-
+verb_list = ["say", "go", "be-1", "be-2", "come", "go down", "bathe (INTR)"]
 
 #determine whether verb was affected by extensions based on cognacy of prefixes
 def identify_affected(cogset, value):
@@ -213,98 +232,97 @@ for i, row in e_df.iterrows():
         )
         overview = overview.append(t_df)
 
-pyd.x = ["Cognateset_ID"]
-pyd.y = ["Orig_Language", "Form", "Language_ID"]
-pyd.content_string = "Affected"
-pyd.x_sort = verb_list
-
-repl_dic = {
-    "DETRZ+come": "come"
-}
-
-overview["Cognateset_ID"] = overview["Cognateset_ID"].replace(repl_dic)
-
-
-result = pyd.compose_paradigm(overview)
-result["Lg"] = pd.Categorical([lvl[2] for lvl in result.index.str.split(".")], lg_list)
-result["Orig"] = pd.Categorical(
-    [lvl[0] for lvl in result.index.str.split(".")], lg_list
-)
-result["Form"] = [lvl[1] for lvl in result.index.str.split(".")]
-temp_list = ["Orig", "Form", "Lg"]
-result.set_index(temp_list, inplace=True)
-result.sort_index(inplace=True, level="Lg")
-result.replace({"n/n": "n", "n/y": "(y)", "": "–"}, inplace=True)
-result.index.names = ["", "", ""]
-print("\nOverview of extensions and (un-)affected verbs:")
-print(result)
-
-#format for latex
-# rename index
-def modify_index(idx):
-    if idx[2][0] == "P":
-        o = "rc"
-    else:
-        o = "obj"
-    if idx[0] != idx[2]:
-        return "\\quad " + print_shorthand(idx[2])
-    else:
-        return print_shorthand(idx[0]) + " " + "\\%s{%s}" % (o, idx[1])
-    return idx
-
-
-result.index = result.index.map(modify_index)
-
-# replace cogset ids with reconstructed forms and translationsm
-cs_df["Gloss"] = cs_df["Meaning"].replace(" ", ".")
-t_d = dict(zip(cs_df["ID"], cs_df["Gloss"]))
-f_d = dict(zip(cs_df["ID"], cs_df["Form"]))
-
-result.columns = [
-    result.columns.map(lambda x: f"\\rc{{{f_d[x]}}}"),
-    result.columns.map(lambda x: f"\\qu{{to {t_d[x]}}}"),
-]
-
-# add nice-looking checkmarks and stuff
-result.replace({"n": "×", "y": "\checkmark", "(y)": "(\\checkmark)"}, inplace=True)
-
-save_float(print_latex(result), "overview", "Overview of extensions and (un-)affected verbs")
-
-# #forms illustrating Sa vs Sp verbs
-dv_df = pd.read_csv("../data/split_s_data.csv")
-dv_df["Language"] = dv_df["Language_ID"].map(print_shorthand)
-dv_df["String"] = dv_df.apply(combine_form_meaning, axis=1)
-pyd.content_string = "String"
-pyd.x = ["Class"]
-pyd.y = ["Language"]
-pyd.z = []
-pyd.x_sort = ["S_A_", "S_P_"]
-pyd.y_sort = list(map(print_shorthand, lg_list))
-
-#participles
-pyd.filters={"Construction": ["PTCP"]}
-emp = ["o-", "w-"]
-res = pyd.compose_paradigm(dv_df)
-for em in emp:
-    res["S_A_"] = res["S_A_"].str.replace(em, f"\\emp{{{em}}}", regex=False)
-res["S_A_"] = res["S_A_"].str.replace("\emp{o-}se", "o-se", regex=False)
-res.columns = res.columns.map(pynt.get_expex_code)
-save_float(print_latex(res, keep_index=True), "participles", "Participles of \gl{s_a_} and \gl{s_p_} verbs " + get_sources(dv_df), short="Participles of \gl{s_a_} and \gl{s_p_} verbs")
-
-#nominalizations
-pyd.filters={"Construction": ["NMLZ"]}
-emp = {"-u-": "-\\emp{u-}", "w-": "\\emp{w-}"}
-res = pyd.compose_paradigm(dv_df)
-for em, em1 in emp.items():
-    res["S_A_"] = res["S_A_"].str.replace(em, em1, regex=False)
-res.columns = res.columns.map(pynt.get_expex_code)
-save_float(print_latex(res, keep_index=True), "nominalizations", "Nominalizations of \gl{s_a_} and \gl{s_p_} verbs " + get_sources(dv_df), short="Nominalizations of \gl{s_a_} and \gl{s_p_} verbs")
-
-#imperatives
-pyd.filters={"Construction": ["IMP"]}
-emp = ["oj-", "o-", "ə-", "əw-", "aj-"]
-res = pyd.compose_paradigm(dv_df)
-for em in emp:
-    res["S_P_"] = res["S_P_"].str.replace(em, f"\\emp{{{em}}}", regex=False)
-res.columns = res.columns.map(pynt.get_expex_code)
-save_float(print_latex(res, keep_index=True), "imperatives", "Imperatives of \gl{s_a_} and \gl{s_p_} verbs " + get_sources(dv_df), short="Imperatives of \gl{s_a_} and \gl{s_p_} verbs")
+# pyd.x = ["Cognateset_ID"]
+# pyd.y = ["Orig_Language", "Form", "Language_ID"]
+# pyd.content_string = "Affected"
+# pyd.x_sort = verb_list
+#
+# repl_dic = {
+#     "DETRZ+come": "come"
+# }
+#
+# overview["Cognateset_ID"] = overview["Cognateset_ID"].replace(repl_dic)
+#
+# result = pyd.compose_paradigm(overview)
+# result["Lg"] = pd.Categorical([lvl[2] for lvl in result.index.str.split(".")], lg_list)
+# result["Orig"] = pd.Categorical(
+#     [lvl[0] for lvl in result.index.str.split(".")], lg_list
+# )
+# result["Form"] = [lvl[1] for lvl in result.index.str.split(".")]
+# temp_list = ["Orig", "Form", "Lg"]
+# result.set_index(temp_list, inplace=True)
+# result.sort_index(inplace=True, level="Lg")
+# result.replace({"n/n": "n", "n/y": "(y)", "": "–"}, inplace=True)
+# result.index.names = ["", "", ""]
+# print("\nOverview of extensions and (un-)affected verbs:")
+# print(result)
+#
+# #format for latex
+# # rename index
+# def modify_index(idx):
+#     if idx[2][0] == "P":
+#         o = "rc"
+#     else:
+#         o = "obj"
+#     if idx[0] != idx[2]:
+#         return "\\quad " + print_shorthand(idx[2])
+#     else:
+#         return print_shorthand(idx[0]) + " " + "\\%s{%s}" % (o, idx[1])
+#     return idx
+#
+#
+# result.index = result.index.map(modify_index)
+#
+# # replace cogset ids with reconstructed forms and translationsm
+# cs_df["Gloss"] = cs_df["Meaning"].replace(" ", ".")
+# t_d = dict(zip(cs_df["ID"], cs_df["Gloss"]))
+# f_d = dict(zip(cs_df["ID"], cs_df["Form"]))
+#
+# result.columns = [
+#     result.columns.map(lambda x: f"\\rc{{{f_d[x]}}}"),
+#     result.columns.map(lambda x: f"\\qu{{to {t_d[x]}}}"),
+# ]
+#
+# # add nice-looking checkmarks and stuff
+# result.replace({"n": "×", "y": "\checkmark", "(y)": "(\\checkmark)"}, inplace=True)
+#
+# save_float(print_latex(result), "overview", "Overview of extensions and (un-)affected verbs")
+#
+# # #forms illustrating Sa vs Sp verbs
+# dv_df = pd.read_csv("../data/split_s_data.csv")
+# dv_df["Language"] = dv_df["Language_ID"].map(print_shorthand)
+# dv_df["String"] = dv_df.apply(combine_form_meaning, axis=1)
+# pyd.content_string = "String"
+# pyd.x = ["Class"]
+# pyd.y = ["Language"]
+# pyd.z = []
+# pyd.x_sort = ["S_A_", "S_P_"]
+# pyd.y_sort = list(map(print_shorthand, lg_list))
+#
+# #participles
+# pyd.filters={"Construction": ["PTCP"]}
+# emp = ["o-", "w-"]
+# res = pyd.compose_paradigm(dv_df)
+# for em in emp:
+#     res["S_A_"] = res["S_A_"].str.replace(em, f"\\emp{{{em}}}", regex=False)
+# res["S_A_"] = res["S_A_"].str.replace("\emp{o-}se", "o-se", regex=False)
+# res.columns = res.columns.map(pynt.get_expex_code)
+# save_float(print_latex(res, keep_index=True), "participles", "Participles of \gl{s_a_} and \gl{s_p_} verbs " + get_sources(dv_df), short="Participles of \gl{s_a_} and \gl{s_p_} verbs")
+#
+# #nominalizations
+# pyd.filters={"Construction": ["NMLZ"]}
+# emp = {"-u-": "-\\emp{u-}", "w-": "\\emp{w-}"}
+# res = pyd.compose_paradigm(dv_df)
+# for em, em1 in emp.items():
+#     res["S_A_"] = res["S_A_"].str.replace(em, em1, regex=False)
+# res.columns = res.columns.map(pynt.get_expex_code)
+# save_float(print_latex(res, keep_index=True), "nominalizations", "Nominalizations of \gl{s_a_} and \gl{s_p_} verbs " + get_sources(dv_df), short="Nominalizations of \gl{s_a_} and \gl{s_p_} verbs")
+#
+# #imperatives
+# pyd.filters={"Construction": ["IMP"]}
+# emp = ["oj-", "o-", "ə-", "əw-", "aj-"]
+# res = pyd.compose_paradigm(dv_df)
+# for em in emp:
+#     res["S_P_"] = res["S_P_"].str.replace(em, f"\\emp{{{em}}}", regex=False)
+# res.columns = res.columns.map(pynt.get_expex_code)
+# save_float(print_latex(res, keep_index=True), "imperatives", "Imperatives of \gl{s_a_} and \gl{s_p_} verbs " + get_sources(dv_df), short="Imperatives of \gl{s_a_} and \gl{s_p_} verbs")
