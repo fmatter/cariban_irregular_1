@@ -1,25 +1,25 @@
 ID,Language_ID,Form,Source,Comment,Parameter_ID,Segments
 ara_form_0,ara,wɨ-ge-,alves2017arara[153],,1_say,w ɨ + g e
-ara_form_1,ara,w-ibɨ-,alves2017arara[153],,1_bathe,w + i + b ɨ
+ara_form_1,ara,w-ibɨ-,alves2017arara[153],,1_bathe_intr,w + i + b ɨ
 ara_form_2,ara,w-it͡ʃi-,alves2017arara[153],,1_be,w + i t͡ʃ i
 ara_form_3,ara,w-ebɨ-,alves2017arara[153],,1_come,w + e b ɨ
 ara_form_4,ara,w-ɨdo-,alves2017arara[153],,1_go,w + ɨ d o
 ara_form_5,ara,w-iptoŋ-,alves2017arara[153],,1_go_down,w + i p t o ŋ
 ara_form_6,ara,w-ap-,alves2017arara[200],,1_be,w + a p
 aku_form_7,aku,p-ɨtə-,gildea1994akuriyo[84],,1_go_down,p + ɨ t ə
-aku_form_8,aku,t͡ʃ-epɨ-,gildea1994akuriyo[87],,1_bathe,t͡ʃ + e + p ɨ
+aku_form_8,aku,t͡ʃ-epɨ-,gildea1994akuriyo[87],,1_bathe_intr,t͡ʃ + e + p ɨ
 car_form_9,car,j-eh-,guerrero2019carijo[82],,1_come,j + e h
 car_form_10,car,∅-ka-,pc[David Felipe Guerrero],,1_say,∅ + k a
 car_form_11,car,j-et͡ʃi-,guerrero2019carijo[92],,1_be,j + e t͡ʃ i
 hix_form_12,hix,ɨ-ka-,hixkaryanaderby1979[4],,1_say,ɨ + k a
-hix_form_13,hix,k-ewehɨ-,hixkaryanaderby1985[195],,1_bathe,k + e w e + h ɨ
+hix_form_13,hix,k-ewehɨ-,hixkaryanaderby1985[195],,1_bathe_intr,k + e w e + h ɨ
 hix_form_14,hix,w-ah-,hixkaryanaderby1985[197],,1_be,w + a h
 hix_form_15,hix,w-eʃe-,hixkaryanaderby1985[198],,1_be,w + e ʃ e
 hix_form_16,hix,ɨ-to-,hixkaryanaderby1985[70],,1_go,ɨ + t o
 kar_form_17,kar,wɨ-ʔ-,hoff1968carib[168],,1_go,w ɨ + ʔ
 kar_form_18,kar,∅-ka-,hoff1968carib[168],,1_say,∅ + k a
 kar_form_19,kar,w-oʔ-,hoff1968carib[304],,1_come,w + o ʔ
-ikp_form_20,ikp,∅-ip-,ikpengpacheco1997[68],,1_bathe,∅ + i + p
+ikp_form_20,ikp,∅-ip-,ikpengpacheco1997[68],,1_bathe_intr,∅ + i + p
 ikp_form_21,ikp,∅-et͡ʃi-,ikpengpacheco2001[139],,1_be,∅ + e t͡ʃ i
 ikp_form_22,ikp,ɨ-ge-,ikpengpacheco2001[209],,1_say,ɨ + g e
 ikp_form_23,ikp,k-arep-,ikpengpacheco2001[42],,1_come,k + a r + e p
@@ -34,7 +34,7 @@ aku_form_33,aku,∅-a-,meira1998proto[115],,1_be,∅ + a
 car_form_34,car,w-a-,meira1998proto[115],,1_be,w + a
 tri_form_35,tri,w-a-,meira1998proto[115],,1_be,w + a
 tri_form_36,tri,p-ɨhtə-,meira1998proto[116],,1_go_down,p + ɨ h t ə
-bak_form_37,bak,w-i-,meira2003bakairi[4],,1_bathe,w + i
+bak_form_37,bak,w-i-,meira2003bakairi[4],,1_bathe_intr,w + i
 yuk_form_38,yuk,j-ewtu-,meira2003primeras,"ewu(h)tu only looks partially cognate, if anything.",1_go_down,j + e w t u
 yuk_form_39,yuk,∅-to-,meira2006syntactic[139],,1_go,∅ + t o
 yuk_form_40,yuk,j-a-,meira2006syntactic[142],,1_be,j + a
@@ -46,14 +46,14 @@ tri_form_46,tri,wɨ-tən-,triomeira1999[292],,1_go,w ɨ + t ə n
 tri_form_47,tri,w-əepɨ-,triomeira1999[294],,1_come,w + ə + e p ɨ
 tri_form_48,tri,wɨ-ka-,triomeira1999[294],,1_say,w ɨ + k a
 tri_form_49,tri,w-ei-,triomeira1999[339],,1_be,w + e i
-tri_form_50,tri,s-epɨ-,triomeira1999[660],,1_bathe,s + e + p ɨ
+tri_form_50,tri,s-epɨ-,triomeira1999[660],,1_bathe_intr,s + e + p ɨ
 bak_form_51,bak,w-a-,von1892bakairi[130],,1_be,w + a
 bak_form_52,bak,u-ge-,von1892bakairi[131],,1_say,u + g e
 bak_form_53,bak,k-ɨtəgɨ-,von1892bakairi[137],,1_go_down,k + ɨ t ə g ɨ
 bak_form_54,bak,u-tə-,von1892bakairi[374],,1_go,u + t ə
 bak_form_55,bak,w-i-,von1892bakairi[397],,1_be,w + i
 bak_form_56,bak,k-əewɨ-,von1892bakairi[76],,1_come,k + ə + e w ɨ
-wai_form_57,wai,k-ejeɸu-,waiwaihawkins1998[166],,1_bathe,k + e j e + ɸ u
+wai_form_57,wai,k-ejeɸu-,waiwaihawkins1998[166],,1_bathe_intr,k + e j e + ɸ u
 wai_form_58,wai,wɨ-ka-,waiwaihawkins1998[71],,1_say,w ɨ + k a
 wai_form_59,wai,kɨw-tom-,waiwaihawkins1998[85],,1_go,k ɨ + w + t o m
 way_form_60,way,wɨ-təm-,wayanatavares2005[195],,1_go,w ɨ + t ə m
@@ -74,9 +74,9 @@ PWai_form_76,PWai,wɨ-ka-,,,1_say,w ɨ + k a
 PWai_form_77,PWai,w-eʃi-,,,1_be,w + e ʃ i
 PWai_form_78,PWai,w-ah-,,,1_be,w + a h
 PWai_form_79,PWai,wɨ-to-,,,1_go,w ɨ + t o
-PPek_form_80,PPek,w-ipɨ-,,,1_bathe,w + i + p ɨ
-PWai_form_81,PWai,k-eeɸɨ-,,"Werikyana has long e in this verb, assuming the same pattern for Proto-Waiwaian allows reconciling the divergent Waiwai and Hixkaryána forms.",1_bathe,k + ee + ɸ ɨ
-PTir_form_82,PTir,t͡ʃ-epɨ-,,,1_bathe,t͡ʃ + e + p ɨ
+PPek_form_80,PPek,w-ipɨ-,,,1_bathe_intr,w + i + p ɨ
+PWai_form_81,PWai,k-eeɸɨ-,,"Werikyana has long e in this verb, assuming the same pattern for Proto-Waiwaian allows reconciling the divergent Waiwai and Hixkaryána forms.",1_bathe_intr,k + ee + ɸ ɨ
+PTir_form_82,PTir,t͡ʃ-epɨ-,,,1_bathe_intr,t͡ʃ + e + p ɨ
 mac_stem_0,mac,ipɨ,macushiabbott1991[32],,come,i p ɨ
 pem_stem_1,pem,jepɨ,alvarez2000construcciones[102],,come,j e p ɨ
 aka_stem_2,aka,jepɨ,akawaiocaesar2003[125],,come,j e p ɨ
@@ -176,34 +176,34 @@ bak_stem_95,bak,əeke,meira2005bakairi,,defecate,ə + e k e
 apa_stem_96,apa,weka,camargo2002lexico[96],,defecate,w e k a
 pan_stem_97,pan,iʔka,mattei1994diccionario[319],Potentially Sp.,defecate,i ʔ k a
 pan_stem_98,pan,aiʔka,mattei1994diccionario[319],Potentially Sa.,defecate,a + i ʔ k a
-kax_stem_99,kax,eehɨ,pc[Spike Gildea],,bathe,ee + h ɨ
-kax_stem_100,kax,ɨhɨ,pc[Spike Gildea],,bathe,ɨ h ɨ
-hix_stem_101,hix,ewehɨ,hixkaryanaderby1979[198],,bathe,e w e + h ɨ
-hix_stem_102,hix,ɨhɨ,hixkaryanaderby1979[198],,bathe,ɨ h ɨ
-wai_stem_103,wai,ejeɸu,waiwaihawkins1998[203],,bathe,e j e + ɸ u
-wai_stem_104,wai,pɨ,waiwaihawkins1998[192],,bathe,p ɨ
-ara_stem_105,ara,ibɨ,alves2017arara[150],,bathe,i b ɨ
-ara_stem_106,ara,ɨp,alves2017arara[162],,bathe,ɨ p
-ikp_stem_107,ikp,ip,ikpengpacheco1997[103],,bathe,i p
-ikp_stem_108,ikp,ɨp,campetela1997analise[123],,bathe,ɨ p
-bak_stem_109,bak,i,meira2003bakairi[4],,bathe,i
-bak_stem_110,bak,ɨ,meira2005bakairi[285],,bathe,ɨ
-tri_stem_111,tri,epɨ,triomeira1999[697],,bathe,e + p ɨ
-tri_stem_112,tri,pɨ,triomeira1999[697],,bathe,p ɨ
-aku_stem_113,aku,epɨ,gildea1994akuriyo[87],,bathe,e + p ɨ
-aku_stem_114,aku,pɨ,gildea1994akuriyo[87],,bathe,p ɨ
-way_stem_115,way,epɨ,camargo2010wayana[24],,bathe,e + p ɨ
-way_stem_116,way,upɨ,camargo2010wayana[52],,bathe,u p ɨ
-apa_stem_117,apa,epɨ,meira2000split[218],,bathe,e + p ɨ
-apa_stem_118,apa,pɨ,meira2000split[218],,bathe,p ɨ
-kar_stem_119,kar,ekupi,courtz2008carib[304],,bathe,e + k u p i
-kar_stem_120,kar,kupi,courtz2008carib[304],,bathe,k u p i
-mak_stem_121,mak,eʔhi,maquiritaricaceres2011[439],,bathe,e + ʔ h i
-mak_stem_122,mak,ɨhɨ,maquiritaricaceres2011[454],,bathe,ɨ h ɨ
-kap_stem_123,kap,ekuʔpi,stegeman2014akawaio[37],,bathe,e + k u ʔ p i
-kap_stem_124,kap,kuʔpi,stegeman2014akawaio[37],,bathe,k u ʔ p i
-pem_stem_125,pem,ekupɨ,pemondearmellada1944dic[34],,bathe,e + k u p ɨ
-pem_stem_126,pem,pɨ,pemondearmellada1944dic[129],,bathe,p ɨ
-pan_stem_127,pan,akupɨ,mattei1994diccionario[8],,bathe,a + k u p ɨ
-pan_stem_128,pan,kupɨ,mattei1994diccionario[294],,bathe,k u p ɨ
-pan_stem_129,pan,ɨpɨ,mattei1994diccionario[294],,bathe,ɨ p ɨ
+kax_stem_99,kax,eehɨ,pc[Spike Gildea],,bathe_intr,ee + h ɨ
+kax_stem_100,kax,ɨhɨ,pc[Spike Gildea],,bathe_tr,ɨ h ɨ
+hix_stem_101,hix,ewehɨ,hixkaryanaderby1979[198],,bathe_intr,e w e + h ɨ
+hix_stem_102,hix,ɨhɨ,hixkaryanaderby1979[198],,bathe_tr,ɨ h ɨ
+wai_stem_103,wai,ejeɸu,waiwaihawkins1998[203],,bathe_intr,e j e + ɸ u
+wai_stem_104,wai,pɨ,waiwaihawkins1998[192],,bathe_tr,p ɨ
+ara_stem_105,ara,ibɨ,alves2017arara[150],,bathe_intr,i b ɨ
+ara_stem_106,ara,ɨp,alves2017arara[162],,bathe_tr,ɨ p
+ikp_stem_107,ikp,ip,ikpengpacheco1997[103],,bathe_intr,i p
+ikp_stem_108,ikp,ɨp,campetela1997analise[123],,bathe_tr,ɨ p
+bak_stem_109,bak,i,meira2003bakairi[4],,bathe_intr,i
+bak_stem_110,bak,ɨ,meira2005bakairi[285],,bathe_tr,ɨ
+tri_stem_111,tri,epɨ,triomeira1999[697],,bathe_intr,e + p ɨ
+tri_stem_112,tri,pɨ,triomeira1999[697],,bathe_tr,p ɨ
+aku_stem_113,aku,epɨ,gildea1994akuriyo[87],,bathe_intr,e + p ɨ
+aku_stem_114,aku,pɨ,gildea1994akuriyo[87],,bathe_tr,p ɨ
+way_stem_115,way,epɨ,camargo2010wayana[24],,bathe_intr,e + p ɨ
+way_stem_116,way,upɨ,camargo2010wayana[52],,bathe_tr,u p ɨ
+apa_stem_117,apa,epɨ,meira2000split[218],,bathe_intr,e + p ɨ
+apa_stem_118,apa,pɨ,meira2000split[218],,bathe_tr,p ɨ
+kar_stem_119,kar,ekupi,courtz2008carib[304],,bathe_intr,e + k u p i
+kar_stem_120,kar,kupi,courtz2008carib[304],,bathe_tr,k u p i
+mak_stem_121,mak,eʔhi,maquiritaricaceres2011[439],,bathe_intr,e + ʔ h i
+mak_stem_122,mak,ɨhɨ,maquiritaricaceres2011[454],,bathe_tr,ɨ h ɨ
+kap_stem_123,kap,ekuʔpi,stegeman2014akawaio[37],,bathe_intr,e + k u ʔ p i
+kap_stem_124,kap,kuʔpi,stegeman2014akawaio[37],,bathe_tr,k u ʔ p i
+pem_stem_125,pem,ekupɨ,pemondearmellada1944dic[34],,bathe_intr,e + k u p ɨ
+pem_stem_126,pem,pɨ,pemondearmellada1944dic[129],,bathe_tr,p ɨ
+pan_stem_127,pan,akupɨ,mattei1994diccionario[8],,bathe_intr,a + k u p ɨ
+pan_stem_128,pan,kupɨ,mattei1994diccionario[294],,bathe_tr,k u p ɨ
+pan_stem_129,pan,ɨpɨ,mattei1994diccionario[294],,bathe_tr,ɨ p ɨ

@@ -1,14 +1,15 @@
-ID,Description,Name
-say,'to say',say
-bathe,'to bathe',bathe
-be,'to be',be
-come,'to come',come
-go,'to go',go
-go_down,'to go down',go.down
-defecate,'to defecate',defecate
-1_say,First person form of 'to say',
-1_bathe,First person form of 'to bathe',
-1_be,First person form of 'to be',
-1_come,First person form of 'to come',
-1_go,First person form of 'to go',
-1_go_down,First person form of 'to go down',
+ID,Name,Description
+say,say,'to say'
+bathe_intr,bathe.INTR,'to bathe (INTR)'
+be,be,'to be'
+come,come,'to come'
+go,go,'to go'
+go_down,go.down,'to go down'
+defecate,defecate,'to defecate'
+bathe_tr,bathe.TR,'to bathe (TR)'
+1_say,1-say,First person form of 'to say'
+1_bathe_intr,1-bathe.INTR,First person form of 'to bathe (INTR)'
+1_be,1-be,First person form of 'to be'
+1_come,1-come,First person form of 'to come'
+1_go,1-go,First person form of 'to go'
+1_go_down,1-go.down,First person form of 'to go down'

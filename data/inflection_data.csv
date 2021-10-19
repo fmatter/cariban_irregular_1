@@ -8,7 +8,7 @@
 "say","say","ara",2,"mɨ-ge-","2sa","alves2017arara[150]",,"mygen"
 "say","say","ara",3,"∅-ke-",,"alves2017arara[150]",,"kedakpyny"
 "say","say","ara","1+2","kut-ke-","kut","alves2017arara[150]",,"kutkeny"
-"bathe","DETRZ1+bathe_1","ara",1,"w-i+bɨ-","1w","alves2017arara[153]",,"w-ibyny"
+"bathe_intr","DETRZ1+bathe_1","ara",1,"w-i+bɨ-","1w","alves2017arara[153]",,"w-ibyny"
 "be","be_2","ara",1,"w-it͡ʃi-","1w","alves2017arara[153]",,"w-itxiny"
 "come","come","ara",1,"w-ebɨ-","1w","alves2017arara[153]",,"w-ebyny"
 "go","go","ara",1,"w-ɨdo-","1w","alves2017arara[153]",,"w-ydoly"
@@ -26,14 +26,14 @@
 "go","go","aku","1+2","kɨt-əe-","kut","gildea1994akuriyo[87]",,
 "go","go","aku","IMP","ətə-kə",,"gildea1994akuriyo[87]",,
 "go","go","aku","PTCP","tɨɨtəe",,"gildea1994akuriyo[87]",,
-"bathe","DETRZ1+bathe_1","aku",1,"t͡ʃ-e+pɨ-","1t","gildea1994akuriyo[87]",,"šeépɨ̀"
+"bathe_intr","DETRZ1+bathe_1","aku",1,"t͡ʃ-e+pɨ-","1t","gildea1994akuriyo[87]",,"šeépɨ̀"
 "come","come","car",1,"j-eh-","1p","guerrero2019carijo[82]",,"ʤehɨ"
 "say","say","car",1,"∅-ka-","1w","pc[David Felipe Guerrero]",,"ka-e"
 "be","be_2","car",1,"j-et͡ʃi-","1p","guerrero2019carijo[92]",,"ʤeʧi"
 "say","say","hix",1,"ɨ-ka-","1w","hixkaryanaderby1979[4]",,"ɨkano"
 "say","say","hix",2,"mɨ-ka-","2sa","hixkaryanaderby1979[4]",,"mɨkano"
 "say","say","hix","IMP","kas-ko",,"hixkaryanaderby1979[5]",,
-"bathe","DETRZ1+bathe_1","hix",1,"k-ewe+hɨ-","k","hixkaryanaderby1985[195]",,"kewehtano"
+"bathe_intr","DETRZ1+bathe_1","hix",1,"k-ewe+hɨ-","k","hixkaryanaderby1985[195]",,"kewehtano"
 "be","be_1","hix",1,"w-ah-","1w","hixkaryanaderby1985[197]",,"wahko"
 "be","be_2","hix",1,"w-eʃe-","1w","hixkaryanaderby1985[198]",,"wexeye"
 "go","go","hix","IMP","ɨto-ko",,"hixkaryanaderby1985[248]",,
@@ -58,7 +58,7 @@
 "come","come","kar",1,"w-oʔ-","1w","hoff1968carib[304]",,"woxsakóŋ̑"
 "come","come","kar",3,"kɨn-o-","3sa","hoff1968carib[410]",,"kïno:saŋ̑"
 "come","come","kar",2,"m-opɨ-","2sa","hoff1968carib[416]",,"mo:pïi"
-"bathe","DETRZ1+bathe_1","ikp",1,"∅-i+p-","1w","ikpengpacheco1997[68]",,"i-p-txi"
+"bathe_intr","DETRZ1+bathe_1","ikp",1,"∅-i+p-","1w","ikpengpacheco1997[68]",,"i-p-txi"
 "come","come","ikp",3,"∅-arep-",,"ikpengpacheco2001[118]",,"Ø-arep-lɨ"
 "be","be_2","ikp",1,"∅-et͡ʃi-","1w","ikpengpacheco2001[139]",,"etʃi"
 "say","say","ikp",1,"ɨ-ge-","1w","ikpengpacheco2001[209]",,"ɨ-ge-lɨ"
@@ -69,7 +69,7 @@
 "go","go","ikp",3,"∅-ero-",,"ikpengpacheco2001[54]",,"Ø-ero-lɨ"
 "go","go","ikp",1,"k-aran-","k","ikpengpacheco2001[80]",,"k-aran-tʃi"
 "go","go","ikp",2,"m-aran-","2sa","ikpengpacheco2001[92]",,"m-aran-pɨnpe"
-"bathe","DETRZ1+bathe_1","car",1,"?-e+hɨ-","?","koch1908hiana[72]","Full form potentially features a supine suffix and what is described as a hortative suffix.","e̠hẹ́e-máni"
+"bathe_intr","DETRZ1+bathe_1","car",1,"?-e+hɨ-","?","koch1908hiana[72]","Full form potentially features a supine suffix and what is described as a hortative suffix.","e̠hẹ́e-máni"
 "say","say","yuk",1,"?-ka-","?","largo2011yukpa[63]","Full form is third person.","nʉkana"
 "come","come","mac","IMP","asiʔ-tɨ",,"macushiabbott1991[51]",,
 "come","come","mak",3,"n-ehə-","3sa","maquiritaricaceres2011[143]",,"nehəa"
@@ -104,7 +104,7 @@
 "be","be_1","car",1,"w-a-","1w","meira1998proto[115]",,"wae"
 "be","be_1","tri",1,"w-a-","1w","meira1998proto[115]",,"wae"
 "go_down","go_down","tri",1,"p-ɨhtə-","1p","meira1998proto[116]",,"p-ɨhtə"
-"bathe","DETRZ1","bak",1,"w-i-","1w","meira2003bakairi[4]",,"w-i-də"
+"bathe_intr","DETRZ1","bak",1,"w-i-","1w","meira2003bakairi[4]",,"w-i-də"
 "go_down","go_down","yuk",1,"j-ewtu-","1p","meira2003primeras","ewu(h)tu only looks partially cognate, if anything.","aw y-éwtu"
 "go","go","yuk",1,"∅-to-","1w","meira2006syntactic[139]",,"to"
 "be","be_1","yuk",1,"j-a-","1p","meira2006syntactic[142]",,"patume=ya"
@@ -133,7 +133,7 @@
 "go","go","tri","PTCP","tɨɨ-tə-e",,"triomeira1999[334]",,
 "be","be_2","tri",1,"w-ei-","1w","triomeira1999[339]",,"w-ei"
 "come","come","tri","IMP","oh-kə",,"triomeira1999[628]",,
-"bathe","DETRZ1+bathe_1","tri",1,"s-e+pɨ-","1t","triomeira1999[660]",,"s-epï-ja-e"
+"bathe_intr","DETRZ1+bathe_1","tri",1,"s-e+pɨ-","1t","triomeira1999[660]",,"s-epï-ja-e"
 "go","go","bak",2,"m-ɨtə-","2sa","von1892bakairi[112]",,"mǖíta"
 "go","go","bak",3,"n-ətə-","3sa","von1892bakairi[112]",,"nǻta"
 "go","go","bak","1+2","k-ɨtə-","kut","von1892bakairi[112]",,"kχíta"
@@ -151,7 +151,7 @@
 "come","come","bak",3,"∅-əwɨ-",,"von1892bakairi[76]",,"awíle"
 "come","come","bak",3,"∅-əewɨ-",,"von1892bakairi[76]",,"aweile"
 "say","say","wai",3,"nɨ-ka-","3sa","waiwaihawkins1998[128]",,"nɨɨkaj"
-"bathe","DETRZ1+bathe_1","wai",1,"k-eje+ɸu-","k","waiwaihawkins1998[166]",,"k-eyepu"
+"bathe_intr","DETRZ1+bathe_1","wai",1,"k-eje+ɸu-","k","waiwaihawkins1998[166]",,"k-eyepu"
 "say","say","wai","IMP","kas-ko",,"waiwaihawkins1998[26]",,
 "go","go","wai",3,"∅-tom-",,"waiwaihawkins1998[45]",,"tomo"
 "go","go","wai",2,"mɨ-to-","2sa","waiwaihawkins1998[58]",,"mɨɨt͡ʃe"
@@ -187,6 +187,6 @@
 "be","be_2","PWai",1,"w-eʃi-","1w",,,
 "be","be_1","PWai",1,"w-ah-","1w",,,
 "go","go","PWai",1,"wɨ-to-","1w",,,
-"bathe","DETRZ1+bathe_1","PPek",1,"w-i+pɨ-","1w",,,
-"bathe","DETRZ1+bathe_1","PWai",1,"k-ee+ɸɨ-","k",,"Werikyana has long e in this verb, assuming the same pattern for Proto-Waiwaian allows reconciling the divergent Waiwai and Hixkaryána forms.",
-"bathe","DETRZ1+bathe_1","PTir",1,"t͡ʃ-e+pɨ-","1t",,,
+"bathe_intr","DETRZ1+bathe_1","PPek",1,"w-i+pɨ-","1w",,,
+"bathe_intr","DETRZ1+bathe_1","PWai",1,"k-ee+ɸɨ-","k",,"Werikyana has long e in this verb, assuming the same pattern for Proto-Waiwaian allows reconciling the divergent Waiwai and Hixkaryána forms.",
+"bathe_intr","DETRZ1+bathe_1","PTir",1,"t͡ʃ-e+pɨ-","1t",,,
