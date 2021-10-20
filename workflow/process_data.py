@@ -139,7 +139,7 @@ print("\nClass membership of 'to defecate':")
 tabular, sources = print_cognate_table(v_df, "defecate", print_class=True)
 save_float(tabular, "defecate", r"\rc{weka} \qu{to defecate} as another class-switching \gl{s_p_} verb " + sources, short=r"\rc{weka} \qu{to defecate} as another class-switching \gl{s_p_} verb")
 
-come_aligned = pd.read_csv("come_aligned.csv", keep_default_na=False)
+come_aligned = pd.read_csv("../data/comp_tables/come.csv", keep_default_na=False)
 # columns = pd.DataFrame(come_aligned.columns.tolist())
 # columns.loc[columns[0].str.startswith('Unnamed:'), 0] = np.nan
 # come_aligned.columns = pd.MultiIndex.from_tuples(columns.to_records(index=False).tolist())
