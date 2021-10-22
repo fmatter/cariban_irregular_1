@@ -1,5 +1,6 @@
 import pyradigms as pyd
 import pandas as pd
+
 pd.options.mode.chained_assignment = None
 import cariban_helpers as cah
 import cldf_helpers as cldfh
@@ -18,19 +19,23 @@ segments = open("../data/segments.txt").read()
 segment_list = [{"Grapheme": x, "mapping": x} for x in segments.split("\n")]
 t = Tokenizer(Profile(*segment_list))
 cognatesets = pd.read_csv("../data/cldf/cognatesets.csv")
+cognatesets = cognatesets.append({"ID": "?", "Description": "Unknown material"}, ignore_index=True)
 
-#lingpy does not like cogid 0
-cognatesets.index = cognatesets.index+1
+# lingpy does not like cogid 0
+cognatesets.index = cognatesets.index + 1
 cognum = dict(zip(cognatesets["ID"], cognatesets.index.astype(str)))
 numcog = dict(zip(cognatesets.index.astype(str), cognatesets["ID"]))
 
 print("Assigning cognates")
 
+
 def str2numcog(cogsets):
     return " ".join([cognum[x] for x in cogsets.split("+")])
 
+
 def num2strcog(cogids):
     return "+".join([numcog[i] for i in cogids.split(" ")])
+
 
 def segmentify(form):
     form = re.sub("[()]", "", form)
@@ -38,13 +43,15 @@ def segmentify(form):
     form = form.strip("+")
     return t(form)
 
-#functions for creating latex tables
+
+# functions for creating latex tables
+
 
 def print_latex(df, ex=False, keep_index=False):
     if keep_index:
         df.columns.name = df.index.name
         df.index.name = None
-        
+
     with pd.option_context("max_colwidth", 1000):
         lines = df.to_latex(escape=False, index=keep_index).split("\n")
     lines[0] = lines[0].replace("tabular}{l", "tabular}[t]{@{}l").replace("l}", "l@{}}")
@@ -54,8 +61,9 @@ def print_latex(df, ex=False, keep_index=False):
         del lines[-2]
         return "\n".join(lines)
     else:
-        return "\n".join(lines).replace(u"\toprule", u"\mytoprule")
-        
+        return "\n".join(lines).replace("\toprule", "\mytoprule")
+
+
 def save_float(tabular, label, caption, filename=None, short=None):
     if not filename:
         filename = label
@@ -72,7 +80,10 @@ def save_float(tabular, label, caption, filename=None, short=None):
     f.write(output)
     f.close()
 
+
 normalfonties = ["Ø", "?", "V", "G", "C", "∅"]
+
+
 def objectify(string, obj_string="obj"):
     if string in ["", "?", " ", "  ", "–"]:
         return string
@@ -87,7 +98,8 @@ def objectify(string, obj_string="obj"):
         morph_list = entry.split("; ")
         for i, morph in enumerate(morph_list):
             out_list.append(r"\%s{%s}" % (obj_string, morph))
-            if i > 0: obj_string = "obj"
+            if i > 0:
+                obj_string = "obj"
         output.append("/".join(out_list))
     for i, cell in enumerate(output):
         if r"\env" in cell:
@@ -96,6 +108,7 @@ def objectify(string, obj_string="obj"):
     for normalfonty in normalfonties:
         output = output.replace(normalfonty, r"{\normalfont %s}" % normalfonty)
     return output
+
 
 def combine_form_meaning(row, latex=True):
     if latex:
@@ -106,7 +119,8 @@ def combine_form_meaning(row, latex=True):
         meaning = f"""'{row["Meaning"]}'"""
     out = form + " " + meaning
     return out
-    
+
+
 def get_sources(df, parens=True):
     tmp = pyd.content_string
     pyd.content_string = "Source"
@@ -116,19 +130,23 @@ def get_sources(df, parens=True):
     pyd.content_string = tmp
     return source_string
 
+
 def sort_lg(df):
     df.Language_ID = df.Language_ID.astype("category")
     df.Language_ID.cat.set_categories(lg_list, ordered=True, inplace=True)
     df.sort_values(["Language_ID"], inplace=True)
 
+
 def print_shorthand(abbrev):
     return "\\" + cah.get_shorthand(abbrev)
+
 
 def get_obj_str(lg):
     if lg[0] == "P":
         return "rc"
     else:
         return "obj"
+
 
 # prepare overviews of class-switching 'go down' and 'defecate'
 print("\nClass membership of 'to go down':")
@@ -143,27 +161,45 @@ gd_df.drop(columns=["Source"], inplace=True)
 grouped = gd_df.groupby(gd_df.Cog_Cert)
 temp_df1 = grouped.get_group(1.0)
 temp_df2 = grouped.get_group(0.5)
-temp_df1["Segments"] = temp_df1.apply(lambda x: segmentify(x["Form"]),axis=1)
+temp_df1["Segments"] = temp_df1.apply(lambda x: segmentify(x["Form"]), axis=1)
 temp_df1["Cognateset_ID"] = temp_df1["Cognateset_ID"].map(str2numcog)
 temp_df1 = calculate_alignment(temp_df1, fuzzy=True)
+temp_df1["Cognateset_ID"] = temp_df1["Cognateset_ID"].map(num2strcog)
 temp_df1.rename(columns={"Cognateset_ID1": "Cognateset_ID"}, inplace=True)
-temp_df1["Form"] = temp_df1.apply(lambda x: "("+x["Form"]+")" if "+" in x["Segments"] else x["Form"], axis=1)
-temp_df2["Form"] = temp_df2.apply(lambda x: "("+x["Form"]+")", axis=1)
+temp_df1["Class"] = temp_df1.apply(
+    lambda x: "(" + x["Class"] + ")" if "DETRZ" in x["Cognateset_ID"] else x["Class"], axis=1
+)
+temp_df2["Form"] = temp_df2.apply(lambda x: "(" + x["Form"] + ")", axis=1)
 for i, row in temp_df2.iterrows():
     temp_df1 = temp_df1.append(row)
-temp_df1.drop(columns=["Cognateset_ID", "Comment", "Cog_Cert", "Parameter_ID", "Segments"], inplace=True)
+temp_df1.drop(
+    columns=["Cognateset_ID", "Comment", "Cog_Cert", "Parameter_ID", "Segments"],
+    inplace=True,
+)
 gd_df = temp_df1
 gd_df.fillna("", inplace=True)
 gd_df["Form"] = gd_df["Form"].str.replace("+", "", regex=True)
 sort_lg(gd_df)
 print(gd_df)
-gd_df["Class"] = gd_df.apply(lambda x: pynt.get_expex_code(x["Class"]) if x["Class"] not in ["?", "–"] else x["Class"], axis=1)
-gd_df["Form"] = gd_df.apply(lambda x: objectify(x["Form"], get_obj_str(x["Language_ID"])), axis=1)
+gd_df["Class"] = gd_df.apply(
+    lambda x: pynt.get_expex_code(x["Class"])
+    if x["Class"] not in ["?", "–"]
+    else x["Class"],
+    axis=1,
+)
+gd_df["Form"] = gd_df.apply(
+    lambda x: objectify(x["Form"], get_obj_str(x["Language_ID"])), axis=1
+)
 gd_df["Language_ID"] = gd_df["Language_ID"].apply(print_shorthand)
 gd_df.rename(columns={"Language_ID": "Language"}, inplace=True)
 gd_df.set_index("Language", drop=True, inplace=True)
 tabular = print_latex(gd_df, keep_index=True)
-save_float(tabular, "godown", r"Reflexes of \rc{ɨpɨtə} \qu{to go down} " + sources, short=r"Reflexes of \rc{ɨpɨtə} \qu{to go down}")
+save_float(
+    tabular,
+    "godown",
+    r"Reflexes of \rc{ɨpɨtə} \qu{to go down} " + sources,
+    short=r"Reflexes of \rc{ɨpɨtə} \qu{to go down}",
+)
 
 # print("\nClass membership of 'to defecate':")
 
