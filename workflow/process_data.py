@@ -6,11 +6,37 @@ import cldf_helpers as cldfh
 import pynterlinear as pynt
 import numpy as np
 import re
+from segments import Tokenizer, Profile
+from lingpy_alignments import calculate_alignment
 
 lg_list = list(cah.lg_order().keys())
 cognate_list = ["go", "say", "come", "be_1", "be_2", "go_down", "bathe_intr"]
 cs_df = pd.read_csv("../data/cognate_sets.csv")
 v_df = pd.read_csv("../data/verb_stem_data.csv")
+v_df.rename(columns={"Meaning": "Parameter_ID"}, inplace=True)
+segments = open("../data/segments.txt").read()
+segment_list = [{"Grapheme": x, "mapping": x} for x in segments.split("\n")]
+t = Tokenizer(Profile(*segment_list))
+cognatesets = pd.read_csv("../data/cldf/cognatesets.csv")
+
+#lingpy does not like cogid 0
+cognatesets.index = cognatesets.index+1
+cognum = dict(zip(cognatesets["ID"], cognatesets.index.astype(str)))
+numcog = dict(zip(cognatesets.index.astype(str), cognatesets["ID"]))
+
+print("Assigning cognates")
+
+def str2numcog(cogsets):
+    return " ".join([cognum[x] for x in cogsets.split("+")])
+
+def num2strcog(cogids):
+    return "+".join([numcog[i] for i in cogids.split(" ")])
+
+def segmentify(form):
+    form = re.sub("[()]", "", form)
+    form = form.replace("-", "+")
+    form = form.strip("+")
+    return t(form)
 
 #functions for creating latex tables
 
@@ -90,147 +116,149 @@ def get_sources(df, parens=True):
     pyd.content_string = tmp
     return source_string
 
+def sort_lg(df):
+    df.Language_ID = df.Language_ID.astype("category")
+    df.Language_ID.cat.set_categories(lg_list, ordered=True, inplace=True)
+    df.sort_values(["Language_ID"], inplace=True)
+
 def print_shorthand(abbrev):
     return "\\" + cah.get_shorthand(abbrev)
 
-#compile overview of individual cognate sets
-def print_cognate_table(df, verb, print_class=False):
-    #filter by verb
-    df_v = df[df["Cognateset_ID"] == verb]
-    #get bib references
-    df_v["Source"] = df_v["Source"].fillna("")
-    src = list(df_v["Source"])
-    if "" in src:
-        src.remove("")
-    sources = cldfh.cite_a_bunch(src, parens=True)
-    #sort by language
-    df_v.Language_ID = df_v.Language_ID.astype("category")
-    df_v.Language_ID.cat.set_categories(lg_list, ordered=True, inplace=True)
-    df_v.sort_values(["Language_ID"], inplace=True)
-    if print_class:
-        #print verb with class
-        fields = ["Language_ID", "Form", "Class"]
-        print(df_v[fields].to_string(index=False))
-        df_v["Class"] = df_v.apply(lambda x: pynt.get_expex_code(x["Class"]) if x["Class"] not in ["?", "–"] else x["Class"], axis=1)
-        df_v["Form"] = df_v.apply(lambda x: objectify(x["Form"], "rc") if x["Language_ID"][0] == "P" else objectify(x["Form"]), axis=1)
-        df_v["Form"] = df_v.apply(lambda x: "(" + x["Form"] + ")" if x["Cog_Cert"]<1 else x["Form"], axis=1)
+def get_obj_str(lg):
+    if lg[0] == "P":
+        return "rc"
     else:
-        #print only forms, concatenate different reflexes of the same cognate set
-        fields = ["Language_ID", "Form"]
-        print(df_v[fields].to_string(index=False))
-        df_v["Form"] = df_v.apply(lambda x: objectify(x["Form"], "rc") if x["Language_ID"][0] == "P" else objectify(x["Form"]), axis=1)
-        df_v["Form"] = df_v.apply(lambda x: "(" + x["Form"] + ")" if x["Cog_Cert"]<1 else x["Form"], axis=1)
-        df_v = df_v.groupby("Language_ID")["Form"].agg(", ".join).reset_index()
-        df_v = df_v[~(pd.isnull(df_v["Form"]))]
-    # object language representation with parentheses for uncertain or partial cognates
-    # convert IDs to shorthand
-    df_v["Language_ID"] = df_v["Language_ID"].apply(print_shorthand)
-    df_v = df_v[fields]
-    df_v.rename(columns={"Language_ID": "Language"}, inplace=True)
-    df_v.set_index("Language", drop=True, inplace=True)
-    return print_latex(df_v, keep_index=True), sources
+        return "obj"
 
-# class-switching verbs
+# prepare overviews of class-switching 'go down' and 'defecate'
 print("\nClass membership of 'to go down':")
-tabular, sources = print_cognate_table(v_df, "go_down", print_class=True)
+gd_df = v_df[v_df["Parameter_ID"] == "go_down"]
+gd_df["Source"] = gd_df["Source"].fillna("")
+src = list(gd_df["Source"])
+if "" in src:
+    src.remove("")
+sources = cldfh.cite_a_bunch(src, parens=True)
+gd_df.drop(columns=["Source"], inplace=True)
+
+grouped = gd_df.groupby(gd_df.Cog_Cert)
+temp_df1 = grouped.get_group(1.0)
+temp_df2 = grouped.get_group(0.5)
+temp_df1["Segments"] = temp_df1.apply(lambda x: segmentify(x["Form"]),axis=1)
+temp_df1["Cognateset_ID"] = temp_df1["Cognateset_ID"].map(str2numcog)
+temp_df1 = calculate_alignment(temp_df1, fuzzy=True)
+temp_df1.rename(columns={"Cognateset_ID1": "Cognateset_ID"}, inplace=True)
+temp_df1["Form"] = temp_df1.apply(lambda x: "("+x["Form"]+")" if "+" in x["Segments"] else x["Form"], axis=1)
+temp_df2["Form"] = temp_df2.apply(lambda x: "("+x["Form"]+")", axis=1)
+for i, row in temp_df2.iterrows():
+    temp_df1 = temp_df1.append(row)
+temp_df1.drop(columns=["Cognateset_ID", "Comment", "Cog_Cert", "Parameter_ID", "Segments"], inplace=True)
+gd_df = temp_df1
+gd_df.fillna("", inplace=True)
+gd_df["Form"] = gd_df["Form"].str.replace("+", "", regex=True)
+sort_lg(gd_df)
+print(gd_df)
+gd_df["Class"] = gd_df.apply(lambda x: pynt.get_expex_code(x["Class"]) if x["Class"] not in ["?", "–"] else x["Class"], axis=1)
+gd_df["Form"] = gd_df.apply(lambda x: objectify(x["Form"], get_obj_str(x["Language_ID"])), axis=1)
+gd_df["Language_ID"] = gd_df["Language_ID"].apply(print_shorthand)
+gd_df.rename(columns={"Language_ID": "Language"}, inplace=True)
+gd_df.set_index("Language", drop=True, inplace=True)
+tabular = print_latex(gd_df, keep_index=True)
 save_float(tabular, "godown", r"Reflexes of \rc{ɨpɨtə} \qu{to go down} " + sources, short=r"Reflexes of \rc{ɨpɨtə} \qu{to go down}")
 
-print("\nClass membership of 'to defecate':")
-tabular, sources = print_cognate_table(v_df, "defecate", print_class=True)
-save_float(tabular, "defecate", r"\rc{weka} \qu{to defecate} as another class-switching \gl{s_p_} verb " + sources, short=r"\rc{weka} \qu{to defecate} as another class-switching \gl{s_p_} verb")
+# print("\nClass membership of 'to defecate':")
 
-come_aligned = pd.read_csv("../data/comp_tables/come.csv", keep_default_na=False)
-# columns = pd.DataFrame(come_aligned.columns.tolist())
-# columns.loc[columns[0].str.startswith('Unnamed:'), 0] = np.nan
-# come_aligned.columns = pd.MultiIndex.from_tuples(columns.to_records(index=False).tolist())
+# come_aligned = pd.read_csv("../data/comp_tables/come.csv", keep_default_na=False)
+# # columns = pd.DataFrame(come_aligned.columns.tolist())
+# # columns.loc[columns[0].str.startswith('Unnamed:'), 0] = np.nan
+# # come_aligned.columns = pd.MultiIndex.from_tuples(columns.to_records(index=False).tolist())
 
-print("\n(Partial) cognates of 'to come':")
-come_aligned["Language_ID"] = come_aligned["Language_ID"].astype("category")
-come_aligned["Language_ID"].cat.set_categories(lg_list, ordered=True, inplace=True)
-come_aligned.sort_values(["Language_ID"], inplace=True)
-come_aligned["Language_ID"] = come_aligned["Language_ID"].map(print_shorthand)
-come_aligned["Form"] = come_aligned["Form"].map(objectify)
-come_aligned.rename(columns={"Language_ID": "Language", "Form": "Form", "Unnamed: 3": "Alignment"}, inplace=True)
-come_aligned.rename(columns=lambda x: re.sub(r"Unnamed: [\d]","",x), inplace=True)
+# print("\n(Partial) cognates of 'to come':")
+# come_aligned["Language_ID"] = come_aligned["Language_ID"].astype("category")
+# come_aligned["Language_ID"].cat.set_categories(lg_list, ordered=True, inplace=True)
+# come_aligned.sort_values(["Language_ID"], inplace=True)
+# come_aligned["Language_ID"] = come_aligned["Language_ID"].map(print_shorthand)
+# come_aligned["Form"] = come_aligned["Form"].map(objectify)
+# come_aligned.rename(columns={"Language_ID": "Language", "Form": "Form", "Unnamed: 3": "Alignment"}, inplace=True)
+# come_aligned.rename(columns=lambda x: re.sub(r"Unnamed: [\d]","",x), inplace=True)
 
 
-sources = list(come_aligned["Source"])
-sources = cldfh.cite_a_bunch(sources, parens=True)
-come_aligned.drop(columns=["Source"], inplace=True)
-save_float(print_latex(come_aligned), "come", r"Reflexes of \qu{to come} " + sources, short=r"Reflexes of \qu{to come}")
+# sources = list(come_aligned["Source"])
+# sources = cldfh.cite_a_bunch(sources, parens=True)
+# come_aligned.drop(columns=["Source"], inplace=True)
+# save_float(print_latex(come_aligned), "come", r"Reflexes of \qu{to come} " + sources, short=r"Reflexes of \qu{to come}")
 
 
-# comparison of intransitive and transitive 'to bathe'
-df_b = pd.read_csv("../data/bathe_data.csv")
-sources = cldfh.cite_a_bunch(list(df_b["Source"]), parens=True)
-df_b.drop(columns=["Source", "Cognateset_ID"], inplace=True)
-df_b["Form"] = df_b["Form"].str.replace("+", "")
-df_b["Form"] = df_b["Form"].apply(objectify)
-pyd.x = ["Transitivity"]
-pyd.y = ["Language_ID"]
-pyd.y_sort = lg_list
-pyd.x_sort = ["TR", "INTR"]
-table = pyd.compose_paradigm(df_b)
-table.index = table.index.map(print_shorthand)
-table.index.name = "Language"
-table.columns = table.columns.map(pynt.get_expex_code)
-save_float(print_latex(table, keep_index=True), "bathe", "Transitive and intransitive \qu{to bathe} " + sources, short="Transitive and intransitive \qu{to bathe}")
+# # comparison of intransitive and transitive 'to bathe'
+# df_b = pd.read_csv("../data/bathe_data.csv")
+# sources = cldfh.cite_a_bunch(list(df_b["Source"]), parens=True)
+# df_b.drop(columns=["Source", "Cognateset_ID"], inplace=True)
+# df_b["Form"] = df_b["Form"].str.replace("+", "")
+# df_b["Form"] = df_b["Form"].apply(objectify)
+# pyd.x = ["Transitivity"]
+# pyd.y = ["Language_ID"]
+# pyd.y_sort = lg_list
+# pyd.x_sort = ["TR", "INTR"]
+# table = pyd.compose_paradigm(df_b)
+# table.index = table.index.map(print_shorthand)
+# table.index.name = "Language"
+# table.columns = table.columns.map(pynt.get_expex_code)
+# save_float(print_latex(table, keep_index=True), "bathe", "Transitive and intransitive \qu{to bathe} " + sources, short="Transitive and intransitive \qu{to bathe}")
 
 
-#overview of what extensions affected what verbs
-e_df = pd.read_csv("../data/extensions.csv")
-i_df = pd.read_csv("../data/inflection_data.csv")
-i_df = i_df[i_df["Inflection"] == "1"]
-verb_list = ["say", "go", "be-1", "be-2", "come", "go down", "bathe (INTR)"]
+# #overview of what extensions affected what verbs
+# e_df = pd.read_csv("../data/extensions.csv")
+# i_df = pd.read_csv("../data/inflection_data.csv")
+# i_df = i_df[i_df["Inflection"] == "1"]
+# verb_list = ["say", "go", "be-1", "be-2", "come", "go down", "bathe (INTR)"]
 
-#determine whether verb was affected by extensions based on cognacy of prefixes
-def identify_affected(cogset, value):
-    if value in ["?", "–"]:
-        return value
-    elif pd.isnull(value):
-        return "–"
-    else:
-        if cogset == value:
-            return "y"
-        elif cogset in value.split("+"):
-            return "(y)"
-        else:
-            return "n"
+# #determine whether verb was affected by extensions based on cognacy of prefixes
+# def identify_affected(cogset, value):
+#     if value in ["?", "–"]:
+#         return value
+#     elif pd.isnull(value):
+#         return "–"
+#     else:
+#         if cogset == value:
+#             return "y"
+#         elif cogset in value.split("+"):
+#             return "(y)"
+#         else:
+#             return "n"
 
-#extensions that happened in proto-languages sometimes go further in daughter languages
-daughters = {
-    "PWai": ["wai", "hix"],
-    "PTir": ["tri", "aku"],
-    "PPek": ["ara", "ikp", "bak"],
-}
+# #extensions that happened in proto-languages sometimes go further in daughter languages
+# daughters = {
+#     "PWai": ["wai", "hix"],
+#     "PTir": ["tri", "aku"],
+#     "PPek": ["ara", "ikp", "bak"],
+# }
 
-overview = pd.DataFrame()
-for i, row in e_df.iterrows():
-    if row["Language_ID"] in daughters:
-        lgs = [row["Language_ID"]] + daughters[row["Language_ID"]]
-    else:
-        lgs = [row["Language_ID"]]
-    for lg in lgs:
-        t_df = i_df[i_df["Language_ID"] == lg]
-        t_df["Form"] = row["Form"]
-        t_df["Orig_Language"] = row["Language_ID"]
-        t_df["Affected"] = t_df.apply(
-            lambda x: identify_affected(
-                row["Cognateset_ID"], x["Prefix_Cognateset_ID"]
-            ),
-            axis=1,
-        )
-        t_df.drop(
-            columns=[
-                "Source",
-                "Prefix_Cognateset_ID",
-                "Inflection",
-                "Full_Form",
-                "Comment",
-            ],
-            inplace=True,
-        )
-        overview = overview.append(t_df)
+# overview = pd.DataFrame()
+# for i, row in e_df.iterrows():
+#     if row["Language_ID"] in daughters:
+#         lgs = [row["Language_ID"]] + daughters[row["Language_ID"]]
+#     else:
+#         lgs = [row["Language_ID"]]
+#     for lg in lgs:
+#         t_df = i_df[i_df["Language_ID"] == lg]
+#         t_df["Form"] = row["Form"]
+#         t_df["Orig_Language"] = row["Language_ID"]
+#         t_df["Affected"] = t_df.apply(
+#             lambda x: identify_affected(
+#                 row["Cognateset_ID"], x["Prefix_Cognateset_ID"]
+#             ),
+#             axis=1,
+#         )
+#         t_df.drop(
+#             columns=[
+#                 "Source",
+#                 "Prefix_Cognateset_ID",
+#                 "Inflection",
+#                 "Full_Form",
+#                 "Comment",
+#             ],
+#             inplace=True,
+#         )
+#         overview = overview.append(t_df)
 
 # pyd.x = ["Cognateset_ID"]
 # pyd.y = ["Orig_Language", "Form", "Language_ID"]
