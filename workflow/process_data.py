@@ -348,7 +348,7 @@ f.close()
 e_df = pd.read_csv("../data/extensions.csv")
 i_df = pd.read_csv("../data/inflection_data.csv")
 i_df = i_df[i_df["Inflection"] == "1"]
-verb_list = ["say", "go", "be-1", "be-2", "come", "go down", "bathe (INTR)"]
+verb_list = ["say", "go", "be_1", "be_2", "come", "go_down", "bathe_intr"]
 
 #determine whether verb was affected by extensions based on cognacy of prefixes
 def identify_affected(cogset, value):
@@ -403,7 +403,7 @@ for i, row in e_df.iterrows():
 pyd.x = ["Cognateset_ID"]
 pyd.y = ["Orig_Language", "Form", "Language_ID"]
 pyd.content_string = "Affected"
-# pyd.x_sort = verb_list
+pyd.x_sort = verb_list
 
 repl_dic = {
     "DETRZ+come": "come",
@@ -414,86 +414,82 @@ repl_dic = {
 overview["Cognateset_ID"] = overview["Verb_Cognateset_ID"].replace(repl_dic)
 #
 result = pyd.compose_paradigm(overview)
+result["Lg"] = pd.Categorical([lvl[2] for lvl in result.index.str.split(".")], lg_list)
+result["Orig"] = pd.Categorical(
+    [lvl[0] for lvl in result.index.str.split(".")], lg_list
+)
+result["Form"] = [lvl[1] for lvl in result.index.str.split(".")]
+temp_list = ["Orig", "Form", "Lg"]
+result.set_index(temp_list, inplace=True)
+result.sort_index(inplace=True, level="Lg")
+result.replace({"n/n": "n", "n/y": "(y)", "": "–"}, inplace=True)
+result.index.names = ["", "", ""]
+print("\nOverview of extensions and (un-)affected verbs:")
 print(result)
-# result["Lg"] = pd.Categorical([lvl[2] for lvl in result.index.str.split(".")], lg_list)
-# result["Orig"] = pd.Categorical(
-#     [lvl[0] for lvl in result.index.str.split(".")], lg_list
-# )
-# result["Form"] = [lvl[1] for lvl in result.index.str.split(".")]
-# temp_list = ["Orig", "Form", "Lg"]
-# result.set_index(temp_list, inplace=True)
-# result.sort_index(inplace=True, level="Lg")
-# result.replace({"n/n": "n", "n/y": "(y)", "": "–"}, inplace=True)
-# result.index.names = ["", "", ""]
-# print("\nOverview of extensions and (un-)affected verbs:")
-# print(result)
-#
-# #format for latex
-# # rename index
-# def modify_index(idx):
-#     if idx[2][0] == "P":
-#         o = "rc"
-#     else:
-#         o = "obj"
-#     if idx[0] != idx[2]:
-#         return "\\quad " + print_shorthand(idx[2])
-#     else:
-#         return print_shorthand(idx[0]) + " " + "\\%s{%s}" % (o, idx[1])
-#     return idx
-#
-#
-# result.index = result.index.map(modify_index)
-#
-# # replace cogset ids with reconstructed forms and translationsm
-# cs_df["Gloss"] = cs_df["Meaning"].replace(" ", ".")
-# t_d = dict(zip(cs_df["ID"], cs_df["Gloss"]))
-# f_d = dict(zip(cs_df["ID"], cs_df["Form"]))
-#
-# result.columns = [
-#     result.columns.map(lambda x: f"\\rc{{{f_d[x]}}}"),
-#     result.columns.map(lambda x: f"\\qu{{to {t_d[x]}}}"),
-# ]
-#
-# # add nice-looking checkmarks and stuff
-# result.replace({"n": "×", "y": "\checkmark", "(y)": "(\\checkmark)"}, inplace=True)
-#
-# save_float(print_latex(result), "overview", "Overview of extensions and (un-)affected verbs")
-#
-# # #forms illustrating Sa vs Sp verbs
-# dv_df = pd.read_csv("../data/split_s_data.csv")
-# dv_df["Language"] = dv_df["Language_ID"].map(print_shorthand)
-# dv_df["String"] = dv_df.apply(combine_form_meaning, axis=1)
-# pyd.content_string = "String"
-# pyd.x = ["Class"]
-# pyd.y = ["Language"]
-# pyd.z = []
-# pyd.x_sort = ["S_A_", "S_P_"]
-# pyd.y_sort = list(map(print_shorthand, lg_list))
-#
-# #participles
-# pyd.filters={"Construction": ["PTCP"]}
-# emp = ["o-", "w-"]
-# res = pyd.compose_paradigm(dv_df)
-# for em in emp:
-#     res["S_A_"] = res["S_A_"].str.replace(em, f"\\emp{{{em}}}", regex=False)
-# res["S_A_"] = res["S_A_"].str.replace("\emp{o-}se", "o-se", regex=False)
-# res.columns = res.columns.map(pynt.get_expex_code)
-# save_float(print_latex(res, keep_index=True), "participles", "Participles of \gl{s_a_} and \gl{s_p_} verbs " + get_sources(dv_df), short="Participles of \gl{s_a_} and \gl{s_p_} verbs")
-#
-# #nominalizations
-# pyd.filters={"Construction": ["NMLZ"]}
-# emp = {"-u-": "-\\emp{u-}", "w-": "\\emp{w-}"}
-# res = pyd.compose_paradigm(dv_df)
-# for em, em1 in emp.items():
-#     res["S_A_"] = res["S_A_"].str.replace(em, em1, regex=False)
-# res.columns = res.columns.map(pynt.get_expex_code)
-# save_float(print_latex(res, keep_index=True), "nominalizations", "Nominalizations of \gl{s_a_} and \gl{s_p_} verbs " + get_sources(dv_df), short="Nominalizations of \gl{s_a_} and \gl{s_p_} verbs")
-#
-# #imperatives
-# pyd.filters={"Construction": ["IMP"]}
-# emp = ["oj-", "o-", "ə-", "əw-", "aj-"]
-# res = pyd.compose_paradigm(dv_df)
-# for em in emp:
-#     res["S_P_"] = res["S_P_"].str.replace(em, f"\\emp{{{em}}}", regex=False)
-# res.columns = res.columns.map(pynt.get_expex_code)
-# save_float(print_latex(res, keep_index=True), "imperatives", "Imperatives of \gl{s_a_} and \gl{s_p_} verbs " + get_sources(dv_df), short="Imperatives of \gl{s_a_} and \gl{s_p_} verbs")
+
+#format for latex
+# rename index
+def modify_index(idx):
+    o = get_obj_str(idx[2][0])
+    if idx[0] != idx[2]:
+        return "\\quad " + print_shorthand(idx[2])
+    else:
+        return print_shorthand(idx[0]) + " " + "\\%s{%s}" % (o, idx[1])
+    return idx
+
+
+result.index = result.index.map(modify_index)
+
+# replace cogset ids with reconstructed forms and translationsm
+cs_df["Gloss"] = cs_df["Meaning"].replace(" ", ".")
+t_d = dict(zip(cs_df["ID"], cs_df["Gloss"]))
+f_d = dict(zip(cs_df["ID"], cs_df["Form"]))
+f_d["bathe_intr"] = "e-pɨ"
+f_d["come"] = "(ət-)jəpɨ"
+t_d["bathe_intr"] = r"bathe"
+result.columns = [
+    result.columns.map(lambda x: f"\\rc{{{f_d[x]}}}"),
+    result.columns.map(lambda x: f"\\qu{{to {t_d[x]}}}"),
+]
+# add nice-looking checkmarks and stuff
+result.replace({"n": "×", "y": "\checkmark", "(y)": "(\\checkmark)"}, inplace=True)
+save_float(print_latex(result, keep_index=True), "overview", "Overview of extensions and (un-)affected verbs")
+
+# #forms illustrating Sa vs Sp verbs
+dv_df = pd.read_csv("../data/split_s_data.csv")
+dv_df["Language"] = dv_df["Language_ID"].map(print_shorthand)
+dv_df["String"] = dv_df.apply(combine_form_meaning, axis=1)
+pyd.content_string = "String"
+pyd.x = ["Class"]
+pyd.y = ["Language"]
+pyd.z = []
+pyd.x_sort = ["S_A_", "S_P_"]
+pyd.y_sort = list(map(print_shorthand, lg_list))
+
+#participles
+pyd.filters={"Construction": ["PTCP"]}
+emp = ["o-", "w-"]
+res = pyd.compose_paradigm(dv_df)
+for em in emp:
+    res["S_A_"] = res["S_A_"].str.replace(em, f"\\emp{{{em}}}", regex=False)
+res["S_A_"] = res["S_A_"].str.replace("\emp{o-}se", "o-se", regex=False)
+res.columns = res.columns.map(pynt.get_expex_code)
+save_float(print_latex(res, keep_index=True), "participles", "Participles of \gl{s_a_} and \gl{s_p_} verbs " + get_sources(dv_df), short="Participles of \gl{s_a_} and \gl{s_p_} verbs")
+
+#nominalizations
+pyd.filters={"Construction": ["NMLZ"]}
+emp = {"-u-": "-\\emp{u-}", "w-": "\\emp{w-}"}
+res = pyd.compose_paradigm(dv_df)
+for em, em1 in emp.items():
+    res["S_A_"] = res["S_A_"].str.replace(em, em1, regex=False)
+res.columns = res.columns.map(pynt.get_expex_code)
+save_float(print_latex(res, keep_index=True), "nominalizations", "Nominalizations of \gl{s_a_} and \gl{s_p_} verbs " + get_sources(dv_df), short="Nominalizations of \gl{s_a_} and \gl{s_p_} verbs")
+
+#imperatives
+pyd.filters={"Construction": ["IMP"]}
+emp = ["oj-", "o-", "ə-", "əw-", "aj-"]
+res = pyd.compose_paradigm(dv_df)
+for em in emp:
+    res["S_P_"] = res["S_P_"].str.replace(em, f"\\emp{{{em}}}", regex=False)
+res.columns = res.columns.map(pynt.get_expex_code)
+save_float(print_latex(res, keep_index=True), "imperatives", "Imperatives of \gl{s_a_} and \gl{s_p_} verbs " + get_sources(dv_df), short="Imperatives of \gl{s_a_} and \gl{s_p_} verbs")
