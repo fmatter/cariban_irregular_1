@@ -59,7 +59,7 @@ def is_empty(slot):
 def join_slots(slotlist, almsep):
     out = [slotlist[0]]
     for slot in slotlist[1::]:
-        if is_empty(out[-1]):
+        if (is_empty(out[-1]) or is_empty(slot)):
             out.append("-")
         else:
             out.append("+")
@@ -86,7 +86,6 @@ def buffer_alignments(df, cogid="COGIDS", cogsep=" ", almid="ALIGNMENT", almsep=
     c[almid] = c[[x for x in order]].values.tolist()
     # c[almid] = c[almid].apply(lambda x: almsep.join(x))
     c[almid] = c[almid].apply(join_slots, almsep=almsep)
-    # print(c)
     df[almid] = c[almid]
     # print(df)
 

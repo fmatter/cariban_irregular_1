@@ -139,13 +139,14 @@ def print_shorthand(abbrev):
     return "\\" + cah.get_shorthand(abbrev)
 
 
-def extract_sources(df, src_str="Source"):
+def extract_sources(df, src_str="Source", keep=False):
     df[src_str] = df[src_str].fillna("")
     src = list(df[src_str])
     if "" in src:
         src.remove("")
     sources = cldfh.cite_a_bunch(src, parens=True)
-    df.drop(columns=[src_str], inplace=True)
+    if not keep:
+        df.drop(columns=[src_str], inplace=True)
     return sources
 
 
@@ -239,10 +240,10 @@ save_float(
     short=r"Reflexes of \qu{to defecate} ",
 )
 
-def print_aligned_table(verb, caption, fuzzy=False):
+def print_aligned_table(df, verb="new_verb", caption="", fuzzy=False, only_tab=False, do_sources=True):
     fields = ["Language_ID", "Form", ""]
-    df = v_df[v_df["Parameter_ID"] == verb]
-    sources = extract_sources(df)
+    if do_sources:
+        sources = extract_sources(df)
     df["Segments"] = df.apply(lambda x: segmentify(x["Form"]), axis=1)
     df["Cognateset_ID"] = df["Cognateset_ID"].map(str2numcog)
     df = calculate_alignment(df, fuzzy=fuzzy)
@@ -253,47 +254,84 @@ def print_aligned_table(verb, caption, fuzzy=False):
             df.columns.values[i] = "Alignment"
             break
     df["Form"] = df["Form"].str.replace("+", "", regex=True)
+    print(f"Comparative table for 'to {verb}'")
     print(df)
     add_obj_markdown(df)
     repl_lg_id(df)
     df.set_index("Language", drop=True, inplace=True)
     tabular = print_latex(df, keep_index=True)
-    save_float(
-        tabular,
-        verb,
-        caption + " " + sources,
-        short=caption,
-    )
-# df.to_csv("../data/comp_tables/come.csv", index=False)
-print_aligned_table("come", r"Reflexes of \qu{to come}", fuzzy=True)
-print_aligned_table("go", r"Reflexes of \rc{ɨtə(mə)} \qu{to go}")
-print_aligned_table("say", r"Reflexes of \rc{ka(ti)} \qu{to say}")
+    if only_tab:
+        if do_sources:
+            return tabular, sources
+        else:
+            return tabular
+    else:
+        if do_sources:
+            save_float(
+                tabular,
+                verb,
+                caption + " " + sources,
+                short=caption,
+            )
+        else:
+            save_float(
+                tabular,
+                verb,
+                caption,
+            )
 
-# come_aligned = pd.read_csv("../data/comp_tables/come.csv", keep_default_na=False)
-# # columns = pd.DataFrame(come_aligned.columns.tolist())
-# # columns.loc[columns[0].str.startswith('Unnamed:'), 0] = np.nan
-# # come_aligned.columns = pd.MultiIndex.from_tuples(columns.to_records(index=False).tolist())
+print_aligned_table(v_df[v_df["Parameter_ID"] == "come"], verb="come", caption=r"Reflexes of \qu{to come}", fuzzy=True)
+print_aligned_table(v_df[v_df["Parameter_ID"] == "go"], verb="go", caption=r"Reflexes of \rc{ɨtə(mə)} \qu{to go}")
+print_aligned_table(v_df[v_df["Parameter_ID"] == "say"], verb="say", caption=r"Reflexes of \rc{ka(ti)} \qu{to say}")
 
-# print("\n(Partial) cognates of 'to come':")
-# come_aligned["Language_ID"] = come_aligned["Language_ID"].astype("category")
-# come_aligned["Language_ID"].cat.set_categories(lg_list, ordered=True, inplace=True)
-# come_aligned.sort_values(["Language_ID"], inplace=True)
-# come_aligned["Language_ID"] = come_aligned["Language_ID"].map(print_shorthand)
-# come_aligned["Form"] = come_aligned["Form"].map(objectify)
-# come_aligned.rename(columns={"Language_ID": "Language", "Form": "Form", "Unnamed: 3": "Alignment"}, inplace=True)
-# come_aligned.rename(columns=lambda x: re.sub(r"Unnamed: [\d]","",x), inplace=True)
+# comparison of intransitive and transitive 'to bathe'
+df_b = pd.read_csv("../data/bathe_data.csv")
+df_b["Parameter_ID"] = df_b["Transitivity"].apply(lambda x: "bathe" + "_" + x.lower())
+df_b.drop(columns=["Transitivity"], inplace=True)
+df_b.index = df_b.index+1
+sources = extract_sources(df_b)
+tr = df_b[df_b["Parameter_ID"] == "bathe_tr"]
+intr = df_b[df_b["Parameter_ID"] == "bathe_intr"]
+intr_1 = intr[intr["Cognateset_ID"] == "DETRZ1+bathe_2"]
+intr_2 = intr[intr["Cognateset_ID"] == "DETRZ+bathe_2"]
+intr.drop(intr_1.index, inplace=True)
+intr.drop(intr_2.index, inplace=True)
+tr_1 =tr[tr["Cognateset_ID"] == "bathe_2"]
+tr.drop(tr_1.index, inplace=True)
 
+bathe_tables = [
+    (intr, r"Reflexes of \rc{e-pɨ} \qu{to bathe (\gl{intr})}", "bathe_intr_1", True),
+    (intr_1, r"Reflexes of \rc{e-kupi} \qu{to bathe (\gl{intr})}", "bathe_intr_2", True),
+    (intr_2, r"Reflexes of \rc{ə-kupi} \qu{to bathe (\gl{intr})}", "bathe_intr_3", True),
+    (tr, r"Reflexes of \rc{(ɨ)pɨ} \qu{to bathe (\gl{tr})}", "bathe_tr_1", False),
+    (tr_1, r"Reflexes of \rc{kupi} \qu{to bathe (\gl{tr})}", "bathe_tr_2", False),
+]
 
-# sources = list(come_aligned["Source"])
-# sources = cldfh.cite_a_bunch(sources, parens=True)
-# come_aligned.drop(columns=["Source"], inplace=True)
-# save_float(print_latex(come_aligned), "come", r"Reflexes of \qu{to come} " + sources, short=r"Reflexes of \qu{to come}")
+bathe_out = r"""\begin{table}
+\caption{Comparison of intransitive and transitive \qu{to bathe} %s}
+\label{tab:bathe}
+\small
+\centering
+""" % sources
+for table in bathe_tables:
+    tabular= print_aligned_table(table[0], verb=table[2], caption=table[1], only_tab=True, fuzzy=table[-1], do_sources=False)
+    if table[2] == "bathe_intr_1":
+        bathe_out += r"""\begin{subtable}[t]{.49\linewidth}
+"""
+    if table[2] == "bathe_tr_1":
+        bathe_out += r"""\end{subtable}
+\begin{subtable}[t]{.49\linewidth}"""
+    bathe_out += r"""\caption{%s}
+\label{tab:%s}
+%s""" % (table[1], table[2], tabular)
+bathe_out += r"\end{subtable}\end{table}"
+f = open(f"../documents/floats/bathe.tex", "w")
+f.write(bathe_out)
+f.close()
 
-
-# # comparison of intransitive and transitive 'to bathe'
-# df_b = pd.read_csv("../data/bathe_data.csv")
-# sources = cldfh.cite_a_bunch(list(df_b["Source"]), parens=True)
-# df_b.drop(columns=["Source", "Cognateset_ID"], inplace=True)
+# alternative table with transitive and intransitive forms juxtaposed
+# sources = extract_sources(df_b)
+# df_b.drop(columns=["Cognateset_ID"], inplace=True)
 # df_b["Form"] = df_b["Form"].str.replace("+", "")
 # df_b["Form"] = df_b["Form"].apply(objectify)
 # pyd.x = ["Transitivity"]
@@ -306,74 +344,77 @@ print_aligned_table("say", r"Reflexes of \rc{ka(ti)} \qu{to say}")
 # table.columns = table.columns.map(pynt.get_expex_code)
 # save_float(print_latex(table, keep_index=True), "bathe", "Transitive and intransitive \qu{to bathe} " + sources, short="Transitive and intransitive \qu{to bathe}")
 
+#overview of what extensions affected what verbs
+e_df = pd.read_csv("../data/extensions.csv")
+i_df = pd.read_csv("../data/inflection_data.csv")
+i_df = i_df[i_df["Inflection"] == "1"]
+verb_list = ["say", "go", "be-1", "be-2", "come", "go down", "bathe (INTR)"]
 
-# #overview of what extensions affected what verbs
-# e_df = pd.read_csv("../data/extensions.csv")
-# i_df = pd.read_csv("../data/inflection_data.csv")
-# i_df = i_df[i_df["Inflection"] == "1"]
-# verb_list = ["say", "go", "be-1", "be-2", "come", "go down", "bathe (INTR)"]
+#determine whether verb was affected by extensions based on cognacy of prefixes
+def identify_affected(cogset, value):
+    if value in ["?", "–"]:
+        return value
+    elif pd.isnull(value):
+        return "–"
+    else:
+        if cogset == value:
+            return "y"
+        elif cogset in value.split("+"):
+            return "(y)"
+        else:
+            return "n"
 
-# #determine whether verb was affected by extensions based on cognacy of prefixes
-# def identify_affected(cogset, value):
-#     if value in ["?", "–"]:
-#         return value
-#     elif pd.isnull(value):
-#         return "–"
-#     else:
-#         if cogset == value:
-#             return "y"
-#         elif cogset in value.split("+"):
-#             return "(y)"
-#         else:
-#             return "n"
+#extensions that happened in proto-languages sometimes go further in daughter languages
+daughters = {
+    "PWai": ["wai", "hix"],
+    "PTir": ["tri", "aku"],
+    "PPek": ["ara", "ikp", "bak"],
+}
 
-# #extensions that happened in proto-languages sometimes go further in daughter languages
-# daughters = {
-#     "PWai": ["wai", "hix"],
-#     "PTir": ["tri", "aku"],
-#     "PPek": ["ara", "ikp", "bak"],
-# }
+overview = pd.DataFrame()
+for i, row in e_df.iterrows():
+    if row["Language_ID"] in daughters:
+        lgs = [row["Language_ID"]] + daughters[row["Language_ID"]]
+    else:
+        lgs = [row["Language_ID"]]
+    for lg in lgs:
+        t_df = i_df[i_df["Language_ID"] == lg]
+        t_df["Form"] = row["Form"]
+        t_df["Orig_Language"] = row["Language_ID"]
+        t_df["Affected"] = t_df.apply(
+            lambda x: identify_affected(
+                row["Cognateset_ID"], x["Prefix_Cognateset_ID"]
+            ),
+            axis=1,
+        )
+        t_df.drop(
+            columns=[
+                "Source",
+                "Prefix_Cognateset_ID",
+                "Inflection",
+                "Full_Form",
+                "Comment",
+            ],
+            inplace=True,
+        )
+        overview = overview.append(t_df)
 
-# overview = pd.DataFrame()
-# for i, row in e_df.iterrows():
-#     if row["Language_ID"] in daughters:
-#         lgs = [row["Language_ID"]] + daughters[row["Language_ID"]]
-#     else:
-#         lgs = [row["Language_ID"]]
-#     for lg in lgs:
-#         t_df = i_df[i_df["Language_ID"] == lg]
-#         t_df["Form"] = row["Form"]
-#         t_df["Orig_Language"] = row["Language_ID"]
-#         t_df["Affected"] = t_df.apply(
-#             lambda x: identify_affected(
-#                 row["Cognateset_ID"], x["Prefix_Cognateset_ID"]
-#             ),
-#             axis=1,
-#         )
-#         t_df.drop(
-#             columns=[
-#                 "Source",
-#                 "Prefix_Cognateset_ID",
-#                 "Inflection",
-#                 "Full_Form",
-#                 "Comment",
-#             ],
-#             inplace=True,
-#         )
-#         overview = overview.append(t_df)
 
-# pyd.x = ["Cognateset_ID"]
-# pyd.y = ["Orig_Language", "Form", "Language_ID"]
-# pyd.content_string = "Affected"
+pyd.x = ["Cognateset_ID"]
+pyd.y = ["Orig_Language", "Form", "Language_ID"]
+pyd.content_string = "Affected"
 # pyd.x_sort = verb_list
+
+repl_dic = {
+    "DETRZ+come": "come",
+    "DETRZ1+bathe_1": "bathe_intr",
+    "DETRZ1": "bathe_intr"
+}
+
+overview["Cognateset_ID"] = overview["Verb_Cognateset_ID"].replace(repl_dic)
 #
-# repl_dic = {
-#     "DETRZ+come": "come"
-# }
-#
-# overview["Cognateset_ID"] = overview["Cognateset_ID"].replace(repl_dic)
-#
-# result = pyd.compose_paradigm(overview)
+result = pyd.compose_paradigm(overview)
+print(result)
 # result["Lg"] = pd.Categorical([lvl[2] for lvl in result.index.str.split(".")], lg_list)
 # result["Orig"] = pd.Categorical(
 #     [lvl[0] for lvl in result.index.str.split(".")], lg_list
