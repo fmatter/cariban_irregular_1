@@ -240,7 +240,10 @@ save_float(
     short=r"Reflexes of \qu{to defecate} ",
 )
 
-def print_aligned_table(df, verb="new_verb", caption="", fuzzy=False, only_tab=False, do_sources=True):
+
+def print_aligned_table(
+    df, verb="new_verb", caption="", fuzzy=False, only_tab=False, do_sources=True
+):
     fields = ["Language_ID", "Form", ""]
     if do_sources:
         sources = extract_sources(df)
@@ -280,15 +283,29 @@ def print_aligned_table(df, verb="new_verb", caption="", fuzzy=False, only_tab=F
                 caption,
             )
 
-print_aligned_table(v_df[v_df["Parameter_ID"] == "come"], verb="come", caption=r"Reflexes of \qu{to come}", fuzzy=True)
-print_aligned_table(v_df[v_df["Parameter_ID"] == "go"], verb="go", caption=r"Reflexes of \rc{ɨtə(mə)} \qu{to go}")
-print_aligned_table(v_df[v_df["Parameter_ID"] == "say"], verb="say", caption=r"Reflexes of \rc{ka(ti)} \qu{to say}")
+
+print_aligned_table(
+    v_df[v_df["Parameter_ID"] == "come"],
+    verb="come",
+    caption=r"Reflexes of \qu{to come}",
+    fuzzy=True,
+)
+print_aligned_table(
+    v_df[v_df["Parameter_ID"] == "go"],
+    verb="go",
+    caption=r"Reflexes of \rc{ɨtə(mə)} \qu{to go}",
+)
+print_aligned_table(
+    v_df[v_df["Parameter_ID"] == "say"],
+    verb="say",
+    caption=r"Reflexes of \rc{ka(ti)} \qu{to say}",
+)
 
 # comparison of intransitive and transitive 'to bathe'
 df_b = pd.read_csv("../data/bathe_data.csv")
 df_b["Parameter_ID"] = df_b["Transitivity"].apply(lambda x: "bathe" + "_" + x.lower())
 df_b.drop(columns=["Transitivity"], inplace=True)
-df_b.index = df_b.index+1
+df_b.index = df_b.index + 1
 sources = extract_sources(df_b)
 tr = df_b[df_b["Parameter_ID"] == "bathe_tr"]
 intr = df_b[df_b["Parameter_ID"] == "bathe_intr"]
@@ -296,25 +313,45 @@ intr_1 = intr[intr["Cognateset_ID"] == "DETRZ1+bathe_2"]
 intr_2 = intr[intr["Cognateset_ID"] == "DETRZ+bathe_2"]
 intr.drop(intr_1.index, inplace=True)
 intr.drop(intr_2.index, inplace=True)
-tr_1 =tr[tr["Cognateset_ID"] == "bathe_2"]
+tr_1 = tr[tr["Cognateset_ID"] == "bathe_2"]
 tr.drop(tr_1.index, inplace=True)
 
 bathe_tables = [
     (intr, r"Reflexes of \rc{e-pɨ} \qu{to bathe (\gl{intr})}", "bathe_intr_1", True),
-    (intr_1, r"Reflexes of \rc{e-kupi} \qu{to bathe (\gl{intr})}", "bathe_intr_2", True),
-    (intr_2, r"Reflexes of \rc{ə-kupi} \qu{to bathe (\gl{intr})}", "bathe_intr_3", True),
+    (
+        intr_1,
+        r"Reflexes of \rc{e-kupi} \qu{to bathe (\gl{intr})}",
+        "bathe_intr_2",
+        True,
+    ),
+    (
+        intr_2,
+        r"Reflexes of \rc{ə-kupi} \qu{to bathe (\gl{intr})}",
+        "bathe_intr_3",
+        True,
+    ),
     (tr, r"Reflexes of \rc{(ɨ)pɨ} \qu{to bathe (\gl{tr})}", "bathe_tr_1", False),
     (tr_1, r"Reflexes of \rc{kupi} \qu{to bathe (\gl{tr})}", "bathe_tr_2", False),
 ]
 
-bathe_out = r"""\begin{table}
+bathe_out = (
+    r"""\begin{table}
 \caption{Comparison of intransitive and transitive \qu{to bathe} %s}
 \label{tab:bathe}
 \small
 \centering
-""" % sources
+"""
+    % sources
+)
 for table in bathe_tables:
-    tabular= print_aligned_table(table[0], verb=table[2], caption=table[1], only_tab=True, fuzzy=table[-1], do_sources=False)
+    tabular = print_aligned_table(
+        table[0],
+        verb=table[2],
+        caption=table[1],
+        only_tab=True,
+        fuzzy=table[-1],
+        do_sources=False,
+    )
     if table[2] == "bathe_intr_1":
         bathe_out += r"""\begin{subtable}[t]{.49\linewidth}
 """
@@ -323,7 +360,11 @@ for table in bathe_tables:
 \begin{subtable}[t]{.49\linewidth}"""
     bathe_out += r"""\caption{%s}
 \label{tab:%s}
-%s""" % (table[1], table[2], tabular)
+%s""" % (
+        table[1],
+        table[2],
+        tabular,
+    )
 bathe_out += r"\end{subtable}\end{table}"
 f = open(f"../documents/floats/bathe.tex", "w")
 f.write(bathe_out)
@@ -344,13 +385,13 @@ f.close()
 # table.columns = table.columns.map(pynt.get_expex_code)
 # save_float(print_latex(table, keep_index=True), "bathe", "Transitive and intransitive \qu{to bathe} " + sources, short="Transitive and intransitive \qu{to bathe}")
 
-#overview of what extensions affected what verbs
+# overview of what extensions affected what verbs
 e_df = pd.read_csv("../data/extensions.csv")
 i_df = pd.read_csv("../data/inflection_data.csv")
 i_df = i_df[i_df["Inflection"] == "1"]
 verb_list = ["say", "go", "be_1", "be_2", "come", "go_down", "bathe_intr"]
 
-#determine whether verb was affected by extensions based on cognacy of prefixes
+# determine whether verb was affected by extensions based on cognacy of prefixes
 def identify_affected(cogset, value):
     if value in ["?", "–"]:
         return value
@@ -364,7 +405,8 @@ def identify_affected(cogset, value):
         else:
             return "n"
 
-#extensions that happened in proto-languages sometimes go further in daughter languages
+
+# extensions that happened in proto-languages sometimes go further in daughter languages
 daughters = {
     "PWai": ["wai", "hix"],
     "PTir": ["tri", "aku"],
@@ -408,7 +450,7 @@ pyd.x_sort = verb_list
 repl_dic = {
     "DETRZ+come": "come",
     "DETRZ1+bathe_1": "bathe_intr",
-    "DETRZ1": "bathe_intr"
+    "DETRZ1": "bathe_intr",
 }
 
 overview["Cognateset_ID"] = overview["Verb_Cognateset_ID"].replace(repl_dic)
@@ -427,7 +469,7 @@ result.index.names = ["", "", ""]
 print("\nOverview of extensions and (un-)affected verbs:")
 print(result)
 
-#format for latex
+# format for latex
 # rename index
 def modify_index(idx):
     o = get_obj_str(idx[2][0])
@@ -453,7 +495,11 @@ result.columns = [
 ]
 # add nice-looking checkmarks and stuff
 result.replace({"n": "×", "y": "\checkmark", "(y)": "(\\checkmark)"}, inplace=True)
-save_float(print_latex(result, keep_index=True), "overview", "Overview of extensions and (un-)affected verbs")
+save_float(
+    print_latex(result, keep_index=True),
+    "overview",
+    "Overview of extensions and (un-)affected verbs",
+)
 
 # #forms illustrating Sa vs Sp verbs
 dv_df = pd.read_csv("../data/split_s_data.csv")
@@ -466,30 +512,45 @@ pyd.z = []
 pyd.x_sort = ["S_A_", "S_P_"]
 pyd.y_sort = list(map(print_shorthand, lg_list))
 
-#participles
-pyd.filters={"Construction": ["PTCP"]}
+# participles
+pyd.filters = {"Construction": ["PTCP"]}
 emp = ["o-", "w-"]
 res = pyd.compose_paradigm(dv_df)
 for em in emp:
     res["S_A_"] = res["S_A_"].str.replace(em, f"\\emp{{{em}}}", regex=False)
 res["S_A_"] = res["S_A_"].str.replace("\emp{o-}se", "o-se", regex=False)
 res.columns = res.columns.map(pynt.get_expex_code)
-save_float(print_latex(res, keep_index=True), "participles", "Participles of \gl{s_a_} and \gl{s_p_} verbs " + get_sources(dv_df), short="Participles of \gl{s_a_} and \gl{s_p_} verbs")
+save_float(
+    print_latex(res, keep_index=True),
+    "participles",
+    "Participles of \gl{s_a_} and \gl{s_p_} verbs " + get_sources(dv_df),
+    short="Participles of \gl{s_a_} and \gl{s_p_} verbs",
+)
 
-#nominalizations
-pyd.filters={"Construction": ["NMLZ"]}
+# nominalizations
+pyd.filters = {"Construction": ["NMLZ"]}
 emp = {"-u-": "-\\emp{u-}", "w-": "\\emp{w-}"}
 res = pyd.compose_paradigm(dv_df)
 for em, em1 in emp.items():
     res["S_A_"] = res["S_A_"].str.replace(em, em1, regex=False)
 res.columns = res.columns.map(pynt.get_expex_code)
-save_float(print_latex(res, keep_index=True), "nominalizations", "Nominalizations of \gl{s_a_} and \gl{s_p_} verbs " + get_sources(dv_df), short="Nominalizations of \gl{s_a_} and \gl{s_p_} verbs")
+save_float(
+    print_latex(res, keep_index=True),
+    "nominalizations",
+    "Nominalizations of \gl{s_a_} and \gl{s_p_} verbs " + get_sources(dv_df),
+    short="Nominalizations of \gl{s_a_} and \gl{s_p_} verbs",
+)
 
-#imperatives
-pyd.filters={"Construction": ["IMP"]}
+# imperatives
+pyd.filters = {"Construction": ["IMP"]}
 emp = ["oj-", "o-", "ə-", "əw-", "aj-"]
 res = pyd.compose_paradigm(dv_df)
 for em in emp:
     res["S_P_"] = res["S_P_"].str.replace(em, f"\\emp{{{em}}}", regex=False)
 res.columns = res.columns.map(pynt.get_expex_code)
-save_float(print_latex(res, keep_index=True), "imperatives", "Imperatives of \gl{s_a_} and \gl{s_p_} verbs " + get_sources(dv_df), short="Imperatives of \gl{s_a_} and \gl{s_p_} verbs")
+save_float(
+    print_latex(res, keep_index=True),
+    "imperatives",
+    "Imperatives of \gl{s_a_} and \gl{s_p_} verbs " + get_sources(dv_df),
+    short="Imperatives of \gl{s_a_} and \gl{s_p_} verbs",
+)
