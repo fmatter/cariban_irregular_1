@@ -106,7 +106,7 @@ kax_stem_25,kax,oohɨ,pc[Spike Gildea],,come,oo h ɨ
 ing_stem_26,ing,ətə,cruz2005fonologia[291],,go,ə t ə
 tri_stem_27,tri,tə(n),triomeira1999[292],,go,t ə n
 way_stem_28,way,(ɨ)tə(m),wayanatavares2005[195],,go,ɨ t ə m
-aku_stem_29,aku,(ə)tə(mɨ),meira1998proto[112]; gildea1994akuriyo[87],,go,ə t ə m ɨ
+aku_stem_29,aku,(ə)tə(mɨ),gildea1994akuriyo[87],,go,ə t ə m ɨ
 ara_stem_30,ara,ɨdo,alves2017arara[],,go,ɨ d o
 hix_stem_31,hix,(ɨ)to,"hixkaryanaderby1985[27, 248]",,go,ɨ t o
 wai_stem_32,wai,(e)to(m),"waiwaihawkins1998[45, 62]",,go,e t o m
@@ -160,9 +160,9 @@ pan_stem_79,pan,əhtə,mattei1994diccionario[88],,go_down,ə h t ə
 yab_stem_80,yab,əhtə,mendez1959yawarana[68],,go_down,ə h t ə
 wmr_stem_81,wmr,ɨtɨ,bruno1996dictionary[58],,go_down,ɨ t ɨ
 aku_stem_82,aku,ɨhtə,gildea1994akuriyo[84],,go_down,ɨ h t ə
-ara_stem_83,ara,iptoŋ,alves2017arara[153],,go_down,i p t o ŋ
-bak_stem_84,bak,ɨtəgɨ,von1892bakairi[137],,go_down,ɨ t ə g ɨ
-ikp_stem_85,ikp,iptoŋ,pc[Angela Fabíola Alves Chagas],,go_down,i p t o ŋ
+ara_stem_83,ara,iptoŋ,alves2017arara[153],,go_down,i p t o + ŋ
+bak_stem_84,bak,ɨtəgɨ,von1892bakairi[137],,go_down,ɨ t ə + g ɨ
+ikp_stem_85,ikp,iptoŋ,pc[Angela Fabíola Alves Chagas],,go_down,i p t o + ŋ
 tri_stem_86,tri,ɨhtə,meira1998proto[116],,go_down,ɨ h t ə
 PPar_stem_87,PPar,ɨɸɨto,,,go_down,ɨ ɸ ɨ t o
 kar_stem_88,kar,uweka,courtz2008carib[418],,defecate,u w e k a

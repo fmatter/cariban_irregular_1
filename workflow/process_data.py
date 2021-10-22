@@ -243,6 +243,7 @@ def print_aligned_table(verb, caption, fuzzy=False):
     fields = ["Language_ID", "Form", ""]
     df = v_df[v_df["Parameter_ID"] == verb]
     sources = extract_sources(df)
+    df["Segments"] = df.apply(lambda x: segmentify(x["Form"]), axis=1)
     df["Cognateset_ID"] = df["Cognateset_ID"].map(str2numcog)
     df = calculate_alignment(df, fuzzy=fuzzy)
     df = df[fields]
@@ -265,7 +266,8 @@ def print_aligned_table(verb, caption, fuzzy=False):
     )
 # df.to_csv("../data/comp_tables/come.csv", index=False)
 print_aligned_table("come", r"Reflexes of \qu{to come}", fuzzy=True)
-print_aligned_table("go", r"Reflexes of \rc{ka(ti)} \qu{to go}")
+print_aligned_table("go", r"Reflexes of \rc{ɨtə(mə)} \qu{to go}")
+print_aligned_table("say", r"Reflexes of \rc{ka(ti)} \qu{to say}")
 
 # come_aligned = pd.read_csv("../data/comp_tables/come.csv", keep_default_na=False)
 # # columns = pd.DataFrame(come_aligned.columns.tolist())

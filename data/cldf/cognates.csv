@@ -98,7 +98,8 @@ ara_stem_18_cog_1,ara_stem_18,DETRZ,1
 ara_stem_18_cog_2,ara_stem_18,come,2
 ara_stem_30_cog,ara_stem_30,go,1
 ara_stem_51_cog,ara_stem_51,say,1
-ara_stem_83_cog,ara_stem_83,go_down,1
+ara_stem_83_cog_1,ara_stem_83,go_down,1
+ara_stem_83_cog_2,ara_stem_83,?,2
 ara_stem_91_cog,ara_stem_91,defecate,1
 bak_form_37_infl,bak_form_37,1w,1
 bak_form_37_stem,bak_form_37,DETRZ1,2
@@ -121,7 +122,8 @@ bak_stem_20_cog_1,bak_stem_20,DETRZ,1
 bak_stem_20_cog_2,bak_stem_20,come,2
 bak_stem_35_cog,bak_stem_35,go,1
 bak_stem_48_cog,bak_stem_48,say,1
-bak_stem_84_cog,bak_stem_84,go_down,1
+bak_stem_84_cog_1,bak_stem_84,go_down,1
+bak_stem_84_cog_2,bak_stem_84,?,2
 bak_stem_95_cog_1,bak_stem_95,DETRZ,1
 bak_stem_95_cog_2,bak_stem_95,defecate,2
 car_form_10_infl,car_form_10,1w,1
@@ -177,7 +179,8 @@ ikp_stem_17_cog_2,ikp_stem_17,come,2
 ikp_stem_33_cog,ikp_stem_33,go,1
 ikp_stem_34_cog,ikp_stem_34,go,1
 ikp_stem_50_cog,ikp_stem_50,say,1
-ikp_stem_85_cog,ikp_stem_85,go_down,1
+ikp_stem_85_cog_1,ikp_stem_85,go_down,1
+ikp_stem_85_cog_2,ikp_stem_85,?,2
 ikp_stem_92_cog,ikp_stem_92,defecate,1
 ing_stem_26_cog,ing_stem_26,go,1
 ing_stem_3_cog,ing_stem_3,come,1
