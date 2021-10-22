@@ -19,14 +19,14 @@ segments = open("../data/segments.txt").read()
 segment_list = [{"Grapheme": x, "mapping": x} for x in segments.split("\n")]
 t = Tokenizer(Profile(*segment_list))
 cognatesets = pd.read_csv("../data/cldf/cognatesets.csv")
-cognatesets = cognatesets.append({"ID": "?", "Description": "Unknown material"}, ignore_index=True)
+cognatesets = cognatesets.append(
+    {"ID": "?", "Description": "Unknown material"}, ignore_index=True
+)
 
 # lingpy does not like cogid 0
 cognatesets.index = cognatesets.index + 1
 cognum = dict(zip(cognatesets["ID"], cognatesets.index.astype(str)))
 numcog = dict(zip(cognatesets.index.astype(str), cognatesets["ID"]))
-
-print("Assigning cognates")
 
 
 def str2numcog(cogsets):
@@ -45,8 +45,6 @@ def segmentify(form):
 
 
 # functions for creating latex tables
-
-
 def print_latex(df, ex=False, keep_index=False):
     if keep_index:
         df.columns.name = df.index.name
@@ -140,6 +138,7 @@ def sort_lg(df):
 def print_shorthand(abbrev):
     return "\\" + cah.get_shorthand(abbrev)
 
+
 def extract_sources(df, src_str="Source"):
     df[src_str] = df[src_str].fillna("")
     src = list(df[src_str])
@@ -149,20 +148,24 @@ def extract_sources(df, src_str="Source"):
     df.drop(columns=[src_str], inplace=True)
     return sources
 
+
 def get_obj_str(lg):
     if lg[0] == "P":
         return "rc"
     else:
         return "obj"
 
+
 def add_obj_markdown(df, lg_col="Language_ID", form_col="Form"):
     df[form_col] = df.apply(
         lambda x: objectify(x[form_col], get_obj_str(x[lg_col])), axis=1
     )
 
+
 def repl_lg_id(df):
     df["Language_ID"] = df["Language_ID"].apply(print_shorthand)
     df.rename(columns={"Language_ID": "Language"}, inplace=True)
+
 
 # prepare overviews of class-switching 'go down' and 'defecate'
 print("\nClass membership of 'to go down':")
@@ -178,7 +181,8 @@ temp_df1 = calculate_alignment(temp_df1, fuzzy=True)
 temp_df1["Cognateset_ID"] = temp_df1["Cognateset_ID"].map(num2strcog)
 temp_df1.rename(columns={"Cognateset_ID1": "Cognateset_ID"}, inplace=True)
 temp_df1["Class"] = temp_df1.apply(
-    lambda x: "(" + x["Class"] + ")" if "DETRZ" in x["Cognateset_ID"] else x["Class"], axis=1
+    lambda x: "(" + x["Class"] + ")" if "DETRZ" in x["Cognateset_ID"] else x["Class"],
+    axis=1,
 )
 temp_df2["Form"] = temp_df2.apply(lambda x: "(" + x["Form"] + ")", axis=1)
 for i, row in temp_df2.iterrows():
@@ -212,7 +216,9 @@ save_float(
 print("\nClass membership of 'to defecate':")
 s_df = v_df[v_df["Parameter_ID"] == "defecate"]
 sources = extract_sources(s_df)
-s_df.drop(columns=["Parameter_ID", "Cog_Cert", "Comment", "Cognateset_ID"], inplace=True)
+s_df.drop(
+    columns=["Parameter_ID", "Cog_Cert", "Comment", "Cognateset_ID"], inplace=True
+)
 s_df["Form"] = s_df["Form"].str.replace("+", "", regex=True)
 sort_lg(s_df)
 print(s_df)
@@ -232,6 +238,33 @@ save_float(
     r"Reflexes of \qu{to defecate} " + sources,
     short=r"Reflexes of \qu{to defecate} ",
 )
+
+def print_aligned_table(verb, caption, fuzzy=False):
+    fields = ["Language_ID", "Form", ""]
+    df = v_df[v_df["Parameter_ID"] == verb]
+    sources = extract_sources(df)
+    df["Cognateset_ID"] = df["Cognateset_ID"].map(str2numcog)
+    df = calculate_alignment(df, fuzzy=fuzzy)
+    df = df[fields]
+    sort_lg(df)
+    for i, col in enumerate(df.columns):
+        if col == "":
+            df.columns.values[i] = "Alignment"
+            break
+    df["Form"] = df["Form"].str.replace("+", "", regex=True)
+    print(df)
+    add_obj_markdown(df)
+    repl_lg_id(df)
+    df.set_index("Language", drop=True, inplace=True)
+    tabular = print_latex(df, keep_index=True)
+    save_float(
+        tabular,
+        verb,
+        caption + " " + sources,
+        short=caption,
+    )
+# df.to_csv("../data/comp_tables/come.csv", index=False)
+print_aligned_table("come", r"Reflexes of \qu{to come}", fuzzy=True)
 
 # come_aligned = pd.read_csv("../data/comp_tables/come.csv", keep_default_na=False)
 # # columns = pd.DataFrame(come_aligned.columns.tolist())
