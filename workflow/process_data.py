@@ -265,6 +265,7 @@ def print_aligned_table(verb, caption, fuzzy=False):
     )
 # df.to_csv("../data/comp_tables/come.csv", index=False)
 print_aligned_table("come", r"Reflexes of \qu{to come}", fuzzy=True)
+print_aligned_table("go", r"Reflexes of \rc{ka(ti)} \qu{to go}")
 
 # come_aligned = pd.read_csv("../data/comp_tables/come.csv", keep_default_na=False)
 # # columns = pd.DataFrame(come_aligned.columns.tolist())
