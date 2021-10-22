@@ -140,6 +140,14 @@ def sort_lg(df):
 def print_shorthand(abbrev):
     return "\\" + cah.get_shorthand(abbrev)
 
+def extract_sources(df, src_str="Source"):
+    df[src_str] = df[src_str].fillna("")
+    src = list(df[src_str])
+    if "" in src:
+        src.remove("")
+    sources = cldfh.cite_a_bunch(src, parens=True)
+    df.drop(columns=[src_str], inplace=True)
+    return sources
 
 def get_obj_str(lg):
     if lg[0] == "P":
@@ -147,16 +155,19 @@ def get_obj_str(lg):
     else:
         return "obj"
 
+def add_obj_markdown(df, lg_col="Language_ID", form_col="Form"):
+    df[form_col] = df.apply(
+        lambda x: objectify(x[form_col], get_obj_str(x[lg_col])), axis=1
+    )
+
+def repl_lg_id(df):
+    df["Language_ID"] = df["Language_ID"].apply(print_shorthand)
+    df.rename(columns={"Language_ID": "Language"}, inplace=True)
 
 # prepare overviews of class-switching 'go down' and 'defecate'
 print("\nClass membership of 'to go down':")
 gd_df = v_df[v_df["Parameter_ID"] == "go_down"]
-gd_df["Source"] = gd_df["Source"].fillna("")
-src = list(gd_df["Source"])
-if "" in src:
-    src.remove("")
-sources = cldfh.cite_a_bunch(src, parens=True)
-gd_df.drop(columns=["Source"], inplace=True)
+sources = extract_sources(gd_df)
 
 grouped = gd_df.groupby(gd_df.Cog_Cert)
 temp_df1 = grouped.get_group(1.0)
@@ -187,11 +198,8 @@ gd_df["Class"] = gd_df.apply(
     else x["Class"],
     axis=1,
 )
-gd_df["Form"] = gd_df.apply(
-    lambda x: objectify(x["Form"], get_obj_str(x["Language_ID"])), axis=1
-)
-gd_df["Language_ID"] = gd_df["Language_ID"].apply(print_shorthand)
-gd_df.rename(columns={"Language_ID": "Language"}, inplace=True)
+add_obj_markdown(gd_df)
+repl_lg_id(gd_df)
 gd_df.set_index("Language", drop=True, inplace=True)
 tabular = print_latex(gd_df, keep_index=True)
 save_float(
@@ -201,7 +209,29 @@ save_float(
     short=r"Reflexes of \rc{ɨpɨtə} \qu{to go down}",
 )
 
-# print("\nClass membership of 'to defecate':")
+print("\nClass membership of 'to defecate':")
+s_df = v_df[v_df["Parameter_ID"] == "defecate"]
+sources = extract_sources(s_df)
+s_df.drop(columns=["Parameter_ID", "Cog_Cert", "Comment", "Cognateset_ID"], inplace=True)
+s_df["Form"] = s_df["Form"].str.replace("+", "", regex=True)
+sort_lg(s_df)
+print(s_df)
+s_df["Class"] = s_df.apply(
+    lambda x: pynt.get_expex_code(x["Class"])
+    if x["Class"] not in ["?", "–"]
+    else x["Class"],
+    axis=1,
+)
+add_obj_markdown(s_df)
+repl_lg_id(s_df)
+s_df.set_index("Language", drop=True, inplace=True)
+tabular = print_latex(s_df, keep_index=True)
+save_float(
+    tabular,
+    "defecate",
+    r"Reflexes of \qu{to defecate} " + sources,
+    short=r"Reflexes of \qu{to defecate} ",
+)
 
 # come_aligned = pd.read_csv("../data/comp_tables/come.csv", keep_default_na=False)
 # # columns = pd.DataFrame(come_aligned.columns.tolist())
