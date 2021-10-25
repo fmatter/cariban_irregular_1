@@ -20,7 +20,7 @@
 "go","go","ara","1+2","ku-to-","kut","alves2017arara[74]",,"kuton"
 "say","say","way","PTCP","tɨ-ka-i",,"camargo2010wayana[65]",,
 "say","say","way","IMP","kai-kə",,"camargo2010wayana[66]",,
-"go_down","go_down","aku",1,"p-ɨtə-","1p","gildea1994akuriyo[84]",,"pɨ́ɨ̀ˀtəpa"
+"go_down","go_down","aku",1,"p-ɨtə-","1p","gildea1994akuriyo[84]",,"pɨ́ɨ̀ʔtəpa"
 "go","go","aku",2,"mɨ-təemɨ-","2sa","gildea1994akuriyo[87]",,
 "go","go","aku",3,"nɨ-təəmɨ-","3sa","gildea1994akuriyo[87]",,
 "go","go","aku","1+2","kɨt-əe-","kut","gildea1994akuriyo[87]",,
@@ -177,9 +177,9 @@
 "be","be_2","PTir",1,"w-eʔi-","1w",,,
 "come","come","PPek",1,"w-epɨ-","1w",,,
 "come","DETRZ+come","PTir",1,"w-əʔ+epɨ-","1w",,,
-"go","go","PPek",1,"wɨ-tən-","1w",,,
-"go","go","PTir",1,"wɨ-tə(mɨ)-","1w",,,
-"go_down","go_down","PPek",1,"w-Vptə-","1w",,,
+"go","go","PPek",1,"w-ɨtən-","1w",,,
+"go","go","PTir",1,"wɨ-təmɨ-","1w",,,
+"go_down","go_down","PPek",1,"w-ɨptə-","1w",,,
 "go_down","go_down","PTir",1,"p-ɨhtə-","1p",,,
 "say","say","PPek",1,"wɨ-ge-","1w",,,
 "say","say","PTir",1,"wɨ-ka-","1w",,,
@@ -190,3 +190,15 @@
 "bathe_intr","DETRZ1+bathe_1","PPek",1,"w-i+pɨ-","1w",,,
 "bathe_intr","DETRZ1+bathe_1","PWai",1,"k-ee+ɸɨ-","k",,"Werikyana has long e in this verb, assuming the same pattern for Proto-Waiwaian allows reconciling the divergent Waiwai and Hixkaryána forms.",
 "bathe_intr","DETRZ1+bathe_1","PTir",1,"t͡ʃ-e+pɨ-","1t",,,
+"learn",,"aku",1,"k-əempa-","k","gildea1994akuriyo[82]",,"kə̀ém̀pà"
+"cry",,"aku",1,"k-əət͡ʃena-","k","gildea1994akuriyo[86]",,"kə́ə̀čena"
+"tremble",,"aku",1,"k-əiwa-","k","gildea1994akuriyo[84]",,"kéìʔwai"
+"enter",,"aku",1,"k-əməmɨ-","k","gildea1994akuriyo[87]",,"kəməəʔmɨ"
+"run",,"aku",1,"k-ətajiŋka-","k","gildea1994akuriyo[85]",,"kə̀táyiŋkae"
+"talk",,"aku",1,"k-əturu-","k","gildea1994akuriyo[86]",,"kə̀túùrú"
+"sleep","DETRZ+sleep","aku",1,"k-əʔnɨkɨ-","k","gildea1994akuriyo[87]",,"kəʔnɨkɨ"
+"stay_back",,"aku",1,"t͡ʃ-ekɨrɨka-","1t","gildea1994akuriyo[79]",,"šekɨ́ɨrɨka"
+"yawn",,"aku",1,"t͡ʃ-entapo-","1t","gildea1994akuriyo[77]",,"šentapoe"
+"lie_down",,"aku",1,"t͡ʃ-etonema-","1t","gildea1994akuriyo[84]",,"šetóòʔnema"
+"sit_down",,"aku",1,"t͡ʃ-ewai-","1t","gildea1994akuriyo[84]",,"čewaiʔne"
+"bathe_intr",,"aku",1,"t͡ʃ-ehpa-","1t","gildea1994akuriyo[87]",,"šéhpa"

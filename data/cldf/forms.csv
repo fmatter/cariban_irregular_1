@@ -1,72 +1,72 @@
 ID,Language_ID,Form,Source,Comment,Parameter_ID,Segments
-ara_form_0,ara,wɨ-ge-,alves2017arara[153],,1_say,w ɨ + g e
-ara_form_1,ara,w-ibɨ-,alves2017arara[153],,1_bathe_intr,w + i + b ɨ
-ara_form_2,ara,w-it͡ʃi-,alves2017arara[153],,1_be,w + i t͡ʃ i
-ara_form_3,ara,w-ebɨ-,alves2017arara[153],,1_come,w + e b ɨ
-ara_form_4,ara,w-ɨdo-,alves2017arara[153],,1_go,w + ɨ d o
-ara_form_5,ara,w-iptoŋ-,alves2017arara[153],,1_go_down,w + i p t o ŋ
-ara_form_6,ara,w-ap-,alves2017arara[200],,1_be,w + a p
-aku_form_7,aku,p-ɨtə-,gildea1994akuriyo[84],,1_go_down,p + ɨ t ə
-aku_form_8,aku,t͡ʃ-epɨ-,gildea1994akuriyo[87],,1_bathe_intr,t͡ʃ + e + p ɨ
-car_form_9,car,j-eh-,guerrero2019carijo[82],,1_come,j + e h
-car_form_10,car,∅-ka-,pc[David Felipe Guerrero],,1_say,∅ + k a
-car_form_11,car,j-et͡ʃi-,guerrero2019carijo[92],,1_be,j + e t͡ʃ i
-hix_form_12,hix,ɨ-ka-,hixkaryanaderby1979[4],,1_say,ɨ + k a
-hix_form_13,hix,k-ewehɨ-,hixkaryanaderby1985[195],,1_bathe_intr,k + e w e + h ɨ
-hix_form_14,hix,w-ah-,hixkaryanaderby1985[197],,1_be,w + a h
-hix_form_15,hix,w-eʃe-,hixkaryanaderby1985[198],,1_be,w + e ʃ e
-hix_form_16,hix,ɨ-to-,hixkaryanaderby1985[70],,1_go,ɨ + t o
-kar_form_17,kar,wɨ-ʔ-,hoff1968carib[168],,1_go,w ɨ + ʔ
-kar_form_18,kar,∅-ka-,hoff1968carib[168],,1_say,∅ + k a
-kar_form_19,kar,w-oʔ-,hoff1968carib[304],,1_come,w + o ʔ
-ikp_form_20,ikp,∅-ip-,ikpengpacheco1997[68],,1_bathe_intr,∅ + i + p
-ikp_form_21,ikp,∅-et͡ʃi-,ikpengpacheco2001[139],,1_be,∅ + e t͡ʃ i
-ikp_form_22,ikp,ɨ-ge-,ikpengpacheco2001[209],,1_say,ɨ + g e
-ikp_form_23,ikp,k-arep-,ikpengpacheco2001[42],,1_come,k + a r + e p
-ikp_form_24,ikp,k-aran-,ikpengpacheco2001[80],,1_go,k + a r a n
-mak_form_27,mak,w-ɨtə-,maquiritaricaceres2011[160],,1_go,w + ɨ t ə
-mak_form_28,mak,w-ehə-,maquiritaricaceres2011[216],,1_come,w + e h ə
-aku_form_29,aku,ə-təmɨ-,meira1998proto[112],,1_go,ə + t ə m ɨ
-car_form_30,car,wɨ-təmə-,meira1998proto[112],,1_go,w ɨ + t ə m ə
-aku_form_31,aku,wɨ-ka-,meira1998proto[113],,1_say,w ɨ + k a
-aku_form_32,aku,∅-eepɨ-,meira1998proto[114],,1_come,∅ + ee p ɨ
-aku_form_33,aku,∅-a-,meira1998proto[115],,1_be,∅ + a
-car_form_34,car,w-a-,meira1998proto[115],,1_be,w + a
-tri_form_35,tri,w-a-,meira1998proto[115],,1_be,w + a
-tri_form_36,tri,p-ɨhtə-,meira1998proto[116],,1_go_down,p + ɨ h t ə
-bak_form_37,bak,w-i-,meira2003bakairi[4],,1_bathe_intr,w + i
-yuk_form_38,yuk,j-ewtu-,meira2003primeras,"ewu(h)tu only looks partially cognate, if anything.",1_go_down,j + e w t u
-yuk_form_39,yuk,∅-to-,meira2006syntactic[139],,1_go,∅ + t o
-yuk_form_40,yuk,j-a-,meira2006syntactic[142],,1_be,j + a
-yuk_form_41,yuk,j-e-,meira2006syntactic[143],,1_be,j + e
-car_form_43,car,j-ehɨtə-,pc[David Felipe Guerrero],,1_go_down,j + e h ɨ t ə
-wai_form_44,wai,w-a-,pc[Spike Gildea],,1_be,w + a
-wai_form_45,wai,w-eeʃi-,pc[Spike Gildea],,1_be,w + ee ʃ i
-tri_form_46,tri,wɨ-tən-,triomeira1999[292],,1_go,w ɨ + t ə n
-tri_form_47,tri,w-əepɨ-,triomeira1999[294],,1_come,w + ə + e p ɨ
-tri_form_48,tri,wɨ-ka-,triomeira1999[294],,1_say,w ɨ + k a
-tri_form_49,tri,w-ei-,triomeira1999[339],,1_be,w + e i
-tri_form_50,tri,s-epɨ-,triomeira1999[660],,1_bathe_intr,s + e + p ɨ
-bak_form_51,bak,w-a-,von1892bakairi[130],,1_be,w + a
-bak_form_52,bak,u-ge-,von1892bakairi[131],,1_say,u + g e
-bak_form_53,bak,k-ɨtəgɨ-,von1892bakairi[137],,1_go_down,k + ɨ t ə g ɨ
-bak_form_54,bak,u-tə-,von1892bakairi[374],,1_go,u + t ə
-bak_form_55,bak,w-i-,von1892bakairi[397],,1_be,w + i
-bak_form_56,bak,k-əewɨ-,von1892bakairi[76],,1_come,k + ə + e w ɨ
-wai_form_57,wai,k-ejeɸu-,waiwaihawkins1998[166],,1_bathe_intr,k + e j e + ɸ u
-wai_form_58,wai,wɨ-ka-,waiwaihawkins1998[71],,1_say,w ɨ + k a
-wai_form_59,wai,kɨw-tom-,waiwaihawkins1998[85],,1_go,k ɨ + w + t o m
-way_form_60,way,wɨ-təm-,wayanatavares2005[195],,1_go,w ɨ + t ə m
-way_form_61,way,wɨ-ka-,wayanatavares2005[195],,1_say,w ɨ + k a
+ara_form_0,ara,wɨ-ge-,alves2017arara[153],Form in source: wy-geny.,1_say,w ɨ + g e
+ara_form_1,ara,w-ibɨ-,alves2017arara[153],Form in source: w-ibyny.,1_bathe_intr,w + i + b ɨ
+ara_form_2,ara,w-it͡ʃi-,alves2017arara[153],Form in source: w-itxiny.,1_be,w + i t͡ʃ i
+ara_form_3,ara,w-ebɨ-,alves2017arara[153],Form in source: w-ebyny.,1_come,w + e b ɨ
+ara_form_4,ara,w-ɨdo-,alves2017arara[153],Form in source: w-ydoly.,1_go,w + ɨ d o
+ara_form_5,ara,w-iptoŋ-,alves2017arara[153],Form in source: w-iptongry.,1_go_down,w + i p t o ŋ
+ara_form_6,ara,w-ap-,alves2017arara[200],Form in source: w-aptam.,1_be,w + a p
+aku_form_7,aku,p-ɨtə-,gildea1994akuriyo[84],Form in source: pɨ́ɨ̀ʔtəpa.,1_go_down,p + ɨ t ə
+aku_form_8,aku,t͡ʃ-epɨ-,gildea1994akuriyo[87],Form in source: šeépɨ̀.,1_bathe_intr,t͡ʃ + e + p ɨ
+car_form_9,car,j-eh-,guerrero2019carijo[82],Form in source: ʤehɨ.,1_come,j + e h
+car_form_10,car,∅-ka-,pc[David Felipe Guerrero],Form in source: ka-e.,1_say,∅ + k a
+car_form_11,car,j-et͡ʃi-,guerrero2019carijo[92],Form in source: ʤeʧi.,1_be,j + e t͡ʃ i
+hix_form_12,hix,ɨ-ka-,hixkaryanaderby1979[4],Form in source: ɨkano.,1_say,ɨ + k a
+hix_form_13,hix,k-ewehɨ-,hixkaryanaderby1985[195],Form in source: kewehtano.,1_bathe_intr,k + e w e + h ɨ
+hix_form_14,hix,w-ah-,hixkaryanaderby1985[197],Form in source: wahko.,1_be,w + a h
+hix_form_15,hix,w-eʃe-,hixkaryanaderby1985[198],Form in source: wexeye.,1_be,w + e ʃ e
+hix_form_16,hix,ɨ-to-,hixkaryanaderby1985[70],Form in source: ɨtono.,1_go,ɨ + t o
+kar_form_17,kar,wɨ-ʔ-,hoff1968carib[168],Form in source: wïxsa.,1_go,w ɨ + ʔ
+kar_form_18,kar,∅-ka-,hoff1968carib[168],Form in source: ka:e.,1_say,∅ + k a
+kar_form_19,kar,w-oʔ-,hoff1968carib[304],Form in source: woxsakóŋ̑.,1_come,w + o ʔ
+ikp_form_20,ikp,∅-ip-,ikpengpacheco1997[68],Form in source: i-p-txi.,1_bathe_intr,∅ + i + p
+ikp_form_21,ikp,∅-et͡ʃi-,ikpengpacheco2001[139],Form in source: etʃi.,1_be,∅ + e t͡ʃ i
+ikp_form_22,ikp,ɨ-ge-,ikpengpacheco2001[209],Form in source: ɨ-ge-lɨ.,1_say,ɨ + g e
+ikp_form_23,ikp,k-arep-,ikpengpacheco2001[42],Form in source: k-arep-lɨ.,1_come,k + a r + e p
+ikp_form_24,ikp,k-aran-,ikpengpacheco2001[80],Form in source: k-aran-tʃi.,1_go,k + a r a n
+mak_form_27,mak,w-ɨtə-,maquiritaricaceres2011[160],Form in source: w-ütö(mö)-ˈñojo=ˈde.,1_go,w + ɨ t ə
+mak_form_28,mak,w-ehə-,maquiritaricaceres2011[216],Form in source: w-ejö-ne.,1_come,w + e h ə
+aku_form_29,aku,ə-təmɨ-,meira1998proto[112],Form in source: ə-təmɨ.,1_go,ə + t ə m ɨ
+car_form_30,car,wɨ-təmə-,meira1998proto[112],Form in source: wɨ-təmə.,1_go,w ɨ + t ə m ə
+aku_form_31,aku,wɨ-ka-,meira1998proto[113],Form in source: wɨ-ka.,1_say,w ɨ + k a
+aku_form_32,aku,∅-eepɨ-,meira1998proto[114],Form in source: ∅-e:pɨ.,1_come,∅ + ee p ɨ
+aku_form_33,aku,∅-a-,meira1998proto[115],Form in source: aʔe.,1_be,∅ + a
+car_form_34,car,w-a-,meira1998proto[115],Form in source: wae.,1_be,w + a
+tri_form_35,tri,w-a-,meira1998proto[115],Form in source: wae.,1_be,w + a
+tri_form_36,tri,p-ɨhtə-,meira1998proto[116],Form in source: p-ɨhtə.,1_go_down,p + ɨ h t ə
+bak_form_37,bak,w-i-,meira2003bakairi[4],Form in source: w-i-də.,1_bathe_intr,w + i
+yuk_form_38,yuk,j-ewtu-,meira2003primeras,"ewu(h)tu only looks partially cognate, if anything. Form in source: aw y-éwtu.",1_go_down,j + e w t u
+yuk_form_39,yuk,∅-to-,meira2006syntactic[139],Form in source: to.,1_go,∅ + t o
+yuk_form_40,yuk,j-a-,meira2006syntactic[142],Form in source: patume=ya.,1_be,j + a
+yuk_form_41,yuk,j-e-,meira2006syntactic[143],Form in source: yukpa=p=ye.,1_be,j + e
+car_form_43,car,j-ehɨtə-,pc[David Felipe Guerrero],Form in source: y-ejïtë-e.,1_go_down,j + e h ɨ t ə
+wai_form_44,wai,w-a-,pc[Spike Gildea],Form in source: way.,1_be,w + a
+wai_form_45,wai,w-eeʃi-,pc[Spike Gildea],Form in source: weexi.,1_be,w + ee ʃ i
+tri_form_46,tri,wɨ-tən-,triomeira1999[292],Form in source: wï-tën.,1_go,w ɨ + t ə n
+tri_form_47,tri,w-əepɨ-,triomeira1999[294],Form in source: w-ëepï.,1_come,w + ə + e p ɨ
+tri_form_48,tri,wɨ-ka-,triomeira1999[294],Form in source: wï-ka.,1_say,w ɨ + k a
+tri_form_49,tri,w-ei-,triomeira1999[339],Form in source: w-ei.,1_be,w + e i
+tri_form_50,tri,s-epɨ-,triomeira1999[660],Form in source: s-epï-ja-e.,1_bathe_intr,s + e + p ɨ
+bak_form_51,bak,w-a-,von1892bakairi[130],Form in source: töre-wakine.,1_be,w + a
+bak_form_52,bak,u-ge-,von1892bakairi[131],Form in source: u-ɣépa.,1_say,u + g e
+bak_form_53,bak,k-ɨtəgɨ-,von1892bakairi[137],Form in source: kχ-itaké-he.,1_go_down,k + ɨ t ə g ɨ
+bak_form_54,bak,u-tə-,von1892bakairi[374],Form in source: ū́ta.,1_go,u + t ə
+bak_form_55,bak,w-i-,von1892bakairi[397],Form in source: wí-ta.,1_be,w + i
+bak_form_56,bak,k-əewɨ-,von1892bakairi[76],Form in source: kχ-aewí-le.,1_come,k + ə + e w ɨ
+wai_form_57,wai,k-ejeɸu-,waiwaihawkins1998[166],Form in source: k-eyepu.,1_bathe_intr,k + e j e + ɸ u
+wai_form_58,wai,wɨ-ka-,waiwaihawkins1998[71],Form in source: wîî-k-e-kn̂e.,1_say,w ɨ + k a
+wai_form_59,wai,kɨw-tom-,waiwaihawkins1998[85],Form in source: kî-wtom-o.,1_go,k ɨ + w + t o m
+way_form_60,way,wɨ-təm-,wayanatavares2005[195],Form in source: wïtëm.,1_go,w ɨ + t ə m
+way_form_61,way,wɨ-ka-,wayanatavares2005[195],Form in source: wïka.,1_say,w ɨ + k a
 PPek_form_63,PPek,w-ap-,,,1_be,w + a p
 PTir_form_64,PTir,w-a-,,,1_be,w + a
 PPek_form_66,PPek,w-et͡ʃi-,,,1_be,w + e t͡ʃ i
 PTir_form_67,PTir,w-eʔi-,,,1_be,w + e ʔ i
 PPek_form_68,PPek,w-epɨ-,,,1_come,w + e p ɨ
 PTir_form_69,PTir,w-əʔepɨ-,,,1_come,w + ə ʔ + e p ɨ
-PPek_form_70,PPek,wɨ-tən-,,,1_go,w ɨ + t ə n
-PTir_form_71,PTir,wɨ-tə(mɨ)-,,,1_go,w ɨ + t ə m ɨ
-PPek_form_72,PPek,w-Vptə-,,,1_go_down,w + V p t ə
+PPek_form_70,PPek,w-ɨtən-,,,1_go,w + ɨ t ə n
+PTir_form_71,PTir,wɨ-təmɨ-,,,1_go,w ɨ + t ə m ɨ
+PPek_form_72,PPek,w-ɨptə-,,,1_go_down,w + ɨ p t ə
 PTir_form_73,PTir,p-ɨhtə-,,,1_go_down,p + ɨ h t ə
 PPek_form_74,PPek,wɨ-ge-,,,1_say,w ɨ + g e
 PTir_form_75,PTir,wɨ-ka-,,,1_say,w ɨ + k a
@@ -77,6 +77,18 @@ PWai_form_79,PWai,wɨ-to-,,,1_go,w ɨ + t o
 PPek_form_80,PPek,w-ipɨ-,,,1_bathe_intr,w + i + p ɨ
 PWai_form_81,PWai,k-eeɸɨ-,,"Werikyana has long e in this verb, assuming the same pattern for Proto-Waiwaian allows reconciling the divergent Waiwai and Hixkaryána forms.",1_bathe_intr,k + ee + ɸ ɨ
 PTir_form_82,PTir,t͡ʃ-epɨ-,,,1_bathe_intr,t͡ʃ + e + p ɨ
+aku_form_83,aku,k-əempa-,gildea1994akuriyo[82],Form in source: kə̀ém̀pà.,1_learn,k + ə e m p a
+aku_form_84,aku,k-əət͡ʃena-,gildea1994akuriyo[86],Form in source: kə́ə̀čena.,1_cry,k + əə t͡ʃ e n a
+aku_form_85,aku,k-əiwa-,gildea1994akuriyo[84],Form in source: kéìʔwai.,1_tremble,k + ə i w a
+aku_form_86,aku,k-əməmɨ-,gildea1994akuriyo[87],Form in source: kəməəʔmɨ.,1_enter,k + ə m ə m ɨ
+aku_form_87,aku,k-ətajiŋka-,gildea1994akuriyo[85],Form in source: kə̀táyiŋkae.,1_run,k + ə t a j i ŋ k a
+aku_form_88,aku,k-əturu-,gildea1994akuriyo[86],Form in source: kə̀túùrú.,1_talk,k + ə t u r u
+aku_form_89,aku,k-əʔnɨkɨ-,gildea1994akuriyo[87],Form in source: kəʔnɨkɨ.,1_sleep,k + ə ʔ n ɨ k ɨ
+aku_form_90,aku,t͡ʃ-ekɨrɨka-,gildea1994akuriyo[79],Form in source: šekɨ́ɨrɨka.,1_stay_back,t͡ʃ + e k ɨ r ɨ k a
+aku_form_91,aku,t͡ʃ-entapo-,gildea1994akuriyo[77],Form in source: šentapoe.,1_yawn,t͡ʃ + e n t a p o
+aku_form_92,aku,t͡ʃ-etonema-,gildea1994akuriyo[84],Form in source: šetóòʔnema.,1_lie_down,t͡ʃ + e t o n e m a
+aku_form_93,aku,t͡ʃ-ewai-,gildea1994akuriyo[84],Form in source: čewaiʔne.,1_sit_down,t͡ʃ + e w a i
+aku_form_94,aku,t͡ʃ-ehpa-,gildea1994akuriyo[87],Form in source: šéhpa.,1_bathe_intr,t͡ʃ + e h p a
 mac_stem_0,mac,ipɨ,macushiabbott1991[32],,come,i p ɨ
 pem_stem_1,pem,jepɨ,alvarez2000construcciones[102],,come,j e p ɨ
 aka_stem_2,aka,jepɨ,akawaiocaesar2003[125],,come,j e p ɨ
@@ -104,46 +116,46 @@ kar_stem_23,kar,opɨ,courtz2008carib[429],,come,o p ɨ
 uxc_stem_24,uxc,ee,meira2005southern[182],,come,ee
 kax_stem_25,kax,oohɨ,pc[Spike Gildea],,come,oo h ɨ
 ing_stem_26,ing,ətə,cruz2005fonologia[291],,go,ə t ə
-tri_stem_27,tri,tə(n),triomeira1999[292],,go,t ə n
-way_stem_28,way,(ɨ)tə(m),wayanatavares2005[195],,go,ɨ t ə m
-aku_stem_29,aku,(ə)tə(mɨ),gildea1994akuriyo[87],,go,ə t ə m ɨ
+tri_stem_27,tri,tə[n],triomeira1999[292],,go,t ə � n �
+way_stem_28,way,[ɨ]tə[m],wayanatavares2005[195],,go,� ɨ � t ə � m �
+aku_stem_29,aku,[ə]tə[mɨ],gildea1994akuriyo[87],,go,� ə � t ə � m ɨ �
 ara_stem_30,ara,ɨdo,alves2017arara[],,go,ɨ d o
-hix_stem_31,hix,(ɨ)to,"hixkaryanaderby1985[27, 248]",,go,ɨ t o
-wai_stem_32,wai,(e)to(m),"waiwaihawkins1998[45, 62]",,go,e t o m
+hix_stem_31,hix,[ɨ]to,"hixkaryanaderby1985[27, 248]",,go,� ɨ � t o
+wai_stem_32,wai,[e]to[m],"waiwaihawkins1998[45, 62]",,go,� e � t o � m �
 ikp_stem_33,ikp,aran,ikpengpacheco2001[54],,go,a r a n
 ikp_stem_34,ikp,ero,ikpengpacheco2001[80],,go,e r o
-bak_stem_35,bak,(ɨ)tə,"von1892bakairi[112, 374]",,go,ɨ t ə
-mak_stem_36,mak,ɨtə(mə),"maquiritaricaceres2011[181, 216]",,go,ɨ t ə m ə
+bak_stem_35,bak,[ɨ]tə,"von1892bakairi[112, 374]",,go,� ɨ � t ə
+mak_stem_36,mak,ɨtə[mə],"maquiritaricaceres2011[181, 216]",,go,ɨ t ə � m ə �
 car_stem_37,car,təmə,meira1998proto[112],,go,t ə m ə
 kar_stem_38,kar,to,hoff1968carib[168],,go,t o
-kar_stem_39,kar,(ɨ)ʔ,hoff1968carib[168],,go,ɨ ʔ
+kar_stem_39,kar,[ɨ]ʔ,hoff1968carib[168],,go,� ɨ � ʔ
 yuk_stem_40,yuk,to,meira2006syntactic[139],,go,t o
 yab_stem_41,yab,tə,caceres2018yawarana[4],,go,t ə
 map_stem_42,map,tə,muller1975mapoyo[74],wɨs-tə-ri. I interpret wɨs- as an allomorph of wɨhɨ ‘1’. /s/ becomes /h/ intervocalically in Mapoyo.,go,t ə
-pan_stem_43,pan,tə(n),mattei1994diccionario[198],,go,t ə n
-mac_stem_44,mac,(a)tɨ,"macushiabbott1991[48, 50]",,go,a t ɨ
-pem_stem_45,pem,(e)tə,garcia2006diccionario[172],,go,e t ə
-kax_stem_46,kax,to(mo),pc[Spike Gildea],,go,t o m o
-uxc_stem_47,uxc,(e)te,franchetto2002kuikuro[6],,go,e t e
+pan_stem_43,pan,tə[n],mattei1994diccionario[198],,go,t ə � n �
+mac_stem_44,mac,[a]tɨ,"macushiabbott1991[48, 50]",,go,� a � t ɨ
+pem_stem_45,pem,[e]tə,garcia2006diccionario[172],,go,� e � t ə
+kax_stem_46,kax,to[mo],pc[Spike Gildea],,go,t o � m o �
+uxc_stem_47,uxc,[e]te,franchetto2002kuikuro[6],,go,� e � t e
 bak_stem_48,bak,ke,meira2003bakairi[4]; meira2005bakairi[297],,say,k e
 uxc_stem_49,uxc,ki,franchetto2008absolutivo[48],,say,k i
 ikp_stem_50,ikp,ke,ikpengpacheco2001[209],,say,k e
 ara_stem_51,ara,ke,alves2017arara[153],,say,k e
-hix_stem_52,hix,ka(h),hixkaryanaderby1985[182],,say,k a h
+hix_stem_52,hix,ka[h],hixkaryanaderby1985[182],,say,k a � h �
 car_stem_53,car,ka,meira1998proto[113],,say,k a
-apa_stem_54,apa,ka(ʃi),koehn1986apalai[107],,say,k a ʃ i
-wai_stem_55,wai,ka(s),waiwaihawkins1998[26],,say,k a s
-kax_stem_56,kax,ka(s),pc[Spike Gildea],,say,k a s
+apa_stem_54,apa,ka[ʃi],koehn1986apalai[107],,say,k a � ʃ i �
+wai_stem_55,wai,ka[s],waiwaihawkins1998[26],,say,k a � s �
+kax_stem_56,kax,ka[s],pc[Spike Gildea],,say,k a � s �
 tri_stem_57,tri,ka,meira1998proto[113],,say,k a
-way_stem_58,way,ka(i),camargo2010wayana[66],,say,k a i
+way_stem_58,way,ka[i],camargo2010wayana[66],,say,k a � i �
 aku_stem_59,aku,ka,meira1998proto[113],,say,k a
 mac_stem_60,mac,ka,macushiabbott1991[59],,say,k a
 pem_stem_61,pem,ka,swiggers2010gramatica[123],,say,k a
 kar_stem_62,kar,ka,courtz2008carib[430],,say,k a
 kap_stem_63,kap,ka,akawaiocaesar2003[125],,say,k a
-pan_stem_64,pan,ka(h),mattei1994diccionario[102],,say,k a h
+pan_stem_64,pan,ka[h],mattei1994diccionario[102],,say,k a � h �
 kax_stem_65,kax,ɨhɨto,pc[Spike Gildea],,go_down,ɨ h ɨ t o
-yuk_stem_66,yuk,ewu(h)tu,meira2003primeras,,go_down,e w u h t u
+yuk_stem_66,yuk,ewu[h]tu,meira2003primeras,,go_down,e w u � h � t u
 hix_stem_67,hix,hto,hixkaryanaderby1979[196],,go_down,h t o
 wai_stem_68,wai,hto,waiwaihawkins1998[55],,go_down,h t o
 PPek_stem_69,PPek,ɨptə,,,go_down,ɨ p t ə
@@ -207,3 +219,11 @@ pem_stem_126,pem,pɨ,pemondearmellada1944dic[129],,bathe_tr,p ɨ
 pan_stem_127,pan,akupɨ,mattei1994diccionario[8],,bathe_intr,a + k u p ɨ
 pan_stem_128,pan,kupɨ,mattei1994diccionario[294],,bathe_tr,k u p ɨ
 pan_stem_129,pan,ɨpɨ,mattei1994diccionario[294],,bathe_tr,ɨ p ɨ
+ara_other_0,ara,wɨna,alves2017arara[143],,DAT,w ɨ n a
+ikp_other_1,ikp,ɨna,ikpengpacheco2001[164],,DAT,ɨ n a
+ara_other_2,ara,wokori,desouza2010arara[9],,dog,w o k o r i
+ikp_other_3,ikp,akari,ikpengpacheco2001[21],,dog,a k a r i
+ara_other_4,ara,tawe,desouza2010arara[9],,capuchin_monkey,t a w e
+ikp_other_5,ikp,tae,ikpengpacheco2001[21],,capuchin_monkey,t a e
+ara_other_6,ara,wɨnkɨ,souza1993arara[70],Form in source: o-wyngy-∅.,sleep,w ɨ n k ɨ
+ikp_other_7,ikp,ɨnkɨ,campetela1997analise[40],Form in source: y-ɨnkɨ-t.,sleep,ɨ n k ɨ
