@@ -15,6 +15,22 @@ cognate_list = ["go", "say", "come", "be_1", "be_2", "go_down", "bathe_intr"]
 cs_df = pd.read_csv("../data/cognate_sets.csv")
 v_df = pd.read_csv("../data/verb_stem_data.csv")
 v_df.rename(columns={"Meaning": "Parameter_ID"}, inplace=True)
+e_df = pd.read_csv("../data/extensions.csv")
+i_df = pd.read_csv("../data/inflection_data.csv")
+i_df["Form"] = i_df["Form"].str.replace("+", "", regex=True)
+
+m_df = pd.read_csv("../data/cldf/parameters.csv")
+m_df["Description"] = m_df["Description"].str.strip("'").map(pynt.get_expex_code)
+mean_dic = dict(zip(m_df["ID"], m_df["Description"]))
+
+concept_dic = {
+    "DETRZ1+bathe_1": "bathe_intr",
+    "DETRZ+come": "come",
+    "DETRZ1": "bathe_intr"
+}
+
+i_df["Concept"] = i_df.apply(lambda x: concept_dic[x["Verb_Cognateset_ID"]] if x["Verb_Cognateset_ID"] in concept_dic else x["Verb_Cognateset_ID"], axis=1)
+
 segments = open("../data/segments.txt").read()
 segment_list = [{"Grapheme": x, "mapping": x} for x in segments.split("\n")]
 t = Tokenizer(Profile(*segment_list))
@@ -28,6 +44,15 @@ cognatesets.index = cognatesets.index + 1
 cognum = dict(zip(cognatesets["ID"], cognatesets.index.astype(str)))
 numcog = dict(zip(cognatesets.index.astype(str), cognatesets["ID"]))
 
+# cs_df["Gloss"] = cs_df["Meaning"].replace(" ", ".")
+cog_verb_df = cs_df[~(cs_df["Form"].str.contains("-"))]
+cog_trans_dic = dict(zip(cog_verb_df["ID"], cog_verb_df["Meaning"]))
+cog_form_dic = dict(zip(cog_verb_df["ID"], cog_verb_df["Form"]))
+cog_form_dic["bathe_intr"] = "e-pɨ"
+cog_form_dic["come"] = "(ət-)jəpɨ"
+cog_trans_dic["bathe_intr"] = r"bathe"
+cog_trans_dic["be_1"] = r"be-1"
+cog_trans_dic["be_2"] = r"be-2"
 
 def str2numcog(cogsets):
     return " ".join([cognum[x] for x in cogsets.split("+")])
@@ -38,7 +63,7 @@ def num2strcog(cogids):
 
 
 def segmentify(form):
-    form = re.sub("[()]", "", form)
+    form = re.sub("[()\[\]]", "", form)
     form = form.replace("-", "+")
     form = form.strip("+")
     return t(form)
@@ -167,6 +192,95 @@ def repl_lg_id(df):
     df["Language_ID"] = df["Language_ID"].apply(print_shorthand)
     df.rename(columns={"Language_ID": "Language"}, inplace=True)
 
+
+def reconstructed_form_table(lgs, proto, verbs, caption, name):
+    print(f"Irregular {cah.get_name(proto)} verbs:")
+    pyd.x = ["Language_ID"]
+    pyd.y = ["Concept"]
+    pyd.filters = {"Inflection": ["1"], "Language_ID": lgs, "Concept": verbs}
+    pyd.x_sort = lgs
+    pyd.y_sort = verbs
+    tabular = pyd.compose_paradigm(i_df)
+    sources = get_sources(i_df)
+    tabular.index.name = None
+    print(tabular)
+    
+    tabular.index = tabular.index.map(lambda x: "\\qu{"+cog_trans_dic[x]+"}")
+    tabular = tabular.apply(lambda x: x.apply(objectify, obj_string=get_obj_str(x.name)))
+    tabular.columns = tabular.columns.map(print_shorthand)
+    tabular = print_latex(tabular, keep_index=True)
+    
+    save_float(
+        tabular,
+        name,
+        caption + " " + sources,
+        short=caption,
+    )
+    pyd.filters = {}
+
+lgs = ["PPek", "ara", "ikp", "bak"]
+verbs = ["say", "bathe_intr", "be_1", "be_2", "come", "go_down", "go"]
+reconstructed_form_table(lgs, "PPek", verbs, r"Verbs preserving \gl{1}\gl{s_a_} \rc{w-} in \PPek", "ppekverbs")
+
+lgs = ["PWai", "hix", "wai"]
+verbs = ["say", "be_1", "be_2", "go"]
+reconstructed_form_table(lgs, "PWai", verbs, r"Verbs preserving \gl{1}\gl{s_a_} \rc{w-} in \PWai", "pwaiverbs")
+
+reconstructed_form_table(["PTir", "tri", "aku"], "PTir", ["go", "say", "come", "be_1", "be_2"], r"Verbs preserving \gl{1}\gl{s_a_} \rc{w-} in \PTir", "ptirverbs")
+
+
+akuverbs = i_df[(i_df["Language_ID"] == "aku") & (i_df["Prefix_Cognateset_ID"].isin(["k", "1t"]))]
+akuverbs["Form"] = akuverbs["Form"].apply(lambda x: x.split("-", 1)[1])
+akuverbs["Meaning"] = akuverbs["Meaning"].map(mean_dic)
+akuverbs["String"] = akuverbs.apply(combine_form_meaning, axis=1)
+
+k_list = akuverbs[akuverbs["Prefix_Cognateset_ID"] == "k"]["String"].reset_index(drop=True)
+t_list = akuverbs[akuverbs["Prefix_Cognateset_ID"] == "1t"]["String"].reset_index(drop=True)
+sources = extract_sources(akuverbs)
+out = pd.DataFrame.from_dict({r"first person \obj{k-}": k_list, r"first person \obj{t͡ʃ-}": t_list})
+out.fillna("", inplace=True)
+
+save_float(
+    print_latex(out),
+    "aku1sa",
+    r"\akuriyo \gl{1}\gl{s_a_} markers in Gildea's fieldnotes " + sources,
+    short=r"\akuriyo \gl{1}\gl{s_a_} markers in Gildea's fieldnotes",
+)
+i_df = i_df[~(pd.isnull(i_df["Verb_Cognateset_ID"]))]
+
+# pekodian lexical comparison
+forms = pd.read_csv("../data/cldf/forms.csv")
+lgs = ["ara", "ikp"]
+meanings = [
+"defecate",
+"DAT",
+"dog",
+"capuchin_monkey",
+"sleep",
+]
+pyd.x = ["Language_ID"]
+pyd.y = ["Parameter_ID"]
+pyd.filters = {"Language_ID": lgs, "Parameter_ID": meanings}
+pyd.x_sort = lgs
+pyd.y_sort = meanings
+tabular = pyd.compose_paradigm(forms)
+print(tabular)
+sources = get_sources(forms)
+tabular = tabular.apply(lambda x: x.apply(objectify, obj_string=get_obj_str(x.name)))
+tabular.columns = tabular.columns.map(print_shorthand)
+
+tabular.index.name = "Meaning"
+tabular.reset_index(inplace=True)
+tabular["Meaning"] = tabular["Meaning"].map(mean_dic)
+tabular["Meaning"] = tabular["Meaning"].map(lambda x: "\\qu{"+ x +"}")
+
+save_float(
+    print_latex(tabular),
+    "pxinw",
+    r"Loss of \rc{w} in \ikpeng " + sources,
+    short=r"Loss of \rc{w} in \ikpeng",
+)
+pyd.filters = {}
 
 # prepare overviews of class-switching 'go down' and 'defecate'
 print("\nClass membership of 'to go down':")
@@ -386,8 +500,6 @@ f.close()
 # save_float(print_latex(table, keep_index=True), "bathe", "Transitive and intransitive \qu{to bathe} " + sources, short="Transitive and intransitive \qu{to bathe}")
 
 # overview of what extensions affected what verbs
-e_df = pd.read_csv("../data/extensions.csv")
-i_df = pd.read_csv("../data/inflection_data.csv")
 i_df = i_df[i_df["Inflection"] == "1"]
 verb_list = ["say", "go", "be_1", "be_2", "come", "go_down", "bathe_intr"]
 
@@ -454,7 +566,8 @@ repl_dic = {
 }
 
 overview["Cognateset_ID"] = overview["Verb_Cognateset_ID"].replace(repl_dic)
-#
+overview = overview[~(overview["Cognateset_ID"] == "DETRZ+sleep")]
+
 result = pyd.compose_paradigm(overview)
 result["Lg"] = pd.Categorical([lvl[2] for lvl in result.index.str.split(".")], lg_list)
 result["Orig"] = pd.Categorical(
@@ -483,15 +596,9 @@ def modify_index(idx):
 result.index = result.index.map(modify_index)
 
 # replace cogset ids with reconstructed forms and translationsm
-cs_df["Gloss"] = cs_df["Meaning"].replace(" ", ".")
-t_d = dict(zip(cs_df["ID"], cs_df["Gloss"]))
-f_d = dict(zip(cs_df["ID"], cs_df["Form"]))
-f_d["bathe_intr"] = "e-pɨ"
-f_d["come"] = "(ət-)jəpɨ"
-t_d["bathe_intr"] = r"bathe"
 result.columns = [
-    result.columns.map(lambda x: f"\\rc{{{f_d[x]}}}"),
-    result.columns.map(lambda x: f"\\qu{{to {t_d[x]}}}"),
+    result.columns.map(lambda x: f"\\rc{{{cog_form_dic[x]}}}"),
+    result.columns.map(lambda x: f"\\qu{{to {cog_trans_dic[x]}}}"),
 ]
 # add nice-looking checkmarks and stuff
 result.replace({"n": "×", "y": "\checkmark", "(y)": "(\\checkmark)"}, inplace=True)
@@ -554,3 +661,5 @@ save_float(
     "Imperatives of \gl{s_a_} and \gl{s_p_} verbs " + get_sources(dv_df),
     short="Imperatives of \gl{s_a_} and \gl{s_p_} verbs",
 )
+pyd.content_string = "Form"
+
