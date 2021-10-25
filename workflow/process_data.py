@@ -1,6 +1,6 @@
 import pyradigms as pyd
+import warnings; warnings.filterwarnings("ignore")
 import pandas as pd
-
 pd.options.mode.chained_assignment = None
 import cariban_helpers as cah
 import cldf_helpers as cldfh
