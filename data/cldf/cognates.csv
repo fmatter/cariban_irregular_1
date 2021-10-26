@@ -49,7 +49,6 @@ PWai_form_81_infl,PWai_form_81,k,1
 PWai_form_81_stem_pfx,PWai_form_81,DETRZ1,2
 PWai_form_81_stem_root,PWai_form_81,bathe_1,3
 PWai_form_99_infl,PWai_form_99,k,1
-PWai_form_99_stem,PWai_form_99,sleep,2
 aka_stem_19_cog_1,aka_stem_19,DETRZ,1
 aka_stem_19_cog_2,aka_stem_19,come,2
 aka_stem_2_cog,aka_stem_2,come,1
@@ -177,7 +176,6 @@ hix_form_15_stem,hix_form_15,be_2,2
 hix_form_16_infl,hix_form_16,1w,1
 hix_form_16_stem,hix_form_16,go,2
 hix_form_98_infl,hix_form_98,k,1
-hix_form_98_stem,hix_form_98,sleep,2
 hix_stem_101_cog_1,hix_stem_101,DETRZ1,1
 hix_stem_101_cog_2,hix_stem_101,bathe_1,2
 hix_stem_102_cog,hix_stem_102,bathe_1,1
@@ -325,7 +323,6 @@ wai_form_59_infl_pfx1,wai_form_59,k,1
 wai_form_59_infl_pfx2,wai_form_59,1w,2
 wai_form_59_stem,wai_form_59,go,3
 wai_form_97_infl,wai_form_97,k,1
-wai_form_97_stem,wai_form_97,sleep,2
 wai_stem_103_cog_1,wai_stem_103,DETRZ1,1
 wai_stem_103_cog_2,wai_stem_103,bathe_1,2
 wai_stem_104_cog,wai_stem_104,bathe_1,1

@@ -306,7 +306,7 @@ sources = get_sources(i_df)
 
 print(tabular)
 
-tabular = tabular.apply(lambda x: x.apply(objectify, obj_string=get_obj_str(x.name[1])))
+tabular = tabular.apply(lambda x: x.apply(objectify, obj_string=get_obj_str(x.name[0])))
 tabular.rename(
     columns={"sleep": r"\qu{to sleep}", "fall": "\qu{to fall}"},
     level="Meaning",
