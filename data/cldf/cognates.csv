@@ -148,6 +148,8 @@ bak_stem_95_cog_1,bak_stem_95,DETRZ,1
 bak_stem_95_cog_2,bak_stem_95,defecate,2
 car_form_10_infl,car_form_10,1w,1
 car_form_10_stem,car_form_10,say,2
+car_form_106_infl,car_form_106,1p,1
+car_form_107_infl,car_form_107,1p,1
 car_form_11_infl,car_form_11,1p,1
 car_form_11_stem,car_form_11,be_2,2
 car_form_30_infl,car_form_30,1w,1
@@ -345,6 +347,9 @@ wmr_stem_81_cog,wmr_stem_81,go_down,1
 yab_stem_22_cog,yab_stem_22,come,1
 yab_stem_41_cog,yab_stem_41,go,1
 yab_stem_80_cog,yab_stem_80,go_down,1
+yuk_form_108_infl,yuk_form_108,1p,1
+yuk_form_109_infl,yuk_form_109,1p,1
+yuk_form_110_infl,yuk_form_110,1p,1
 yuk_form_38_infl,yuk_form_38,1p,1
 yuk_form_38_stem,yuk_form_38,go_down,2
 yuk_form_39_infl,yuk_form_39,1w,1

@@ -286,14 +286,14 @@ out.fillna("", inplace=True)
 save_float(
     print_latex(out),
     "aku1sa",
-    r"\akuriyo \gl{1}\gl{s_a_} markers in Gildea's fieldnotes " + sources,
-    short=r"\akuriyo \gl{1}\gl{s_a_} markers in Gildea's fieldnotes",
+    r"Regular \akuriyo \gl{1}\gl{s_a_} markers " + sources,
+    short=r"Regular \akuriyo \gl{1}\gl{s_a_} markers",
 )
 
 # regular proto-waiwaian verbs
 meanings = ["fall", "sleep"]
 lgs = ["PWai", "hix", "wai"]
-pyd.x = ["Meaning", "Language_ID"]
+pyd.x = ["Language_ID", "Meaning"]
 pyd.y = ["Inflection"]
 pyd.filters = {"Language_ID": lgs, "Meaning": meanings}
 pyd.sort_orders = {
@@ -308,7 +308,7 @@ print(tabular)
 
 tabular = tabular.apply(lambda x: x.apply(objectify, obj_string=get_obj_str(x.name[1])))
 tabular.rename(
-    columns={"sleep": r"\qu{to sleep} (\gl{s_p_})", "fall": "\qu{to fall} (\gl{s_a_})"},
+    columns={"sleep": r"\qu{to sleep}", "fall": "\qu{to fall}"},
     level="Meaning",
     inplace=True,
 )
@@ -319,7 +319,7 @@ tabular.columns.names = [None, None]
 save_float(
     print_latex(tabular, keep_index=True),
     "pwaireg",
-    "Regular \PWai verbs " + sources,
+    "Regular \qu{to fall} (\gl{s_a_}) and \qu{to sleep} (\gl{s_p_}) in \PWai " + sources,
     short="Regular \PWai verbs",
 )
 
@@ -328,6 +328,7 @@ tir_reg = i_df[~(pd.isnull(i_df["Verb_Cognateset_ID"]))]
 meanings = ["bathe_intr", "sleep"]
 lgs = ["PTir", "tri", "aku"]
 pyd.filters = {"Language_ID": lgs, "Meaning": meanings}
+pyd.x = ["Meaning", "Language_ID"]
 pyd.sort_orders = {
     "Language_ID": lgs,
     "Meaning": meanings,
@@ -365,9 +366,8 @@ for lg, meaning in {"bak": "go_up", "ara": "dance", "ikp": "run"}.items():
     sources.extend(get_sources(i_df, latexify=False))
     tabular = pd.concat([tabular, temp], axis=1)
 
-print(tabular)
 
-sources = cldfh.cite_a_bunch(sources)
+sources = cldfh.cite_a_bunch(sources, parens=True)
 tabular = tabular.apply(lambda x: x.apply(objectify, obj_string=get_obj_str(x.name[1])))
 
 tabular.rename(columns=trans_dic, level="Meaning", inplace=True)
@@ -376,6 +376,8 @@ tabular.rename(columns=shorthand_dic, level="Language_ID", inplace=True)
 tabular.index = tabular.index.map(pynt.get_expex_code)
 tabular.index.names = [None]
 tabular.columns.names = [None, None]
+tabular.columns = [" ".join([x, y]) for x, y in tabular.columns]
+
 save_float(
     print_latex(tabular, keep_index=True),
     "pekreg",
@@ -383,6 +385,29 @@ save_float(
     short="Regular Pekodian \gl{s_a_} verbs",
 )
 
+#regular carijo and yukpa verbs
+pyd.x = ["Meaning"]
+for lg, meanings in {
+    "car": ["arrive", "dance"],
+    "yuk": ["wash_self", "sleep", "fall"]
+}.items():
+    pyd.filters = {"Language_ID": [lg], "Meaning": meanings}
+    tabular = pyd.compose_paradigm(i_df, multi_index=True)
+    print(tabular)
+    sources = get_sources(i_df)
+    tabular.index = tabular.index.map(pynt.get_expex_code)
+    tabular.index.name = None
+    tabular.rename(columns=trans_dic, inplace=True)
+    tabular = tabular.apply(lambda x: x.apply(objectify))
+    tabular.columns.names = [None]
+    
+    save_float(
+        print_latex(tabular, keep_index=True),
+        lg + "reg",
+        f"Regular {print_shorthand(lg)} verbs " + sources,
+        short=f"Regular {print_shorthand(lg)} verbs",
+    )
+    
 i_df = i_df[~(pd.isnull(i_df["Verb_Cognateset_ID"]))]
 
 # pekodian lexical comparison
@@ -587,7 +612,7 @@ bathe_tables = [
 
 bathe_out = (
     r"""\begin{table}
-\caption{Comparison of intransitive and transitive \qu{to bathe} %s}
+\caption[Comparison of intransitive and transitive \qu{to bathe}]{Comparison of intransitive and transitive \qu{to bathe} %s}
 \label{tab:bathe}
 \small
 \centering
