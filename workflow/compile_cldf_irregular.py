@@ -77,6 +77,7 @@ lex_meanings["Description"] = "'" + lex_meanings["Meaning"] + "'"
 lex_meanings["ID"] = lex_meanings["Meaning"].str.replace(" ", "_")
 lex_meanings.drop(columns=["Meaning"], inplace=True)
 lex_meanings.drop_duplicates(subset=["ID"], inplace=True)
+lex_meanings = lex_meanings[~(lex_meanings["ID"].isin(verb_meanings["ID"]))]
 
 meanings = verb_meanings.append(form_meanings).append(lex_meanings)
 

@@ -1,6 +1,9 @@
 import pyradigms as pyd
-import warnings; warnings.filterwarnings("ignore")
+import warnings
+
+warnings.filterwarnings("ignore")
 import pandas as pd
+
 pd.options.mode.chained_assignment = None
 import cariban_helpers as cah
 import cldf_helpers as cldfh
@@ -22,14 +25,20 @@ i_df["Form"] = i_df["Form"].str.replace("+", "", regex=True)
 m_df = pd.read_csv("../data/cldf/parameters.csv")
 m_df["Description"] = m_df["Description"].str.strip("'").map(pynt.get_expex_code)
 mean_dic = dict(zip(m_df["ID"], m_df["Description"]))
+trans_dic = {x: "\\qu{%s}" % y for x, y in mean_dic.items()}
 
 concept_dic = {
     "DETRZ1+bathe_1": "bathe_intr",
     "DETRZ+come": "come",
-    "DETRZ1": "bathe_intr"
+    "DETRZ1": "bathe_intr",
 }
 
-i_df["Concept"] = i_df.apply(lambda x: concept_dic[x["Verb_Cognateset_ID"]] if x["Verb_Cognateset_ID"] in concept_dic else x["Verb_Cognateset_ID"], axis=1)
+i_df["Concept"] = i_df.apply(
+    lambda x: concept_dic[x["Verb_Cognateset_ID"]]
+    if x["Verb_Cognateset_ID"] in concept_dic
+    else x["Verb_Cognateset_ID"],
+    axis=1,
+)
 
 segments = open("../data/segments.txt").read()
 segment_list = [{"Grapheme": x, "mapping": x} for x in segments.split("\n")]
@@ -53,6 +62,7 @@ cog_form_dic["come"] = "(ət-)jəpɨ"
 cog_trans_dic["bathe_intr"] = r"bathe"
 cog_trans_dic["be_1"] = r"be-1"
 cog_trans_dic["be_2"] = r"be-2"
+
 
 def str2numcog(cogsets):
     return " ".join([cognum[x] for x in cogsets.split("+")])
@@ -84,7 +94,7 @@ def print_latex(df, ex=False, keep_index=False):
         del lines[-2]
         return "\n".join(lines)
     else:
-        return "\n".join(lines).replace("\toprule", "\mytoprule")
+        return "\n".join(lines).replace(r"\toprule", "\mytoprule")
 
 
 def save_float(tabular, label, caption, filename=None, short=None):
@@ -144,13 +154,15 @@ def combine_form_meaning(row, latex=True):
     return out
 
 
-def get_sources(df, parens=True):
+def get_sources(df, parens=True, latexify=True):
     tmp = pyd.content_string
     pyd.content_string = "Source"
     table = pyd.compose_paradigm(df)
-    ref_list = [j for i in table.values.tolist() for j in i]
-    source_string = cldfh.cite_a_bunch(ref_list, parens=parens)
     pyd.content_string = tmp
+    ref_list = [j for i in table.values.tolist() for j in i]
+    if not latexify:
+        return ref_list
+    source_string = cldfh.cite_a_bunch(ref_list, parens=parens)
     return source_string
 
 
@@ -162,6 +174,9 @@ def sort_lg(df):
 
 def print_shorthand(abbrev):
     return "\\" + cah.get_shorthand(abbrev)
+
+
+shorthand_dic = {x: print_shorthand(x) for x in lg_list}
 
 
 def extract_sources(df, src_str="Source", keep=False):
@@ -204,12 +219,14 @@ def reconstructed_form_table(lgs, proto, verbs, caption, name):
     sources = get_sources(i_df)
     tabular.index.name = None
     print(tabular)
-    
-    tabular.index = tabular.index.map(lambda x: "\\qu{"+cog_trans_dic[x]+"}")
-    tabular = tabular.apply(lambda x: x.apply(objectify, obj_string=get_obj_str(x.name)))
+
+    tabular.index = tabular.index.map(lambda x: "\\qu{" + cog_trans_dic[x] + "}")
+    tabular = tabular.apply(
+        lambda x: x.apply(objectify, obj_string=get_obj_str(x.name))
+    )
     tabular.columns = tabular.columns.map(print_shorthand)
     tabular = print_latex(tabular, keep_index=True)
-    
+
     save_float(
         tabular,
         name,
@@ -218,26 +235,52 @@ def reconstructed_form_table(lgs, proto, verbs, caption, name):
     )
     pyd.filters = {}
 
+
 lgs = ["PPek", "ara", "ikp", "bak"]
 verbs = ["say", "bathe_intr", "be_1", "be_2", "come", "go_down", "go"]
-reconstructed_form_table(lgs, "PPek", verbs, r"Verbs preserving \gl{1}\gl{s_a_} \rc{w-} in \PPek", "ppekverbs")
+reconstructed_form_table(
+    lgs,
+    "PPek",
+    verbs,
+    r"Verbs preserving \gl{1}\gl{s_a_} \rc{w-} in \PPek",
+    "ppekverbs",
+)
 
 lgs = ["PWai", "hix", "wai"]
 verbs = ["say", "be_1", "be_2", "go"]
-reconstructed_form_table(lgs, "PWai", verbs, r"Verbs preserving \gl{1}\gl{s_a_} \rc{w-} in \PWai", "pwaiverbs")
+reconstructed_form_table(
+    lgs,
+    "PWai",
+    verbs,
+    r"Verbs preserving \gl{1}\gl{s_a_} \rc{w-} in \PWai",
+    "pwaiverbs",
+)
 
-reconstructed_form_table(["PTir", "tri", "aku"], "PTir", ["go", "say", "come", "be_1", "be_2"], r"Verbs preserving \gl{1}\gl{s_a_} \rc{w-} in \PTir", "ptirverbs")
+reconstructed_form_table(
+    ["PTir", "tri", "aku"],
+    "PTir",
+    ["go", "say", "come", "be_1", "be_2"],
+    r"Verbs preserving \gl{1}\gl{s_a_} \rc{w-} in \PTir",
+    "ptirverbs",
+)
 
-
-akuverbs = i_df[(i_df["Language_ID"] == "aku") & (i_df["Prefix_Cognateset_ID"].isin(["k", "1t"]))]
+akuverbs = i_df[
+    (i_df["Language_ID"] == "aku") & (i_df["Prefix_Cognateset_ID"].isin(["k", "1t"]))
+]
 akuverbs["Form"] = akuverbs["Form"].apply(lambda x: x.split("-", 1)[1])
 akuverbs["Meaning"] = akuverbs["Meaning"].map(mean_dic)
 akuverbs["String"] = akuverbs.apply(combine_form_meaning, axis=1)
 
-k_list = akuverbs[akuverbs["Prefix_Cognateset_ID"] == "k"]["String"].reset_index(drop=True)
-t_list = akuverbs[akuverbs["Prefix_Cognateset_ID"] == "1t"]["String"].reset_index(drop=True)
+k_list = akuverbs[akuverbs["Prefix_Cognateset_ID"] == "k"]["String"].reset_index(
+    drop=True
+)
+t_list = akuverbs[akuverbs["Prefix_Cognateset_ID"] == "1t"]["String"].reset_index(
+    drop=True
+)
 sources = extract_sources(akuverbs)
-out = pd.DataFrame.from_dict({r"first person \obj{k-}": k_list, r"first person \obj{t͡ʃ-}": t_list})
+out = pd.DataFrame.from_dict(
+    {r"first person \obj{k-}": k_list, r"first person \obj{t͡ʃ-}": t_list}
+)
 out.fillna("", inplace=True)
 
 save_float(
@@ -246,17 +289,111 @@ save_float(
     r"\akuriyo \gl{1}\gl{s_a_} markers in Gildea's fieldnotes " + sources,
     short=r"\akuriyo \gl{1}\gl{s_a_} markers in Gildea's fieldnotes",
 )
+
+# regular proto-waiwaian verbs
+meanings = ["fall", "sleep"]
+lgs = ["PWai", "hix", "wai"]
+pyd.x = ["Meaning", "Language_ID"]
+pyd.y = ["Inflection"]
+pyd.filters = {"Language_ID": lgs, "Meaning": meanings}
+pyd.sort_orders = {
+    "Language_ID": lgs,
+    "Meaning": meanings,
+    "Inflection": ["1", "2", "1+2", "3"],
+}
+tabular = pyd.compose_paradigm(i_df, multi_index=True)
+sources = get_sources(i_df)
+
+print(tabular)
+
+tabular = tabular.apply(lambda x: x.apply(objectify, obj_string=get_obj_str(x.name[1])))
+tabular.rename(
+    columns={"sleep": r"\qu{to sleep} (\gl{s_p_})", "fall": "\qu{to fall} (\gl{s_a_})"},
+    level="Meaning",
+    inplace=True,
+)
+tabular.rename(columns=shorthand_dic, level="Language_ID", inplace=True)
+tabular.index = tabular.index.map(pynt.get_expex_code)
+tabular.index.names = [None]
+tabular.columns.names = [None, None]
+save_float(
+    print_latex(tabular, keep_index=True),
+    "pwaireg",
+    "Regular \PWai verbs " + sources,
+    short="Regular \PWai verbs",
+)
+
+# regular proto-tiriyoan verbs
+tir_reg = i_df[~(pd.isnull(i_df["Verb_Cognateset_ID"]))]
+meanings = ["bathe_intr", "sleep"]
+lgs = ["PTir", "tri", "aku"]
+pyd.filters = {"Language_ID": lgs, "Meaning": meanings}
+pyd.sort_orders = {
+    "Language_ID": lgs,
+    "Meaning": meanings,
+    "Inflection": ["1", "2", "1+2", "3"],
+}
+tabular = pyd.compose_paradigm(tir_reg, multi_index=True)
+sources = get_sources(tir_reg)
+
+print(tabular)
+
+tabular = tabular.apply(lambda x: x.apply(objectify, obj_string=get_obj_str(x.name[1])))
+
+tabular.rename(columns=trans_dic, level="Meaning", inplace=True)
+tabular.rename(columns=shorthand_dic, level="Language_ID", inplace=True)
+
+tabular.index = tabular.index.map(pynt.get_expex_code)
+tabular.index.names = [None]
+tabular.columns.names = [None, None]
+save_float(
+    print_latex(tabular, keep_index=True),
+    "ptirreg",
+    "Regular \PTir \gl{s_a_} verbs " + sources,
+    short="Regular \PTir \gl{s_a_} verbs",
+)
+
+
+# regular pekodian verbs
+tabular = pd.DataFrame()
+sources = []
+pyd.x = ["Language_ID", "Meaning"]
+for lg, meaning in {"bak": "go_up", "ara": "dance", "ikp": "run"}.items():
+    pyd.filters = {"Language_ID": [lg], "Meaning": [meaning]}
+    pyd.sort_orders = {"Inflection": ["1", "2", "1+2", "3"]}
+    temp = pyd.compose_paradigm(i_df, multi_index=True)
+    sources.extend(get_sources(i_df, latexify=False))
+    tabular = pd.concat([tabular, temp], axis=1)
+
+print(tabular)
+
+sources = cldfh.cite_a_bunch(sources)
+tabular = tabular.apply(lambda x: x.apply(objectify, obj_string=get_obj_str(x.name[1])))
+
+tabular.rename(columns=trans_dic, level="Meaning", inplace=True)
+tabular.rename(columns=shorthand_dic, level="Language_ID", inplace=True)
+
+tabular.index = tabular.index.map(pynt.get_expex_code)
+tabular.index.names = [None]
+tabular.columns.names = [None, None]
+save_float(
+    print_latex(tabular, keep_index=True),
+    "pekreg",
+    "Regular Pekodian \gl{s_a_} verbs " + sources,
+    short="Regular Pekodian \gl{s_a_} verbs",
+)
+
 i_df = i_df[~(pd.isnull(i_df["Verb_Cognateset_ID"]))]
 
 # pekodian lexical comparison
 forms = pd.read_csv("../data/cldf/forms.csv")
 lgs = ["ara", "ikp"]
 meanings = [
-"defecate",
-"DAT",
-"dog",
-"capuchin_monkey",
-"sleep",
+    "defecate",
+    "DAT",
+    "dog",
+    "capuchin_monkey",
+    "sleep",
 ]
 pyd.x = ["Language_ID"]
 pyd.y = ["Parameter_ID"]
@@ -272,7 +409,7 @@ tabular.columns = tabular.columns.map(print_shorthand)
 tabular.index.name = "Meaning"
 tabular.reset_index(inplace=True)
 tabular["Meaning"] = tabular["Meaning"].map(mean_dic)
-tabular["Meaning"] = tabular["Meaning"].map(lambda x: "\\qu{"+ x +"}")
+tabular["Meaning"] = tabular["Meaning"].map(lambda x: "\\qu{" + x + "}")
 
 save_float(
     print_latex(tabular),
@@ -662,4 +799,3 @@ save_float(
     short="Imperatives of \gl{s_a_} and \gl{s_p_} verbs",
 )
 pyd.content_string = "Form"
-
