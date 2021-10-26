@@ -46,7 +46,7 @@ tri_form_46,tri,wɨ-tən-,triomeira1999[292],Form in source: wï-tën.,1_go,w ɨ
 tri_form_47,tri,w-əepɨ-,triomeira1999[294],Form in source: w-ëepï.,1_come,w + ə + e p ɨ
 tri_form_48,tri,wɨ-ka-,triomeira1999[294],Form in source: wï-ka.,1_say,w ɨ + k a
 tri_form_49,tri,w-ei-,triomeira1999[339],Form in source: w-ei.,1_be,w + e i
-tri_form_50,tri,s-epɨ-,triomeira1999[660],Form in source: s-epï-ja-e.,1_bathe_intr,s + e + p ɨ
+tri_form_50,tri,s-epɨ-,triomeira1999[292],Form in source: s-epï.,1_bathe_intr,s + e + p ɨ
 bak_form_51,bak,w-a-,von1892bakairi[130],Form in source: töre-wakine.,1_be,w + a
 bak_form_52,bak,u-ge-,von1892bakairi[131],Form in source: u-ɣépa.,1_say,u + g e
 bak_form_53,bak,k-ɨtəgɨ-,von1892bakairi[137],Form in source: kχ-itaké-he.,1_go_down,k + ɨ t ə g ɨ
@@ -89,6 +89,14 @@ aku_form_91,aku,t͡ʃ-entapo-,gildea1994akuriyo[77],Form in source: šentapoe.,1
 aku_form_92,aku,t͡ʃ-etonema-,gildea1994akuriyo[84],Form in source: šetóòʔnema.,1_lie_down,t͡ʃ + e t o n e m a
 aku_form_93,aku,t͡ʃ-ewai-,gildea1994akuriyo[84],Form in source: čewaiʔne.,1_sit_down,t͡ʃ + e w a i
 aku_form_94,aku,t͡ʃ-ehpa-,gildea1994akuriyo[87],Form in source: šéhpa.,1_bathe_intr,t͡ʃ + e h p a
+tri_form_95,tri,t-əənɨkɨ-,meira1998proto[107],,1_sleep,t + əə n ɨ k ɨ
+PTir_form_96,PTir,t͡ʃ-epɨ-,,,1_bathe_intr,t͡ʃ + e + p ɨ
+wai_form_97,wai,kɨ-wɨnɨkɨ-,waiwaihawkins1998[30],"Form in source: kî-wînîkî-o, kîwînko.",1_sleep,k ɨ + w ɨ n ɨ k ɨ
+hix_form_98,hix,kɨ-nɨkɨ-,hixkaryanaderby1985[189],"Form in source: kɨ-nɨkɨ-no, dɨkno.",1_sleep,k ɨ + n ɨ k ɨ
+PWai_form_99,PWai,kɨ-wɨnɨkɨ-,,,1_sleep,k ɨ + w ɨ n ɨ k ɨ
+wai_form_100,wai,k-eɸɨrka-,howard2001wrought[150],Form in source: kepîrkesî.,1_fall,k + e ɸ ɨ r k a
+hix_form_101,hix,k-ehurka-,howard2001wrought[150],Form in source: kehurkehe.,1_fall,k + e h u r k a
+PWai_form_102,PWai,k-eɸurka-,,,1_fall,k + e ɸ u r k a
 mac_stem_0,mac,ipɨ,macushiabbott1991[32],,come,i p ɨ
 pem_stem_1,pem,jepɨ,alvarez2000construcciones[102],,come,j e p ɨ
 aka_stem_2,aka,jepɨ,akawaiocaesar2003[125],,come,j e p ɨ

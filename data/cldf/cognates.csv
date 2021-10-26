@@ -32,7 +32,11 @@ PTir_form_75_stem,PTir_form_75,say,2
 PTir_form_82_infl,PTir_form_82,1t,1
 PTir_form_82_stem_pfx,PTir_form_82,DETRZ1,2
 PTir_form_82_stem_root,PTir_form_82,bathe_1,3
+PTir_form_96_infl,PTir_form_96,1t,1
+PTir_form_96_stem_pfx,PTir_form_96,DETRZ1,2
+PTir_form_96_stem_root,PTir_form_96,bathe_1,3
 PTir_stem_70_cog,PTir_stem_70,go_down,1
+PWai_form_102_infl,PWai_form_102,k,1
 PWai_form_76_infl,PWai_form_76,1w,1
 PWai_form_76_stem,PWai_form_76,say,2
 PWai_form_77_infl,PWai_form_77,1w,1
@@ -44,6 +48,8 @@ PWai_form_79_stem,PWai_form_79,go,2
 PWai_form_81_infl,PWai_form_81,k,1
 PWai_form_81_stem_pfx,PWai_form_81,DETRZ1,2
 PWai_form_81_stem_root,PWai_form_81,bathe_1,3
+PWai_form_99_infl,PWai_form_99,k,1
+PWai_form_99_stem,PWai_form_99,sleep,2
 aka_stem_19_cog_1,aka_stem_19,DETRZ,1
 aka_stem_19_cog_2,aka_stem_19,come,2
 aka_stem_2_cog,aka_stem_2,come,1
@@ -154,6 +160,7 @@ car_stem_37_cog,car_stem_37,go,1
 car_stem_53_cog,car_stem_53,say,1
 car_stem_71_cog,car_stem_71,go_down,1
 car_stem_9_cog,car_stem_9,come,1
+hix_form_101_infl,hix_form_101,k,1
 hix_form_12_infl,hix_form_12,1w,1
 hix_form_12_stem,hix_form_12,say,2
 hix_form_13_infl,hix_form_13,k,1
@@ -165,6 +172,8 @@ hix_form_15_infl,hix_form_15,1w,1
 hix_form_15_stem,hix_form_15,be_2,2
 hix_form_16_infl,hix_form_16,1w,1
 hix_form_16_stem,hix_form_16,go,2
+hix_form_98_infl,hix_form_98,k,1
+hix_form_98_stem,hix_form_98,sleep,2
 hix_stem_101_cog_1,hix_stem_101,DETRZ1,1
 hix_stem_101_cog_2,hix_stem_101,bathe_1,2
 hix_stem_102_cog,hix_stem_102,bathe_1,1
@@ -281,6 +290,9 @@ tri_form_49_stem,tri_form_49,be_2,2
 tri_form_50_infl,tri_form_50,1t,1
 tri_form_50_stem_pfx,tri_form_50,DETRZ1,2
 tri_form_50_stem_root,tri_form_50,bathe_1,3
+tri_form_95_infl,tri_form_95,1t,1
+tri_form_95_stem_pfx,tri_form_95,DETRZ,2
+tri_form_95_stem_root,tri_form_95,sleep,3
 tri_stem_111_cog_1,tri_stem_111,DETRZ1,1
 tri_stem_111_cog_2,tri_stem_111,bathe_1,2
 tri_stem_112_cog,tri_stem_112,bathe_1,1
@@ -294,6 +306,7 @@ tri_stem_94_cog,tri_stem_94,defecate,1
 uxc_stem_24_cog,uxc_stem_24,come,1
 uxc_stem_47_cog,uxc_stem_47,go,1
 uxc_stem_49_cog,uxc_stem_49,say,1
+wai_form_100_infl,wai_form_100,k,1
 wai_form_44_infl,wai_form_44,1w,1
 wai_form_44_stem,wai_form_44,be_1,2
 wai_form_45_infl,wai_form_45,1w,1
@@ -306,6 +319,8 @@ wai_form_58_stem,wai_form_58,say,2
 wai_form_59_infl_pfx1,wai_form_59,k,1
 wai_form_59_infl_pfx2,wai_form_59,1w,2
 wai_form_59_stem,wai_form_59,go,3
+wai_form_97_infl,wai_form_97,k,1
+wai_form_97_stem,wai_form_97,sleep,2
 wai_stem_103_cog_1,wai_stem_103,DETRZ1,1
 wai_stem_103_cog_2,wai_stem_103,bathe_1,2
 wai_stem_104_cog,wai_stem_104,bathe_1,1
