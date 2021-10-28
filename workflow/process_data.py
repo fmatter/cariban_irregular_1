@@ -319,7 +319,8 @@ tabular.columns.names = [None, None]
 save_float(
     print_latex(tabular, keep_index=True),
     "pwaireg",
-    "Regular \qu{to fall} (\gl{s_a_}) and \qu{to sleep} (\gl{s_p_}) in \PWai " + sources,
+    "Regular \qu{to fall} (\gl{s_a_}) and \qu{to sleep} (\gl{s_p_}) in \PWai "
+    + sources,
     short="Regular \PWai verbs",
 )
 
@@ -385,11 +386,11 @@ save_float(
     short="Regular Pekodian \gl{s_a_} verbs",
 )
 
-#regular carijo and yukpa verbs
+# regular carijo and yukpa verbs
 pyd.x = ["Meaning"]
 for lg, meanings in {
     "car": ["arrive", "dance"],
-    "yuk": ["wash_self", "sleep", "fall"]
+    "yuk": ["wash_self", "sleep", "fall"],
 }.items():
     pyd.filters = {"Language_ID": [lg], "Meaning": meanings}
     tabular = pyd.compose_paradigm(i_df, multi_index=True)
@@ -400,14 +401,14 @@ for lg, meanings in {
     tabular.rename(columns=trans_dic, inplace=True)
     tabular = tabular.apply(lambda x: x.apply(objectify))
     tabular.columns.names = [None]
-    
+
     save_float(
         print_latex(tabular, keep_index=True),
         lg + "reg",
         f"Regular {print_shorthand(lg)} verbs " + sources,
         short=f"Regular {print_shorthand(lg)} verbs",
     )
-    
+
 i_df = i_df[~(pd.isnull(i_df["Verb_Cognateset_ID"]))]
 
 # pekodian lexical comparison
@@ -530,7 +531,7 @@ def print_aligned_table(
     sort_lg(df)
     for i, col in enumerate(df.columns):
         if col == "":
-            df.columns.values[i] = "Alignment"
+            # df.columns.values[i] = "Alignment"
             break
     df["Form"] = df["Form"].str.replace("+", "", regex=True)
     print(f"Comparative table for 'to {verb}'")
@@ -569,12 +570,12 @@ print_aligned_table(
 print_aligned_table(
     v_df[v_df["Parameter_ID"] == "go"],
     verb="go",
-    caption=r"Reflexes of \rc{ɨtə(mə)} \qu{to go}",
+    caption=r"Reflexes of \rc{ɨtə[mə]} \qu{to go}",
 )
 print_aligned_table(
     v_df[v_df["Parameter_ID"] == "say"],
     verb="say",
-    caption=r"Reflexes of \rc{ka(ti)} \qu{to say}",
+    caption=r"Reflexes of \rc{ka[ti]} \qu{to say}",
 )
 
 # comparison of intransitive and transitive 'to bathe'
@@ -666,16 +667,40 @@ i_df = i_df[i_df["Inflection"] == "1"]
 verb_list = ["say", "go", "be_1", "be_2", "come", "go_down", "bathe_intr"]
 
 # determine whether verb was affected by extensions based on cognacy of prefixes
-def identify_affected(cogset, value):
+def identify_affected(cogset, value, verb):
+    # we either don't know what form occurs or we think no potential form exists
     if value in ["?", "–"]:
         return value
+    # we think the verb does not occur at all in the language
     elif pd.isnull(value):
         return "–"
+    # 'go down' used to be an Sp verb, the relative chronology of the class
+    # change and the extensions, and whether the class occurred at all
+    # are not known in some cases
+    elif verb == "go_down":
+        # the extension of PTir *t- could have happened before or after the class change
+        # the extension of car and yuk j- could have happened before or after the collapse
+        # of the system. the verb might have changed class or not.
+        if cogset in ["1t", "1p"]:
+            return "N/A"
+        # we have to assume that when aku extended k-
+        # it was already an Sa verb
+        elif cogset == "k":
+            return "n"
+        # the verb didn't exist in PWai, and while it could have switched classes
+        # *after* the extension of PPek *k-, why would it have acquired the old Sa
+        # marker instead of the new one?
+        else:
+            raise ValueError("This combination should not occur")
     else:
+        # the new person marker occurs on the verb
         if cogset == value:
             return "y"
+        # the new person marker occurs on the verb together
+        # with another prefix (wai)
         elif cogset in value.split("+"):
             return "(y)"
+        # the new marker does not occur on the verb
         else:
             return "n"
 
@@ -689,6 +714,7 @@ daughters = {
 
 overview = pd.DataFrame()
 for i, row in e_df.iterrows():
+    print(row)
     if row["Language_ID"] in daughters:
         lgs = [row["Language_ID"]] + daughters[row["Language_ID"]]
     else:
@@ -699,7 +725,7 @@ for i, row in e_df.iterrows():
         t_df["Orig_Language"] = row["Language_ID"]
         t_df["Affected"] = t_df.apply(
             lambda x: identify_affected(
-                row["Cognateset_ID"], x["Prefix_Cognateset_ID"]
+                row["Cognateset_ID"], x["Prefix_Cognateset_ID"], x["Verb_Cognateset_ID"]
             ),
             axis=1,
         )
@@ -739,7 +765,7 @@ result["Form"] = [lvl[1] for lvl in result.index.str.split(".")]
 temp_list = ["Orig", "Form", "Lg"]
 result.set_index(temp_list, inplace=True)
 result.sort_index(inplace=True, level="Lg")
-result.replace({"n/n": "n", "n/y": "(y)", "": "–"}, inplace=True)
+result.replace({"": "–"}, inplace=True)
 result.index.names = ["", "", ""]
 print("\nOverview of extensions and (un-)affected verbs:")
 print(result)
@@ -763,7 +789,16 @@ result.columns = [
     result.columns.map(lambda x: f"\\qu{{to {cog_trans_dic[x]}}}"),
 ]
 # add nice-looking checkmarks and stuff
-result.replace({"n": "×", "y": "\checkmark", "(y)": "(\\checkmark)"}, inplace=True)
+result.replace(
+    {
+        "n": "×",
+        "(n)": "(×)",
+        "y": "\checkmark",
+        "(y)": "(\\checkmark)",
+        "N/A": "\\textsc{n/a}",
+    },
+    inplace=True,
+)
 save_float(
     print_latex(result, keep_index=True),
     "overview",
