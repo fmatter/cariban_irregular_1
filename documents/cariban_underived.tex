@@ -1,7 +1,19 @@
 \input{config/config.tex}
+
 \newcommand{\detrz}{\rc{əte}\slash{}\obj{e-}}
 \usepackage{phonrule}
 \usepackage{amsthm,etoolbox,xcolor}
+
+\usepackage{placeins}
+
+\let\Oldsection\section
+\renewcommand{\section}{\FloatBarrier\Oldsection}
+
+\let\Oldsubsection\subsection
+\renewcommand{\subsection}{\FloatBarrier\Oldsubsection}
+
+\let\Oldsubsubsection\subsubsection
+\renewcommand{\subsubsection}{\FloatBarrier\Oldsubsubsection}
 
 \makeatletter
 \patchcmd{\@@setcref}         {??}{\color{red} undefined Label}{}{}
