@@ -25,7 +25,7 @@ PTir_form_69_stem_pfx,PTir_form_69,DETRZ,2
 PTir_form_69_stem_root,PTir_form_69,come,3
 PTir_form_71_infl,PTir_form_71,1w,1
 PTir_form_71_stem,PTir_form_71,go,2
-PTir_form_73_infl,PTir_form_73,1p,1
+PTir_form_73_infl,PTir_form_73,tri1p,1
 PTir_form_73_stem,PTir_form_73,go_down,2
 PTir_form_75_infl,PTir_form_75,1w,1
 PTir_form_75_stem,PTir_form_75,say,2
@@ -60,7 +60,7 @@ aku_form_32_infl,aku_form_32,1w,1
 aku_form_32_stem,aku_form_32,come,2
 aku_form_33_infl,aku_form_33,1w,1
 aku_form_33_stem,aku_form_33,be_1,2
-aku_form_7_infl,aku_form_7,1p,1
+aku_form_7_infl,aku_form_7,tri1p,1
 aku_form_7_stem,aku_form_7,go_down,2
 aku_form_8_infl,aku_form_8,1t,1
 aku_form_8_stem_pfx,aku_form_8,DETRZ1,2
@@ -279,7 +279,7 @@ pem_stem_61_cog,pem_stem_61,say,1
 pem_stem_77_cog,pem_stem_77,go_down,1
 tri_form_35_infl,tri_form_35,1w,1
 tri_form_35_stem,tri_form_35,be_1,2
-tri_form_36_infl,tri_form_36,1p,1
+tri_form_36_infl,tri_form_36,tri1p,1
 tri_form_36_stem,tri_form_36,go_down,2
 tri_form_46_infl,tri_form_46,1w,1
 tri_form_46_stem,tri_form_46,go,2
