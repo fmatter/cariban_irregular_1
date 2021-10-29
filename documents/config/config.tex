@@ -77,8 +77,11 @@
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
- \fancyhead[L,C]{} \fancyhead[R]{DRAFT (\today)} \fancyfoot[L]{} \fancyfoot[C]{\thepage}
-
+ \fancyhead[L,C]{}
+ \fancyhead[R]{DRAFT (\today)}
+ \fancyfoot[L]{}
+ \fancyfoot[C]{\thepage}
+ \addtolength{\topmargin}{-2.49998pt}
 %CROSSREFS
 \usepackage{hyperref}
 \usepackage[capitalise,noabbrev]{cleveref}
@@ -86,6 +89,9 @@
 
 \newlist{inlinelist}{enumerate*}{1}
 \setlist[inlinelist]{label={\alph*)}, itemjoin={{; }}, itemjoin*={{; and }}}
+
+\newlist{legendlist}{itemize*}{1}
+\setlist[legendlist]{itemjoin={{; }}}
 
 \newcommand{\emp}[1]{\textbf{#1}}
 \newcommand{\subs}[1]{\textsubscript{#1}}

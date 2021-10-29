@@ -669,31 +669,34 @@ i_df = i_df[i_df["Inflection"] == "1"]
 verb_list = ["say", "go", "be_1", "be_2", "come", "go_down", "bathe_intr"]
 
 # determine whether verb was affected by extensions based on cognacy of prefixes
-def identify_affected(cogset, value, verb):
-    # we either don't know what form occurs or we think no potential form exists
-    if value in ["?", "–"]:
-        return value
-    # we think the verb does not occur at all in the language
-    elif pd.isnull(value):
-        return "–"
+def identify_affected(cogset, row):
+    value = row["Prefix_Cognateset_ID"]
+    verb = row["Verb_Cognateset_ID"]
+    lg = row["Language_ID"]
     # 'go down' used to be an Sp verb, the relative chronology of the class
     # change and the extensions, and whether the class occurred at all
     # are not known in some cases
-    elif verb == "go_down":
+    if verb == "go_down" and lg not in ["PPek", "ara", "ikp", "bak"]:
         # the extension of PTir *t- could have happened before or after the class change
         # the extension of car and yuk j- could have happened before or after the collapse
         # of the system. the verb might have changed class or not.
-        if cogset in ["1t", "1p"]:
+        if (cogset in ["1t", "1p"] or lg in ["PWai", "wai", "hix"]):
             return "N/A"
         # we have to assume that when aku extended k-
         # it was already an Sa verb
-        elif cogset == "k":
+        elif lg == "aku":
             return "n"
         # the verb didn't exist in PWai, and while it could have switched classes
         # *after* the extension of PPek *k-, why would it have acquired the old Sa
         # marker instead of the new one?
         else:
             raise ValueError("This combination should not occur")
+    # we either don't know what form occurs or we think no potential form exists
+    elif value in ["?", "–"]:
+        return value
+    # we think the verb does not occur at all in the language
+    elif pd.isnull(value):
+        return "–"
     else:
         # the new person marker occurs on the verb
         if cogset == value:
@@ -706,6 +709,14 @@ def identify_affected(cogset, value, verb):
         else:
             return "n"
 
+overview_legend = {
+    "y":  {"tex": "\checkmark", "legend": "affected"},
+    "n":  {"tex": "×", "legend": "not affected"},
+    "?": {"tex": "?", "legend": "unknown first person prefix"},
+    "–": {"tex": "–", "legend": "does not occur"},
+    "(y)": {"tex": "(\\checkmark)", "legend": "affected with surviving old marker"},
+    "N/A": {"tex": "\\textsc{n/a}", "legend": "not meaningfully answerable"},
+}
 
 # extensions that happened in proto-languages sometimes go further in daughter languages
 daughters = {
@@ -716,7 +727,6 @@ daughters = {
 
 overview = pd.DataFrame()
 for i, row in e_df.iterrows():
-    print(row)
     if row["Language_ID"] in daughters:
         lgs = [row["Language_ID"]] + daughters[row["Language_ID"]]
     else:
@@ -727,7 +737,7 @@ for i, row in e_df.iterrows():
         t_df["Orig_Language"] = row["Language_ID"]
         t_df["Affected"] = t_df.apply(
             lambda x: identify_affected(
-                row["Cognateset_ID"], x["Prefix_Cognateset_ID"], x["Verb_Cognateset_ID"]
+                row["Cognateset_ID"], x
             ),
             axis=1,
         )
@@ -788,21 +798,23 @@ result.index = result.index.map(modify_index)
 # replace cogset ids with reconstructed forms and translationsm
 result.columns = [
     result.columns.map(lambda x: f"\\rc{{{cog_form_dic[x]}}}"),
-    result.columns.map(lambda x: f"\\qu{{to {cog_trans_dic[x]}}}"),
+    result.columns.map(lambda x: f"\\qu{{{cog_trans_dic[x]}}}"),
 ]
 # add nice-looking checkmarks and stuff
+repl_dic = {x: y["tex"] for x, y in overview_legend.items()}
 result.replace(
-    {
-        "n": "×",
-        "(n)": "(×)",
-        "y": "\checkmark",
-        "(y)": "(\\checkmark)",
-        "N/A": "\\textsc{n/a}",
-    },
+    repl_dic,
     inplace=True,
 )
+
+legend = "\\begin{legendlist}"
+for v in overview_legend.values():
+    legend += f"""\\item[{v["tex"]}] {v["legend"]}
+"""
+legend += "\\end{legendlist}"
+
 save_float(
-    print_latex(result, keep_index=True),
+    print_latex(result, keep_index=True) + legend,
     "overview",
     "Overview of extensions and (un-)affected verbs",
 )
