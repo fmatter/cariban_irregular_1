@@ -631,10 +631,12 @@ for table in bathe_tables:
     )
     if table[2] == "bathe_intr_1":
         bathe_out += r"""\begin{subtable}[t]{.49\linewidth}
+\centering
 """
     if table[2] == "bathe_tr_1":
         bathe_out += r"""\end{subtable}
-\begin{subtable}[t]{.49\linewidth}"""
+\begin{subtable}[t]{.49\linewidth}
+\centering"""
     bathe_out += r"""\caption{%s}
 \label{tab:%s}
 %s""" % (
