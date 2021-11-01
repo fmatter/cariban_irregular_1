@@ -95,3 +95,13 @@
 
 \newcommand{\emp}[1]{\textbf{#1}}
 \newcommand{\subs}[1]{\textsubscript{#1}}
+
+%to have nice right-hand sources in quotes
+\def\signed #1{{\leavevmode\unskip\nobreak\hfil\penalty50\hskip2em
+  \hbox{}\nobreak\hfil#1%
+  \parfillskip=0pt \finalhyphendemerits=0 \endgraf}}
+
+\newsavebox\mybox
+\newenvironment{quotebox}[1]
+  {\savebox\mybox{#1}\begin{quotation}}
+  {\signed{\usebox\mybox}\end{quotation}}
