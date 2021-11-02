@@ -1,7 +1,7 @@
-"Language_ID","Form","Cognateset_ID","Morphological","Phonological","Frequency","Comment"
-"PWai","k-","k","y","n","y",
-"PPek","k-","k","y","n","n?",
-"PTir","t-","1t","n","n","y?",
-"aku","k-","k","n","y","n",
-"car","j-","1p","n","y","n?",
-"yuk","j-","1p","n","y","y?",
+"ID","Language_ID","Form","Cognateset_ID","Morphological","Phonological","Frequency","Comment"
+"pwai_k","PWai","k-","k","y","n","y",
+"ppek_k","PPek","k-","k","y","n","n?",
+"ptir_t","PTir","t-","1t","n","n","y?",
+"aku_k","aku","k-","k","n","y","n",
+"car_j","car","j-","1p","n","y","n?",
+"yuk_j","yuk","j-","1p","n","y","y?",
