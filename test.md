@@ -62,10 +62,10 @@
 * [inflection_data.csv](data/inflection_data.csv)<a name="inflection_data">
   * Meaning_ID<a name="inflection_data.Meaning_ID">: 
   * Verb_Cognateset_ID<a name="inflection_data.Verb_Cognateset_ID">: 
-  * Language_ID<a name="inflection_data.Language_ID">: [languages](#languages):[`ID`](#languages.ID)
-  * Inflection<a name="inflection_data.Inflection">: [xxx](#xxx):[`xxy`](#xxx.xxy)
+  * Language_ID<a name="inflection_data.Language_ID">: Reference to [languages](#languages):[`ID`](#languages.ID)
+  * Inflection<a name="inflection_data.Inflection">: 
   * Form<a name="inflection_data.Form">: 
   * Prefix_Cognateset_ID<a name="inflection_data.Prefix_Cognateset_ID">: 
-  * Source<a name="inflection_data.Source">: 
+  * Source<a name="inflection_data.Source">: [bibkey](data/cldf/references.bib):[page]
   * Full_Form<a name="inflection_data.Full_Form">: 
   * Comment<a name="inflection_data.Comment">: 
