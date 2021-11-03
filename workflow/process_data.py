@@ -94,7 +94,7 @@ def print_latex(df, ex=False, keep_index=False):
         del lines[-2]
         return "\n".join(lines)
     else:
-        return "\n".join(lines).replace(r"\toprule", "\mytoprule")
+        return "\n".join(lines).replace(r"\toprule", "\mytoprule").replace("%", "\\%")
 
 
 def save_float(tabular, label, caption, filename=None, short=None):
@@ -851,7 +851,7 @@ def m_expl(row):
 cond_map = {
     "yuk_j": ["ə", "e", "a"],
     "aku_k": ["ə"],
-    "car_j": ["e"],
+    "car_j": ["e", "ə"],
     "ppek_k": ["ə", "e"],
     "pwai_k": ["o", "e"],
     "ptir_t": ["ə", "e"],
@@ -873,7 +873,7 @@ def p_expl(row):
 freq_map = {
     "be": 1,
     "go": 1,
-    "come": 0.5,
+    "come": 0, # or 0.5?
     "say": 1,
     "bathe_intr": 0,
     "go_down": 0,
@@ -881,12 +881,21 @@ freq_map = {
 
 
 def f_expl(row):
-    return freq_map[row["Meaning"]]
+    aff = freq_map[row["Meaning"]]
+    if aff == 0.5:
+        return 1
+    if row["Affected"] == "y":
+        if aff == 0:
+            return 1
+        elif aff == 1:
+            return 0
+    else:
+        return aff
 
 
-affectedness["Morphological"] = affectedness.apply(m_expl, axis=1)
-affectedness["Phonological"] = affectedness.apply(p_expl, axis=1)
-affectedness["Frequency"] = affectedness.apply(f_expl, axis=1)
+affectedness["morphological"] = affectedness.apply(m_expl, axis=1)
+affectedness["phonological"] = affectedness.apply(p_expl, axis=1)
+affectedness["frequency"] = affectedness.apply(f_expl, axis=1)
 affectedness.drop(columns=["Verb_Cognateset_ID", "Concept", "Meaning"], inplace=True)
 
 
@@ -911,7 +920,7 @@ def get_print(x, factor):
 
 affected_result = pd.DataFrame()
 
-for factor in ["Morphological", "Phonological", "Frequency"]:
+for factor in ["morphological", "phonological", "frequency"]:
     affected_result[factor] = affectedness.groupby("Extension_ID").apply(
         get_print, factor
     )
