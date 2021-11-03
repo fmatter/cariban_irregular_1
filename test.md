@@ -62,8 +62,8 @@
 * inflection_data.csv<a name="inflection_data">
   * Meaning_ID<a name="inflection_data.Meaning_ID">: 
   * Verb_Cognateset_ID<a name="inflection_data.Verb_Cognateset_ID">: 
-  * Language_ID<a name="inflection_data.Language_ID">: [#languages.csv](languages)`ID`
-  * Inflection<a name="inflection_data.Inflection">: [#xxx.csv](xxx)`xxy`
+  * Language_ID<a name="inflection_data.Language_ID">: [languages.csv](#languages)`ID`
+  * Inflection<a name="inflection_data.Inflection">: [xxx.csv](#xxx)`xxy`
   * Form<a name="inflection_data.Form">: 
   * Prefix_Cognateset_ID<a name="inflection_data.Prefix_Cognateset_ID">: 
   * Source<a name="inflection_data.Source">: 
