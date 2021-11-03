@@ -67,5 +67,5 @@
   * Form<a name="inflection_data.Form">: 
   * Prefix_Cognateset_ID<a name="inflection_data.Prefix_Cognateset_ID">: [cognate_sets](#cognate_sets):[`ID`](#cognate_sets.ID)+[cognate_sets](#cognate_sets):[`ID`](#cognate_sets.ID)
   * Source<a name="inflection_data.Source">: [bibkey](data/cldf/references.bib)[page]
-  * Full_Form<a name="inflection_data.Full_Form">: 
-  * Comment<a name="inflection_data.Comment">: 
+  * Full_Form<a name="inflection_data.Full_Form">: The full form in the source, if applicable.
+  * Comment<a name="inflection_data.Comment">: Comments
