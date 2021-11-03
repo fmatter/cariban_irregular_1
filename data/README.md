@@ -1,5 +1,23 @@
-* [languages.csv](languages.csv): List of languages with IDs, names, glottocodes, and locations.
-* [inflection_data.csv](inflection_data.csv): Prefix-Verb combinations for irregularly inflected verbs.
+This folder contains all the data compiled for the study, organized in CSV (comma-separated values) files.
+The individual files are structured as follows:
+
+* [languages.csv](languages.csv): List of languages
+	* `ID`: a three- (attested) or four-letter (reconstructed) string
+	* `Name`: the name as used in the paper
+	* `Glottocode`: the identified used in [Glottolog](https://www.glottolog.org)
+	* `Longitude`: longitude, decimal format
+	* `Latitude`: latitude, decimal format
+* [inflection_data.csv](inflection_data.csv): Prefix-Verb combinations for various inflected verbs. The central source of information about what extensions affected what verbs.
+	* `Meaning_ID`: a reference to the values of [cognate_sets.csv](cognate_sets.csv):`Meaning_ID`
+	* `Verb_Cognateset_ID`: 
+	* `Language_ID`: 
+	* `Inflection`: 
+	* `Form`: 
+	* `Prefix_Cognateset_ID`: 
+	* `Source`: 
+	* `Full_Form`: 
+	* `Comment`: 
+
 * [extensions.csv](extensions.csv): List of incomplete first person marker extensions with language and cognate set ID.
 * [verb_stem_data.csv](verb_stem_data.csv): Verbs roots or stems of verbs reconstructed in the manuscript.
 * [cognate_sets.csv](cognate_sets.csv): Reconstructed Proto-Cariban forms of verbal prefixes and stems.

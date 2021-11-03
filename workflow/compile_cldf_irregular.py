@@ -18,7 +18,7 @@ v_forms.reset_index(inplace=True, drop=True)
 lex_df = pd.read_csv("../data/other_lexemes.csv")
 
 print("Compiling meanings")
-bathe["Meaning"] = bathe["Transitivity"].apply(
+bathe["Meaning_ID"] = bathe["Transitivity"].apply(
     lambda x: "bathe_tr" if x == "TR" else "bathe_intr"
 )
 
@@ -27,55 +27,55 @@ par_names = {"bathe_tr": "bathe.TR", "bathe_intr": "bathe.INTR"}
 id_desc = {"bathe_tr": "bathe (TR)", "bathe_intr": "bathe (INTR)"}
 
 verb_meanings = (
-    v_forms[["Meaning"]].append(verbs[["Meaning"]]).append(bathe[["Meaning"]])
+    v_forms[["Meaning_ID"]].append(verbs[["Meaning_ID"]]).append(bathe[["Meaning_ID"]])
 )
-verb_meanings.drop_duplicates(subset=["Meaning"], inplace=True)
+verb_meanings.drop_duplicates(subset=["Meaning_ID"], inplace=True)
 verb_meanings["Name"] = verb_meanings.apply(
-    lambda x: par_names[x["Meaning"]]
-    if x["Meaning"] in par_names
-    else x["Meaning"].replace("_", "."),
+    lambda x: par_names[x["Meaning_ID"]]
+    if x["Meaning_ID"] in par_names
+    else x["Meaning_ID"].replace("_", "."),
     axis=1,
 )
 verb_meanings["Description"] = verb_meanings.apply(
-    lambda x: id_desc[x["Meaning"]]
-    if x["Meaning"] in id_desc
+    lambda x: id_desc[x["Meaning_ID"]]
+    if x["Meaning_ID"] in id_desc
     else x["Name"].replace(".", " "),
     axis=1,
 )
 verb_meanings["Description"] = verb_meanings["Description"].apply(
     lambda x: "'to " + x + "'"
 )
-verb_meanings.rename(columns={"Meaning": "ID"}, inplace=True)
+verb_meanings.rename(columns={"Meaning_ID": "ID"}, inplace=True)
 
 par_desc = dict(zip(verb_meanings["ID"], verb_meanings["Description"]))
 
 infl_desc = {"1": "First person form"}
 
 v_forms["Parameter_ID"] = v_forms.apply(
-    lambda x: x["Inflection"] + "_" + x["Meaning"], axis=1
+    lambda x: x["Inflection"] + "_" + x["Meaning_ID"], axis=1
 )
-form_meanings = v_forms[["Parameter_ID", "Inflection", "Meaning"]]
+form_meanings = v_forms[["Parameter_ID", "Inflection", "Meaning_ID"]]
 form_meanings["Description"] = form_meanings.apply(
-    lambda x: infl_desc[x["Inflection"]] + " of " + par_desc[x["Meaning"]], axis=1
+    lambda x: infl_desc[x["Inflection"]] + " of " + par_desc[x["Meaning_ID"]], axis=1
 )
 form_meanings["Name"] = form_meanings.apply(
-    lambda x: par_names[x["Meaning"]]
-    if x["Meaning"] in par_names
-    else x["Meaning"].replace("_", "."),
+    lambda x: par_names[x["Meaning_ID"]]
+    if x["Meaning_ID"] in par_names
+    else x["Meaning_ID"].replace("_", "."),
     axis=1,
 )
 form_meanings["Name"] = form_meanings.apply(
     lambda x: x["Inflection"] + "-" + x["Name"], axis=1
 )
 form_meanings.rename(columns={"Parameter_ID": "ID"}, inplace=True)
-form_meanings.drop(columns=["Inflection", "Meaning"], inplace=True)
+form_meanings.drop(columns=["Inflection", "Meaning_ID"], inplace=True)
 form_meanings.drop_duplicates(subset=["ID"], inplace=True)
 
-lex_meanings = lex_df[["Meaning"]]
-lex_meanings["Name"] = lex_meanings["Meaning"].str.replace(" ", ".")
-lex_meanings["Description"] = "'" + lex_meanings["Meaning"] + "'"
-lex_meanings["ID"] = lex_meanings["Meaning"].str.replace(" ", "_")
-lex_meanings.drop(columns=["Meaning"], inplace=True)
+lex_meanings = lex_df[["Meaning_ID"]]
+lex_meanings["Name"] = lex_meanings["Meaning_ID"].str.replace(" ", ".")
+lex_meanings["Description"] = "'" + lex_meanings["Meaning_ID"] + "'"
+lex_meanings["ID"] = lex_meanings["Meaning_ID"].str.replace(" ", "_")
+lex_meanings.drop(columns=["Meaning_ID"], inplace=True)
 lex_meanings.drop_duplicates(subset=["ID"], inplace=True)
 lex_meanings = lex_meanings[~(lex_meanings["ID"].isin(verb_meanings["ID"]))]
 
@@ -153,7 +153,7 @@ def split_cogset_ids(
 
 
 verbs = verbs.append(bathe)
-verbs.rename(columns={"Meaning": "Parameter_ID"}, inplace=True)
+verbs.rename(columns={"Meaning_ID": "Parameter_ID"}, inplace=True)
 verbs.reset_index(inplace=True, drop=True)
 verbs.index = verbs["Language_ID"] + "_stem_" + verbs.index.astype(str)
 verbs.index.name = "ID"
@@ -168,11 +168,11 @@ cogsets["Description"] = (
     "*"
     + cogsets["Form"].astype(str)
     + " '"
-    + cogsets["Meaning"].astype(str)
+    + cogsets["Meaning_ID"].astype(str)
     + "' . "
     + cogsets["Comment"].astype(str)
 )
-cogsets.drop(columns=["Form", "Meaning", "Comment"], inplace=True)
+cogsets.drop(columns=["Form", "Meaning_ID", "Comment"], inplace=True)
 
 v_forms = v_forms[~(v_forms["Form"] == "–")]
 v_forms = v_forms[~(v_forms["Form"].str.contains("?", regex=False))]
@@ -188,7 +188,7 @@ form_cogs2 = split_cogset_ids(
     v_forms, cogset_col="Verb_Cognateset_ID", suffixes=["pfx", "root"], bare="stem"
 )
 
-lex_df.rename(columns={"Meaning": "Parameter_ID"}, inplace=True)
+lex_df.rename(columns={"Meaning_ID": "Parameter_ID"}, inplace=True)
 lex_df["Parameter_ID"] = lex_df["Parameter_ID"].str.replace(" ", "_")
 lex_df.index = lex_df["Language_ID"] + "_other_" + lex_df.index.astype(str)
 lex_df.index.name = "ID"
@@ -232,7 +232,7 @@ cognates.reset_index(inplace=True, drop=True)
 
 forms = v_forms.append(verbs).append(lex_df)
 forms["Form"] = forms["Form"].str.replace("+", "", regex=False)
-forms.drop(columns=["Cognateset_ID", "Meaning"], inplace=True)
+forms.drop(columns=["Cognateset_ID", "Meaning_ID"], inplace=True)
 
 print("Getting languages")
 # extract relevant languages

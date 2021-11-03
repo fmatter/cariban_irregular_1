@@ -17,7 +17,7 @@ lg_list = list(cah.lg_order().keys())
 cognate_list = ["go", "say", "come", "be_1", "be_2", "go_down", "bathe_intr"]
 cs_df = pd.read_csv("../data/cognate_sets.csv")
 v_df = pd.read_csv("../data/verb_stem_data.csv")
-v_df.rename(columns={"Meaning": "Parameter_ID"}, inplace=True)
+v_df.rename(columns={"Meaning_ID": "Parameter_ID"}, inplace=True)
 e_df = pd.read_csv("../data/extensions.csv")
 i_df = pd.read_csv("../data/inflection_data.csv")
 i_df["Form"] = i_df["Form"].str.replace("+", "", regex=True)
@@ -53,9 +53,8 @@ cognatesets.index = cognatesets.index + 1
 cognum = dict(zip(cognatesets["ID"], cognatesets.index.astype(str)))
 numcog = dict(zip(cognatesets.index.astype(str), cognatesets["ID"]))
 
-# cs_df["Gloss"] = cs_df["Meaning"].replace(" ", ".")
 cog_verb_df = cs_df[~(cs_df["Form"].str.contains("-"))]
-cog_trans_dic = dict(zip(cog_verb_df["ID"], cog_verb_df["Meaning"]))
+cog_trans_dic = dict(zip(cog_verb_df["ID"], cog_verb_df["Meaning_ID"]))
 cog_form_dic = dict(zip(cog_verb_df["ID"], cog_verb_df["Form"]))
 cog_form_dic["bathe_intr"] = "e-pɨ"
 cog_form_dic["come"] = "(ət-)jəpɨ"
@@ -272,7 +271,7 @@ def reconstructed_form_table(lgs, proto, verbs, caption, name):
 #     (i_df["Language_ID"] == "aku") & (i_df["Prefix_Cognateset_ID"].isin(["k", "1t"]))
 # ]
 # akuverbs["Form"] = akuverbs["Form"].apply(lambda x: x.split("-", 1)[1])
-# akuverbs["Meaning"] = akuverbs["Meaning"].map(mean_dic)
+# akuverbs["Meaning"] = akuverbs["Meaning_ID"].map(mean_dic)
 # akuverbs["String"] = akuverbs.apply(combine_form_meaning, axis=1)
 #
 # k_list = akuverbs[akuverbs["Prefix_Cognateset_ID"] == "k"]["String"].reset_index(
@@ -297,12 +296,12 @@ def reconstructed_form_table(lgs, proto, verbs, caption, name):
 # # regular proto-waiwaian verbs
 # meanings = ["fall", "sleep"]
 # lgs = ["PWai", "hix", "wai"]
-# pyd.x = ["Language_ID", "Meaning"]
+# pyd.x = ["Language_ID", "Meaning_ID"]
 # pyd.y = ["Inflection"]
-# pyd.filters = {"Language_ID": lgs, "Meaning": meanings}
+# pyd.filters = {"Language_ID": lgs, "Meaning_ID": meanings}
 # pyd.sort_orders = {
 #     "Language_ID": lgs,
-#     "Meaning": meanings,
+#     "Meaning_ID": meanings,
 #     "Inflection": ["1", "2", "1+2", "3"],
 # }
 # tabular = pyd.compose_paradigm(i_df, multi_index=True)
@@ -313,7 +312,7 @@ def reconstructed_form_table(lgs, proto, verbs, caption, name):
 # tabular = tabular.apply(lambda x: x.apply(objectify, obj_string=get_obj_str(x.name[0])))
 # tabular.rename(
 #     columns={"sleep": r"\qu{to sleep}", "fall": "\qu{to fall}"},
-#     level="Meaning",
+#     level="Meaning_ID",
 #     inplace=True,
 # )
 # tabular.rename(columns=shorthand_dic, level="Language_ID", inplace=True)
@@ -332,11 +331,11 @@ def reconstructed_form_table(lgs, proto, verbs, caption, name):
 # tir_reg = i_df[~(pd.isnull(i_df["Verb_Cognateset_ID"]))]
 # meanings = ["bathe_intr", "sleep"]
 # lgs = ["PTir", "tri", "aku"]
-# pyd.filters = {"Language_ID": lgs, "Meaning": meanings}
-# pyd.x = ["Meaning", "Language_ID"]
+# pyd.filters = {"Language_ID": lgs, "Meaning_ID": meanings}
+# pyd.x = ["Meaning_ID", "Language_ID"]
 # pyd.sort_orders = {
 #     "Language_ID": lgs,
-#     "Meaning": meanings,
+#     "Meaning_ID": meanings,
 #     "Inflection": ["1", "2", "1+2", "3"],
 # }
 # tabular = pyd.compose_paradigm(tir_reg, multi_index=True)
@@ -346,7 +345,7 @@ def reconstructed_form_table(lgs, proto, verbs, caption, name):
 #
 # tabular = tabular.apply(lambda x: x.apply(objectify, obj_string=get_obj_str(x.name[1])))
 #
-# tabular.rename(columns=trans_dic, level="Meaning", inplace=True)
+# tabular.rename(columns=trans_dic, level="Meaning_ID", inplace=True)
 # tabular.rename(columns=shorthand_dic, level="Language_ID", inplace=True)
 #
 # tabular.index = tabular.index.map(pynt.get_expex_code)
@@ -363,9 +362,9 @@ def reconstructed_form_table(lgs, proto, verbs, caption, name):
 # # regular pekodian verbs
 # tabular = pd.DataFrame()
 # sources = []
-# pyd.x = ["Language_ID", "Meaning"]
+# pyd.x = ["Language_ID", "Meaning_ID"]
 # for lg, meaning in {"bak": "go_up", "ara": "dance", "ikp": "run"}.items():
-#     pyd.filters = {"Language_ID": [lg], "Meaning": [meaning]}
+#     pyd.filters = {"Language_ID": [lg], "Meaning_ID": [meaning]}
 #     pyd.sort_orders = {"Inflection": ["1", "2", "1+2", "3"]}
 #     temp = pyd.compose_paradigm(i_df, multi_index=True)
 #     sources.extend(get_sources(i_df, latexify=False))
@@ -375,7 +374,7 @@ def reconstructed_form_table(lgs, proto, verbs, caption, name):
 # sources = cldfh.cite_a_bunch(sources, parens=True)
 # tabular = tabular.apply(lambda x: x.apply(objectify, obj_string=get_obj_str(x.name[1])))
 #
-# tabular.rename(columns=trans_dic, level="Meaning", inplace=True)
+# tabular.rename(columns=trans_dic, level="Meaning_ID", inplace=True)
 # tabular.rename(columns=shorthand_dic, level="Language_ID", inplace=True)
 #
 # tabular.index = tabular.index.map(pynt.get_expex_code)
@@ -391,12 +390,12 @@ def reconstructed_form_table(lgs, proto, verbs, caption, name):
 # )
 #
 # # regular carijo and yukpa verbs
-# pyd.x = ["Meaning"]
+# pyd.x = ["Meaning_ID"]
 # for lg, meanings in {
 #     "car": ["arrive", "dance"],
 #     "yuk": ["wash_self", "sleep", "fall"],
 # }.items():
-#     pyd.filters = {"Language_ID": [lg], "Meaning": meanings}
+#     pyd.filters = {"Language_ID": [lg], "Meaning_ID": meanings}
 #     tabular = pyd.compose_paradigm(i_df, multi_index=True)
 #     print(tabular)
 #     sources = get_sources(i_df)
@@ -866,8 +865,6 @@ def p_expl(row):
         return int(initial in triggers)
     else:
         return int(initial not in triggers)
-    # else:
-    # return 0
 
 
 freq_map = {
@@ -881,7 +878,7 @@ freq_map = {
 
 
 def f_expl(row):
-    aff = freq_map[row["Meaning"]]
+    aff = freq_map[row["Meaning_ID"]]
     if aff == 0.5:
         return 1
     if row["Affected"] == "y":
@@ -896,7 +893,7 @@ def f_expl(row):
 affectedness["morphological"] = affectedness.apply(m_expl, axis=1)
 affectedness["phonological"] = affectedness.apply(p_expl, axis=1)
 affectedness["frequency"] = affectedness.apply(f_expl, axis=1)
-affectedness.drop(columns=["Verb_Cognateset_ID", "Concept", "Meaning"], inplace=True)
+affectedness.drop(columns=["Verb_Cognateset_ID", "Concept", "Meaning_ID"], inplace=True)
 
 
 def format_exp(f):
