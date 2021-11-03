@@ -9,8 +9,9 @@ The individual files are structured as follows:
 	* `Latitude`: latitude, decimal format
 * [inflection_data.csv](inflection_data.csv): Prefix-Verb combinations for various inflected verbs. The central source of information about what extensions affected what verbs.
 	* `Meaning_ID`: a reference to the values of [cognate_sets.csv](cognate_sets.csv):`Meaning_ID`
-	* `Verb_Cognateset_ID`: 
-	* `Language_ID`: 
+	* `Verb_Cognateset_ID`: [cognate_sets.csv](cognate_sets.csv):`ID
+`+[cognate_sets.csv](cognate_sets.csv):`ID`
+	* `Language_ID`{#foo}: 
 	* `Inflection`: 
 	* `Form`: 
 	* `Prefix_Cognateset_ID`: 
@@ -18,6 +19,7 @@ The individual files are structured as follows:
 	* `Full_Form`: 
 	* `Comment`: 
 
+* [link](#foo)
 * [extensions.csv](extensions.csv): List of incomplete first person marker extensions with language and cognate set ID.
 * [verb_stem_data.csv](verb_stem_data.csv): Verbs roots or stems of verbs reconstructed in the manuscript.
 * [cognate_sets.csv](cognate_sets.csv): Reconstructed Proto-Cariban forms of verbal prefixes and stems.
