@@ -11,7 +11,7 @@ The individual files are structured as follows:
 	* `Meaning_ID`: a reference to the values of [cognate_sets.csv](cognate_sets.csv):`Meaning_ID`
 	* `Verb_Cognateset_ID`: [cognate_sets.csv](cognate_sets.csv):`ID
 `+[cognate_sets.csv](cognate_sets.csv):`ID`
-	* `Language_ID`{#foo}: 
+	* `Language_ID`<a name="foo">: 
 	* `Inflection`: 
 	* `Form`: 
 	* `Prefix_Cognateset_ID`: 
