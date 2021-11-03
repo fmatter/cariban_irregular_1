@@ -65,7 +65,7 @@
   * Language_ID<a name="inflection_data.Language_ID">: Reference to [languages](#languages):[`ID`](#languages.ID)
   * Inflection<a name="inflection_data.Inflection">: 
   * Form<a name="inflection_data.Form">: 
-  * Prefix_Cognateset_ID<a name="inflection_data.Prefix_Cognateset_ID">: TABLINK(cognate_sets, ID)+TABLINK(cognate_sets, ID)
+  * Prefix_Cognateset_ID<a name="inflection_data.Prefix_Cognateset_ID">: [cognate_sets](#cognate_sets):[`ID`](#cognate_sets.ID)+[cognate_sets](#cognate_sets):[`ID`](#cognate_sets.ID)
   * Source<a name="inflection_data.Source">: [bibkey](data/cldf/references.bib)[page]
   * Full_Form<a name="inflection_data.Full_Form">: 
   * Comment<a name="inflection_data.Comment">: 
