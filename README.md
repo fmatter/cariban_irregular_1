@@ -8,8 +8,8 @@ More info about the study in general can be found here:
 
 This repository is organized as follows:
 
-* [data](data) contains all the data on which the analyses in the paper are based, as well as a derived CLDF version
-* [workflow] contains different python scripts used for analysis, data visualization, and CLDF dataset creation
-* [documents] contains the current version of the manuscript as well as material used in presentations
+* [data](data) contains all the data on which the analyses in the paper are based, as well as a derived CLDF version.
+* [workflow](workflow) contains different python scripts used for analysis, data visualization, and CLDF dataset creation.
+* [documents](documents) contains the current version of the manuscript as well as materials used in presentations.
 
 See each folder for more information.
