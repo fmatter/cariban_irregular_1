@@ -1,29 +1,71 @@
 This folder contains all the data compiled for the study, organized in CSV (comma-separated values) files.
-The individual files are structured as follows:
-
-* [languages.csv](languages.csv): List of languages
-	* `ID`: a three- (attested) or four-letter (reconstructed) string
-	* `Name`: the name as used in the paper
-	* `Glottocode`: the identified used in [Glottolog](https://www.glottolog.org)
-	* `Longitude`: longitude, decimal format
-	* `Latitude`: latitude, decimal format
-* [inflection_data.csv](inflection_data.csv): Prefix-Verb combinations for various inflected verbs. The central source of information about what extensions affected what verbs.
-	* `Meaning_ID`: a reference to the values of [cognate_sets.csv](cognate_sets.csv):`Meaning_ID`
-	* `Verb_Cognateset_ID`: [cognate_sets.csv](cognate_sets.csv):`ID
-`+[cognate_sets.csv](cognate_sets.csv):`ID`
-	* `Language_ID`: 
-	* `Inflection`: 
-	* `Form`: 
-	* `Prefix_Cognateset_ID`: 
-	* `Source`: 
-	* `Full_Form`: 
-	* `Comment`: 
-
-* [link](#foo)
-* [extensions.csv](extensions.csv): List of incomplete first person marker extensions with language and cognate set ID.
-* [verb_stem_data.csv](verb_stem_data.csv): Verbs roots or stems of verbs reconstructed in the manuscript.
-* [cognate_sets.csv](cognate_sets.csv): Reconstructed Proto-Cariban forms of verbal prefixes and stems.
-* [examples.csv](examples.csv): Illustrative example sentences used in the manuscript.
+The contents are structured as follows:
 * [cldf](cldf): dataset in the CLDF format
-* [bathe_data.csv](bathe_data.csv): Intransitive and transitive forms of 'to bathe' from various languages.
-* [split_s_data.csv](split_s_data.csv): Additional data illustrating non-person-based properties of the split-S system in languages across the family, reconstructible to Proto-Cariban.
+* [verb_stem_data.csv](data/verb_stem_data.csv)<a name="verb_stem_data">
+  * Language_ID<a name="verb_stem_data.Language_ID">: Reference to [languages](#languages):[`ID`](#languages.ID).
+  * Form<a name="verb_stem_data.Form">: Derivational morphology segmented with `+`, elements in brackets only surface sometimes.
+  * Source<a name="verb_stem_data.Source">: bibkey[page] referencing [references.bib](data/cldf/references.bib), multiple separated by `; `, `pc` for personal communication
+  * Cognateset_ID<a name="verb_stem_data.Cognateset_ID">: [cognate_sets](#cognate_sets):[`ID`](#cognate_sets.ID)+[cognate_sets](#cognate_sets):[`ID`](#cognate_sets.ID).
+  * Class<a name="verb_stem_data.Class">: Class of the verb: `S_A_` or `S_P_`. `–` when no split-S, `?` when class unknown, `S_A_ / S_P_` for mixed Wayana verbs.
+  * Comment<a name="verb_stem_data.Comment">: Comments
+  * Cog_Cert<a name="verb_stem_data.Cog_Cert">: Cases which do not seem fully cognate are marked with `0.5` here.
+  * Meaning<a name="verb_stem_data.Meaning">: Reference to values of [cognate_sets](#cognate_sets):[`Meaning_ID`](#cognate_sets.Meaning_ID).
+* [split_s_data.csv](data/split_s_data.csv)<a name="split_s_data">
+  * Language_ID<a name="split_s_data.Language_ID">: Reference to [languages](#languages):[`ID`](#languages.ID).
+  * Construction<a name="split_s_data.Construction">: Kind of verb form.
+  * Form<a name="split_s_data.Form">: Form with `-` separating morphemes.
+  * Meaning<a name="split_s_data.Meaning">: Direct translation, not a [cognate_sets](#cognate_sets):[`Meaning_ID`](#cognate_sets.Meaning_ID).
+  * Class<a name="split_s_data.Class">: Verb class, `S_A_` or `S_P_`.
+  * Source<a name="split_s_data.Source">: bibkey[page] referencing [references.bib](data/cldf/references.bib), multiple separated by `; `, `pc` for personal communication
+* [other_lexemes.csv](data/other_lexemes.csv)<a name="other_lexemes">
+  * Language_ID<a name="other_lexemes.Language_ID">: Reference to [languages](#languages):[`ID`](#languages.ID).
+  * Form<a name="other_lexemes.Form">: Form.
+  * Meaning<a name="other_lexemes.Meaning">: Translation.
+  * Source<a name="other_lexemes.Source">: bibkey[page] referencing [references.bib](data/cldf/references.bib), multiple separated by `; `, `pc` for personal communication
+  * Full_Form<a name="other_lexemes.Full_Form">: Full form as it appeared in the cited source.
+  * Cognateset_ID<a name="other_lexemes.Cognateset_ID">: [cognate_sets](#cognate_sets):[`ID`](#cognate_sets.ID)
+* [examples.csv](data/examples.csv)<a name="examples">
+  * ID<a name="examples.ID">: An ID, usually consisting of [languages](#languages):[`ID`](#languages.ID)`-X`.
+  * Language_ID<a name="examples.Language_ID">: Reference to [languages](#languages):[`ID`](#languages.ID).
+  * Sentence<a name="examples.Sentence">: Either identical to [`Segmentation`](#examples.Segmentation), an orthographical form, and/or the form in the source.
+  * Segmentation<a name="examples.Segmentation">: `-`separate morphemes, spaces phonological words.
+  * Gloss<a name="examples.Gloss">: Corresponding to [`Segmentation`](#examples.Segmentation).
+  * Translation<a name="examples.Translation">: Free English translation.
+  * Source<a name="examples.Source">: bibkey[page] referencing [references.bib](data/cldf/references.bib), `pc` for personal communication
+  * Orig_Segmentation<a name="examples.Orig_Segmentation">: Segmentation of the form as it appears in the source.
+  * Orig_Glossing<a name="examples.Orig_Glossing">: Glossing as it appears in the source.
+  * Orig_Translation<a name="examples.Orig_Translation">: Translation as it appears in the source.
+  * Comment<a name="examples.Comment">: Comments.
+* [extensions.csv](data/extensions.csv)<a name="extensions">
+  * ID<a name="extensions.ID">: IDs referring to extensions.
+  * Language_ID<a name="extensions.Language_ID">: Reference to [languages](#languages):[`ID`](#languages.ID).
+  * Form<a name="extensions.Form">: Form of the innovative prefix.
+  * Cognateset_ID<a name="extensions.Cognateset_ID">: [cognate_sets](#cognate_sets):[`ID`](#cognate_sets.ID)
+  * Comment<a name="extensions.Comment">: Comments.
+* [bathe_data.csv](data/bathe_data.csv)<a name="bathe_data">
+  * Language_ID<a name="bathe_data.Language_ID">: Reference to [languages](#languages):[`ID`](#languages.ID).
+  * Form<a name="bathe_data.Form">: `+` separates (etymological) morphemes.
+  * Source<a name="bathe_data.Source">: bibkey[page] referencing [references.bib](data/cldf/references.bib), multiple separated by `; `, `pc` for personal communication
+  * Cognateset_ID<a name="bathe_data.Cognateset_ID">: [cognate_sets](#cognate_sets):[`ID`](#cognate_sets.ID)`+`[cognate_sets](#cognate_sets):[`ID`](#cognate_sets.ID)
+  * Transitivity<a name="bathe_data.Transitivity">: Either transitive or intransitive 'to bathe'.
+* [cognate_sets.csv](data/cognate_sets.csv)<a name="cognate_sets">
+  * ID<a name="cognate_sets.ID">: An ID.
+  * Form<a name="cognate_sets.Form">: Usually my reconstructed Proto-Cariban form, otherwise indicated in [`Comment`](#cognate_sets.Comment)
+  * Meaning<a name="cognate_sets.Meaning">: Translation / Glossing.
+  * Comment<a name="cognate_sets.Comment">: Comments on reconstruction and node of reconstructed form, if not Proto-Cariban.
+* [languages.csv](data/languages.csv)<a name="languages">
+  * ID<a name="languages.ID">: A three- (attested) or four-letter (reconstructed) string.
+  * Name<a name="languages.Name">: The name as used in the paper.
+  * Glottocode<a name="languages.Glottocode">: The identifier used in [Glottolog](https://www.glottolog.org).
+  * Longitude<a name="languages.Longitude">: Longitude in decimal format.
+  * Latitude<a name="languages.Latitude">: Latitude in decimal format.
+* [inflection_data.csv](data/inflection_data.csv)<a name="inflection_data">
+  * Meaning_ID<a name="inflection_data.Meaning_ID">: Reference to values of [cognate_sets](#cognate_sets):[`Meaning_ID`](#cognate_sets.Meaning_ID).
+  * Verb_Cognateset_ID<a name="inflection_data.Verb_Cognateset_ID">: [cognate_sets](#cognate_sets):[`ID`](#cognate_sets.ID)+[cognate_sets](#cognate_sets):[`ID`](#cognate_sets.ID).
+  * Language_ID<a name="inflection_data.Language_ID">: Reference to [languages](#languages):[`ID`](#languages.ID).
+  * Inflection<a name="inflection_data.Inflection">: Person inflection of the form.
+  * Form<a name="inflection_data.Form">: `-` mark boundaries between productive morphemes, `+` between unproductive morphemes.
+  * Prefix_Cognateset_ID<a name="inflection_data.Prefix_Cognateset_ID">: [cognate_sets](#cognate_sets):[`ID`](#cognate_sets.ID)+[cognate_sets](#cognate_sets):[`ID`](#cognate_sets.ID).
+  * Source<a name="inflection_data.Source">: bibkey[page] referencing [references.bib](data/cldf/references.bib), multiple separated by `; `, `pc` for personal communication
+  * Full_Form<a name="inflection_data.Full_Form">: The full form in the source, if applicable.
+  * Comment<a name="inflection_data.Comment">: Comments
