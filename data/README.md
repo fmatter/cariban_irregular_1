@@ -1,6 +1,6 @@
 This folder contains all the data compiled for the study, organized in CSV (comma-separated values) files.
 The contents are structured as follows:
-* [cldf](cldf): dataset in the CLDF format
+* [cldf](cldf): dataset in the CLDF format, generated with [../workflow/compile_cldf_irregular.py]
 * [verb_stem_data.csv](data/verb_stem_data.csv)<a name="verb_stem_data">
   * Language_ID<a name="verb_stem_data.Language_ID">: Reference to [languages](#languages):[`ID`](#languages.ID).
   * Form<a name="verb_stem_data.Form">: Derivational morphology segmented with `+`, elements in brackets only surface sometimes.
