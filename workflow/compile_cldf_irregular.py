@@ -71,11 +71,11 @@ form_meanings.rename(columns={"Parameter_ID": "ID"}, inplace=True)
 form_meanings.drop(columns=["Inflection", "Meaning_ID"], inplace=True)
 form_meanings.drop_duplicates(subset=["ID"], inplace=True)
 
-lex_meanings = lex_df[["Meaning_ID"]]
-lex_meanings["Name"] = lex_meanings["Meaning_ID"].str.replace(" ", ".")
-lex_meanings["Description"] = "'" + lex_meanings["Meaning_ID"] + "'"
-lex_meanings["ID"] = lex_meanings["Meaning_ID"].str.replace(" ", "_")
-lex_meanings.drop(columns=["Meaning_ID"], inplace=True)
+lex_meanings = lex_df[["Meaning"]]
+lex_meanings["Name"] = lex_meanings["Meaning"].str.replace(" ", ".")
+lex_meanings["Description"] = "'" + lex_meanings["Meaning"] + "'"
+lex_meanings["ID"] = lex_meanings["Meaning"].str.replace(" ", "_")
+lex_meanings.drop(columns=["Meaning"], inplace=True)
 lex_meanings.drop_duplicates(subset=["ID"], inplace=True)
 lex_meanings = lex_meanings[~(lex_meanings["ID"].isin(verb_meanings["ID"]))]
 
@@ -168,11 +168,11 @@ cogsets["Description"] = (
     "*"
     + cogsets["Form"].astype(str)
     + " '"
-    + cogsets["Meaning_ID"].astype(str)
+    + cogsets["Meaning"].astype(str)
     + "' . "
     + cogsets["Comment"].astype(str)
 )
-cogsets.drop(columns=["Form", "Meaning_ID", "Comment"], inplace=True)
+cogsets.drop(columns=["Form", "Meaning", "Comment"], inplace=True)
 
 v_forms = v_forms[~(v_forms["Form"] == "–")]
 v_forms = v_forms[~(v_forms["Form"].str.contains("?", regex=False))]
@@ -188,7 +188,7 @@ form_cogs2 = split_cogset_ids(
     v_forms, cogset_col="Verb_Cognateset_ID", suffixes=["pfx", "root"], bare="stem"
 )
 
-lex_df.rename(columns={"Meaning_ID": "Parameter_ID"}, inplace=True)
+lex_df.rename(columns={"Meaning": "Parameter_ID"}, inplace=True)
 lex_df["Parameter_ID"] = lex_df["Parameter_ID"].str.replace(" ", "_")
 lex_df.index = lex_df["Language_ID"] + "_other_" + lex_df.index.astype(str)
 lex_df.index.name = "ID"
@@ -296,6 +296,7 @@ bib_data = bib_parser.parse_file(bibfile)
 filtered_bib_data = BibliographyData()
 for key, entry in bib_data.entries.items():
     if key in found_refs:
+        print(entry)
         filtered_bib_data.add_entry(entry.key, entry)
 
 s = filtered_bib_data.to_string("bibtex")
