@@ -1,6 +1,6 @@
 import pyradigms as pyd
 import warnings
-
+import json
 warnings.filterwarnings("ignore")
 import pandas as pd
 
@@ -77,6 +77,13 @@ def segmentify(form):
     form = form.strip("+")
     return t(form)
 
+exported_tables = {}
+def export_csv(tabular, label, caption=None, keep_index=False):
+    if caption:
+        print(f"{caption}: ")
+    print(tabular)
+    tabular.to_csv(f"data_output/{label}.csv", index=keep_index)
+    exported_tables[label] = caption
 
 # functions for creating latex tables
 def print_latex(df, ex=False, keep_index=False):
@@ -212,7 +219,6 @@ def repl_lg_id(df):
 
 
 def reconstructed_form_table(lgs, proto, verbs, caption, name):
-    print(f"Irregular {cah.get_name(proto)} verbs:")
     pyd.x = ["Language_ID"]
     pyd.y = ["Concept"]
     pyd.filters = {"Inflection": ["1"], "Language_ID": lgs, "Concept": verbs}
@@ -221,8 +227,7 @@ def reconstructed_form_table(lgs, proto, verbs, caption, name):
     tabular = pyd.compose_paradigm(i_df)
     sources = get_sources(i_df)
     tabular.index.name = None
-    print(tabular)
-
+    export_csv(tabular, name, f"Irregular {cah.get_name(proto)} verbs", True)
     tabular.index = tabular.index.map(lambda x: "\\qu{" + cog_trans_dic[x] + "}")
     tabular = tabular.apply(
         lambda x: x.apply(objectify, obj_string=get_obj_str(x.name))
@@ -307,8 +312,7 @@ pyd.sort_orders = {
 tabular = pyd.compose_paradigm(i_df, multi_index=True)
 sources = get_sources(i_df)
 
-print(tabular)
-
+export_csv(tabular, "pwaireg", "Regular 'to fall' (Sa) and 'to sleep' (Sp) in Proto-Waiwaian")
 tabular = tabular.apply(lambda x: x.apply(objectify, obj_string=get_obj_str(x.name[0])))
 tabular.rename(
     columns={"sleep": r"\qu{to sleep}", "fall": "\qu{to fall}"},
@@ -341,7 +345,7 @@ pyd.sort_orders = {
 tabular = pyd.compose_paradigm(tir_reg, multi_index=True)
 sources = get_sources(tir_reg)
 
-print(tabular)
+export_csv(tabular, "ptirreg", "Regular Proto-Tiriyoan Sa verbs")
 
 tabular = tabular.apply(lambda x: x.apply(objectify, obj_string=get_obj_str(x.name[1])))
 
@@ -397,7 +401,8 @@ for lg, meanings in {
 }.items():
     pyd.filters = {"Language_ID": [lg], "Meaning_ID": meanings}
     tabular = pyd.compose_paradigm(i_df, multi_index=True)
-    print(tabular)
+    label = lg + "reg"
+    export_csv(tabular, label, f"Regular {lg} verbs")
     sources = get_sources(i_df)
     tabular.index = tabular.index.map(pynt.get_expex_code)
     tabular.index.name = None
@@ -407,7 +412,7 @@ for lg, meanings in {
 
     save_float(
         print_latex(tabular, keep_index=True),
-        lg + "reg",
+        label,
         f"Regular {print_shorthand(lg)} verbs " + sources,
         short=f"Regular {print_shorthand(lg)} verbs",
     )
@@ -430,7 +435,8 @@ pyd.filters = {"Language_ID": lgs, "Parameter_ID": meanings}
 pyd.x_sort = lgs
 pyd.y_sort = meanings
 tabular = pyd.compose_paradigm(forms)
-print(tabular)
+label = "pxinw"
+export_csv(tabular, label, "Loss of *w in Ikpeng", keep_index = True)
 sources = get_sources(forms)
 tabular = tabular.apply(lambda x: x.apply(objectify, obj_string=get_obj_str(x.name)))
 tabular.columns = tabular.columns.map(print_shorthand)
@@ -442,14 +448,13 @@ tabular["Meaning"] = tabular["Meaning"].map(lambda x: "\\qu{" + x + "}")
 
 save_float(
     print_latex(tabular),
-    "pxinw",
+    label,
     r"Loss of \rc{w} in \ikpeng " + sources,
     short=r"Loss of \rc{w} in \ikpeng",
 )
 pyd.filters = {}
 
 # prepare overviews of class-switching 'go down' and 'defecate'
-print("\nClass membership of 'to go down':")
 gd_df = v_df[v_df["Parameter_ID"] == "go_down"]
 sources = extract_sources(gd_df)
 
@@ -476,7 +481,10 @@ gd_df = temp_df1
 gd_df.fillna("", inplace=True)
 gd_df["Form"] = gd_df["Form"].str.replace("+", "", regex=True)
 sort_lg(gd_df)
-print(gd_df)
+
+label = "godown"
+export_csv(gd_df, label, "Reflexes of *ɨpɨtə 'to go down'")
+
 gd_df["Class"] = gd_df.apply(
     lambda x: pynt.get_expex_code(x["Class"])
     if x["Class"] not in ["?", "–"]
@@ -489,36 +497,36 @@ gd_df.set_index("Language", drop=True, inplace=True)
 tabular = print_latex(gd_df, keep_index=True)
 save_float(
     tabular,
-    "godown",
+    label,
     r"Reflexes of \rc{ɨpɨtə} \qu{to go down} " + sources,
     short=r"Reflexes of \rc{ɨpɨtə} \qu{to go down}",
 )
 
-print("\nClass membership of 'to defecate':")
-s_df = v_df[v_df["Parameter_ID"] == "defecate"]
-sources = extract_sources(s_df)
-s_df.drop(
-    columns=["Parameter_ID", "Cog_Cert", "Comment", "Cognateset_ID"], inplace=True
-)
-s_df["Form"] = s_df["Form"].str.replace("+", "", regex=True)
-sort_lg(s_df)
-print(s_df)
-s_df["Class"] = s_df.apply(
-    lambda x: pynt.get_expex_code(x["Class"])
-    if x["Class"] not in ["?", "–"]
-    else x["Class"],
-    axis=1,
-)
-add_obj_markdown(s_df)
-repl_lg_id(s_df)
-s_df.set_index("Language", drop=True, inplace=True)
-tabular = print_latex(s_df, keep_index=True)
-save_float(
-    tabular,
-    "defecate",
-    r"Reflexes of \qu{to defecate} " + sources,
-    short=r"Reflexes of \qu{to defecate} ",
-)
+# print("\nClass membership of 'to defecate':")
+# s_df = v_df[v_df["Parameter_ID"] == "defecate"]
+# sources = extract_sources(s_df)
+# s_df.drop(
+#     columns=["Parameter_ID", "Cog_Cert", "Comment", "Cognateset_ID"], inplace=True
+# )
+# s_df["Form"] = s_df["Form"].str.replace("+", "", regex=True)
+# sort_lg(s_df)
+# print(s_df)
+# s_df["Class"] = s_df.apply(
+#     lambda x: pynt.get_expex_code(x["Class"])
+#     if x["Class"] not in ["?", "–"]
+#     else x["Class"],
+#     axis=1,
+# )
+# add_obj_markdown(s_df)
+# repl_lg_id(s_df)
+# s_df.set_index("Language", drop=True, inplace=True)
+# tabular = print_latex(s_df, keep_index=True)
+# save_float(
+#     tabular,
+#     "defecate",
+#     r"Reflexes of \qu{to defecate} " + sources,
+#     short=r"Reflexes of \qu{to defecate} ",
+# )
 
 
 def print_aligned_table(
@@ -537,8 +545,7 @@ def print_aligned_table(
             # df.columns.values[i] = "Alignment"
             break
     df["Form"] = df["Form"].str.replace("+", "", regex=True)
-    print(f"Comparative table for 'to {verb}'")
-    print(df)
+    export_csv(df, verb, f"Comparative table for 'to {verb}'")
     add_obj_markdown(df)
     repl_lg_id(df)
     df.set_index("Language", drop=True, inplace=True)
@@ -797,8 +804,8 @@ result.set_index(temp_list, inplace=True)
 result.sort_index(inplace=True, level="Lg")
 result.replace({"": "–"}, inplace=True)
 result.index.names = ["", "", ""]
-print("\nOverview of extensions and (un-)affected verbs:")
-print(result)
+label = "overview"
+export_csv(result, label, "Overview of extensions and (un-)affected verbs", keep_index=True)
 
 # format for latex
 # rename index
@@ -833,7 +840,7 @@ legend += "\\end{legendlist}"
 
 save_float(
     print_latex(result, keep_index=True) + legend,
-    "overview",
+    label,
     "Overview of extensions and (un-)affected verbs",
 )
 
@@ -923,8 +930,9 @@ for factor in ["morphological", "phonological", "frequency"]:
         get_print, factor
     )
 
-print("Proportion of (un-)affected verbs accurately predicted by potential factors:")
-print(affected_result)
+caption = "Proportion of (un-)affected verbs accurately predicted by potential factors"
+label = "factors"
+export_csv(affected_result, label, caption, keep_index=True)
 
 ext_dic = dict(zip(e_df["ID"], e_df["Language_ID"]))
 ext_form_dic = dict(zip(e_df["ID"], e_df["Form"]))
@@ -938,8 +946,8 @@ affected_result.drop(columns=["Language_ID"], inplace=True)
 
 save_float(
     print_latex(affected_result, keep_index=True),
-    "factors",
-    "Proportion of (un-)affected verbs accurately predicted by potential factors",
+    label,
+    caption,
 )
 
 # #forms illustrating Sa vs Sp verbs
@@ -996,3 +1004,6 @@ save_float(
     short="Imperatives of \gl{s_a_} and \gl{s_p_} verbs",
 )
 pyd.content_string = "Form"
+
+with open("data_output/metadata.json", 'w') as outfile:
+    json.dump(exported_tables, outfile, indent=4)
