@@ -23,8 +23,8 @@
         "caption": "Regular 'to fall' (Sa) and 'to sleep' (Sp) in Proto-Waiwaian",
         "sources": [
             "howard2001wrought[150]",
-            "hawkins1953waiwai[209, 211]",
             "",
+            "hawkins1953waiwai[209, 211]",
             "hixkaryanaderby1985[189, 190, 196]",
             "waiwaihawkins1998[30]"
         ]
@@ -42,9 +42,9 @@
     "ptirreg": {
         "caption": "Regular Proto-Tiriyoan Sa verbs",
         "sources": [
-            "gildea1994akuriyo[87]",
+            "",
             "triomeira1999[292, 294]",
-            ""
+            "gildea1994akuriyo[87]"
         ]
     },
     "ptirverbs": {
@@ -58,8 +58,8 @@
     "carreg": {
         "caption": "Regular Karijona verbs",
         "sources": [
-            "meira1998proto[106]",
-            "robayo2000avance[173]"
+            "robayo2000avance[173]",
+            "meira1998proto[106]"
         ]
     },
     "yukreg": {
@@ -83,7 +83,7 @@
     "godown": {
         "caption": "Reflexes of \\**\u0268p\u0268t\u0259* 'to go down'",
         "sources": [
-            "pc[Angela Fabi\u0301ola Alves Chagas, Spike Gildea]",
+            "pc[Spike Gildea, Angela Fabi\u0301ola Alves Chagas]",
             "meira2003primeras",
             "hixkaryanaderby1979[196]",
             "waiwaihawkins1998[55]",

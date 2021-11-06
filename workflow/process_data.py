@@ -908,12 +908,6 @@ result.replace({"": "–"}, inplace=True)
 result.index.names = ["", "", ""]
 label = "overview"
 
-# replace cogset ids with reconstructed forms and translationsm
-result.columns = [
-    result.columns.map(lambda x: f"\\rc{{{cog_form_dic[x]}}}"),
-    result.columns.map(lambda x: f"\\qu{{{cog_trans_dic[x]}}}"),
-]
-
 def modify_index(idx, latex=True):
     o = get_obj_str(idx[2][0])
     if idx[0] != idx[2]:
@@ -932,6 +926,18 @@ result_exp = result.copy()
 
 result.index = result.index.map(modify_index)
 result_exp.index = result_exp.index.map(lambda x: modify_index(x, latex=False))
+
+# replace cogset ids with reconstructed forms and translationsm
+result.columns = [
+    result.columns.map(lambda x: f"\\rc{{{cog_form_dic[x]}}}"),
+    result.columns.map(lambda x: f"\\qu{{{cog_trans_dic[x]}}}"),
+]
+
+# replace cogset ids with reconstructed forms and translationsm
+result_exp.columns = [
+    result_exp.columns.map(lambda x: f"\**{cog_form_dic[x]}*"),
+    result_exp.columns.map(lambda x: f"'{cog_trans_dic[x]}'"),
+]
 
 export_csv(
     result_exp, label, "Overview of extensions and (un-)affected verbs", keep_index=True
