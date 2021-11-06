@@ -198,8 +198,12 @@ def get_sources(df, parens=True, latexify=True):
     source_string = cldfh.cite_a_bunch(ref_list, parens=parens)
     return source_string
 
+def upper_repl(match):
+     return match.group(1).upper()
+     
 def repl_latex(string):
     string = re.sub(r"\\rc\{(.*?)\}", r"\**\1*", string)
+    string = re.sub(r"\\gl\{(.*?)\}", upper_repl, string)
     string = re.sub(r"\\obj\{(.*?)\}", r"*\1*", string)
     string = re.sub(r"\\qu\{(.*?)\}", r"'\1'", string)
     return string
@@ -510,7 +514,7 @@ label = "pxinw"
 export_csv(
     tabular,
     label,
-    "Loss of *w in Ikpeng",
+    "Loss of \**w* in Ikpeng",
     keep_index=True,
     sources=get_sources(forms, latexify=False),
 )
@@ -566,7 +570,7 @@ export_csv(
         columns={"Language_ID": "Language"}
     ),
     label,
-    "Reflexes of *ɨpɨtə 'to go down'",
+    "Reflexes of \**ɨpɨtə* 'to go down'",
     sources=raw_sources,
 )
 

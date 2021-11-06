@@ -50,18 +50,18 @@ Sources refer to [this file](../../data/cldf/references.bib).
 | be_1 | w-a-             | w-a-     | ∅-a-      |
 | be_2 | w-eʔi-           | w-ei-    | ?-eʔi-    |
 ### Regular Karijona verbs ([csv](carreg.csv)): 
-|     | dance        | arrive     |
-|:----|:-------------|:-----------|
-| 1   | j-eharaga-   | ji-tuda-   |
-| 2   | m-eharaga-   | mɨ-tuda-   |
-| 1+2 | kɨs-eharaga- | kɨsi-tuda- |
-| 3   | n-eharaga-   | ni-tuda-   |
+|     | arrive     | dance        |
+|:----|:-----------|:-------------|
+| 1   | ji-tuda-   | j-eharaga-   |
+| 2   | mɨ-tuda-   | m-eharaga-   |
+| 1+2 | kɨsi-tuda- | kɨs-eharaga- |
+| 3   | ni-tuda-   | n-eharaga-   |
 ### Regular Yukpa verbs ([csv](yukreg.csv)): 
-|    | fall   | wash_self   | sleep   |
-|---:|:-------|:------------|:--------|
-|  1 | j-ata- | j-otum-     | jɨ-nɨ-  |
-|  2 | m-ata- | m-otum-     | mɨ-nɨ-  |
-|  3 | n-ata- | n-otum-     | nɨ-nɨ-  |
+|    | wash_self   | fall   | sleep   |
+|---:|:------------|:-------|:--------|
+|  1 | j-otum-     | j-ata- | jɨ-nɨ-  |
+|  2 | m-otum-     | m-ata- | mɨ-nɨ-  |
+|  3 | n-otum-     | n-ata- | nɨ-nɨ-  |
 ### Loss of *w in Ikpeng ([csv](pxinw.csv)): 
 |                 | ara    | ikp   |
 |:----------------|:-------|:------|
@@ -170,7 +170,7 @@ Sources refer to [this file](../../data/cldf/references.bib).
 | Macushi           | ka     | k  | a  |    |    |
 | Panare            | ka[h]  | k  | a  | h  |    |
 | Upper Xingu Carib | ki     | k  | i  |    |    |
-### Reflexes of \**e-pɨ* 'to bathe (\gl{intr')} ([csv](bathe_intr_1.csv)): 
+### Reflexes of \**e-pɨ* 'to bathe (INTR)' ([csv](bathe_intr_1.csv)): 
 | Language   | Form   |    |    |    |    |    |    |
 |:-----------|:-------|:---|:---|:---|:---|:---|:---|
 | Werikyana  | eehɨ   |    |    | ee | -  | h  | ɨ  |
@@ -183,18 +183,18 @@ Sources refer to [this file](../../data/cldf/references.bib).
 | Akuriyó    | epɨ    |    |    | e  | -  | p  | ɨ  |
 | Wayana     | epɨ    |    |    | e  | -  | p  | ɨ  |
 | Apalaí     | epɨ    |    |    | e  | -  | p  | ɨ  |
-### Reflexes of \**e-kupi* 'to bathe (\gl{intr')} ([csv](bathe_intr_2.csv)): 
+### Reflexes of \**e-kupi* 'to bathe (INTR)' ([csv](bathe_intr_2.csv)): 
 | Language   | Form   |    |    |    |    |    |    |    |
 |:-----------|:-------|:---|:---|:---|:---|:---|:---|:---|
 | Kari'ña    | ekupi  | e  | -  | k  | u  |    | p  | i  |
 | Ye'kwana   | eʔhi   | e  | -  |    |    | ʔ  | h  | i  |
 | Kapón      | ekuʔpi | e  | -  | k  | u  | ʔ  | p  | i  |
 | Pemón      | ekupɨ  | e  | -  | k  | u  |    | p  | ɨ  |
-### Reflexes of \**ə-kupi* 'to bathe (\gl{intr')} ([csv](bathe_intr_3.csv)): 
+### Reflexes of \**ə-kupi* 'to bathe (INTR)' ([csv](bathe_intr_3.csv)): 
 | Language   | Form   |    |    |    |    |    |    |
 |:-----------|:-------|:---|:---|:---|:---|:---|:---|
 | Panare     | akupɨ  | a  | -  | k  | u  | p  | ɨ  |
-### Reflexes of \**(ɨ)pɨ* 'to bathe (\gl{tr')} ([csv](bathe_tr_1.csv)): 
+### Reflexes of \**(ɨ)pɨ* 'to bathe (TR)' ([csv](bathe_tr_1.csv)): 
 | Language   | Form   |    |    |    |
 |:-----------|:-------|:---|:---|:---|
 | Werikyana  | ɨhɨ    | ɨ  | h  | ɨ  |
@@ -210,7 +210,7 @@ Sources refer to [this file](../../data/cldf/references.bib).
 | Ye'kwana   | ɨhɨ    | ɨ  | h  | ɨ  |
 | Pemón      | pɨ     |    | p  | ɨ  |
 | Panare     | ɨpɨ    | ɨ  | p  | ɨ  |
-### Reflexes of \**kupi* 'to bathe (\gl{tr')} ([csv](bathe_tr_2.csv)): 
+### Reflexes of \**kupi* 'to bathe (TR)' ([csv](bathe_tr_2.csv)): 
 | Language   | Form   |    |    |    |    |    |
 |:-----------|:-------|:---|:---|:---|:---|:---|
 | Kari'ña    | kupi   | k  | u  |    | p  | i  |
