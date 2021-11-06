@@ -1045,6 +1045,7 @@ aff_export.index = aff_export.index.map(lambda x: extension_string(x, latex=Fals
 export_csv(aff_export, label, caption, keep_index=True)
 
 affected_result.index = affected_result.index.map(extension_string)
+affected_result.index.name=None
 
 save_float(
     print_latex(affected_result, keep_index=True),
