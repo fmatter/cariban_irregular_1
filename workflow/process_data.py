@@ -63,6 +63,8 @@ cog_trans_dic["bathe_intr"] = r"bathe"
 cog_trans_dic["be_1"] = r"be-1"
 cog_trans_dic["be_2"] = r"be-2"
 
+def print_shorthand(abbrev):
+    return "\\" + cah.get_shorthand(abbrev)
 
 def str2numcog(cogsets):
     return " ".join([cognum[x] for x in cogsets.split("+")])
@@ -213,16 +215,6 @@ def sort_lg(df):
     df.Language_ID.cat.set_categories(lg_list, ordered=True, inplace=True)
     df.sort_values(["Language_ID"], inplace=True)
 
-
-def print_shorthand(abbrev):
-    return "\\" + cah.get_shorthand(abbrev)
-
-
-shorthand_dic = {x: print_shorthand(x) for x in lg_list}
-
-name_dic = {x: cah.get_name(x) for x in lg_list}
-
-
 def extract_sources(df, src_str="Source", keep=False, latexify=True):
     df[src_str] = df[src_str].fillna("")
     src = list(df[src_str])
@@ -257,6 +249,19 @@ def repl_lg_id(df):
     df["Language_ID"] = df["Language_ID"].apply(print_shorthand)
     df.rename(columns={"Language_ID": "Language"}, inplace=True)
 
+
+shorthand_dic = {x: print_shorthand(x) for x in lg_list}
+name_dic = {x: cah.get_name(x) for x in lg_list}
+
+ext_lg_dic = {x: y for x, y in dict(zip(e_df["ID"], e_df["Language_ID"])).items()}
+ext_form_dic = {x: y for x, y in dict(zip(e_df["ID"], e_df["Form"])).items()}
+
+def extension_string(id, latex=True):
+    form = objectify(ext_form_dic[id], obj_string=get_obj_str(ext_lg_dic[id]))
+    if latex:
+        return print_shorthand(ext_lg_dic[id]) + " " + form
+    else:
+        return name_dic[ext_lg_dic[id]] + " " + repl_latex(form)
 
 # regular pekodian verbs
 tabular = pd.DataFrame()
@@ -953,7 +958,6 @@ def m_expl(row):
             or row["Form"].split("-")[1][0] == "i"
         )
 
-
 cond_map = {
     "yuk_j": ["ə", "e", "a"],
     "aku_k": ["ə"],
@@ -1031,19 +1035,16 @@ for factor in ["morphological", "phonological", "frequency"]:
 
 caption = "Proportion of (un-)affected verbs accurately predicted by potential factors"
 label = "factors"
-export_csv(affected_result, label, caption, keep_index=True)
 
-ext_dic = dict(zip(e_df["ID"], e_df["Language_ID"]))
-ext_form_dic = dict(zip(e_df["ID"], e_df["Form"]))
-affected_result["Language_ID"] = affected_result.index.map(ext_dic)
+affected_result["Language_ID"] = affected_result.index.map(ext_lg_dic)
 sort_lg(affected_result)
-affected_result.index = affected_result.apply(
-    lambda x: print_shorthand(x["Language_ID"])
-    + " "
-    + objectify(ext_form_dic[x.name], get_obj_str(x["Language_ID"])),
-    axis=1,
-)
 affected_result.drop(columns=["Language_ID"], inplace=True)
+
+aff_export = affected_result.copy()
+aff_export.index = aff_export.index.map(lambda x: extension_string(x, latex=False))
+export_csv(aff_export, label, caption, keep_index=True)
+
+affected_result.index = affected_result.index.map(extension_string)
 
 save_float(
     print_latex(affected_result, keep_index=True),

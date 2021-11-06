@@ -1,5 +1,4 @@
 These are the various tables produced by [process_data.py](../process_data.py), as they also appear in the manuscript.
-Sources refer to [this file](../../data/cldf/references.bib).
 ### Regular Pekodian Sa verbs ([csv](pekreg.csv)): 
 |     | Bakairi   | Arara      | Ikpeng     |
 |:----|:----------|:-----------|:-----------|
@@ -50,19 +49,19 @@ Sources refer to [this file](../../data/cldf/references.bib).
 | be_1 | w-a-             | w-a-     | ∅-a-      |
 | be_2 | w-eʔi-           | w-ei-    | ?-eʔi-    |
 ### Regular Karijona verbs ([csv](carreg.csv)): 
-|     | arrive     | dance        |
-|:----|:-----------|:-------------|
-| 1   | ji-tuda-   | j-eharaga-   |
-| 2   | mɨ-tuda-   | m-eharaga-   |
-| 1+2 | kɨsi-tuda- | kɨs-eharaga- |
-| 3   | ni-tuda-   | n-eharaga-   |
+|     | dance        | arrive     |
+|:----|:-------------|:-----------|
+| 1   | j-eharaga-   | ji-tuda-   |
+| 2   | m-eharaga-   | mɨ-tuda-   |
+| 1+2 | kɨs-eharaga- | kɨsi-tuda- |
+| 3   | n-eharaga-   | ni-tuda-   |
 ### Regular Yukpa verbs ([csv](yukreg.csv)): 
-|    | wash_self   | fall   | sleep   |
-|---:|:------------|:-------|:--------|
-|  1 | j-otum-     | j-ata- | jɨ-nɨ-  |
-|  2 | m-otum-     | m-ata- | mɨ-nɨ-  |
-|  3 | n-otum-     | n-ata- | nɨ-nɨ-  |
-### Loss of *w in Ikpeng ([csv](pxinw.csv)): 
+|    | fall   | sleep   | wash_self   |
+|---:|:-------|:--------|:------------|
+|  1 | j-ata- | jɨ-nɨ-  | j-otum-     |
+|  2 | m-ata- | mɨ-nɨ-  | m-otum-     |
+|  3 | n-ata- | nɨ-nɨ-  | n-otum-     |
+### Loss of \**w* in Ikpeng ([csv](pxinw.csv)): 
 |                 | ara    | ikp   |
 |:----------------|:-------|:------|
 | defecate        | watke  | atke  |
@@ -70,7 +69,7 @@ Sources refer to [this file](../../data/cldf/references.bib).
 | dog             | wokori | akari |
 | capuchin_monkey | tawe   | tae   |
 | sleep           | wɨnkɨ  | ɨnkɨ  |
-### Reflexes of *ɨpɨtə 'to go down' ([csv](godown.csv)): 
+### Reflexes of \**ɨpɨtə* 'to go down' ([csv](godown.csv)): 
 | Language         | Form     | Class       |    |    |    |    |    |    |    |    |    |    |    |    |
 |:-----------------|:---------|:------------|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|
 | Proto-Parukotoan | ɨɸɨto    | S_P_        |    |    |    |    | ɨ  | ɸ  | ɨ  | t  | o  |    |    |    |
@@ -233,11 +232,11 @@ Sources refer to [this file](../../data/cldf/references.bib).
 | car  | j- | car  | n     | n    | n      | y      | y      | N/A       | ?            |
 | yuk  | j- | yuk  | ?     | n    | y      | y      | –      | N/A       | –            |
 ### Proportion of (un-)affected verbs accurately predicted by potential factors ([csv](factors.csv)): 
-|        | morphological   | phonological   | frequency   |
-|:-------|:----------------|:---------------|:------------|
-| aku_k  | 5/6 (83%)       | 6/6 (100%)     | 3/6 (50%)   |
-| car_j  | 3/5 (60%)       | 5/5 (100%)     | 4/5 (80%)   |
-| ppek_k | 7/7 (100%)      | 5/7 (71%)      | 4/7 (57%)   |
-| ptir_t | 5/6 (83%)       | 4/6 (67%)      | 5/6 (83%)   |
-| pwai_k | 5/5 (100%)      | 4/5 (80%)      | 5/5 (100%)  |
-| yuk_j  | 1/3 (33%)       | 3/3 (100%)     | 1/3 (33%)   |
+|                       | morphological   | phonological   | frequency   |
+|:----------------------|:----------------|:---------------|:------------|
+| Proto-Waiwaian \**k-* | 5/5 (100%)      | 4/5 (80%)      | 5/5 (100%)  |
+| Proto-Pekodian \**k-* | 7/7 (100%)      | 5/7 (71%)      | 4/7 (57%)   |
+| Proto-Tiriyoan \**t-* | 5/6 (83%)       | 4/6 (67%)      | 5/6 (83%)   |
+| Akuriyó *k-*          | 5/6 (83%)       | 6/6 (100%)     | 3/6 (50%)   |
+| Karijona *j-*         | 3/5 (60%)       | 5/5 (100%)     | 4/5 (80%)   |
+| Yukpa *j-*            | 1/3 (33%)       | 3/3 (100%)     | 1/3 (33%)   |
