@@ -907,28 +907,36 @@ result.sort_index(inplace=True, level="Lg")
 result.replace({"": "–"}, inplace=True)
 result.index.names = ["", "", ""]
 label = "overview"
-export_csv(
-    result, label, "Overview of extensions and (un-)affected verbs", keep_index=True
-)
-
-# format for latex
-# rename index
-def modify_index(idx):
-    o = get_obj_str(idx[2][0])
-    if idx[0] != idx[2]:
-        return "\\quad " + print_shorthand(idx[2])
-    else:
-        return print_shorthand(idx[0]) + " " + "\\%s{%s}" % (o, idx[1])
-    return idx
-
-
-result.index = result.index.map(modify_index)
 
 # replace cogset ids with reconstructed forms and translationsm
 result.columns = [
     result.columns.map(lambda x: f"\\rc{{{cog_form_dic[x]}}}"),
     result.columns.map(lambda x: f"\\qu{{{cog_trans_dic[x]}}}"),
 ]
+
+def modify_index(idx, latex=True):
+    o = get_obj_str(idx[2][0])
+    if idx[0] != idx[2]:
+        if latex:
+            return "\\quad " + print_shorthand(idx[2])
+        else:
+            return "    " + name_dic[idx[2]]
+    else:
+        if latex:
+            return print_shorthand(idx[0]) + " " + "\\%s{%s}" % (o, idx[1])
+        else:
+            return name_dic[idx[0]] + " " + repl_latex("\\%s{%s}" % (o, idx[1]))
+    return idx
+
+result_exp = result.copy()
+
+result.index = result.index.map(modify_index)
+result_exp.index = result_exp.index.map(lambda x: modify_index(x, latex=False))
+
+export_csv(
+    result_exp, label, "Overview of extensions and (un-)affected verbs", keep_index=True
+)
+
 # add nice-looking checkmarks and stuff
 repl_dic = {x: y["tex"] for x, y in overview_legend.items()}
 result.replace(

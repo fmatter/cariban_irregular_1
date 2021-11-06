@@ -49,18 +49,18 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 | be_1 | w-a-             | w-a-     | ∅-a-      |
 | be_2 | w-eʔi-           | w-ei-    | ?-eʔi-    |
 ### Regular Karijona verbs ([csv](carreg.csv)): 
-|     | dance        | arrive     |
-|:----|:-------------|:-----------|
-| 1   | j-eharaga-   | ji-tuda-   |
-| 2   | m-eharaga-   | mɨ-tuda-   |
-| 1+2 | kɨs-eharaga- | kɨsi-tuda- |
-| 3   | n-eharaga-   | ni-tuda-   |
+|     | arrive     | dance        |
+|:----|:-----------|:-------------|
+| 1   | ji-tuda-   | j-eharaga-   |
+| 2   | mɨ-tuda-   | m-eharaga-   |
+| 1+2 | kɨsi-tuda- | kɨs-eharaga- |
+| 3   | ni-tuda-   | n-eharaga-   |
 ### Regular Yukpa verbs ([csv](yukreg.csv)): 
-|    | fall   | sleep   | wash_self   |
-|---:|:-------|:--------|:------------|
-|  1 | j-ata- | jɨ-nɨ-  | j-otum-     |
-|  2 | m-ata- | mɨ-nɨ-  | m-otum-     |
-|  3 | n-ata- | nɨ-nɨ-  | n-otum-     |
+|    | wash_self   | fall   | sleep   |
+|---:|:------------|:-------|:--------|
+|  1 | j-otum-     | j-ata- | jɨ-nɨ-  |
+|  2 | m-otum-     | m-ata- | mɨ-nɨ-  |
+|  3 | n-otum-     | n-ata- | nɨ-nɨ-  |
 ### Loss of \**w* in Ikpeng ([csv](pxinw.csv)): 
 |                 | ara    | ikp   |
 |:----------------|:-------|:------|
@@ -216,21 +216,22 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 | Kapón      | kuʔpi  | k  | u  | ʔ  | p  | i  |
 | Panare     | kupɨ   | k  | u  |    | p  | ɨ  |
 ### Overview of extensions and (un-)affected verbs ([csv](overview.csv)): 
-|      |    |      | say   | go   | be_1   | be_2   | come   | go_down   | bathe_intr   |
-|:-----|:---|:-----|:------|:-----|:-------|:-------|:-------|:----------|:-------------|
-| PWai | k- | PWai | n     | n    | n      | n      | –      | N/A       | y            |
-| PWai | k- | hix  | n     | n    | n      | n      | –      | N/A       | y            |
-| PWai | k- | wai  | n     | (y)  | n      | n      | –      | N/A       | y            |
-| PPek | k- | PPek | n     | n    | n      | n      | n      | n         | n            |
-| PPek | k- | ara  | n     | n    | n      | n      | n      | n         | n            |
-| PPek | k- | ikp  | n     | y    | –      | n      | y      | ?         | n            |
-| PPek | k- | bak  | n     | n    | n      | n      | y      | y         | n            |
-| PTir | t- | PTir | n     | n    | n      | n      | n      | N/A       | y            |
-| PTir | t- | tri  | n     | n    | n      | n      | n      | N/A       | y            |
-| PTir | t- | aku  | n     | n    | n      | ?      | n      | N/A       | y            |
-| aku  | k- | aku  | n     | n    | n      | ?      | n      | n         | n            |
-| car  | j- | car  | n     | n    | n      | y      | y      | N/A       | ?            |
-| yuk  | j- | yuk  | ?     | n    | y      | y      | –      | N/A       | –            |
+|                       | \rc{ka[ti]}   | \rc{ɨtə[mə]}   | \rc{a[p]}   | \rc{eti}   | \rc{(ət-)jəpɨ}   | \rc{ɨpɨtə}   | \rc{e-pɨ}   |
+|:----------------------|:--------------|:---------------|:------------|:-----------|:-----------------|:-------------|:------------|
+|                       | \qu{say}      | \qu{go}        | \qu{be-1}   | \qu{be-2}  | \qu{come}        | \qu{go down} | \qu{bathe}  |
+| Proto-Waiwaian \**k-* | n             | n              | n           | n          | –                | N/A          | y           |
+| Hixkaryána            | n             | n              | n           | n          | –                | N/A          | y           |
+| Waiwai                | n             | (y)            | n           | n          | –                | N/A          | y           |
+| Proto-Pekodian \**k-* | n             | n              | n           | n          | n                | n            | n           |
+| Arara                 | n             | n              | n           | n          | n                | n            | n           |
+| Ikpeng                | n             | y              | –           | n          | y                | ?            | n           |
+| Bakairi               | n             | n              | n           | n          | y                | y            | n           |
+| Proto-Tiriyoan \**t-* | n             | n              | n           | n          | n                | N/A          | y           |
+| Tiriyó                | n             | n              | n           | n          | n                | N/A          | y           |
+| Akuriyó               | n             | n              | n           | ?          | n                | N/A          | y           |
+| Akuriyó *k-*          | n             | n              | n           | ?          | n                | n            | n           |
+| Karijona *j-*         | n             | n              | n           | y          | y                | N/A          | ?           |
+| Yukpa *j-*            | ?             | n              | y           | y          | –                | N/A          | –           |
 ### Proportion of (un-)affected verbs accurately predicted by potential factors ([csv](factors.csv)): 
 |                       | morphological   | phonological   | frequency   |
 |:----------------------|:----------------|:---------------|:------------|
