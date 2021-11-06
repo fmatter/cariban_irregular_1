@@ -22,10 +22,10 @@
     "pwaireg": {
         "caption": "Regular 'to fall' (Sa) and 'to sleep' (Sp) in Proto-Waiwaian",
         "sources": [
-            "hixkaryanaderby1985[189, 190, 196]",
+            "hawkins1953waiwai[209, 211]",
             "",
             "howard2001wrought[150]",
-            "hawkins1953waiwai[209, 211]",
+            "hixkaryanaderby1985[189, 190, 196]",
             "waiwaihawkins1998[30]"
         ]
     },
@@ -42,9 +42,9 @@
     "ptirreg": {
         "caption": "Regular Proto-Tiriyoan Sa verbs",
         "sources": [
-            "triomeira1999[292, 294]",
             "",
-            "gildea1994akuriyo[87]"
+            "gildea1994akuriyo[87]",
+            "triomeira1999[292, 294]"
         ]
     },
     "ptirverbs": {
@@ -58,15 +58,15 @@
     "carreg": {
         "caption": "Regular Karijona verbs",
         "sources": [
-            "meira1998proto[106]",
-            "robayo2000avance[173]"
+            "robayo2000avance[173]",
+            "meira1998proto[106]"
         ]
     },
     "yukreg": {
         "caption": "Regular Yukpa verbs",
         "sources": [
-            "largo2011yukpa[72, 76]",
-            "meira2006syntactic[139]"
+            "meira2006syntactic[139]",
+            "largo2011yukpa[72, 76]"
         ]
     },
     "pxinw": {
@@ -106,7 +106,7 @@
         ]
     },
     "come": {
-        "caption": "Reflexes of 'to come'",
+        "caption": "Reflexes of \\**(\u0259t-)j\u0259p\u0268* 'to come'",
         "sources": [
             "macushiabbott1991[32]",
             "alvarez2000construcciones[102]",
@@ -130,7 +130,7 @@
         ]
     },
     "go": {
-        "caption": "Reflexes of 'to go'",
+        "caption": "Reflexes of \\**\u0268t\u0259[m\u0259]* 'to go'",
         "sources": [
             "cruz2005fonologia[291]",
             "triomeira1999[292]",
@@ -156,7 +156,7 @@
         ]
     },
     "say": {
-        "caption": "Reflexes of 'to say'",
+        "caption": "Reflexes of \\**ka[ti]* 'to say'",
         "sources": [
             "meira2003bakairi[4]",
             "franchetto2008absolutivo[48]",
@@ -176,7 +176,7 @@
         ]
     },
     "bathe_intr_1": {
-        "caption": "Reflexes of 'to bathe_intr_1'",
+        "caption": "Reflexes of \\**e-p\u0268* 'to bathe (\\gl{intr')}",
         "sources": [
             "pc[Spike Gildea]",
             "hixkaryanaderby1979[198]",
@@ -191,7 +191,7 @@
         ]
     },
     "bathe_intr_2": {
-        "caption": "Reflexes of 'to bathe_intr_2'",
+        "caption": "Reflexes of \\**e-kupi* 'to bathe (\\gl{intr')}",
         "sources": [
             "courtz2008carib[304]",
             "maquiritaricaceres2011[439]",
@@ -200,13 +200,13 @@
         ]
     },
     "bathe_intr_3": {
-        "caption": "Reflexes of 'to bathe_intr_3'",
+        "caption": "Reflexes of \\**\u0259-kupi* 'to bathe (\\gl{intr')}",
         "sources": [
             "mattei1994diccionario[8]"
         ]
     },
     "bathe_tr_1": {
-        "caption": "Reflexes of 'to bathe_tr_1'",
+        "caption": "Reflexes of \\**(\u0268)p\u0268* 'to bathe (\\gl{tr')}",
         "sources": [
             "pc[Spike Gildea]",
             "hixkaryanaderby1979[198]",
@@ -224,7 +224,7 @@
         ]
     },
     "bathe_tr_2": {
-        "caption": "Reflexes of 'to bathe_tr_2'",
+        "caption": "Reflexes of \\**kupi* 'to bathe (\\gl{tr')}",
         "sources": [
             "courtz2008carib[304]",
             "stegeman2014akawaio[37]",

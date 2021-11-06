@@ -198,6 +198,11 @@ def get_sources(df, parens=True, latexify=True):
     source_string = cldfh.cite_a_bunch(ref_list, parens=parens)
     return source_string
 
+def repl_latex(string):
+    string = re.sub(r"\\rc\{(.*?)\}", r"\**\1*", string)
+    string = re.sub(r"\\obj\{(.*?)\}", r"*\1*", string)
+    string = re.sub(r"\\qu\{(.*?)\}", r"'\1'", string)
+    return string
 
 def sort_lg(df):
     df.Language_ID = df.Language_ID.astype("category")
@@ -631,7 +636,7 @@ def print_aligned_table(
     export_csv(
         df.replace({"Language_ID": name_dic}).rename(columns={"Language_ID": "Language"}),
         verb,
-        f"Reflexes of 'to {verb}'",
+        repl_latex(caption),
         sources = raw_sources
     )
     add_obj_markdown(df)
@@ -662,7 +667,7 @@ def print_aligned_table(
 print_aligned_table(
     v_df[v_df["Parameter_ID"] == "come"],
     verb="come",
-    caption=r"Reflexes of \qu{to come}",
+    caption=r"Reflexes of \rc{(ət-)jəpɨ} \qu{to come}",
     fuzzy=True,
 )
 print_aligned_table(
