@@ -15,26 +15,6 @@
 %
 %\let\Oldsubsubsection\subsubsection
 %\renewcommand{\subsubsection}{\FloatBarrier\Oldsubsubsection}
-\makeatletter
-\patchcmd{\@@setcref}         {??}{\color{red} undefined Label}{}{}
-\patchcmd{\@@setcref}         {??}{\color{red} undefined Label}{}{}
-\patchcmd{\@@setcrefrange}    {??}{\color{red} undefined Label}{}{}
-\patchcmd{\@@setcrefrange}    {??}{\color{red} undefined Label}{}{}
-\patchcmd{\@@setcrefrange}    {??}{\color{red} undefined Label}{}{}
-\patchcmd{\@@setcrefrange}    {??}{\color{red} undefined Label}{}{}
-\patchcmd{\@@setcrefrange}    {??}{\color{red} undefined Label}{}{}
-\patchcmd{\@@setcrefrange}    {??}{\color{red} undefined Label}{}{}
-\patchcmd{\@@setnamecref}     {??}{\color{red} undefined Label}{}{}
-\patchcmd{\@@setnamecref}     {??}{\color{red} undefined Label}{}{}
-\patchcmd{\@@setcpageref}     {??}{\color{red} undefined Label}{}{}
-\patchcmd{\@@setcpageref}     {??}{\color{red} undefined Label}{}{}
-\patchcmd{\@@setcpagerefrange}{??}{\color{red} undefined Label}{}{}
-\patchcmd{\@@setcpagerefrange}{??}{\color{red} undefined Label}{}{}
-\patchcmd{\@@setcpagerefrange}{??}{\color{red} undefined Label}{}{}
-\patchcmd{\@@setcpagerefrange}{??}{\color{red} undefined Label}{}{}
-\patchcmd{\@@setcpagerefrange}{??}{\color{red} undefined Label}{}{}
-\patchcmd{\@@cref}            {??}{\color{red} undefined Label}{}{}
-\makeatother
 
 \newcommand{\pcone}{\\\small\begin{tabular}{@{}rllll@{}}
 & \gl{a} & \gl{s_a_} & \gl{s_p_} & \gl{p}\\
@@ -105,10 +85,10 @@
 \pagenumbering{arabic}
 
 \input{sections/introduction.tex}
-\input{sections/proto_carib.tex}
-\input{sections/extensions.tex}
-\input{sections/verbs.tex}
-\input{sections/discussion.tex}
+%\input{sections/proto_carib.tex}
+%\input{sections/extensions.tex}
+%\input{sections/verbs.tex}
+%\input{sections/discussion.tex}
 
 
 \newpage

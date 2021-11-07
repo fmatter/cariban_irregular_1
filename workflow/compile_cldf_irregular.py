@@ -296,7 +296,7 @@ bib_data = bib_parser.parse_file(bibfile)
 filtered_bib_data = BibliographyData()
 for key, entry in bib_data.entries.items():
     if key in found_refs:
-        print(entry)
+        # print(entry)
         filtered_bib_data.add_entry(entry.key, entry)
 
 s = filtered_bib_data.to_string("bibtex")
