@@ -267,14 +267,14 @@ pyd.x = ["Meaning_ID"]
 pyd.y = ["Inflection"]
 pyd.y_sort = person
 for lg, meanings in {
-    "hix": ["fall", "be_afraid", "walk", "go"],
-    "tri": ["sleep", "bathe_intr", "yawn", "say"],
-    "mak": ["eat", "arrive", "go"]
+    "hix": ["fall", "be_afraid", "walk", "cut_self", "be"],
+    "tri": ["sleep", "see_self", "bathe_intr", "yawn", "go"],
+    "mak": ["eat", "arrive", "go", "be"]
     # "yuk": ["wash_self", "sleep", "fall"],
 }.items():
     pyd.filters = {"Language_ID": [lg], "Meaning_ID": meanings, "Inflection": person}
     pyd.x_sort = meanings
-    tabular = pyd.compose_paradigm(i_df, multi_index=False)
+    tabular = pyd.compose_paradigm(i_df[i_df["Verb_Cognateset_ID"] != "be_1"], multi_index=False)
     label = lg + "intro"
     tabular_raw = tabular.rename(columns=mean_dic)
     tabular_raw.columns = [repl_latex(f"'{col}'") for col in tabular_raw.columns]

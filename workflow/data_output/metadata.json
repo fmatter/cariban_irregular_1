@@ -2,20 +2,21 @@
     "hixintro": {
         "caption": "Some Hixkary\u00e1na verbs",
         "sources": [
-            "howard2001wrought[150, 510, 511, 513]",
-            "hixkaryanaderby1985[27, 69, 70]"
+            "howard2001wrought[150, 510, 511, 513, 520]",
+            "hixkaryanaderby1985[197, 198]"
         ]
     },
     "triintro": {
         "caption": "Some Tiriy\u00f3 verbs",
         "sources": [
-            "triomeira1999[292, 294]"
+            "triomeira1999[292, 294]",
+            "triocarlin2004[274]"
         ]
     },
     "makintro": {
         "caption": "Some Ye'kwana verbs",
         "sources": [
-            "maquiritaricaceres2011[98, 180, 183, 223, 224, 363]"
+            "maquiritaricaceres2011[98, 180, 183, 223, 224, 292, 363]"
         ]
     }
 }
