@@ -107,7 +107,7 @@ t = Tokenizer(Profile(*segment_list))
 
 
 def segmentify(form):
-    form = re.sub("[()]", "", form)
+    form = re.sub("[()\[\]]", "", form)
     form = form.replace("-", "+")
     form = form.strip("+")
     return t(form)

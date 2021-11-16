@@ -104,8 +104,8 @@ car_form_106,car,j-eharaga-,robayo2000avance[173],Form in source: ʤi-eharaga-ɨ
 yuk_form_107,yuk,j-otum-,largo2011yukpa[72],Form in source: yotumna.,1_wash_self,j + o t u m
 yuk_form_108,yuk,jɨ-nɨ-,largo2011yukpa[76],"As all verbs except to ‘to go’, this verb is analyzed as V-initial by meira2003primeras, but unprefixed forms are consistently C-initial. Form in source: yʉnʉna.",1_sleep,j ɨ + n ɨ
 yuk_form_109,yuk,j-ata-,meira2006syntactic[139],Form in source: y-ata.,1_fall,j + a t a
-hix_form_113,hix,k-oserʲehɨ-,howard2001wrought[510],Form in source: koseřehyano.,1_be_afraid,k + o s e r � e h ɨ
-hix_form_114,hix,k-atarʲeknohɨ-,howard2001wrought[513],Form in source: katařeknohyaha.,1_walk,k + a t a r � e k n o h ɨ
+hix_form_113,hix,k-oserʲehɨ-,howard2001wrought[510],Form in source: koseřehyano.,1_be_afraid,k + o s e rʲ e h ɨ
+hix_form_114,hix,k-atarʲeknohɨ-,howard2001wrought[513],Form in source: katařeknohyaha.,1_walk,k + a t a rʲ e k n o h ɨ
 tri_form_115,tri,t-əturu-,triomeira1999[292],Form in source: t-ëturu.,1_talk,t + ə t u r u
 tri_form_116,tri,s-entapo-,triomeira1999[292],Form in source: s-entapo.,1_yawn,s + e n t a p o
 way_form_117,way,w-əturu-,wayanatavares2005[208],Form in source: w-ëtulu.,1_talk,w + ə t u r u
@@ -142,44 +142,44 @@ kar_stem_23,kar,opɨ,courtz2008carib[429],,come,o p ɨ
 uxc_stem_24,uxc,ee,meira2005southern[182],,come,ee
 kax_stem_25,kax,oohɨ,pc[Spike Gildea],,come,oo h ɨ
 ing_stem_26,ing,ətə,cruz2005fonologia[291],,go,ə t ə
-tri_stem_27,tri,tə[n],triomeira1999[292],,go,t ə � n �
-way_stem_28,way,[ɨ]tə[m],wayanatavares2005[195],,go,� ɨ � t ə � m �
-aku_stem_29,aku,[ə]tə[mɨ],gildea1994akuriyo[87],,go,� ə � t ə � m ɨ �
+tri_stem_27,tri,tə[n],triomeira1999[292],,go,t ə n
+way_stem_28,way,[ɨ]tə[m],wayanatavares2005[195],,go,ɨ t ə m
+aku_stem_29,aku,[ə]tə[mɨ],gildea1994akuriyo[87],,go,ə t ə m ɨ
 ara_stem_30,ara,ɨdo,alves2017arara[153],,go,ɨ d o
-hix_stem_31,hix,[ɨ]to,"hixkaryanaderby1985[27, 248]",,go,� ɨ � t o
-wai_stem_32,wai,[e]to[m],"waiwaihawkins1998[45, 62]",,go,� e � t o � m �
+hix_stem_31,hix,[ɨ]to,"hixkaryanaderby1985[27, 248]",,go,ɨ t o
+wai_stem_32,wai,[e]to[m],"waiwaihawkins1998[45, 62]",,go,e t o m
 ikp_stem_33,ikp,aran,ikpengpacheco2001[54],,go,a r a n
 ikp_stem_34,ikp,ero,ikpengpacheco2001[80],,go,e r o
-bak_stem_35,bak,[ɨ]tə,"von1892bakairi[112, 374]",Various unprefixed forms spelled as ⟨ita⟩.,go,� ɨ � t ə
-mak_stem_36,mak,ɨtə[mə],"maquiritaricaceres2011[181, 216]",,go,ɨ t ə � m ə �
+bak_stem_35,bak,[ɨ]tə,"von1892bakairi[112, 374]",Various unprefixed forms spelled as ⟨ita⟩.,go,ɨ t ə
+mak_stem_36,mak,ɨtə[mə],"maquiritaricaceres2011[181, 216]",,go,ɨ t ə m ə
 car_stem_37,car,təmə,meira1998proto[112],,go,t ə m ə
 kar_stem_38,kar,to,hoff1968carib[168],,go,t o
-kar_stem_39,kar,[ɨ]ʔ,hoff1968carib[168],,go,� ɨ � ʔ
+kar_stem_39,kar,[ɨ]ʔ,hoff1968carib[168],,go,ɨ ʔ
 yuk_stem_40,yuk,to,meira2006syntactic[139],,go,t o
 yab_stem_41,yab,tə,caceres2018yawarana[4],,go,t ə
 map_stem_42,map,tə,muller1975mapoyo[74],wɨs-tə-ri. I interpret wɨs- as an allomorph of wɨhɨ ‘1’. /s/ becomes /h/ intervocalically in Mapoyo.,go,t ə
-pan_stem_43,pan,tə[n],mattei1994diccionario[198],,go,t ə � n �
-mac_stem_44,mac,[a]tɨ,"macushiabbott1991[48, 50]",,go,� a � t ɨ
-pem_stem_45,pem,[e]tə,garcia2006diccionario[172],,go,� e � t ə
-kax_stem_46,kax,to[mo],pc[Spike Gildea],,go,t o � m o �
-uxc_stem_47,uxc,[e]te,franchetto2002kuikuro[6],,go,� e � t e
+pan_stem_43,pan,tə[n],mattei1994diccionario[198],,go,t ə n
+mac_stem_44,mac,[a]tɨ,"macushiabbott1991[48, 50]",,go,a t ɨ
+pem_stem_45,pem,[e]tə,garcia2006diccionario[172],,go,e t ə
+kax_stem_46,kax,to[mo],pc[Spike Gildea],,go,t o m o
+uxc_stem_47,uxc,[e]te,franchetto2002kuikuro[6],,go,e t e
 bak_stem_48,bak,ke,meira2003bakairi[4]; meira2005bakairi[297],,say,k e
 uxc_stem_49,uxc,ki,franchetto2008absolutivo[48],,say,k i
 ikp_stem_50,ikp,ke,ikpengpacheco2001[209],,say,k e
 ara_stem_51,ara,ke,alves2017arara[153],,say,k e
-hix_stem_52,hix,ka[h],hixkaryanaderby1985[182],,say,k a � h �
+hix_stem_52,hix,ka[h],hixkaryanaderby1985[182],,say,k a h
 car_stem_53,car,ka,meira1998proto[113],,say,k a
-apa_stem_54,apa,ka[ʃi],koehn1986apalai[107],,say,k a � ʃ i �
-wai_stem_55,wai,ka[s],waiwaihawkins1998[26],,say,k a � s �
-kax_stem_56,kax,ka[s],pc[Spike Gildea],,say,k a � s �
+apa_stem_54,apa,ka[ʃi],koehn1986apalai[107],,say,k a ʃ i
+wai_stem_55,wai,ka[s],waiwaihawkins1998[26],,say,k a s
+kax_stem_56,kax,ka[s],pc[Spike Gildea],,say,k a s
 tri_stem_57,tri,ka,meira1998proto[113],,say,k a
-way_stem_58,way,ka[i],camargo2010wayana[66],,say,k a � i �
+way_stem_58,way,ka[i],camargo2010wayana[66],,say,k a i
 aku_stem_59,aku,ka,meira1998proto[113],,say,k a
 mac_stem_60,mac,ka,macushiabbott1991[59],,say,k a
 pem_stem_61,pem,ka,swiggers2010gramatica[123],,say,k a
 kar_stem_62,kar,ka,courtz2008carib[430],,say,k a
 kap_stem_63,kap,ka,akawaiocaesar2003[125],,say,k a
-pan_stem_64,pan,ka[h],mattei1994diccionario[102],,say,k a � h �
+pan_stem_64,pan,ka[h],mattei1994diccionario[102],,say,k a h
 kax_stem_65,kax,ɨhɨto,pc[Spike Gildea],,go_down,ɨ h ɨ t o
 yuk_stem_66,yuk,ewuhtu,meira2003primeras,,go_down,e w u h t u
 hix_stem_67,hix,hto,hixkaryanaderby1979[196],,go_down,h t o
