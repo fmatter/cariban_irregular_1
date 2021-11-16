@@ -98,9 +98,6 @@ examples.rename(
 )
 examples["Analyzed_Word"] = examples["Analyzed_Word"].str.replace(" ", "\t")
 examples["Gloss"] = examples["Gloss"].str.replace(" ", "\t")
-examples["Language_ID"] = examples["Language_ID"].map(
-    dict(zip(lgs["Glottocode"], lgs["ID"]))
-)
 
 print("Tokenizing forms and splitting cognate sets")
 # tokenize inflected forms and stems, create cognates (links between forms and cognatesets)
