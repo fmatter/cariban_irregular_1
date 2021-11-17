@@ -853,7 +853,7 @@ overview_legend = {
     "n": {"tex": "×", "legend": "not affected"},
     "?": {"tex": "?", "legend": "unknown first person prefix"},
     "–": {"tex": "–", "legend": "does not occur"},
-    "(y)": {"tex": "(\\checkmark)", "legend": "affected with surviving old marker"},
+    "(y)": {"tex": "(\\checkmark)", "legend": "old and new marker combined"},
     "N/A": {"tex": "\\textsc{n/a}", "legend": "not meaningfully answerable"},
 }
 
