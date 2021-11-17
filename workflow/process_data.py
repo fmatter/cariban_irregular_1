@@ -781,11 +781,15 @@ for table in bathe_tables:
     if table[2] == "bathe_intr_1":
         bathe_out += r"""\begin{subtable}[t]{.49\linewidth}
 \centering
-"""
-    if table[2] == "bathe_tr_1":
+"""        
+    elif table[2] == "bathe_tr_1":
         bathe_out += r"""\end{subtable}
 \begin{subtable}[t]{.49\linewidth}
 \centering"""
+    # hacky fix for aligning ye'kwana ʔ with k rather than akawaio ʔ
+    elif table[2] == "bathe_intr_2":
+        tabular = tabular.replace("&    &    &  ʔ", "&  ʔ &    &   ")
+
     bathe_out += r"""\caption{%s}
 \label{tab:%s}
 %s""" % (

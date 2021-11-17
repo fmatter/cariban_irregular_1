@@ -240,11 +240,11 @@ kar_stem_121,kar,ekupi,courtz2008carib[304],,bathe_intr,e + k u p i
 kar_stem_122,kar,kupi,courtz2008carib[304],,bathe_tr,k u p i
 mak_stem_123,mak,eʔhi,maquiritaricaceres2011[439],,bathe_intr,e + ʔ h i
 mak_stem_124,mak,ɨhɨ,maquiritaricaceres2011[454],,bathe_tr,ɨ h ɨ
-kap_stem_125,kap,ekuʔpi,stegeman2014akawaio[37],,bathe_intr,e + k u ʔ p i
-kap_stem_126,kap,kuʔpi,stegeman2014akawaio[37],,bathe_tr,k u ʔ p i
+kap_stem_125,kap,ekuʔpi,stegeman2014akawaio[37],Unexpected glottal stop.,bathe_intr,e + k u ʔ p i
+kap_stem_126,kap,kuʔpi,stegeman2014akawaio[37],Unexpected glottal stop.,bathe_tr,k u ʔ p i
 pem_stem_127,pem,ekupɨ,pemondearmellada1944dic[34],,bathe_intr,e + k u p ɨ
 pem_stem_128,pem,pɨ,pemondearmellada1944dic[129],,bathe_tr,p ɨ
-pan_stem_129,pan,akupɨ,mattei1994diccionario[8],,bathe_intr,a + k u p ɨ
+pan_stem_129,pan,akupɨ,mattei1994diccionario[8],Only detransitivized form not based on *e-.,bathe_intr,a + k u p ɨ
 pan_stem_130,pan,kupɨ,mattei1994diccionario[294],,bathe_tr,k u p ɨ
 pan_stem_131,pan,ɨpɨ,mattei1994diccionario[294],,bathe_tr,ɨ p ɨ
 ara_other_0,ara,wɨna,alves2017arara[143],,DAT,w ɨ n a
