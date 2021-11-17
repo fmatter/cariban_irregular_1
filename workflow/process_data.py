@@ -632,31 +632,31 @@ save_float(
     short=r"Reflexes of \rc{ɨpɨtə} \qu{to go down}",
 )
 
-print("\nClass membership of 'to defecate':")
-s_df = v_df[v_df["Parameter_ID"] == "defecate"]
-sources = extract_sources(s_df)
-s_df.drop(
-    columns=["Parameter_ID", "Cog_Cert", "Comment", "Cognateset_ID"], inplace=True
-)
-s_df["Form"] = s_df["Form"].str.replace("+", "", regex=True)
-sort_lg(s_df)
-print(s_df)
-s_df["Class"] = s_df.apply(
-    lambda x: pynt.get_expex_code(x["Class"])
-    if x["Class"] not in ["?", "–"]
-    else x["Class"],
-    axis=1,
-)
-add_obj_markdown(s_df)
-repl_lg_id(s_df)
-s_df.set_index("Language", drop=True, inplace=True)
-tabular = print_latex(s_df, keep_index=True)
-save_float(
-    tabular,
-    "defecate",
-    r"Reflexes of \qu{to defecate} " + sources,
-    short=r"Reflexes of \qu{to defecate} ",
-)
+# print("\nClass membership of 'to defecate':")
+# s_df = v_df[v_df["Parameter_ID"] == "defecate"]
+# sources = extract_sources(s_df)
+# s_df.drop(
+#     columns=["Parameter_ID", "Cog_Cert", "Comment", "Cognateset_ID"], inplace=True
+# )
+# s_df["Form"] = s_df["Form"].str.replace("+", "", regex=True)
+# sort_lg(s_df)
+# print(s_df)
+# s_df["Class"] = s_df.apply(
+#     lambda x: pynt.get_expex_code(x["Class"])
+#     if x["Class"] not in ["?", "–"]
+#     else x["Class"],
+#     axis=1,
+# )
+# add_obj_markdown(s_df)
+# repl_lg_id(s_df)
+# s_df.set_index("Language", drop=True, inplace=True)
+# tabular = print_latex(s_df, keep_index=True)
+# save_float(
+#     tabular,
+#     "defecate",
+#     r"Reflexes of \qu{to defecate} " + sources,
+#     short=r"Reflexes of \qu{to defecate} ",
+# )
 
 
 def print_aligned_table(
