@@ -1147,5 +1147,20 @@ save_float(
 )
 pyd.content_string = "Form"
 
+
+# preliminary Sa verb frequency counts from apalai
+apalai_data = pd.read_csv("../data/apalai_sa_verb_stats.csv")
+apalai_data["String"] = apalai_data.apply(combine_form_meaning, axis=1)
+
+export_csv(
+    apalai_data,
+    "apalaicounts",
+    "Frequency counts of Sa verbs from two Apalai texts",
+    keep_index=False,
+    sources="",
+)
+
+print(apalai_data)
+
 with open("data_output/metadata.json", "w") as outfile:
     json.dump(exported_tables, outfile, indent=4)
