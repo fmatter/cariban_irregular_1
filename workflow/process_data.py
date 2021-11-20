@@ -1150,7 +1150,6 @@ pyd.content_string = "Form"
 
 # preliminary Sa verb frequency counts from apalai
 apalai_data = pd.read_csv("../data/apalai_sa_verb_stats.csv")
-apalai_data["String"] = apalai_data.apply(combine_form_meaning, axis=1)
 
 export_csv(
     apalai_data,
@@ -1159,6 +1158,9 @@ export_csv(
     keep_index=False,
     sources="",
 )
+
+apalai_data["String"] = apalai_data.apply(combine_form_meaning, axis=1)
+
 
 print(apalai_data)
 

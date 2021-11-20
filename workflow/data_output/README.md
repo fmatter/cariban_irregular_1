@@ -77,11 +77,11 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 | 1+2 | kɨsi-tuda- | kɨs-eharaga- |
 | 3   | ni-tuda-   | n-eharaga-   |
 ### Regular Yukpa verbs ([csv](yukreg.csv)): 
-|    | fall   | sleep   | wash_self   |
-|---:|:-------|:--------|:------------|
-|  1 | j-ata- | jɨ-nɨ-  | j-otum-     |
-|  2 | m-ata- | mɨ-nɨ-  | m-otum-     |
-|  3 | n-ata- | nɨ-nɨ-  | n-otum-     |
+|    | fall   | wash_self   | sleep   |
+|---:|:-------|:------------|:--------|
+|  1 | j-ata- | j-otum-     | jɨ-nɨ-  |
+|  2 | m-ata- | m-otum-     | mɨ-nɨ-  |
+|  3 | n-ata- | n-otum-     | nɨ-nɨ-  |
 ### Loss of \**w* in Ikpeng ([csv](pxinw.csv)): 
 |                 | ara    | ikp   |
 |:----------------|:-------|:------|
@@ -264,23 +264,23 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 | Karijona *j-*         | 3/5 (60%)       | 5/5 (100%)     | 4/5 (80%)   |
 | Yukpa *j-*            | 1/3 (33%)       | 3/3 (100%)     | 1/3 (33%)   |
 ### Frequency counts of Sa verbs from two Apalai texts ([csv](apalaicounts.csv)): 
-|   Count | Meaning        | Form        |      % Sa |    % Words | String                             |
-|--------:|:---------------|:------------|----------:|-----------:|:-----------------------------------|
-|      24 | be-1           | a           | 0.247423  | 0.037037   | \obj{a} \qu{be-1}                  |
-|      20 | say            | ka          | 0.206186  | 0.0308642  | \obj{ka} \qu{say}                  |
-|      16 | go             | ɨto         | 0.164948  | 0.0246914  | \obj{ɨto} \qu{go}                  |
-|      14 | be-2           | eʃi         | 0.14433   | 0.0216049  | \obj{eʃi} \qu{be-2}                |
-|       4 | come           | oepɨ        | 0.0412371 | 0.00617284 | \obj{oepɨ} \qu{come}               |
-|       3 | arrive         | e-poreʔka   | 0.0309278 | 0.00462963 | \obj{e-poreʔka} \qu{arrive}        |
-|       2 | ask            | ot-urupo    | 0.0206186 | 0.00308642 | \obj{ot-urupo} \qu{ask}            |
-|       2 | eat            | ot-uʔ       | 0.0206186 | 0.00308642 | \obj{ot-uʔ} \qu{eat}               |
-|       2 | fail           | e-kureʔ     | 0.0206186 | 0.00308642 | \obj{e-kureʔ} \qu{fail}            |
-|       2 | choke          | os-enakũnuʔ | 0.0206186 | 0.00308642 | \obj{os-enakũnuʔ} \qu{choke}       |
-|       1 | spend_night    | e-meʔ       | 0.0103093 | 0.00154321 | \obj{e-meʔ} \qu{spend_night}       |
-|       1 | land           | ot-ɨrɨʔka   | 0.0103093 | 0.00154321 | \obj{ot-ɨrɨʔka} \qu{land}          |
-|       1 | suffer         | e-tuarima   | 0.0103093 | 0.00154321 | \obj{e-tuarima} \qu{suffer}        |
-|       1 | divide_up      | at-apiaka   | 0.0103093 | 0.00154321 | \obj{at-apiaka} \qu{divide_up}     |
-|       1 | meet           | os-eporɨ    | 0.0103093 | 0.00154321 | \obj{os-eporɨ} \qu{meet}           |
-|       1 | fall           | e-puka      | 0.0103093 | 0.00154321 | \obj{e-puka} \qu{fall}             |
-|       1 | laugh          | e-unopɨ     | 0.0103093 | 0.00154321 | \obj{e-unopɨ} \qu{laugh}           |
-|       1 | lose loincloth | e-metɨka    | 0.0103093 | 0.00154321 | \obj{e-metɨka} \qu{lose loincloth} |
+| Form        | Meaning        |   Count |      % Sa |    % Words |
+|:------------|:---------------|--------:|----------:|-----------:|
+| a           | be-1           |      24 | 0.247423  | 0.037037   |
+| ka          | say            |      20 | 0.206186  | 0.0308642  |
+| ɨto         | go             |      16 | 0.164948  | 0.0246914  |
+| eʃi         | be-2           |      14 | 0.14433   | 0.0216049  |
+| oepɨ        | come           |       4 | 0.0412371 | 0.00617284 |
+| e-poreʔka   | arrive         |       3 | 0.0309278 | 0.00462963 |
+| ot-urupo    | ask            |       2 | 0.0206186 | 0.00308642 |
+| ot-uʔ       | eat            |       2 | 0.0206186 | 0.00308642 |
+| e-kureʔ     | fail           |       2 | 0.0206186 | 0.00308642 |
+| os-enakũnuʔ | choke          |       2 | 0.0206186 | 0.00308642 |
+| e-meʔ       | spend_night    |       1 | 0.0103093 | 0.00154321 |
+| ot-ɨrɨʔka   | land           |       1 | 0.0103093 | 0.00154321 |
+| e-tuarima   | suffer         |       1 | 0.0103093 | 0.00154321 |
+| at-apiaka   | divide_up      |       1 | 0.0103093 | 0.00154321 |
+| os-eporɨ    | meet           |       1 | 0.0103093 | 0.00154321 |
+| e-puka      | fall           |       1 | 0.0103093 | 0.00154321 |
+| e-unopɨ     | laugh          |       1 | 0.0103093 | 0.00154321 |
+| e-metɨka    | lose loincloth |       1 | 0.0103093 | 0.00154321 |
