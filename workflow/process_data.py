@@ -63,8 +63,10 @@ cog_trans_dic["bathe_intr"] = r"bathe"
 cog_trans_dic["be_1"] = r"be-1"
 cog_trans_dic["be_2"] = r"be-2"
 
+
 def print_shorthand(abbrev):
     return "\\" + cah.get_shorthand(abbrev)
+
 
 def str2numcog(cogsets):
     return " ".join([cognum[x] for x in cogsets.split("+")])
@@ -82,6 +84,7 @@ def segmentify(form):
 
 
 exported_tables = {}
+
 
 def export_csv(
     tabular,
@@ -114,13 +117,15 @@ def export_csv(
 
 
 # functions for creating latex tables
-def print_latex(df, ex=False, keep_index=False):
+def print_latex(df, ex=False, keep_index=False, formatters=None):
     if keep_index:
         df.columns.name = df.index.name
         df.index.name = None
 
     with pd.option_context("max_colwidth", 1000):
-        lines = df.to_latex(escape=False, index=keep_index).split("\n")
+        lines = df.to_latex(
+            escape=False, index=keep_index, formatters=formatters
+        ).split("\n")
     lines[0] = lines[0].replace("tabular}{l", "tabular}[t]{@{}l").replace("l}", "l@{}}")
     if ex:
         del lines[1:4]
@@ -184,7 +189,7 @@ def combine_form_meaning(row, latex=True):
     else:
         form = f"""*{row["Form"]}*"""
         meaning = f"""'{row["Meaning"]}'"""
-    out = form + " " + meaning
+    out = form + " " + meaning.replace("_", " ")
     return out
 
 
@@ -199,9 +204,11 @@ def get_sources(df, parens=True, latexify=True):
     source_string = cldfh.cite_a_bunch(ref_list, parens=parens)
     return source_string
 
+
 def upper_repl(match):
-     return match.group(1).upper()
-     
+    return match.group(1).upper()
+
+
 def repl_latex(string):
     string = re.sub(r"\\rc\{(.*?)\}", r"\**\1*", string)
     string = re.sub(r"\\gl\{(.*?)\}", upper_repl, string)
@@ -209,10 +216,12 @@ def repl_latex(string):
     string = re.sub(r"\\qu\{(.*?)\}", r"'\1'", string)
     return string
 
+
 def sort_lg(df):
     df.Language_ID = df.Language_ID.astype("category")
     df.Language_ID.cat.set_categories(lg_list, ordered=True, inplace=True)
     df.sort_values(["Language_ID"], inplace=True)
+
 
 def extract_sources(df, src_str="Source", keep=False, latexify=True):
     df[src_str] = df[src_str].fillna("")
@@ -255,12 +264,14 @@ name_dic = {x: cah.get_name(x) for x in lg_list}
 ext_lg_dic = {x: y for x, y in dict(zip(e_df["ID"], e_df["Language_ID"])).items()}
 ext_form_dic = {x: y for x, y in dict(zip(e_df["ID"], e_df["Form"])).items()}
 
+
 def extension_string(id, latex=True):
     form = objectify(ext_form_dic[id], obj_string=get_obj_str(ext_lg_dic[id]))
     if latex:
         return print_shorthand(ext_lg_dic[id]) + " " + form
     else:
         return name_dic[ext_lg_dic[id]] + " " + repl_latex(form)
+
 
 person = ["1", "2", "1+2", "3"]
 pyd.x = ["Meaning_ID"]
@@ -274,7 +285,9 @@ for lg, meanings in {
 }.items():
     pyd.filters = {"Language_ID": [lg], "Meaning_ID": meanings, "Inflection": person}
     pyd.x_sort = meanings
-    tabular = pyd.compose_paradigm(i_df[i_df["Verb_Cognateset_ID"] != "be_1"], multi_index=False)
+    tabular = pyd.compose_paradigm(
+        i_df[i_df["Verb_Cognateset_ID"] != "be_1"], multi_index=False
+    )
     label = lg + "intro"
     tabular_raw = tabular.rename(columns=mean_dic)
     tabular_raw.columns = [repl_latex(f"'{col}'") for col in tabular_raw.columns]
@@ -679,10 +692,12 @@ def print_aligned_table(
             break
     df["Form"] = df["Form"].str.replace("+", "", regex=True)
     export_csv(
-        df.replace({"Language_ID": name_dic}).rename(columns={"Language_ID": "Language"}),
+        df.replace({"Language_ID": name_dic}).rename(
+            columns={"Language_ID": "Language"}
+        ),
         verb,
         repl_latex(caption),
-        sources = raw_sources
+        sources=raw_sources,
     )
     add_obj_markdown(df)
     repl_lg_id(df)
@@ -781,7 +796,7 @@ for table in bathe_tables:
     if table[2] == "bathe_intr_1":
         bathe_out += r"""\begin{subtable}[t]{.49\linewidth}
 \centering
-"""        
+"""
     elif table[2] == "bathe_tr_1":
         bathe_out += r"""\end{subtable}
 \begin{subtable}[t]{.49\linewidth}
@@ -933,6 +948,7 @@ result.replace({"": "–"}, inplace=True)
 result.index.names = ["", "", ""]
 label = "overview"
 
+
 def modify_index(idx, latex=True):
     o = get_obj_str(idx[2][0])
     if idx[0] != idx[2]:
@@ -946,6 +962,7 @@ def modify_index(idx, latex=True):
         else:
             return name_dic[idx[0]] + " " + repl_latex("\\%s{%s}" % (o, idx[1]))
     return idx
+
 
 result_exp = result.copy()
 
@@ -996,6 +1013,7 @@ def m_expl(row):
             "DETRZ" not in row["Verb_Cognateset_ID"]
             or row["Form"].split("-")[1][0] == "i"
         )
+
 
 cond_map = {
     "yuk_j": ["ə", "e", "a"],
@@ -1084,7 +1102,7 @@ aff_export.index = aff_export.index.map(lambda x: extension_string(x, latex=Fals
 export_csv(aff_export, label, caption, keep_index=True)
 
 affected_result.index = affected_result.index.map(extension_string)
-affected_result.index.name=None
+affected_result.index.name = None
 
 save_float(
     print_latex(affected_result, keep_index=True),
@@ -1151,18 +1169,38 @@ pyd.content_string = "Form"
 # preliminary Sa verb frequency counts from apalai
 apalai_data = pd.read_csv("../data/apalai_sa_verb_stats.csv")
 
+label = "apalaicounts"
+
 export_csv(
     apalai_data,
-    "apalaicounts",
-    "Frequency counts of Sa verbs from two Apalai texts",
+    label,
+    "Frequency counts of Sa verbs in two Apalai texts",
     keep_index=False,
     sources="",
 )
 
-apalai_data["String"] = apalai_data.apply(combine_form_meaning, axis=1)
+apalai_data["Verb"] = apalai_data.apply(combine_form_meaning, axis=1)
+apalai_data.drop(columns=["Form", "Meaning"], inplace=True)
+
+apalai_data.rename(
+    columns={"% Sa": "% \gl{s_a_} verb tokens", "% Words": "% word tokens"},
+    inplace=True,
+)
 
 
-print(apalai_data)
+save_float(
+    print_latex(
+        apalai_data[["Verb", "Count", "% \gl{s_a_} verb tokens", "% word tokens"]],
+        formatters={
+            "% \gl{s_a_} verb tokens": "{:,.2%}".format,
+            "% word tokens": "{:,.2%}".format,
+        },
+    ),
+    label,
+    r"Frequency counts of \gl{s_a_} verbs in three \apalai texts from \textcite{koehns1994textos} (163 \gl{s_a_} verbs, 1070 words)",
+    short=r"Frequency counts of \gl{s_a_} verbs in \apalai",
+)
+
 
 with open("data_output/metadata.json", "w") as outfile:
     json.dump(exported_tables, outfile, indent=4)

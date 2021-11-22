@@ -280,10 +280,11 @@ for filename in os.listdir(data_path):
     if filename in ["extensions.csv", "cognate_sets.csv", "languages.csv"]:
         continue
     df = pd.read_csv(os.path.join(data_path, filename))
-    for i in df["Source"]:
-        if pd.isnull(i):
-            continue
-        found_refs.append(cldf_helpers.split_ref(i)[0])
+    if "Source" in df.columns:
+        for i in df["Source"]:
+            if pd.isnull(i):
+                continue
+            found_refs.append(cldf_helpers.split_ref(i)[0])
 found_refs = list(set(found_refs))
 found_refs.remove("pc")
 
