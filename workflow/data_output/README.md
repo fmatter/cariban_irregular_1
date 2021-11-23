@@ -13,13 +13,6 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 | 2   | m-əənɨkɨ-    | m-əene-         | m-epɨ-              | m-entapo-   | mɨ-tən-   |
 | 1+2 | kɨt-əənɨkɨ-  | k-əene-         | ke-epɨ-             | k-entapo-   | kɨ-tən-   |
 | 3   | n-əənɨkɨ-    | n-əene-         | n-epɨ-              | n-entapo-   | nɨ-tən-   |
-### Some Ye'kwana verbs ([csv](makintro.csv)): 
-|     | 'to eat'       | 'to arrive'   | 'to go'   | 'to be'   |
-|:----|:---------------|:--------------|:----------|:----------|
-| 1   | w-ətəwasint͡ʃə- | w-əʔrɨ-       | w-ɨtə-    | w-ei-     |
-| 2   | m-ətəwasint͡ʃə- | m-əʔrɨ-       | m-ɨtə-    | m-ei-     |
-| 1+2 | k-ətəwasint͡ʃə- | k-əʔrɨ-       | k-ɨtə-    | k-ei-     |
-| 3   | n-ətəwasint͡ʃə- | n-əʔrɨ-       | n-ɨtə-    | n-ei-     |
 ### Regular Pekodian Sa verbs ([csv](pekreg.csv)): 
 |     | Bakairi   | Arara      | Ikpeng     |
 |:----|:----------|:-----------|:-----------|
@@ -31,13 +24,13 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 ### Irregular Proto-Pekodian verbs ([csv](ppekverbs.csv)): 
 |            | Proto-Pekodian   | Arara    | Ikpeng   | Bakairi   |
 |:-----------|:-----------------|:---------|:---------|:----------|
-| say        | wɨ-ge-           | wɨ-ge-   | ɨ-ge-    | u-ge-     |
-| bathe_intr | w-ipɨ-           | w-ibɨ-   | ∅-ip-    | w-i-      |
 | be_1       | w-ap-            | w-ap-    | –        | w-a-      |
 | be_2       | w-et͡ʃi-          | w-it͡ʃi-  | ∅-et͡ʃi-  | w-i-      |
+| say        | wɨ-ge-           | wɨ-ge-   | ɨ-ge-    | u-ge-     |
+| go         | w-ɨtən-          | w-ɨdo-   | k-aran-  | u-tə-     |
 | come       | w-epɨ-           | w-ebɨ-   | k-arep-  | k-əewɨ-   |
 | go_down    | w-ɨptə-          | w-iptoŋ- | ?-iptoŋ- | k-ɨtəgɨ-  |
-| go         | w-ɨtən-          | w-ɨdo-   | k-aran-  | u-tə-     |
+| bathe_intr | w-ipɨ-           | w-ibɨ-   | ∅-ip-    | w-i-      |
 ### Regular 'to fall' (Sa) and 'to sleep' (Sp) in Proto-Waiwaian ([csv](pwaireg.csv)): 
 | Proto-Waiwaian   | Proto-Waiwaian.1   | Hixkaryána   | Hixkaryána.1   | Waiwai     | Waiwai.1    |
 |:-----------------|:-------------------|:-------------|:---------------|:-----------|:------------|
@@ -49,9 +42,9 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 ### Irregular Proto-Waiwaian verbs ([csv](pwaiverbs.csv)): 
 |      | Proto-Waiwaian   | Hixkaryána   | Waiwai   |
 |:-----|:-----------------|:-------------|:---------|
-| say  | wɨ-ka-           | ɨ-ka-        | wɨ-ka-   |
 | be_1 | w-ah-            | w-ah-        | w-a-     |
 | be_2 | w-eʃi-           | w-eʃe-       | w-eeʃi-  |
+| say  | wɨ-ka-           | ɨ-ka-        | wɨ-ka-   |
 | go   | wɨ-tom-          | ɨ-to-        | kɨw-tom- |
 ### Regular Proto-Tiriyoan Sa verbs ([csv](ptirreg.csv)): 
 | bathe_intr     | bathe_intr.1   | bathe_intr.2   | sleep          | sleep.1     | sleep.2     |
@@ -64,24 +57,24 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 ### Irregular Proto-Tiriyoan verbs ([csv](ptirverbs.csv)): 
 |      | Proto-Tiriyoan   | Tiriyó   | Akuriyó   |
 |:-----|:-----------------|:---------|:----------|
-| go   | wɨ-təmɨ-         | wɨ-tən-  | ə-təmɨ-   |
-| say  | wɨ-ka-           | wɨ-ka-   | wɨ-ka-    |
-| come | w-əʔepɨ-         | w-əepɨ-  | ∅-eepɨ-   |
 | be_1 | w-a-             | w-a-     | ∅-a-      |
 | be_2 | w-eʔi-           | w-ei-    | ?-eʔi-    |
+| say  | wɨ-ka-           | wɨ-ka-   | wɨ-ka-    |
+| go   | wɨ-təmɨ-         | wɨ-tən-  | ə-təmɨ-   |
+| come | w-əʔepɨ-         | w-əepɨ-  | ∅-eepɨ-   |
 ### Regular Karijona verbs ([csv](carreg.csv)): 
-|     | arrive     | dance        |
-|:----|:-----------|:-------------|
-| 1   | ji-tuda-   | j-eharaga-   |
-| 2   | mɨ-tuda-   | m-eharaga-   |
-| 1+2 | kɨsi-tuda- | kɨs-eharaga- |
-| 3   | ni-tuda-   | n-eharaga-   |
+|     | dance        | arrive     |
+|:----|:-------------|:-----------|
+| 1   | j-eharaga-   | ji-tuda-   |
+| 2   | m-eharaga-   | mɨ-tuda-   |
+| 1+2 | kɨs-eharaga- | kɨsi-tuda- |
+| 3   | n-eharaga-   | ni-tuda-   |
 ### Regular Yukpa verbs ([csv](yukreg.csv)): 
-|    | fall   | wash_self   | sleep   |
-|---:|:-------|:------------|:--------|
-|  1 | j-ata- | j-otum-     | jɨ-nɨ-  |
-|  2 | m-ata- | m-otum-     | mɨ-nɨ-  |
-|  3 | n-ata- | n-otum-     | nɨ-nɨ-  |
+|    | fall   | sleep   | wash_self   |
+|---:|:-------|:--------|:------------|
+|  1 | j-ata- | jɨ-nɨ-  | j-otum-     |
+|  2 | m-ata- | mɨ-nɨ-  | m-otum-     |
+|  3 | n-ata- | nɨ-nɨ-  | n-otum-     |
 ### Loss of \**w* in Ikpeng ([csv](pxinw.csv)): 
 |                 | ara    | ikp   |
 |:----------------|:-------|:------|
@@ -254,33 +247,28 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 | Akuriyó *k-*          | n            | n             | n          | ?         | n               | n           | n          |
 | Karijona *j-*         | n            | n             | n          | y         | y               | N/A         | ?          |
 | Yukpa *j-*            | ?            | n             | y          | y         | –               | N/A         | –          |
-### Proportion of (un-)affected verbs accurately predicted by potential factors ([csv](factors.csv)): 
-|                       | morphological   | phonological   | frequency   |
-|:----------------------|:----------------|:---------------|:------------|
-| Proto-Waiwaian \**k-* | 5/5 (100%)      | 4/5 (80%)      | 5/5 (100%)  |
-| Proto-Pekodian \**k-* | 7/7 (100%)      | 5/7 (71%)      | 4/7 (57%)   |
-| Proto-Tiriyoan \**t-* | 5/6 (83%)       | 4/6 (67%)      | 5/6 (83%)   |
-| Akuriyó *k-*          | 5/6 (83%)       | 6/6 (100%)     | 3/6 (50%)   |
-| Karijona *j-*         | 3/5 (60%)       | 5/5 (100%)     | 4/5 (80%)   |
-| Yukpa *j-*            | 1/3 (33%)       | 3/3 (100%)     | 1/3 (33%)   |
-### Frequency counts of Sa verbs from two Apalai texts ([csv](apalaicounts.csv)): 
-| Form        | Meaning        |   Count |      % Sa |    % Words |
-|:------------|:---------------|--------:|----------:|-----------:|
-| a           | be-1           |      24 | 0.247423  | 0.037037   |
-| ka          | say            |      20 | 0.206186  | 0.0308642  |
-| ɨto         | go             |      16 | 0.164948  | 0.0246914  |
-| eʃi         | be-2           |      14 | 0.14433   | 0.0216049  |
-| oepɨ        | come           |       4 | 0.0412371 | 0.00617284 |
-| e-poreʔka   | arrive         |       3 | 0.0309278 | 0.00462963 |
-| ot-urupo    | ask            |       2 | 0.0206186 | 0.00308642 |
-| ot-uʔ       | eat            |       2 | 0.0206186 | 0.00308642 |
-| e-kureʔ     | fail           |       2 | 0.0206186 | 0.00308642 |
-| os-enakũnuʔ | choke          |       2 | 0.0206186 | 0.00308642 |
-| e-meʔ       | spend_night    |       1 | 0.0103093 | 0.00154321 |
-| ot-ɨrɨʔka   | land           |       1 | 0.0103093 | 0.00154321 |
-| e-tuarima   | suffer         |       1 | 0.0103093 | 0.00154321 |
-| at-apiaka   | divide_up      |       1 | 0.0103093 | 0.00154321 |
-| os-eporɨ    | meet           |       1 | 0.0103093 | 0.00154321 |
-| e-puka      | fall           |       1 | 0.0103093 | 0.00154321 |
-| e-unopɨ     | laugh          |       1 | 0.0103093 | 0.00154321 |
-| e-metɨka    | lose loincloth |       1 | 0.0103093 | 0.00154321 |
+### Frequency counts of Sa verbs in two Apalai texts ([csv](apalaicounts.csv)): 
+| Form        | Meaning        | ID     |   Count |       % Sa |     % Words |
+|:------------|:---------------|:-------|--------:|-----------:|------------:|
+| a           | be-1           | be_1   |      49 | 0.300613   | 0.0457944   |
+| eʃi         | be-2           | be_2   |      30 | 0.184049   | 0.0280374   |
+| ka          | say            | say    |      26 | 0.159509   | 0.0242991   |
+| ɨto         | go             | go     |      23 | 0.141104   | 0.0214953   |
+| oepɨ        | come           | come   |      13 | 0.0797546  | 0.0121495   |
+| e-poreʔka   | arrive         | reg-sa |       3 | 0.0184049  | 0.00280374  |
+| ot-urupo    | ask            | reg-sa |       2 | 0.0122699  | 0.00186916  |
+| ot-uʔ       | eat            | reg-sa |       2 | 0.0122699  | 0.00186916  |
+| os-enakũnuʔ | choke          | reg-sa |       2 | 0.0122699  | 0.00186916  |
+| e-unopɨ     | laugh          | reg-sa |       1 | 0.00613497 | 0.000934579 |
+| at-akĩma    | pack bags      | reg-sa |       1 | 0.00613497 | 0.000934579 |
+| at-ankɨema  | be happy       | reg-sa |       1 | 0.00613497 | 0.000934579 |
+| os-ereh     | be_amazed      | reg-sa |       1 | 0.00613497 | 0.000934579 |
+| e-metɨka    | lose loincloth | reg-sa |       1 | 0.00613497 | 0.000934579 |
+| e-tuarima   | suffer         | reg-sa |       1 | 0.00613497 | 0.000934579 |
+| e-puka      | fall           | reg-sa |       1 | 0.00613497 | 0.000934579 |
+| os-eporɨ    | meet           | reg-sa |       1 | 0.00613497 | 0.000934579 |
+| ot-ɨrɨʔka   | land           | reg-sa |       1 | 0.00613497 | 0.000934579 |
+| ot-ɨʔka     | finish         | reg-sa |       1 | 0.00613497 | 0.000934579 |
+| ot-uru      | talk           | reg-sa |       1 | 0.00613497 | 0.000934579 |
+| at-apiaka   | divide_up      | reg-sa |       1 | 0.00613497 | 0.000934579 |
+| e-sɨrɨʔma   | move           | reg-sa |       1 | 0.00613497 | 0.000934579 |
