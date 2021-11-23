@@ -13,12 +13,6 @@
             "triocarlin2004[274]"
         ]
     },
-    "makintro": {
-        "caption": "Some Ye'kwana verbs",
-        "sources": [
-            "maquiritaricaceres2011[98, 180, 183, 223, 224, 292, 363]"
-        ]
-    },
     "pekreg": {
         "caption": "Regular Pekodian Sa verbs",
         "sources": [
@@ -42,11 +36,11 @@
     "pwaireg": {
         "caption": "Regular 'to fall' (Sa) and 'to sleep' (Sp) in Proto-Waiwaian",
         "sources": [
+            "howard2001wrought[150]",
             "",
             "hixkaryanaderby1985[189, 190, 196]",
-            "howard2001wrought[150]",
-            "waiwaihawkins1998[30]",
-            "hawkins1953waiwai[209, 211]"
+            "hawkins1953waiwai[209, 211]",
+            "waiwaihawkins1998[30]"
         ]
     },
     "pwaiverbs": {
@@ -62,8 +56,8 @@
     "ptirreg": {
         "caption": "Regular Proto-Tiriyoan Sa verbs",
         "sources": [
-            "triomeira1999[292, 294]",
             "",
+            "triomeira1999[292, 294]",
             "gildea1994akuriyo[87]"
         ]
     },
@@ -78,15 +72,15 @@
     "carreg": {
         "caption": "Regular Karijona verbs",
         "sources": [
-            "meira1998proto[106]",
-            "robayo2000avance[173]"
+            "robayo2000avance[173]",
+            "meira1998proto[106]"
         ]
     },
     "yukreg": {
         "caption": "Regular Yukpa verbs",
         "sources": [
-            "largo2011yukpa[72, 76]",
-            "meira2006syntactic[139]"
+            "meira2006syntactic[139]",
+            "largo2011yukpa[72, 76]"
         ]
     },
     "pxinw": {
@@ -254,9 +248,6 @@
     },
     "overview": {
         "caption": "Overview of extensions and (un-)affected verbs"
-    },
-    "factors": {
-        "caption": "Proportion of (un-)affected verbs accurately predicted by potential factors"
     },
     "apalaicounts": {
         "caption": "Frequency counts of Sa verbs in two Apalai texts"
