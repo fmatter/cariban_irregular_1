@@ -36,10 +36,10 @@
     "pwaireg": {
         "caption": "Regular 'to fall' (Sa) and 'to sleep' (Sp) in Proto-Waiwaian",
         "sources": [
-            "howard2001wrought[150]",
-            "",
             "hixkaryanaderby1985[189, 190, 196]",
+            "",
             "waiwaihawkins1998[30]",
+            "howard2001wrought[150]",
             "hawkins1953waiwai[209, 211]"
         ]
     },
@@ -103,7 +103,7 @@
     "godown": {
         "caption": "Reflexes of \\**\u0268p\u0268t\u0259* 'to go down'",
         "sources": [
-            "pc[Spike Gildea, Angela Fabi\u0301ola Alves Chagas]",
+            "pc[Angela Fabi\u0301ola Alves Chagas, Spike Gildea]",
             "meira2003primeras",
             "hixkaryanaderby1979[196]",
             "waiwaihawkins1998[55]",
@@ -254,5 +254,23 @@
     },
     "overview": {
         "caption": "Overview of extensions and (un-)affected verbs"
+    },
+    "pwai_predictions": {
+        "caption": "Predictions and scores for Proto-Waiwaian"
+    },
+    "ppek_predictions": {
+        "caption": "Predictions and scores for Proto-Pekodian"
+    },
+    "ptir_predictions": {
+        "caption": "Predictions and scores for Proto-Tiriyoan"
+    },
+    "aku_predictions": {
+        "caption": "Predictions and scores for Akuriy\u00f3"
+    },
+    "car_predictions": {
+        "caption": "Predictions and scores for Karijona"
+    },
+    "yuk_predictions": {
+        "caption": "Predictions and scores for Yukpa"
     }
 }

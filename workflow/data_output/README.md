@@ -257,3 +257,45 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 | Akuriyó *k-*          | n            | n             | n          | ?         | n               | n           | n          |
 | Karijona *j-*         | n            | n             | n          | y         | y               | N/A         | ?          |
 | Yukpa *j-*            | ?            | n             | y          | y         | –               | N/A         | –          |
+### Predictions and scores for Proto-Waiwaian ([csv](pwai_predictions.csv)): 
+|                        |   say |   be_2 |   be_1 |   go |   DETRZ1+bathe_1 |   Score |
+|:-----------------------|------:|-------:|-------:|-----:|-----------------:|--------:|
+| Morphology             |     1 |      1 |      1 |    1 |                1 |     1   |
+| Morphology + Frequency |     1 |      1 |      1 |    1 |                1 |     1   |
+| Phonology + Frequency  |     1 |      1 |      1 |    1 |                1 |     1   |
+| Phonology              |     1 |      0 |      0 |    1 |                1 |     0.6 |
+### Predictions and scores for Proto-Pekodian ([csv](ppek_predictions.csv)): 
+|                        |   be_1 |   be_2 |   come |   go |   go_down |   say |   DETRZ1+bathe_1 |    Score |
+|:-----------------------|-------:|-------:|-------:|-----:|----------:|------:|-----------------:|---------:|
+| Morphology             |      1 |      1 |      1 |    1 |         1 |     1 |                1 | 1        |
+| Phonology              |      1 |      0 |      0 |    1 |         1 |     1 |                1 | 0.714286 |
+| Morphology + Frequency |      1 |      1 |      0 |    1 |         0 |     1 |                0 | 0.571429 |
+| Phonology + Frequency  |      1 |      1 |      0 |    1 |         0 |     1 |                0 | 0.571429 |
+### Predictions and scores for Proto-Tiriyoan ([csv](ptir_predictions.csv)): 
+|                        |   be_1 |   be_2 |   DETRZ+come |   go |   say |   DETRZ1+bathe_1 |    Score |
+|:-----------------------|-------:|-------:|-------------:|-----:|------:|-----------------:|---------:|
+| Morphology             |      1 |      1 |            0 |    1 |     1 |                1 | 0.833333 |
+| Morphology + Frequency |      1 |      1 |            0 |    1 |     1 |                1 | 0.833333 |
+| Phonology + Frequency  |      1 |      1 |            0 |    1 |     1 |                1 | 0.833333 |
+| Phonology              |      1 |      0 |            0 |    1 |     1 |                1 | 0.666667 |
+### Predictions and scores for Akuriyó ([csv](aku_predictions.csv)): 
+|                        |   go_down |   DETRZ1+bathe_1 |   go |   say |   come |   be_1 |    Score |
+|:-----------------------|----------:|-----------------:|-----:|------:|-------:|-------:|---------:|
+| Phonology              |         1 |                1 |    1 |     1 |      1 |      1 | 1        |
+| Morphology             |         1 |                0 |    1 |     1 |      1 |      1 | 0.833333 |
+| Morphology + Frequency |         0 |                0 |    1 |     1 |      0 |      1 | 0.5      |
+| Phonology + Frequency  |         0 |                0 |    1 |     1 |      0 |      1 | 0.5      |
+### Predictions and scores for Karijona ([csv](car_predictions.csv)): 
+|                        |   come |   say |   be_2 |   go |   be_1 |   Score |
+|:-----------------------|-------:|------:|-------:|-----:|-------:|--------:|
+| Phonology              |      1 |     1 |      1 |    1 |      1 |     1   |
+| Phonology + Frequency  |      1 |     1 |      0 |    1 |      1 |     0.8 |
+| Morphology             |      0 |     1 |      0 |    1 |      1 |     0.6 |
+| Morphology + Frequency |      0 |     1 |      0 |    1 |      1 |     0.6 |
+### Predictions and scores for Yukpa ([csv](yuk_predictions.csv)): 
+|                        |   go |   be_1 |   be_2 |    Score |
+|:-----------------------|-----:|-------:|-------:|---------:|
+| Phonology              |    1 |      1 |      1 | 1        |
+| Morphology             |    1 |      0 |      0 | 0.333333 |
+| Morphology + Frequency |    1 |      0 |      0 | 0.333333 |
+| Phonology + Frequency  |    1 |      0 |      0 | 0.333333 |

@@ -1,7 +1,7 @@
 from helper_functions import *
 
 
-#tables for the introduction, featuring "regular" and "irregular" verbs from Trio and Hixkaryana
+# tables for the introduction, featuring "regular" and "irregular" verbs from Trio and Hixkaryana
 person = ["1", "2", "1+2", "3"]
 pyd.x = ["Meaning_ID"]
 pyd.y = ["Inflection"]
@@ -186,7 +186,7 @@ reconstructed_form_table(
     "ptirverbs",
 )
 
-#regular akuriyo Sa verbs
+# regular akuriyo Sa verbs
 label = "aku1sa"
 aku_verbs = i_df[
     (i_df["Language_ID"] == "aku") & (i_df["Prefix_Cognateset_ID"].isin(["k", "1t"]))
@@ -530,20 +530,6 @@ overview.drop(
     inplace=True,
 )
 
-affectedness = overview[overview["Language_ID"] == overview["Orig_Language"]]
-affectedness = affectedness[affectedness["Affected"].isin(["y", "n"])]
-affectedness = affectedness[affectedness["Concept"].isin(verb_list)]
-affectedness.to_csv("patterns.csv", index=False)
-affectedness.drop(
-    columns=["Prefix_Form", "Orig_Language", "Language_ID"],
-    inplace=True,
-)
-
-overview.drop(
-    columns=["Form", "Extension_ID"],
-    inplace=True,
-)
-
 pyd.x = ["Cognateset_ID"]
 pyd.y = ["Orig_Language", "Prefix_Form", "Language_ID"]
 pyd.content_string = "Affected"
@@ -570,7 +556,6 @@ result.sort_index(inplace=True, level="Lg")
 result.replace({"": "–"}, inplace=True)
 result.index.names = ["", "", ""]
 label = "overview"
-
 
 result_exp = result.copy()
 
@@ -611,6 +596,113 @@ save_float(
     label,
     "Overview of extensions and (un-)affected verbs",
 )
+
+
+# testing possible explanations using bybee's model
+def predict_semantics(form):
+    pass
+
+
+def predict_morphology(form):
+    if "DETRZ" in form["ID"] and form["Form"][0] != "i":
+        return True
+    else:
+        return False
+
+
+phon_preds = {
+    "PWai": ["o", "e", "a"],
+    "PTir": ["ə", "e"],
+    "PPek": ["ə", "e"],
+    "aku": ["ə"],
+    "car": ["ə", "e"],
+    "yuk": ["o", "a", "e", "i", "u"],
+}
+
+
+def predict_phonology(form):
+    if form["Form"][0] in phon_preds[form["Language_ID"]]:
+        return True
+    else:
+        return False
+    return False
+
+
+factors = {
+    "Morphology": predict_morphology,
+    "Phonology": predict_phonology,
+    # "semantics": predict_semantics,
+}
+
+freq_df = pd.read_csv("../data/apalai_sa_verb_stats.csv")
+freq_df["High_Freq"] = freq_df["% Sa"] > 0.1
+frequencies = dict(zip(freq_df["ID"], freq_df["High_Freq"]))
+
+
+def get_frequency_prediction(lexeme, frequencies):
+    if lexeme in frequencies:
+        return not frequencies[lexeme]
+    else:
+        return True
+
+
+def test_explanations(word_form):
+    explanations = {}
+    for factor, factor_function in factors.items():
+        actual = word_form["Affected"]
+        fact_pred = factor_function(word_form)
+        freq_pred = get_frequency_prediction(word_form["ID"], frequencies)
+        explanations[factor] = fact_pred == actual
+        explanations[factor + " + Frequency"] = (
+            freq_pred == fact_pred == word_form["Affected"]
+        ) or (fact_pred and not actual and not freq_pred)
+    #         print(f"""Testing {word_form["Language_ID"]} {word_form["ID"]}. {factor} predicts {fact_pred}
+    # frequency predicts {freq_pred}
+    # reality is {actual}
+    # {factor} scores {explanations[factor]}
+    # {factor}+Frequency scores {explanations[factor+" + Frequency"]}""")
+    return explanations
+
+
+affectedness = overview[overview["Language_ID"] == overview["Orig_Language"]]
+affectedness = affectedness[affectedness["Affected"].isin(["y", "n"])]
+affectedness = affectedness[affectedness["Concept"].isin(verb_list)]
+affectedness.to_csv("patterns.csv", index=False)
+# affectedness.drop(
+#     columns=["Prefix_Form", "Orig_Language", "Language_ID"],
+#     inplace=True,
+# )
+affectedness["Form"] = affectedness["Form"].apply(lambda x: x.split("-")[1])
+
+# # add fake Sa verbs
+# for lg, conds in phon_preds.items():
+#     for i in range(0, 100):
+#         df = df.append({"Form": conds[0]+"turu", "Language_ID": lg, "Verb_Cognateset_ID": f"DETRZ+talk{i}", "Affected": "y", "Meaning_ID": "talk"}, ignore_index=True)
+
+for lg in ["PWai", "PPek", "PTir", "aku", "car", "yuk"]:
+    df_temp = affectedness[affectedness["Language_ID"] == lg]
+    df_temp = df_temp[df_temp["Affected"].isin(["y", "n"])]
+    df_temp["Affected"] = df_temp["Affected"].map({"n": False, "y": True})
+    df_temp.rename(columns={"Verb_Cognateset_ID": "ID"}, inplace=True)
+    explanations = {}
+    for i, row in df_temp.iterrows():
+        explanations[row["ID"]] = test_explanations(row.to_dict())
+    r_df = pd.DataFrame(explanations)
+    r_df = r_df.applymap(int)
+    r_df["Score"] = r_df.apply(sum, axis=1) / len(r_df.columns)
+    r_df.sort_values(by="Score", inplace=True, ascending=False)
+    label = f"{lg.lower()}_predictions"
+    export_csv(
+        r_df,
+        label,
+        caption=f"Predictions and scores for {name_dic[lg]}",
+        keep_index=True,
+        print_i_name=True,
+    )
+    # r_df.to_csv(f"{lg}_results.csv")
+    print(r_df)
+
+print(get_frequency_prediction("go", frequencies))
 #
 #
 # cond_map = {
