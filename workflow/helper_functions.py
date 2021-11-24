@@ -128,6 +128,13 @@ def repl_latex(string):
     string = re.sub(r"\\obj\{(.*?)\}", r"*\1*", string)
     string = re.sub(r"\\qu\{(.*?)\}", r"'\1'", string)
     return string
+    
+def delatexify(string):
+    string = re.sub(r"\\rc\{(.*?)\}", r"\1", string)
+    string = re.sub(r"\\gl\{(.*?)\}", upper_repl, string)
+    string = re.sub(r"\\obj\{(.*?)\}", r"\1", string)
+    string = re.sub(r"\\qu\{(.*?)\}", r"'\1'", string)
+    return string
 
 
 def sort_lg(df):

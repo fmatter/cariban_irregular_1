@@ -217,8 +217,9 @@ save_float(
     short=r"Regular \akuriyo \gl{1}\gl{s_a_} markers",
 )
 
-aku_verbs = aku_verbs.applymap(repl_latex)
+aku_verbs = aku_verbs.applymap(delatexify)
 aku_verbs.columns = map(repl_latex, aku_verbs.columns)
+
 export_csv(
     aku_verbs,
     label,
@@ -226,40 +227,40 @@ export_csv(
     sources=raw_sources,
 )
 
-#
-# # regular carijo and yukpa verbs
-# pyd.x = ["Meaning_ID"]
-# pyd.y = ["Inflection"]
-# pyd.y_sort = ["1", "2", "1+2", "3"]
-# for lg, meanings in {
-#     "car": ["arrive", "dance"],
-#     "yuk": ["wash_self", "sleep", "fall"],
-# }.items():
-#     pyd.filters = {"Language_ID": [lg], "Meaning_ID": meanings}
-#     tabular = pyd.compose_paradigm(i_df, multi_index=False)
-#     label = lg + "reg"
-#     export_csv(
-#         tabular,
-#         label,
-#         f"Regular {name_dic[lg]} verbs",
-#         keep_index=True,
-#         sources=get_sources(i_df, latexify=False),
-#     )
-#     sources = get_sources(i_df)
-#     tabular.index = tabular.index.map(pynt.get_expex_code)
-#     tabular.index.name = None
-#     tabular.rename(columns=trans_dic, inplace=True)
-#     tabular = tabular.apply(lambda x: x.apply(objectify))
-#     tabular.columns.names = [None]
-#
-#     save_float(
-#         print_latex(tabular, keep_index=True),
-#         label,
-#         f"Regular {print_shorthand(lg)} verbs " + sources,
-#         short=f"Regular {print_shorthand(lg)} verbs",
-#     )
-#
-# i_df = i_df[~(pd.isnull(i_df["Verb_Cognateset_ID"]))]
+
+# regular carijo and yukpa verbs
+pyd.x = ["Meaning_ID"]
+pyd.y = ["Inflection"]
+pyd.y_sort = person
+for lg, meanings in {
+    "car": ["arrive", "dance"],
+    "yuk": ["wash_self", "sleep", "fall"],
+}.items():
+    pyd.filters = {"Language_ID": [lg], "Meaning_ID": meanings}
+    tabular = pyd.compose_paradigm(i_df, multi_index=False)
+    label = lg + "reg"
+    export_csv(
+        tabular,
+        label,
+        f"Regular {name_dic[lg]} verbs",
+        keep_index=True,
+        sources=get_sources(i_df, latexify=False),
+    )
+    sources = get_sources(i_df)
+    tabular.index = tabular.index.map(pynt.get_expex_code)
+    tabular.index.name = None
+    tabular.rename(columns=trans_dic, inplace=True)
+    tabular = tabular.apply(lambda x: x.apply(objectify))
+    tabular.columns.names = [None]
+
+    save_float(
+        print_latex(tabular, keep_index=True),
+        label,
+        f"Regular {print_shorthand(lg)} verbs " + sources,
+        short=f"Regular {print_shorthand(lg)} verbs",
+    )
+
+i_df = i_df[~(pd.isnull(i_df["Verb_Cognateset_ID"]))]
 #
 # # pekodian lexical comparison
 # forms = pd.read_csv("../data/cldf/forms.csv")
@@ -768,5 +769,5 @@ export_csv(
 #
 for t in exported_tables.keys():
     print(f"\\input{{floats/{t}.tex}}")
-# with open("data_output/metadata.json", "w") as outfile:
-#     json.dump(exported_tables, outfile, indent=4)
+with open("data_output/metadata.json", "w") as outfile:
+    json.dump(exported_tables, outfile, indent=4)
