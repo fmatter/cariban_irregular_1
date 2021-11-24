@@ -178,7 +178,16 @@ def repl_lg_id(df):
     df.rename(columns={"Language_ID": "Language"}, inplace=True)
 
 
+def get_verb_citation(v_id, l_id, latex=True):
+    res = v_df[(v_df["Cognateset_ID"] == v_id) & (v_df["Language_ID"] == l_id)]
 
+    if len(res) == 0:
+        raise ValueError(f"No verb entry for {l_id} {v_id}")
+    res = res.iloc[0]
+    if latex:
+        return f"""\\{get_obj_str(l_id)}{{{res["Form"]}}} \\qu{{{mean_dic[res["Parameter_ID"]]}}}"""
+    else:
+        return f"""{res["Form"]} '{mean_dic[res["Parameter_ID"]]}'"""
 
 def extension_string(id, latex=True):
     form = objectify(ext_form_dic[id], obj_string=get_obj_str(ext_lg_dic[id]))

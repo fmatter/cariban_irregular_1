@@ -689,9 +689,12 @@ for lg in ["PWai", "PPek", "PTir", "aku", "car", "yuk"]:
         explanations[row["ID"]] = test_explanations(row.to_dict())
     r_df = pd.DataFrame(explanations)
     r_df = r_df.applymap(int)
+    r_df.columns = r_df.columns.map(lambda x: get_verb_citation(x, lg))
     r_df["Score"] = r_df.apply(sum, axis=1) / len(r_df.columns)
     r_df.sort_values(by="Score", inplace=True, ascending=False)
     label = f"{lg.lower()}_predictions"
+
+    print(r_df)
     export_csv(
         r_df,
         label,
@@ -699,7 +702,6 @@ for lg in ["PWai", "PPek", "PTir", "aku", "car", "yuk"]:
         keep_index=True,
         print_i_name=True,
     )
-    # r_df.to_csv(f"{lg}_results.csv")
     print(r_df)
 
 print(get_frequency_prediction("go", frequencies))
@@ -860,7 +862,6 @@ print(get_frequency_prediction("go", frequencies))
 #     short=r"Frequency counts of \gl{s_a_} verbs in \apalai",
 # )
 #
-for t in exported_tables.keys():
-    print(f"\\input{{floats/{t}.tex}}")
+
 with open("data_output/metadata.json", "w") as outfile:
     json.dump(exported_tables, outfile, indent=4)
