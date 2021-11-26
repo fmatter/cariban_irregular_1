@@ -1,0 +1,8 @@
+,\obj{to},\obj{a},\obj{e},Score
+,\qu{go},\qu{be},\qu{be},
+phono,\checkmark,\checkmark,\checkmark,1.0
+infl,×,\checkmark,\checkmark,0.6666666666666666
+DETRZ,\checkmark,×,×,0.3333333333333333
+DETRZ+freq,\checkmark,×,×,0.3333333333333333
+phono+freq,\checkmark,×,×,0.3333333333333333
+infl+freq,\checkmark,×,×,0.3333333333333333

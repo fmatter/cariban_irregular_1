@@ -1,0 +1,7 @@
+,*ehɨ* 'come',*ka* 'say',*et͡ʃi* 'be',*təmə* 'go',*a* 'be',Score 
+phono,✓,✓,✓,✓,✓,✓
+DETRZ,✖,✓,✖,✓,✓,0.6
+DETRZ+freq,✖,✓,✖,✓,✓,0.6
+phono+freq,✖,✓,✖,✓,✓,0.6
+infl+freq,✖,✓,✖,✓,✓,0.6
+infl,✓,✖,✓,✖,✖,0.4

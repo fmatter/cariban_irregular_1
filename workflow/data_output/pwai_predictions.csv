@@ -1,0 +1,8 @@
+,\rc{ka[s]},\rc{eʃi},\rc{ah},\rc{[ɨ]to[m]},\rc{eeɸɨ},Score
+,\qu{say},\qu{be},\qu{be},\qu{go},\qu{bathe (\gl{intr})},
+DETRZ,\checkmark,\checkmark,\checkmark,\checkmark,\checkmark,1.0
+DETRZ+freq,\checkmark,\checkmark,\checkmark,\checkmark,\checkmark,1.0
+phono+freq,\checkmark,\checkmark,\checkmark,\checkmark,\checkmark,1.0
+infl+freq,\checkmark,\checkmark,\checkmark,\checkmark,\checkmark,1.0
+phono,\checkmark,×,×,\checkmark,\checkmark,0.6
+infl,×,×,×,×,\checkmark,0.2

@@ -1,0 +1,8 @@
+,\rc{ap},\rc{et͡ʃi},\rc{epɨ},\rc{ɨtən},\rc{ɨptə},\rc{ke},\rc{ipɨ},Score
+,\qu{be},\qu{be},\qu{come},\qu{go},\qu{go down},\qu{say},\qu{bathe (\gl{intr})},
+DETRZ,\checkmark,\checkmark,\checkmark,\checkmark,\checkmark,\checkmark,\checkmark,1.0
+DETRZ+freq,\checkmark,\checkmark,\checkmark,\checkmark,\checkmark,\checkmark,\checkmark,1.0
+phono+freq,\checkmark,\checkmark,\checkmark,\checkmark,\checkmark,\checkmark,\checkmark,1.0
+phono,\checkmark,×,×,\checkmark,\checkmark,\checkmark,\checkmark,0.7142857142857143
+infl+freq,\checkmark,\checkmark,\checkmark,\checkmark,×,\checkmark,×,0.7142857142857143
+infl,×,×,×,×,×,×,×,0.0

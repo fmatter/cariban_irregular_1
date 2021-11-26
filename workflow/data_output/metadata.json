@@ -36,11 +36,11 @@
     "pwaireg": {
         "caption": "Regular 'to fall' (Sa) and 'to sleep' (Sp) in Proto-Waiwaian",
         "sources": [
-            "hixkaryanaderby1985[189, 190, 196]",
-            "waiwaihawkins1998[30]",
             "howard2001wrought[150]",
+            "hixkaryanaderby1985[189, 190, 196]",
             "",
-            "hawkins1953waiwai[209, 211]"
+            "hawkins1953waiwai[209, 211]",
+            "waiwaihawkins1998[30]"
         ]
     },
     "pwaiverbs": {
@@ -78,15 +78,15 @@
     "carreg": {
         "caption": "Regular Karijona verbs",
         "sources": [
-            "meira1998proto[106]",
-            "robayo2000avance[173]"
+            "robayo2000avance[173]",
+            "meira1998proto[106]"
         ]
     },
     "yukreg": {
         "caption": "Regular Yukpa verbs",
         "sources": [
-            "largo2011yukpa[72, 76]",
-            "meira2006syntactic[139]"
+            "meira2006syntactic[139]",
+            "largo2011yukpa[72, 76]"
         ]
     },
     "pxinw": {
@@ -258,22 +258,46 @@
     "overview": {
         "caption": "Overview of extensions and (un-)affected verbs"
     },
-    "pwai_predictions": {
-        "caption": "Predictions and scores for Proto-Waiwaian"
+    "apalaicounts": {
+        "caption": "Frequency counts of Sa verbs in two Apalai texts"
     },
-    "ppek_predictions": {
-        "caption": "Predictions and scores for Proto-Pekodian"
+    "pwai-evaluations": {
+        "caption": "Evaluating predictions for Proto-Waiwaian"
     },
-    "ptir_predictions": {
-        "caption": "Predictions and scores for Proto-Tiriyoan"
+    "pwai-predictions": {
+        "caption": "Predictions for Proto-Waiwaian"
     },
-    "aku_predictions": {
-        "caption": "Predictions and scores for Akuriy\u00f3"
+    "ppek-evaluations": {
+        "caption": "Evaluating predictions for Proto-Pekodian"
     },
-    "car_predictions": {
-        "caption": "Predictions and scores for Karijona"
+    "ppek-predictions": {
+        "caption": "Predictions for Proto-Pekodian"
     },
-    "yuk_predictions": {
-        "caption": "Predictions and scores for Yukpa"
+    "ptir-evaluations": {
+        "caption": "Evaluating predictions for Proto-Tiriyoan"
+    },
+    "ptir-predictions": {
+        "caption": "Predictions for Proto-Tiriyoan"
+    },
+    "aku-evaluations": {
+        "caption": "Evaluating predictions for Akuriy\u00f3"
+    },
+    "aku-predictions": {
+        "caption": "Predictions for Akuriy\u00f3"
+    },
+    "car-evaluations": {
+        "caption": "Evaluating predictions for Karijona"
+    },
+    "car-predictions": {
+        "caption": "Predictions for Karijona"
+    },
+    "yuk-evaluations": {
+        "caption": "Evaluating predictions for Yukpa"
+    },
+    "yuk-predictions": {
+        "caption": "Predictions for Yukpa"
+    },
+    "resultsoverview": {
+        "caption": "Overview of prediction accuracy"
     }
 }

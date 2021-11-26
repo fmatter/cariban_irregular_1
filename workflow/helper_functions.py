@@ -30,14 +30,14 @@ def segmentify(form):
 
 
 # functions for creating latex tables
-def print_latex(df, ex=False, keep_index=False, formatters=None):
+def print_latex(df, ex=False, keep_index=False, formatters=None, multicolumn=False, float_format=None):
     if keep_index:
         df.columns.name = df.index.name
         df.index.name = None
 
     with pd.option_context("max_colwidth", 1000):
         lines = df.to_latex(
-            escape=False, index=keep_index, formatters=formatters
+            escape=False, index=keep_index, formatters=formatters, multicolumn=multicolumn,float_format=float_format
         ).split("\n")
     lines[0] = lines[0].replace("tabular}{l", "tabular}[t]{@{}l").replace("l}", "l@{}}")
     if ex:
@@ -46,7 +46,7 @@ def print_latex(df, ex=False, keep_index=False, formatters=None):
         del lines[-2]
         return "\n".join(lines)
     else:
-        return "\n".join(lines).replace(r"\toprule", "\mytoprule").replace("%", "\\%")
+        return "\n".join(lines).replace(r"\toprule", "\mytoprule").replace(r"\midrule", "\mymidrule").replace(r"\bottomrule", "\mybottomrule").replace("%", "\\%")
 
 
 def save_float(tabular, label, caption, filename=None, short=None):
@@ -78,12 +78,14 @@ def objectify(string, obj_string="obj"):
         return string
     output = []
     entry_list = string.split(" OR ")
+    unit_count = 0
     for entry in entry_list:
         out_list = []
         morph_list = entry.split("; ")
         for i, morph in enumerate(morph_list):
+            unit_count += 1
             out_list.append(r"\%s{%s}" % (obj_string, morph))
-            if i > 0:
+            if unit_count > 0:
                 obj_string = "obj"
         output.append("/".join(out_list))
     for i, cell in enumerate(output):
@@ -121,12 +123,21 @@ def get_sources(df, parens=True, latexify=True):
 def upper_repl(match):
     return match.group(1).upper()
 
+web_checkmarks = {
+    1: "✓",
+    0: "✖",
+    True: "✓",
+    False: "✖",
+    "\\checkmark": "✓",
+    "×": "✖"
+}
 
 def repl_latex(string):
     string = re.sub(r"\\rc\{(.*?)\}", r"\**\1*", string)
     string = re.sub(r"\\gl\{(.*?)\}", upper_repl, string)
     string = re.sub(r"\\obj\{(.*?)\}", r"*\1*", string)
     string = re.sub(r"\\qu\{(.*?)\}", r"'\1'", string)
+    string = re.sub(r"\\envr\{\}\{(.*?)\}", r"/ _\1", string)
     return string
     
 def delatexify(string):
@@ -178,16 +189,20 @@ def repl_lg_id(df):
     df.rename(columns={"Language_ID": "Language"}, inplace=True)
 
 
-def get_verb_citation(v_id, l_id, latex=True):
+def get_verb_citation(v_id, l_id, latex=True, as_tuple=False):
     res = v_df[(v_df["Cognateset_ID"] == v_id) & (v_df["Language_ID"] == l_id)]
-
     if len(res) == 0:
         raise ValueError(f"No verb entry for {l_id} {v_id}")
     res = res.iloc[0]
+    form = res["Form"].replace("+", "")
     if latex:
-        return f"""\\{get_obj_str(l_id)}{{{res["Form"]}}} \\qu{{{mean_dic[res["Parameter_ID"]]}}}"""
+        obj, gloss = f"""\\{get_obj_str(l_id)}{{{form}}}""", f"""\\qu{{{mean_dic[res["Parameter_ID"]].replace("to ", "")}}}"""
     else:
-        return f"""{res["Form"]} '{mean_dic[res["Parameter_ID"]]}'"""
+        obj, gloss = f"""{form}""",  f"""'{mean_dic[res["Parameter_ID"]]}'"""
+    if as_tuple:
+        return (obj, gloss)
+    else:
+        return obj + " " + gloss
 
 def extension_string(id, latex=True):
     form = objectify(ext_form_dic[id], obj_string=get_obj_str(ext_lg_dic[id]))

@@ -603,11 +603,12 @@ def predict_semantics(form):
     pass
 
 
-def predict_morphology(form):
+def predict_detrz(form):
     if "DETRZ" in form["ID"] and form["Form"][0] != "i":
-        return True
+        prediction = True
     else:
-        return False
+        prediction = False
+    return "\\gl{detrz}", None, prediction
 
 
 phon_preds = {
@@ -622,56 +623,97 @@ phon_preds = {
 
 def predict_phonology(form):
     if form["Form"][0] in phon_preds[form["Language_ID"]]:
-        return True
+        prediction = True
     else:
-        return False
-    return False
+        prediction = False
+    if len(phon_preds[form["Language_ID"]]) > 4:
+        detail = "\\envr{}{V}"
+    else:
+        obj = objectify(" OR ".join(phon_preds[form["Language_ID"]]), get_obj_str(form['Language_ID']))
+        detail = f"""\\envr{{}}{{{obj}}}"""
+    return "phono", detail , prediction
+    
+def predict_inflection(form):
+    #akuriyo is the only case where the previous first person inflection was not *w-
+    if form["Language_ID"] == "aku":
+        detail = "\\obj{k-}"
+        # this assumes t-ə as distinct from t͡ʃ-e
+        if form["Form"][0] == "ə":
+            prediction = True
+        else:
+            prediction = False
+    else:
+        detail = "\\rc{w-}"
+        prediction = True
+    return "infl", detail, prediction
+
+factors = [predict_detrz, predict_phonology, predict_inflection]
+
+# preliminary Sa verb frequency counts from apalai
+apalai_data = pd.read_csv("../data/apalai_sa_verb_stats.csv")
+frequencies = dict(zip(apalai_data["ID"], apalai_data["High_Frequency"]))
+
+label = "apalaicounts"
+
+export_csv(
+    apalai_data,
+    label,
+    "Frequency counts of Sa verbs in two Apalai texts",
+    keep_index=False,
+    sources="",
+)
+
+apalai_data["Verb"] = apalai_data.apply(combine_form_meaning, axis=1)
+apalai_data.drop(columns=["Form", "Meaning"], inplace=True)
+
+apalai_data.rename(
+    columns={"% Sa": "% \gl{s_a_} verb tokens", "% Words": "% word tokens"},
+    inplace=True,
+)
+
+save_float(
+    print_latex(
+        apalai_data[["Verb", "Count", "% \gl{s_a_} verb tokens"]],
+        formatters={
+            "% \gl{s_a_} verb tokens": "{:,.2%}".format,
+            "% word tokens": "{:,.2%}".format,
+        },
+    ),
+    label,
+    r"Frequency counts of \gl{s_a_} verbs in three \apalai texts from \textcite{koehns1994textos} (163 \gl{s_a_} verbs, 1070 words)",
+    short=r"Frequency counts of \gl{s_a_} verbs in \apalai",
+)
 
 
-factors = {
-    "Morphology": predict_morphology,
-    "Phonology": predict_phonology,
-    # "semantics": predict_semantics,
-}
-
-freq_df = pd.read_csv("../data/apalai_sa_verb_stats.csv")
-freq_df["High_Freq"] = freq_df["% Sa"] > 0.1
-frequencies = dict(zip(freq_df["ID"], freq_df["High_Freq"]))
-
-
-def get_frequency_prediction(lexeme, frequencies):
+def predict_frequency(lexeme, frequencies):
     if lexeme in frequencies:
         return not frequencies[lexeme]
     else:
         return True
 
-
 def test_explanations(word_form):
+    predictions = {}
     explanations = {}
-    for factor, factor_function in factors.items():
+    for factor_function in factors:
         actual = word_form["Affected"]
-        fact_pred = factor_function(word_form)
-        freq_pred = get_frequency_prediction(word_form["ID"], frequencies)
+        factor, detail, fact_pred = factor_function(word_form)
+        combo = factor + "+freq"
+        freq_pred = predict_frequency(word_form["ID"].replace("DETRZ+come", "come"), frequencies)
+        if detail:
+            detail_string = f" ({detail})"
+        else:
+            detail_string = ""
+        predictions[factor+detail_string] = fact_pred
+        predictions[combo] = (freq_pred and fact_pred)
         explanations[factor] = fact_pred == actual
-        explanations[factor + " + Frequency"] = (
-            freq_pred == fact_pred == word_form["Affected"]
-        ) or (fact_pred and not actual and not freq_pred)
-    #         print(f"""Testing {word_form["Language_ID"]} {word_form["ID"]}. {factor} predicts {fact_pred}
-    # frequency predicts {freq_pred}
-    # reality is {actual}
-    # {factor} scores {explanations[factor]}
-    # {factor}+Frequency scores {explanations[factor+" + Frequency"]}""")
-    return explanations
+        explanations[combo] = predictions[combo] == actual
+    return predictions, explanations
 
 
 affectedness = overview[overview["Language_ID"] == overview["Orig_Language"]]
 affectedness = affectedness[affectedness["Affected"].isin(["y", "n"])]
 affectedness = affectedness[affectedness["Concept"].isin(verb_list)]
 affectedness.to_csv("patterns.csv", index=False)
-# affectedness.drop(
-#     columns=["Prefix_Form", "Orig_Language", "Language_ID"],
-#     inplace=True,
-# )
 affectedness["Form"] = affectedness["Form"].apply(lambda x: x.split("-")[1])
 
 # # add fake Sa verbs
@@ -679,189 +721,148 @@ affectedness["Form"] = affectedness["Form"].apply(lambda x: x.split("-")[1])
 #     for i in range(0, 100):
 #         df = df.append({"Form": conds[0]+"turu", "Language_ID": lg, "Verb_Cognateset_ID": f"DETRZ+talk{i}", "Affected": "y", "Meaning_ID": "talk"}, ignore_index=True)
 
-for lg in ["PWai", "PPek", "PTir", "aku", "car", "yuk"]:
+bool_map = {
+    "latex": {
+        True: "\checkmark",
+        False: "×"
+    },
+    "csv": {
+        True: "correct",
+        False: "incorrect"
+    }
+}
+
+all_explanations = {}
+
+for i, ext in e_df.iterrows():
+    lg = ext["Language_ID"]
     df_temp = affectedness[affectedness["Language_ID"] == lg]
     df_temp = df_temp[df_temp["Affected"].isin(["y", "n"])]
     df_temp["Affected"] = df_temp["Affected"].map({"n": False, "y": True})
     df_temp.rename(columns={"Verb_Cognateset_ID": "ID"}, inplace=True)
+    predictions = {}
     explanations = {}
     for i, row in df_temp.iterrows():
-        explanations[row["ID"]] = test_explanations(row.to_dict())
+        predictions[row["ID"]], explanations[row["ID"]] = test_explanations(row.to_dict())
     r_df = pd.DataFrame(explanations)
-    r_df = r_df.applymap(int)
-    r_df.columns = r_df.columns.map(lambda x: get_verb_citation(x, lg))
+    p_df = pd.DataFrame(predictions)
     r_df["Score"] = r_df.apply(sum, axis=1) / len(r_df.columns)
-    r_df.sort_values(by="Score", inplace=True, ascending=False)
-    label = f"{lg.lower()}_predictions"
+    all_explanations[ext["ID"]] = dict(zip(r_df.index, r_df["Score"]))
+    
+    r_df.sort_values(by=["Score"], inplace=True, ascending=False)
+    r_df = r_df.applymap(lambda x: bool_map["latex"][x] if type(x)==bool else x)
+    r_df.columns = r_df.columns.map(lambda x: get_verb_citation(x, lg, as_tuple=True) if x!="Score" else (x, ""))
+    p_df = p_df.applymap(lambda x: bool_map["latex"][x] if type(x)==bool else x)
+    p_df.columns = p_df.columns.map(lambda x: get_verb_citation(x, lg, as_tuple=True) if x!="Score" else (x, ""))
+    
+    label = f"{lg.lower()}-evaluations"
 
-    print(r_df)
+    csv_df = r_df.rename(index=repl_latex, columns=repl_latex)
+    csv_df.columns = [" ".join(col) for col in csv_df.columns.values]
+
     export_csv(
-        r_df,
+        csv_df.replace(web_checkmarks),
         label,
-        caption=f"Predictions and scores for {name_dic[lg]}",
+        caption=f"Evaluating predictions for {name_dic[lg]}",
+        keep_index=True,
+    )
+
+    save_float(
+        print_latex(r_df, keep_index=True, multicolumn=False, float_format="%.2f%%"),
+        label,
+        f"Evaluating predictions for {print_shorthand(lg)}",
+    )
+
+    label = f"{lg.lower()}-predictions"
+
+    csv_df = p_df.rename(index=repl_latex, columns=repl_latex)
+    csv_df.columns = [" ".join(col) for col in csv_df.columns.values]
+    export_csv(
+        csv_df.replace(web_checkmarks),
+        label,
+        caption=f"Predictions for {name_dic[lg]}",
         keep_index=True,
         print_i_name=True,
     )
-    print(r_df)
+    save_float(
+        print_latex(p_df, keep_index=True, multicolumn=False),
+        label,
+        f"Predictions for {print_shorthand(lg)}",
+    )
 
-print(get_frequency_prediction("go", frequencies))
-#
-#
-# cond_map = {
-#     "yuk_j": ["ə", "e", "a"],
-#     "aku_k": ["ə"],
-#     "car_j": ["e", "ə"],
-#     "ppek_k": ["ə", "e"],
-#     "pwai_k": ["o", "e"],
-#     "ptir_t": ["ə", "e"],
-# }
-#
-#
-#
-#
-# # affectedness["morphological"] = affectedness.apply(m_expl, axis=1)
-# # affectedness["phonological"] = affectedness.apply(p_expl, axis=1)
-# # affectedness["frequency"] = affectedness.apply(f_expl, axis=1)
-# # affectedness.drop(columns=["Verb_Cognateset_ID", "Concept", "Meaning_ID"], inplace=True)
-#
-#
-# # def format_exp(f):
-# #     if float(f).is_integer():
-# #         return str(int(f))
-# #     else:
-# #         return str(int(f)) + "-" + str(int(f) + 1)
-#
-#
-# # def get_ratio(x, factor):
-# #     return f"{format_exp(x[factor].sum())}/{str(len(x))}"
-#
-#
-# # def get_perc(x, factor):
-# #     return x[factor].sum() / len(x)
-#
-#
-# # def get_print(x, factor):
-# #     return get_ratio(x, factor) + " ({:.0%})".format(get_perc(x, factor))
-#
-#
-# # affected_result = pd.DataFrame()
-#
-# # for factor in ["morphological", "phonological", "frequency"]:
-# #     affected_result[factor] = affectedness.groupby("Extension_ID").apply(
-# #         get_print, factor
-# #     )
-#
-# # caption = "Proportion of (un-)affected verbs accurately predicted by potential factors"
-# # label = "factors"
-#
-# # affected_result["Language_ID"] = affected_result.index.map(ext_lg_dic)
-# # sort_lg(affected_result)
-# # affected_result.drop(columns=["Language_ID"], inplace=True)
-#
-# # aff_export = affected_result.copy()
-# # aff_export.index = aff_export.index.map(lambda x: extension_string(x, latex=False))
-# # export_csv(aff_export, label, caption, keep_index=True)
-#
-# # affected_result.index = affected_result.index.map(extension_string)
-# # affected_result.index.name = None
-#
-# # save_float(
-# #     print_latex(affected_result, keep_index=True),
-# #     label,
-# #     caption,
-# # )
-#
-# # #forms illustrating Sa vs Sp verbs
-# dv_df = pd.read_csv("../data/split_s_data.csv")
-# dv_df["Language"] = dv_df["Language_ID"].map(print_shorthand)
-# dv_df["String"] = dv_df.apply(combine_form_meaning, axis=1)
-# pyd.content_string = "String"
-# pyd.x = ["Class"]
-# pyd.y = ["Language"]
-# pyd.z = []
-# pyd.x_sort = ["S_A_", "S_P_"]
-# pyd.y_sort = list(map(print_shorthand, lg_list))
-#
-# # participles
-# pyd.filters = {"Construction": ["PTCP"]}
-# emp = ["o-", "w-"]
-# res = pyd.compose_paradigm(dv_df)
-# for em in emp:
-#     res["S_A_"] = res["S_A_"].str.replace(em, f"\\emp{{{em}}}", regex=False)
-# res["S_A_"] = res["S_A_"].str.replace("\emp{o-}se", "o-se", regex=False)
-# res.columns = res.columns.map(pynt.get_expex_code)
-# save_float(
-#     print_latex(res, keep_index=True),
-#     "participles",
-#     "Participles of \gl{s_a_} and \gl{s_p_} verbs " + get_sources(dv_df),
-#     short="Participles of \gl{s_a_} and \gl{s_p_} verbs",
-# )
-#
-# # nominalizations
-# pyd.filters = {"Construction": ["NMLZ"]}
-# emp = {"-u-": "-\\emp{u-}", "w-": "\\emp{w-}"}
-# res = pyd.compose_paradigm(dv_df)
-# for em, em1 in emp.items():
-#     res["S_A_"] = res["S_A_"].str.replace(em, em1, regex=False)
-# res.columns = res.columns.map(pynt.get_expex_code)
-# save_float(
-#     print_latex(res, keep_index=True),
-#     "nominalizations",
-#     "Nominalizations of \gl{s_a_} and \gl{s_p_} verbs " + get_sources(dv_df),
-#     short="Nominalizations of \gl{s_a_} and \gl{s_p_} verbs",
-# )
-#
-# # imperatives
-# pyd.filters = {"Construction": ["IMP"]}
-# emp = ["oj-", "o-", "ə-", "əw-", "aj-"]
-# res = pyd.compose_paradigm(dv_df)
-# for em in emp:
-#     res["S_P_"] = res["S_P_"].str.replace(em, f"\\emp{{{em}}}", regex=False)
-# res.columns = res.columns.map(pynt.get_expex_code)
-# save_float(
-#     print_latex(res, keep_index=True),
-#     "imperatives",
-#     "Imperatives of \gl{s_a_} and \gl{s_p_} verbs " + get_sources(dv_df),
-#     short="Imperatives of \gl{s_a_} and \gl{s_p_} verbs",
-# )
-# pyd.content_string = "Form"
-#
-#
-# # preliminary Sa verb frequency counts from apalai
-# apalai_data = pd.read_csv("../data/apalai_sa_verb_stats.csv")
-#
-# label = "apalaicounts"
-#
-# export_csv(
-#     apalai_data,
-#     label,
-#     "Frequency counts of Sa verbs in two Apalai texts",
-#     keep_index=False,
-#     sources="",
-# )
-#
-# apalai_data["Verb"] = apalai_data.apply(combine_form_meaning, axis=1)
-# apalai_data.drop(columns=["Form", "Meaning"], inplace=True)
-#
-# apalai_data.rename(
-#     columns={"% Sa": "% \gl{s_a_} verb tokens", "% Words": "% word tokens"},
-#     inplace=True,
-# )
-#
-#
-# save_float(
-#     print_latex(
-#         apalai_data[["Verb", "Count", "% \gl{s_a_} verb tokens", "% word tokens"]],
-#         formatters={
-#             "% \gl{s_a_} verb tokens": "{:,.2%}".format,
-#             "% word tokens": "{:,.2%}".format,
-#         },
-#     ),
-#     label,
-#     r"Frequency counts of \gl{s_a_} verbs in three \apalai texts from \textcite{koehns1994textos} (163 \gl{s_a_} verbs, 1070 words)",
-#     short=r"Frequency counts of \gl{s_a_} verbs in \apalai",
-# )
-#
+caption = "Overview of prediction accuracy"
+label = "resultsoverview"
+
+res_df = pd.DataFrame(all_explanations)
+
+export_csv(
+    res_df.rename(columns=lambda x: extension_string(x, latex=False), index=repl_latex),
+    label,
+    caption=caption,
+    keep_index=True,
+)
+
+save_float(
+    print_latex(res_df.rename(columns=extension_string).transpose(), keep_index=True, multicolumn=False, float_format="%.2f%%"),
+    label,
+    caption,
+)
+
+# #forms illustrating Sa vs Sp verbs
+dv_df = pd.read_csv("../data/split_s_data.csv")
+dv_df["Language"] = dv_df["Language_ID"].map(print_shorthand)
+dv_df["String"] = dv_df.apply(combine_form_meaning, axis=1)
+pyd.content_string = "String"
+pyd.x = ["Class"]
+pyd.y = ["Language"]
+pyd.z = []
+pyd.x_sort = ["S_A_", "S_P_"]
+pyd.y_sort = list(map(print_shorthand, lg_list))
+
+# participles
+pyd.filters = {"Construction": ["PTCP"]}
+emp = ["o-", "w-"]
+res = pyd.compose_paradigm(dv_df)
+for em in emp:
+    res["S_A_"] = res["S_A_"].str.replace(em, f"\\emp{{{em}}}", regex=False)
+res["S_A_"] = res["S_A_"].str.replace("\emp{o-}se", "o-se", regex=False)
+res.columns = res.columns.map(pynt.get_expex_code)
+save_float(
+    print_latex(res, keep_index=True),
+    "participles",
+    "Participles of \gl{s_a_} and \gl{s_p_} verbs " + get_sources(dv_df),
+    short="Participles of \gl{s_a_} and \gl{s_p_} verbs",
+)
+
+# nominalizations
+pyd.filters = {"Construction": ["NMLZ"]}
+emp = {"-u-": "-\\emp{u-}", "w-": "\\emp{w-}"}
+res = pyd.compose_paradigm(dv_df)
+for em, em1 in emp.items():
+    res["S_A_"] = res["S_A_"].str.replace(em, em1, regex=False)
+res.columns = res.columns.map(pynt.get_expex_code)
+save_float(
+    print_latex(res, keep_index=True),
+    "nominalizations",
+    "Nominalizations of \gl{s_a_} and \gl{s_p_} verbs " + get_sources(dv_df),
+    short="Nominalizations of \gl{s_a_} and \gl{s_p_} verbs",
+)
+
+# imperatives
+pyd.filters = {"Construction": ["IMP"]}
+emp = ["oj-", "o-", "ə-", "əw-", "aj-"]
+res = pyd.compose_paradigm(dv_df)
+for em in emp:
+    res["S_P_"] = res["S_P_"].str.replace(em, f"\\emp{{{em}}}", regex=False)
+res.columns = res.columns.map(pynt.get_expex_code)
+save_float(
+    print_latex(res, keep_index=True),
+    "imperatives",
+    "Imperatives of \gl{s_a_} and \gl{s_p_} verbs " + get_sources(dv_df),
+    short="Imperatives of \gl{s_a_} and \gl{s_p_} verbs",
+)
+pyd.content_string = "Form"
+
 
 with open("data_output/metadata.json", "w") as outfile:
     json.dump(exported_tables, outfile, indent=4)

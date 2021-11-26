@@ -1,0 +1,8 @@
+,\obj{ehɨ},\obj{ka},\obj{et͡ʃi},\obj{təmə},\obj{a},Score
+,\qu{come},\qu{say},\qu{be},\qu{go},\qu{be},
+phono,\checkmark,\checkmark,\checkmark,\checkmark,\checkmark,1.0
+DETRZ,×,\checkmark,×,\checkmark,\checkmark,0.6
+DETRZ+freq,×,\checkmark,×,\checkmark,\checkmark,0.6
+phono+freq,×,\checkmark,×,\checkmark,\checkmark,0.6
+infl+freq,×,\checkmark,×,\checkmark,\checkmark,0.6
+infl,\checkmark,×,\checkmark,×,×,0.4
