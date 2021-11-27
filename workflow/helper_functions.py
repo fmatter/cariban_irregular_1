@@ -125,11 +125,11 @@ def upper_repl(match):
 
 web_checkmarks = {
     1: "✓",
-    0: "✖",
+    0: "×",
     True: "✓",
-    False: "✖",
+    False: "×",
     "\\checkmark": "✓",
-    "×": "✖"
+    "×": "×"
 }
 
 def repl_latex(string):
@@ -363,6 +363,7 @@ def export_csv(
     sources=None,
     print_i_name=False,
     print_c_name=False,
+    float_format=None
 ):
     tabular = tabular.copy()
     # if caption:
@@ -377,7 +378,7 @@ def export_csv(
         #         c = (None for x in c)
 
     # print(tabular)
-    tabular.to_csv(f"data_output/{label}.csv", index=keep_index)
+    tabular.to_csv(f"data_output/{label}.csv", index=keep_index, float_format=float_format)
     exported_tables[label] = {"caption": caption}
     if sources:
         src = cldfh.combine_refs(sources)

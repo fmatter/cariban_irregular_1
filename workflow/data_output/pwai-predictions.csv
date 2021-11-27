@@ -1,7 +1,7 @@
 ,\**ka[s]* 'say',\**eʃi* 'be',\**ah* 'be',\**[ɨ]to[m]* 'go',\**eeɸɨ* 'bathe (INTR)'
-DETRZ,✖,✖,✖,✖,✓
-DETRZ+freq,✖,✖,✖,✖,✓
-"phono (/ _\**o*, *e*, *a*)",✖,✓,✓,✖,✓
-phono+freq,✖,✖,✖,✖,✓
+DETRZ,×,×,×,×,✓
+DETRZ+freq,×,×,×,×,✓
+"phono (/ _\**o*, *e*, *a*)",×,✓,✓,×,✓
+phono+freq,×,×,×,×,✓
 infl (\**w-*),✓,✓,✓,✓,✓
-infl+freq,✖,✖,✖,✖,✓
+infl+freq,×,×,×,×,✓

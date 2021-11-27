@@ -784,6 +784,7 @@ for i, ext in e_df.iterrows():
         caption=f"Predictions for {name_dic[lg]}",
         keep_index=True,
         print_i_name=True,
+        float_format="%.1f%%"
     )
     save_float(
         print_latex(p_df, keep_index=True, multicolumn=False),
@@ -803,6 +804,7 @@ export_csv(
     label,
     caption=caption,
     keep_index=True,
+    float_format="%.1f%%"
 )
 
 save_float(

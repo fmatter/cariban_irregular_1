@@ -73,18 +73,18 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 | əturu- 'to talk'    | ehpa- 'to bathe (INTR)' |
 | əənɨkɨ- 'to sleep'  |                         |
 ### Regular Karijona verbs ([csv](carreg.csv)): 
-|     | arrive     | dance        |
-|:----|:-----------|:-------------|
-| 1   | ji-tuda-   | j-eharaga-   |
-| 2   | mɨ-tuda-   | m-eharaga-   |
-| 1+2 | kɨsi-tuda- | kɨs-eharaga- |
-| 3   | ni-tuda-   | n-eharaga-   |
+|     | dance        | arrive     |
+|:----|:-------------|:-----------|
+| 1   | j-eharaga-   | ji-tuda-   |
+| 2   | m-eharaga-   | mɨ-tuda-   |
+| 1+2 | kɨs-eharaga- | kɨsi-tuda- |
+| 3   | n-eharaga-   | ni-tuda-   |
 ### Regular Yukpa verbs ([csv](yukreg.csv)): 
-|    | fall   | sleep   | wash_self   |
-|---:|:-------|:--------|:------------|
-|  1 | j-ata- | jɨ-nɨ-  | j-otum-     |
-|  2 | m-ata- | mɨ-nɨ-  | m-otum-     |
-|  3 | n-ata- | nɨ-nɨ-  | n-otum-     |
+|    | fall   | wash_self   | sleep   |
+|---:|:-------|:------------|:--------|
+|  1 | j-ata- | j-otum-     | jɨ-nɨ-  |
+|  2 | m-ata- | m-otum-     | mɨ-nɨ-  |
+|  3 | n-ata- | n-otum-     | nɨ-nɨ-  |
 ### Loss of \**w* in Ikpeng ([csv](pxinw.csv)): 
 |                 | ara    | ikp   |
 |:----------------|:-------|:------|
@@ -300,53 +300,53 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 | DETRZ+freq | ✓                 | ✓              | ✓             | ✓                   | ✓                         | ✓        |
 | phono+freq | ✓                 | ✓              | ✓             | ✓                   | ✓                         | ✓        |
 | infl+freq  | ✓                 | ✓              | ✓             | ✓                   | ✓                         | ✓        |
-| phono      | ✓                 | ✖              | ✖             | ✓                   | ✓                         | 0.6      |
-| infl       | ✖                 | ✖              | ✖             | ✖                   | ✓                         | 0.2      |
+| phono      | ✓                 | ×              | ×             | ✓                   | ✓                         | 0.6      |
+| infl       | ×                 | ×              | ×             | ×                   | ✓                         | 0.2      |
 ### Predictions for Proto-Waiwaian ([csv](pwai-predictions.csv)): 
 |                            | \**ka[s]* 'say'   | \**eʃi* 'be'   | \**ah* 'be'   | \**[ɨ]to[m]* 'go'   | \**eeɸɨ* 'bathe (INTR)'   |
 |:---------------------------|:------------------|:---------------|:--------------|:--------------------|:--------------------------|
-| DETRZ                      | ✖                 | ✖              | ✖             | ✖                   | ✓                         |
-| DETRZ+freq                 | ✖                 | ✖              | ✖             | ✖                   | ✓                         |
-| phono (/ _\**o*, *e*, *a*) | ✖                 | ✓              | ✓             | ✖                   | ✓                         |
-| phono+freq                 | ✖                 | ✖              | ✖             | ✖                   | ✓                         |
+| DETRZ                      | ×                 | ×              | ×             | ×                   | ✓                         |
+| DETRZ+freq                 | ×                 | ×              | ×             | ×                   | ✓                         |
+| phono (/ _\**o*, *e*, *a*) | ×                 | ✓              | ✓             | ×                   | ✓                         |
+| phono+freq                 | ×                 | ×              | ×             | ×                   | ✓                         |
 | infl (\**w-*)              | ✓                 | ✓              | ✓             | ✓                   | ✓                         |
-| infl+freq                  | ✖                 | ✖              | ✖             | ✖                   | ✓                         |
+| infl+freq                  | ×                 | ×              | ×             | ×                   | ✓                         |
 ### Evaluating predictions for Proto-Pekodian ([csv](ppek-evaluations.csv)): 
 |            | \**ap* 'be'   | \**et͡ʃi* 'be'   | \**epɨ* 'come'   | \**ɨtən* 'go'   | \**ɨptə* 'go down'   | \**ke* 'say'   | \**ipɨ* 'bathe (INTR)'   | Score              |
 |:-----------|:--------------|:----------------|:-----------------|:----------------|:---------------------|:---------------|:-------------------------|:-------------------|
 | DETRZ      | ✓             | ✓               | ✓                | ✓               | ✓                    | ✓              | ✓                        | ✓                  |
 | DETRZ+freq | ✓             | ✓               | ✓                | ✓               | ✓                    | ✓              | ✓                        | ✓                  |
 | phono+freq | ✓             | ✓               | ✓                | ✓               | ✓                    | ✓              | ✓                        | ✓                  |
-| phono      | ✓             | ✖               | ✖                | ✓               | ✓                    | ✓              | ✓                        | 0.7142857142857143 |
-| infl+freq  | ✓             | ✓               | ✓                | ✓               | ✖                    | ✓              | ✖                        | 0.7142857142857143 |
-| infl       | ✖             | ✖               | ✖                | ✖               | ✖                    | ✖              | ✖                        | ✖                  |
+| phono      | ✓             | ×               | ×                | ✓               | ✓                    | ✓              | ✓                        | 0.7142857142857143 |
+| infl+freq  | ✓             | ✓               | ✓                | ✓               | ×                    | ✓              | ×                        | 0.7142857142857143 |
+| infl       | ×             | ×               | ×                | ×               | ×                    | ×              | ×                        | ×                  |
 ### Predictions for Proto-Pekodian ([csv](ppek-predictions.csv)): 
 |                       | \**ap* 'be'   | \**et͡ʃi* 'be'   | \**epɨ* 'come'   | \**ɨtən* 'go'   | \**ɨptə* 'go down'   | \**ke* 'say'   | \**ipɨ* 'bathe (INTR)'   |
 |:----------------------|:--------------|:----------------|:-----------------|:----------------|:---------------------|:---------------|:-------------------------|
-| DETRZ                 | ✖             | ✖               | ✖                | ✖               | ✖                    | ✖              | ✖                        |
-| DETRZ+freq            | ✖             | ✖               | ✖                | ✖               | ✖                    | ✖              | ✖                        |
-| phono (/ _\**ə*, *e*) | ✖             | ✓               | ✓                | ✖               | ✖                    | ✖              | ✖                        |
-| phono+freq            | ✖             | ✖               | ✖                | ✖               | ✖                    | ✖              | ✖                        |
+| DETRZ                 | ×             | ×               | ×                | ×               | ×                    | ×              | ×                        |
+| DETRZ+freq            | ×             | ×               | ×                | ×               | ×                    | ×              | ×                        |
+| phono (/ _\**ə*, *e*) | ×             | ✓               | ✓                | ×               | ×                    | ×              | ×                        |
+| phono+freq            | ×             | ×               | ×                | ×               | ×                    | ×              | ×                        |
 | infl (\**w-*)         | ✓             | ✓               | ✓                | ✓               | ✓                    | ✓              | ✓                        |
-| infl+freq             | ✖             | ✖               | ✖                | ✖               | ✓                    | ✖              | ✓                        |
+| infl+freq             | ×             | ×               | ×                | ×               | ✓                    | ×              | ✓                        |
 ### Evaluating predictions for Proto-Tiriyoan ([csv](ptir-evaluations.csv)): 
 |            | \**a* 'be'   | \**eʔi* 'be'   | \**əʔepɨ* 'come'   | \**təmɨ* 'go'   | \**ka* 'say'   | \**epɨ* 'bathe (INTR)'   | Score               |
 |:-----------|:-------------|:---------------|:-------------------|:----------------|:---------------|:-------------------------|:--------------------|
 | DETRZ+freq | ✓            | ✓              | ✓                  | ✓               | ✓              | ✓                        | ✓                   |
 | phono+freq | ✓            | ✓              | ✓                  | ✓               | ✓              | ✓                        | ✓                   |
 | infl+freq  | ✓            | ✓              | ✓                  | ✓               | ✓              | ✓                        | ✓                   |
-| DETRZ      | ✓            | ✓              | ✖                  | ✓               | ✓              | ✓                        | 0.8333333333333334  |
-| phono      | ✓            | ✖              | ✖                  | ✓               | ✓              | ✓                        | 0.6666666666666666  |
-| infl       | ✖            | ✖              | ✖                  | ✖               | ✖              | ✓                        | 0.16666666666666666 |
+| DETRZ      | ✓            | ✓              | ×                  | ✓               | ✓              | ✓                        | 0.8333333333333334  |
+| phono      | ✓            | ×              | ×                  | ✓               | ✓              | ✓                        | 0.6666666666666666  |
+| infl       | ×            | ×              | ×                  | ×               | ×              | ✓                        | 0.16666666666666666 |
 ### Predictions for Proto-Tiriyoan ([csv](ptir-predictions.csv)): 
 |                       | \**a* 'be'   | \**eʔi* 'be'   | \**əʔepɨ* 'come'   | \**təmɨ* 'go'   | \**ka* 'say'   | \**epɨ* 'bathe (INTR)'   |
 |:----------------------|:-------------|:---------------|:-------------------|:----------------|:---------------|:-------------------------|
-| DETRZ                 | ✖            | ✖              | ✓                  | ✖               | ✖              | ✓                        |
-| DETRZ+freq            | ✖            | ✖              | ✖                  | ✖               | ✖              | ✓                        |
-| phono (/ _\**ə*, *e*) | ✖            | ✓              | ✓                  | ✖               | ✖              | ✓                        |
-| phono+freq            | ✖            | ✖              | ✖                  | ✖               | ✖              | ✓                        |
+| DETRZ                 | ×            | ×              | ✓                  | ×               | ×              | ✓                        |
+| DETRZ+freq            | ×            | ×              | ×                  | ×               | ×              | ✓                        |
+| phono (/ _\**ə*, *e*) | ×            | ✓              | ✓                  | ×               | ×              | ✓                        |
+| phono+freq            | ×            | ×              | ×                  | ×               | ×              | ✓                        |
 | infl (\**w-*)         | ✓            | ✓              | ✓                  | ✓               | ✓              | ✓                        |
-| infl+freq             | ✖            | ✖              | ✖                  | ✖               | ✖              | ✓                        |
+| infl+freq             | ×            | ×              | ×                  | ×               | ×              | ✓                        |
 ### Evaluating predictions for Akuriyó ([csv](aku-evaluations.csv)): 
 |            | *ɨhtə* 'go down'   | *epɨ* 'bathe (INTR)'   | *[ə]tə[mɨ]* 'go'   | *ka* 'say'   | *eepɨ* 'come'   | *a* 'be'   | Score              |
 |:-----------|:-------------------|:-----------------------|:-------------------|:-------------|:----------------|:-----------|:-------------------|
@@ -354,59 +354,59 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 | phono+freq | ✓                  | ✓                      | ✓                  | ✓            | ✓               | ✓          | ✓                  |
 | infl       | ✓                  | ✓                      | ✓                  | ✓            | ✓               | ✓          | ✓                  |
 | infl+freq  | ✓                  | ✓                      | ✓                  | ✓            | ✓               | ✓          | ✓                  |
-| DETRZ      | ✓                  | ✖                      | ✓                  | ✓            | ✓               | ✓          | 0.8333333333333334 |
-| DETRZ+freq | ✓                  | ✖                      | ✓                  | ✓            | ✓               | ✓          | 0.8333333333333334 |
+| DETRZ      | ✓                  | ×                      | ✓                  | ✓            | ✓               | ✓          | 0.8333333333333334 |
+| DETRZ+freq | ✓                  | ×                      | ✓                  | ✓            | ✓               | ✓          | 0.8333333333333334 |
 ### Predictions for Akuriyó ([csv](aku-predictions.csv)): 
 |                | *ɨhtə* 'go down'   | *epɨ* 'bathe (INTR)'   | *[ə]tə[mɨ]* 'go'   | *ka* 'say'   | *eepɨ* 'come'   | *a* 'be'   |
 |:---------------|:-------------------|:-----------------------|:-------------------|:-------------|:----------------|:-----------|
-| DETRZ          | ✖                  | ✓                      | ✖                  | ✖            | ✖               | ✖          |
-| DETRZ+freq     | ✖                  | ✓                      | ✖                  | ✖            | ✖               | ✖          |
-| phono (/ _*ə*) | ✖                  | ✖                      | ✖                  | ✖            | ✖               | ✖          |
-| phono+freq     | ✖                  | ✖                      | ✖                  | ✖            | ✖               | ✖          |
-| infl (*k-*)    | ✖                  | ✖                      | ✖                  | ✖            | ✖               | ✖          |
-| infl+freq      | ✖                  | ✖                      | ✖                  | ✖            | ✖               | ✖          |
+| DETRZ          | ×                  | ✓                      | ×                  | ×            | ×               | ×          |
+| DETRZ+freq     | ×                  | ✓                      | ×                  | ×            | ×               | ×          |
+| phono (/ _*ə*) | ×                  | ×                      | ×                  | ×            | ×               | ×          |
+| phono+freq     | ×                  | ×                      | ×                  | ×            | ×               | ×          |
+| infl (*k-*)    | ×                  | ×                      | ×                  | ×            | ×               | ×          |
+| infl+freq      | ×                  | ×                      | ×                  | ×            | ×               | ×          |
 ### Evaluating predictions for Karijona ([csv](car-evaluations.csv)): 
 |            | *ehɨ* 'come'   | *ka* 'say'   | *et͡ʃi* 'be'   | *təmə* 'go'   | *a* 'be'   | Score    |
 |:-----------|:---------------|:-------------|:--------------|:--------------|:-----------|:---------|
 | phono      | ✓              | ✓            | ✓             | ✓             | ✓          | ✓        |
-| DETRZ      | ✖              | ✓            | ✖             | ✓             | ✓          | 0.6      |
-| DETRZ+freq | ✖              | ✓            | ✖             | ✓             | ✓          | 0.6      |
-| phono+freq | ✖              | ✓            | ✖             | ✓             | ✓          | 0.6      |
-| infl+freq  | ✖              | ✓            | ✖             | ✓             | ✓          | 0.6      |
-| infl       | ✓              | ✖            | ✓             | ✖             | ✖          | 0.4      |
+| DETRZ      | ×              | ✓            | ×             | ✓             | ✓          | 0.6      |
+| DETRZ+freq | ×              | ✓            | ×             | ✓             | ✓          | 0.6      |
+| phono+freq | ×              | ✓            | ×             | ✓             | ✓          | 0.6      |
+| infl+freq  | ×              | ✓            | ×             | ✓             | ✓          | 0.6      |
+| infl       | ✓              | ×            | ✓             | ×             | ×          | 0.4      |
 ### Predictions for Karijona ([csv](car-predictions.csv)): 
 |                     | *ehɨ* 'come'   | *ka* 'say'   | *et͡ʃi* 'be'   | *təmə* 'go'   | *a* 'be'   |
 |:--------------------|:---------------|:-------------|:--------------|:--------------|:-----------|
-| DETRZ               | ✖              | ✖            | ✖             | ✖             | ✖          |
-| DETRZ+freq          | ✖              | ✖            | ✖             | ✖             | ✖          |
-| phono (/ _*ə*, *e*) | ✓              | ✖            | ✓             | ✖             | ✖          |
-| phono+freq          | ✖              | ✖            | ✖             | ✖             | ✖          |
+| DETRZ               | ×              | ×            | ×             | ×             | ×          |
+| DETRZ+freq          | ×              | ×            | ×             | ×             | ×          |
+| phono (/ _*ə*, *e*) | ✓              | ×            | ✓             | ×             | ×          |
+| phono+freq          | ×              | ×            | ×             | ×             | ×          |
 | infl (\**w-*)       | ✓              | ✓            | ✓             | ✓             | ✓          |
-| infl+freq           | ✖              | ✖            | ✖             | ✖             | ✖          |
+| infl+freq           | ×              | ×            | ×             | ×             | ×          |
 ### Evaluating predictions for Yukpa ([csv](yuk-evaluations.csv)): 
 |            | *to* 'go'   | *a* 'be'   | *e* 'be'   | Score              |
 |:-----------|:------------|:-----------|:-----------|:-------------------|
 | phono      | ✓           | ✓          | ✓          | ✓                  |
-| infl       | ✖           | ✓          | ✓          | 0.6666666666666666 |
-| DETRZ      | ✓           | ✖          | ✖          | 0.3333333333333333 |
-| DETRZ+freq | ✓           | ✖          | ✖          | 0.3333333333333333 |
-| phono+freq | ✓           | ✖          | ✖          | 0.3333333333333333 |
-| infl+freq  | ✓           | ✖          | ✖          | 0.3333333333333333 |
+| infl       | ×           | ✓          | ✓          | 0.6666666666666666 |
+| DETRZ      | ✓           | ×          | ×          | 0.3333333333333333 |
+| DETRZ+freq | ✓           | ×          | ×          | 0.3333333333333333 |
+| phono+freq | ✓           | ×          | ×          | 0.3333333333333333 |
+| infl+freq  | ✓           | ×          | ×          | 0.3333333333333333 |
 ### Predictions for Yukpa ([csv](yuk-predictions.csv)): 
 |               | *to* 'go'   | *a* 'be'   | *e* 'be'   |
 |:--------------|:------------|:-----------|:-----------|
-| DETRZ         | ✖           | ✖          | ✖          |
-| DETRZ+freq    | ✖           | ✖          | ✖          |
-| phono (/ _V)  | ✖           | ✓          | ✓          |
-| phono+freq    | ✖           | ✖          | ✖          |
+| DETRZ         | ×           | ×          | ×          |
+| DETRZ+freq    | ×           | ×          | ×          |
+| phono (/ _V)  | ×           | ✓          | ✓          |
+| phono+freq    | ×           | ×          | ×          |
 | infl (\**w-*) | ✓           | ✓          | ✓          |
-| infl+freq     | ✖           | ✖          | ✖          |
+| infl+freq     | ×           | ×          | ×          |
 ### Overview of prediction accuracy ([csv](resultsoverview.csv)): 
-|            |   Proto-Waiwaian \**k-* |   Proto-Pekodian \**k-* |   Proto-Tiriyoan \**t-* |   Akuriyó *k-* |   Karijona *j-* |   Yukpa *j-* |
-|:-----------|------------------------:|------------------------:|------------------------:|---------------:|----------------:|-------------:|
-| DETRZ      |                     100 |                100      |                 83.3333 |        83.3333 |              60 |      33.3333 |
-| DETRZ+freq |                     100 |                100      |                100      |        83.3333 |              60 |      33.3333 |
-| phono      |                      60 |                 71.4286 |                 66.6667 |       100      |             100 |     100      |
-| phono+freq |                     100 |                100      |                100      |       100      |              60 |      33.3333 |
-| infl       |                      20 |                  0      |                 16.6667 |       100      |              40 |      66.6667 |
-| infl+freq  |                     100 |                 71.4286 |                100      |       100      |              60 |      33.3333 |
+|            | Proto-Waiwaian \**k-*   | Proto-Pekodian \**k-*   | Proto-Tiriyoan \**t-*   | Akuriyó *k-*   | Karijona *j-*   | Yukpa *j-*   |
+|:-----------|:------------------------|:------------------------|:------------------------|:---------------|:----------------|:-------------|
+| DETRZ      | 100.0%                  | 100.0%                  | 83.3%                   | 83.3%          | 60.0%           | 33.3%        |
+| DETRZ+freq | 100.0%                  | 100.0%                  | 100.0%                  | 83.3%          | 60.0%           | 33.3%        |
+| phono      | 60.0%                   | 71.4%                   | 66.7%                   | 100.0%         | 100.0%          | 100.0%       |
+| phono+freq | 100.0%                  | 100.0%                  | 100.0%                  | 100.0%         | 60.0%           | 33.3%        |
+| infl       | 20.0%                   | 0.0%                    | 16.7%                   | 100.0%         | 40.0%           | 66.7%        |
+| infl+freq  | 100.0%                  | 71.4%                   | 100.0%                  | 100.0%         | 60.0%           | 33.3%        |
