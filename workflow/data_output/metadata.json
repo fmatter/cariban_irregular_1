@@ -26,9 +26,8 @@
         "sources": [
             "",
             "alves2017arara[153, 200]",
-            "von1892bakairi[76, 130, 131, 137, 374, 397]",
+            "von1892bakairi[76, 130, 131, 374, 397]",
             "ikpengpacheco2001[42, 80, 139, 209]",
-            "pc[Angela Fabi\u0301ola Alves Chagas]",
             "ikpengpacheco1997[68]",
             "meira2003bakairi[4]"
         ]
@@ -37,9 +36,9 @@
         "caption": "Regular 'to fall' (Sa) and 'to sleep' (Sp) in Proto-Waiwaian",
         "sources": [
             "waiwaihawkins1998[30]",
+            "hixkaryanaderby1985[189, 190, 196]",
             "howard2001wrought[150]",
             "",
-            "hixkaryanaderby1985[189, 190, 196]",
             "hawkins1953waiwai[209, 211]"
         ]
     },
@@ -56,9 +55,9 @@
     "ptirreg": {
         "caption": "Regular Proto-Tiriyoan Sa verbs",
         "sources": [
-            "gildea1994akuriyo[87]",
+            "triomeira1999[292, 294]",
             "",
-            "triomeira1999[292, 294]"
+            "gildea1994akuriyo[87]"
         ]
     },
     "ptirverbs": {
@@ -85,8 +84,8 @@
     "yukreg": {
         "caption": "Regular Yukpa verbs",
         "sources": [
-            "largo2011yukpa[72, 76]",
-            "meira2006syntactic[139]"
+            "meira2006syntactic[139]",
+            "largo2011yukpa[72, 76]"
         ]
     },
     "pxinw": {
@@ -103,7 +102,7 @@
     "godown": {
         "caption": "Reflexes of \\**\u0268p\u0268t\u0259* 'to go down'",
         "sources": [
-            "pc[Spike Gildea, Angela Fabi\u0301ola Alves Chagas]",
+            "pc[Angela Fabi\u0301ola Alves Chagas, Spike Gildea]",
             "meira2003primeras",
             "hixkaryanaderby1979[196]",
             "waiwaihawkins1998[55]",

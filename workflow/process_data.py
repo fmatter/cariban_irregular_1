@@ -539,6 +539,7 @@ repl_dic = {
     "DETRZ+come": "come",
     "DETRZ1+bathe_1": "bathe_intr",
     "DETRZ1": "bathe_intr",
+    "go_down+?": "go_down"
 }
 
 overview["Cognateset_ID"] = overview["Verb_Cognateset_ID"].replace(repl_dic)
