@@ -192,8 +192,10 @@ def repl_lg_id(df):
 def get_verb_citation(v_id, l_id, latex=True, as_tuple=False):
     res = v_df[(v_df["Cognateset_ID"] == v_id) & (v_df["Language_ID"] == l_id)]
     if len(res) == 0:
-        raise ValueError(f"No verb entry for {l_id} {v_id}")
-    res = res.iloc[0]
+        res = {"Form": "əturu", "Parameter_ID": "talk"}
+        # raise ValueError(f"No verb entry for {l_id} {v_id}")
+    else:
+        res = res.iloc[0]
     form = res["Form"].replace("+", "")
     if latex:
         obj, gloss = f"""\\{get_obj_str(l_id)}{{{form}}}""", f"""\\qu{{{mean_dic[res["Parameter_ID"]].replace("to ", "")}}}"""

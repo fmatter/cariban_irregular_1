@@ -713,13 +713,12 @@ def test_explanations(word_form):
 affectedness = overview[overview["Language_ID"] == overview["Orig_Language"]]
 affectedness = affectedness[affectedness["Affected"].isin(["y", "n"])]
 affectedness = affectedness[affectedness["Concept"].isin(verb_list)]
-affectedness.to_csv("patterns.csv", index=False)
 affectedness["Form"] = affectedness["Form"].apply(lambda x: x.split("-")[1])
 
 # # add fake Sa verbs
 # for lg, conds in phon_preds.items():
-#     for i in range(0, 100):
-#         df = df.append({"Form": conds[0]+"turu", "Language_ID": lg, "Verb_Cognateset_ID": f"DETRZ+talk{i}", "Affected": "y", "Meaning_ID": "talk"}, ignore_index=True)
+#     for i in range(0, 1000):
+#         affectedness = affectedness.append({"Form": conds[0]+"turu", "Language_ID": lg, "Verb_Cognateset_ID": f"DETRZ+talk{i}", "Affected": "y", "Meaning_ID": "talk"}, ignore_index=True)
 
 bool_map = {
     "latex": {
@@ -766,9 +765,10 @@ for i, ext in e_df.iterrows():
         caption=f"Evaluating predictions for {name_dic[lg]}",
         keep_index=True,
     )
-
+    
+    r_df["Score"] *= 100
     save_float(
-        print_latex(r_df, keep_index=True, multicolumn=False, float_format="%.2f%%"),
+        print_latex(r_df, keep_index=True, multicolumn=False, float_format="%.1f%%"),
         label,
         f"Evaluating predictions for {print_shorthand(lg)}",
     )
@@ -794,6 +794,8 @@ caption = "Overview of prediction accuracy"
 label = "resultsoverview"
 
 res_df = pd.DataFrame(all_explanations)
+res_df *= 100
+print(res_df)
 
 export_csv(
     res_df.rename(columns=lambda x: extension_string(x, latex=False), index=repl_latex),
@@ -803,7 +805,7 @@ export_csv(
 )
 
 save_float(
-    print_latex(res_df.rename(columns=extension_string).transpose(), keep_index=True, multicolumn=False, float_format="%.2f%%"),
+    print_latex(res_df.rename(columns=extension_string).transpose(), keep_index=True, multicolumn=False, float_format="%.1f%%"),
     label,
     caption,
 )
