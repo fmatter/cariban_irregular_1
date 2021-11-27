@@ -22,15 +22,15 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 | 1+2 | kɨd-əku-  | kud-origu- | kw-aranme- |
 | 3   | n-əku-    | ∅-origu    | ∅-aranme-  |
 ### Irregular Proto-Pekodian verbs ([csv](ppekverbs.csv)): 
-|            | Proto-Pekodian   | Arara    | Ikpeng   | Bakairi   |
-|:-----------|:-----------------|:---------|:---------|:----------|
-| be_1       | w-ap-            | w-ap-    | –        | w-a-      |
-| be_2       | w-et͡ʃi-          | w-it͡ʃi-  | ∅-et͡ʃi-  | w-i-      |
-| say        | wɨ-ge-           | wɨ-ge-   | ɨ-ge-    | u-ge-     |
-| go         | w-ɨtən-          | w-ɨdo-   | k-aran-  | u-tə-     |
-| come       | w-epɨ-           | w-ebɨ-   | k-arep-  | k-əewɨ-   |
-| go_down    | w-ɨptə-          | w-iptoŋ- | ?-iptoŋ- | k-ɨtəgɨ-  |
-| bathe_intr | w-ipɨ-           | w-ibɨ-   | ∅-ip-    | w-i-      |
+|            | Proto-Pekodian   | Arara   | Ikpeng   | Bakairi   |
+|:-----------|:-----------------|:--------|:---------|:----------|
+| be_1       | w-ap-            | w-ap-   | –        | w-a-      |
+| be_2       | w-et͡ʃi-          | w-it͡ʃi- | ∅-et͡ʃi-  | w-i-      |
+| say        | wɨ-ge-           | wɨ-ge-  | ɨ-ge-    | u-ge-     |
+| go         | w-ɨtən-          | w-ɨdo-  | k-aran-  | u-tə-     |
+| come       | w-epɨ-           | w-ebɨ-  | k-arep-  | k-əewɨ-   |
+| go_down    | w-ɨptə-          |         |          |           |
+| bathe_intr | w-ipɨ-           | w-ibɨ-  | ∅-ip-    | w-i-      |
 ### Regular 'to fall' (Sa) and 'to sleep' (Sp) in Proto-Waiwaian ([csv](pwaireg.csv)): 
 | Proto-Waiwaian   | Proto-Waiwaian.1   | Hixkaryána   | Hixkaryána.1   | Waiwai     | Waiwai.1    |
 |:-----------------|:-------------------|:-------------|:---------------|:-----------|:------------|
@@ -73,18 +73,18 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 | əturu- 'to talk'    | ehpa- 'to bathe (INTR)' |
 | əənɨkɨ- 'to sleep'  |                         |
 ### Regular Karijona verbs ([csv](carreg.csv)): 
-|     | dance        | arrive     |
-|:----|:-------------|:-----------|
-| 1   | j-eharaga-   | ji-tuda-   |
-| 2   | m-eharaga-   | mɨ-tuda-   |
-| 1+2 | kɨs-eharaga- | kɨsi-tuda- |
-| 3   | n-eharaga-   | ni-tuda-   |
+|     | arrive     | dance        |
+|:----|:-----------|:-------------|
+| 1   | ji-tuda-   | j-eharaga-   |
+| 2   | mɨ-tuda-   | m-eharaga-   |
+| 1+2 | kɨsi-tuda- | kɨs-eharaga- |
+| 3   | ni-tuda-   | n-eharaga-   |
 ### Regular Yukpa verbs ([csv](yukreg.csv)): 
-|    | fall   | wash_self   | sleep   |
-|---:|:-------|:------------|:--------|
-|  1 | j-ata- | j-otum-     | jɨ-nɨ-  |
-|  2 | m-ata- | m-otum-     | mɨ-nɨ-  |
-|  3 | n-ata- | n-otum-     | nɨ-nɨ-  |
+|    | fall   | sleep   | wash_self   |
+|---:|:-------|:--------|:------------|
+|  1 | j-ata- | jɨ-nɨ-  | j-otum-     |
+|  2 | m-ata- | mɨ-nɨ-  | m-otum-     |
+|  3 | n-ata- | nɨ-nɨ-  | n-otum-     |
 ### Loss of \**w* in Ikpeng ([csv](pxinw.csv)): 
 |                 | ara    | ikp   |
 |:----------------|:-------|:------|
@@ -98,13 +98,15 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 |:-----------------|:---------|:------------|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|
 | Proto-Parukotoan | ɨɸɨto    | S_P_        |    |    |    |    | ɨ  | ɸ  | ɨ  | t  | o  |    |    |    |
 | Werikyana        | ɨhɨto    | S_P_        |    |    |    |    | ɨ  | h  | ɨ  | t  | o  |    |    |    |
+| Proto-Waiwaian   | hto      | ?           |    |    |    |    |    | h  |    | t  | o  |    |    |    |
 | Hixkaryána       | hto      | ?           |    |    |    |    |    | h  |    | t  | o  |    |    |    |
 | Waiwai           | hto      | –           |    |    |    |    |    | h  |    | t  | o  |    |    |    |
 | Proto-Pekodian   | ɨptə     | S_A_        |    |    |    |    | ɨ  | p  |    | t  | ə  |    |    |    |
 | Arara            | iptoŋ    | S_A_        |    |    |    |    | i  | p  |    | t  | o  | -  | ŋ  |    |
 | Ikpeng           | iptoŋ    | ?           |    |    |    |    | i  | p  |    | t  | o  | -  | ŋ  |    |
 | Bakairi          | ɨtəgɨ    | S_A_        |    |    |    |    | ɨ  |    |    | t  | ə  | -  | g  | ɨ  |
-| Proto-Taranoan   | ɨhtə     | S_A_        |    |    |    |    | ɨ  | h  |    | t  | ə  |    |    |    |
+| Proto-Taranoan   | ɨpɨtə    | S_A_        |    |    |    |    | ɨ  | p  | ɨ  | t  | ə  |    |    |    |
+| Proto-Tiriyoan   | ɨhtə     | S_A_        |    |    |    |    | ɨ  | h  |    | t  | ə  |    |    |    |
 | Tiriyó           | ɨhtə     | S_A_        |    |    |    |    | ɨ  | h  |    | t  | ə  |    |    |    |
 | Akuriyó          | ɨhtə     | S_A_        |    |    |    |    | ɨ  | h  |    | t  | ə  |    |    |    |
 | Karijona         | ehɨtə    | –           |    |    |    |    | e  | h  | ɨ  | t  | ə  |    |    |    |
@@ -402,9 +404,9 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 ### Overview of prediction accuracy ([csv](resultsoverview.csv)): 
 |            |   Proto-Waiwaian \**k-* |   Proto-Pekodian \**k-* |   Proto-Tiriyoan \**t-* |   Akuriyó *k-* |   Karijona *j-* |   Yukpa *j-* |
 |:-----------|------------------------:|------------------------:|------------------------:|---------------:|----------------:|-------------:|
-| DETRZ      |                     1   |                1        |                0.833333 |       0.833333 |             0.6 |     0.333333 |
-| DETRZ+freq |                     1   |                1        |                1        |       0.833333 |             0.6 |     0.333333 |
-| phono      |                     0.6 |                0.714286 |                0.666667 |       1        |             1   |     1        |
-| phono+freq |                     1   |                1        |                1        |       1        |             0.6 |     0.333333 |
-| infl       |                     0.2 |                0        |                0.166667 |       1        |             0.4 |     0.666667 |
-| infl+freq  |                     1   |                0.714286 |                1        |       1        |             0.6 |     0.333333 |
+| DETRZ      |                     100 |                100      |                 83.3333 |        83.3333 |              60 |      33.3333 |
+| DETRZ+freq |                     100 |                100      |                100      |        83.3333 |              60 |      33.3333 |
+| phono      |                      60 |                 71.4286 |                 66.6667 |       100      |             100 |     100      |
+| phono+freq |                     100 |                100      |                100      |       100      |              60 |      33.3333 |
+| infl       |                      20 |                  0      |                 16.6667 |       100      |              40 |      66.6667 |
+| infl+freq  |                     100 |                 71.4286 |                100      |       100      |              60 |      33.3333 |
