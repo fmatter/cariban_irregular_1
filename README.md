@@ -1,5 +1,5 @@
-## Archaic first person markers in Cariban
-A comparative study of archaic first person markers in 10 Cariban languages.
+## Verbs with conservative first person forms in Cariban languages
+A comparative study of conservative first person markers in 10 Cariban languages.
 More info about the study in general can be found here:
 
 * [Abstract](documents/talks_abstracts/extensions_SLE_abstract.pdf)
@@ -10,6 +10,7 @@ This repository is organized as follows:
 
 * [data](data) contains all the data on which the analyses in the paper are based, as well as a derived CLDF version.
 * [workflow](workflow) contains different python scripts used for analysis, data visualization, and CLDF dataset creation.
+	* [data_output](workflow/data_output) contains tables with the qualitative and quantitative results
 * [documents](documents) contains the current version of the manuscript as well as materials used in presentations.
 
 See each folder for more information.
