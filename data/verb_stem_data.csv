@@ -67,6 +67,7 @@
 "kax","ɨhɨto","pc[Spike Gildea]","go_down","S_P_",,1,"go_down"
 "yuk","ewuhtu","meira2003primeras","go_down","–",,0.5,"go_down"
 "hix","hto","hixkaryanaderby1979[196]","go_down","?",,1,"go_down"
+"PWai","hto",,"go_down","?",,,
 "wai","hto","waiwaihawkins1998[55]","go_down","–",,1,"go_down"
 "PPek","ɨptə",,"go_down","S_A_",,1,"go_down"
 "PTar","ɨhtə",,"go_down","S_A_",,1,"go_down"
@@ -138,3 +139,7 @@
 "PTir","ka",,"say","S_A_",,1,"say"
 "PTir","e+pɨ",,"DETRZ1+bathe_1","S_A_",,1,"bathe_intr"
 "aku","e+pɨ","gildea1994akuriyo[87]","DETRZ1+bathe_1","S_A_",,1,"bathe_intr"
+"PTir","ɨhtə",,"go_down","S_A_",,,
+"PTir","əənɨkɨ",,"DETRZ+sleep","S_A_",,,
+"aku","əənɨkɨ","gildea1994akuriyo[87]","DETRZ+sleep","S_A_",,,
+"tri","əənɨkɨ","triomeira1999[294]","DETRZ+sleep","S_A_",,,
