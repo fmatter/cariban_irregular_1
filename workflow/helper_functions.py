@@ -219,7 +219,7 @@ def reconstructed_form_table(lgs, proto, verbs, caption, name):
     pyd.filters = {"Inflection": ["1"], "Language_ID": lgs, "Concept": verbs}
     pyd.x_sort = lgs
     pyd.y_sort = ["be_1", "be_2", "say", "go", "come", "go_down", "bathe_intr"]
-    tabular = pyd.compose_paradigm(i_df)
+    tabular = pyd.compose_paradigm(i_df.replace({"go_down+?": "go_down"}))
     sources = get_sources(i_df)
     raw_sources = get_sources(i_df, latexify=False)
     tabular.index.name = None
