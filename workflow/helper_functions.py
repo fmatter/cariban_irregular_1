@@ -56,7 +56,7 @@ def save_float(tabular, label, caption, filename=None, short=None):
         shorttext = ""
     else:
         shorttext = f"[{short}]"
-    output = f"""\\begin{{table}}
+    output = f"""\\begin{{table}}[htbp]
 \centering
 \caption{shorttext}{{{caption}}}
 \label{{tab:{label}}}

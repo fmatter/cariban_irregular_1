@@ -120,7 +120,7 @@ def calculate_alignment(df, fuzzy=False):
     else:
         lex = lingpy.Wordlist(tempfile)
         alm = lingpy.Alignments(lex, ref="cogids")
-    alm.align()
+    alm.align(model="sca", method="library")
     alm.output("tsv", filename="lingpy_temp", ignore="all", prettify=False)
 
     df = pd.read_csv(tempfile, sep="\t", dtype="str")

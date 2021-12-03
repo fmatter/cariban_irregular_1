@@ -22,15 +22,15 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 | 1+2 | kɨd-əku-  | kud-origu- | kw-aranme- |
 | 3   | n-əku-    | ∅-origu    | ∅-aranme-  |
 ### Irregular Proto-Pekodian verbs ([csv](ppekverbs.csv)): 
-|            | Proto-Pekodian   | Arara   | Ikpeng   | Bakairi   |
-|:-----------|:-----------------|:--------|:---------|:----------|
-| be_1       | w-ap-            | w-ap-   | –        | w-a-      |
-| be_2       | w-et͡ʃi-          | w-it͡ʃi- | ∅-et͡ʃi-  | w-i-      |
-| say        | wɨ-ge-           | wɨ-ge-  | ɨ-ge-    | u-ge-     |
-| go         | w-ɨtən-          | w-ɨdo-  | k-aran-  | u-tə-     |
-| come       | w-epɨ-           | w-ebɨ-  | k-arep-  | k-əewɨ-   |
-| go_down    | w-ɨptə-          |         |          |           |
-| bathe_intr | w-ipɨ-           | w-ibɨ-  | ∅-ip-    | w-i-      |
+|            | Proto-Pekodian   | Arara    | Ikpeng   | Bakairi   |
+|:-----------|:-----------------|:---------|:---------|:----------|
+| be_1       | w-ap-            | w-ap-    | –        | w-a-      |
+| be_2       | w-et͡ʃi-          | w-it͡ʃi-  | ∅-et͡ʃi-  | w-i-      |
+| say        | wɨ-ge-           | wɨ-ge-   | ɨ-ge-    | u-ge-     |
+| go         | w-ɨtən-          | w-ɨdo-   | k-aran-  | u-tə-     |
+| come       | w-epɨ-           | w-ebɨ-   | k-arep-  | k-əewɨ-   |
+| go_down    | w-ɨptə-          | w-iptoŋ- | ?-iptoŋ- | k-ɨtəgɨ-  |
+| bathe_intr | w-ipɨ-           | w-ibɨ-   | ∅-ip-    | w-i-      |
 ### Regular 'to fall' (Sa) and 'to sleep' (Sp) in Proto-Waiwaian ([csv](pwaireg.csv)): 
 | Proto-Waiwaian   | Proto-Waiwaian.1   | Hixkaryána   | Hixkaryána.1   | Waiwai     | Waiwai.1    |
 |:-----------------|:-------------------|:-------------|:---------------|:-----------|:------------|
@@ -94,33 +94,33 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 | capuchin_monkey | tawe   | tae   |
 | sleep           | wɨnkɨ  | ɨnkɨ  |
 ### Reflexes of \**ɨpɨtə* 'to go down' ([csv](godown.csv)): 
-| Language         | Form     | Class       |    |    |    |    |    |    |    |    |    |    |    |    |
-|:-----------------|:---------|:------------|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|
-| Proto-Parukotoan | ɨɸɨto    | S_P_        |    |    |    |    | ɨ  | ɸ  | ɨ  | t  | o  |    |    |    |
-| Werikyana        | ɨhɨto    | S_P_        |    |    |    |    | ɨ  | h  | ɨ  | t  | o  |    |    |    |
-| Proto-Waiwaian   | hto      | ?           |    |    |    |    |    | h  |    | t  | o  |    |    |    |
-| Hixkaryána       | hto      | ?           |    |    |    |    |    | h  |    | t  | o  |    |    |    |
-| Waiwai           | hto      | –           |    |    |    |    |    | h  |    | t  | o  |    |    |    |
-| Proto-Pekodian   | ɨptə     | S_A_        |    |    |    |    | ɨ  | p  |    | t  | ə  |    |    |    |
-| Arara            | iptoŋ    | S_A_        |    |    |    |    | i  | p  |    | t  | o  | -  | ŋ  |    |
-| Ikpeng           | iptoŋ    | ?           |    |    |    |    | i  | p  |    | t  | o  | -  | ŋ  |    |
-| Bakairi          | ɨtəgɨ    | S_A_        |    |    |    |    | ɨ  |    |    | t  | ə  | -  | g  | ɨ  |
-| Proto-Taranoan   | ɨpɨtə    | S_A_        |    |    |    |    | ɨ  | p  | ɨ  | t  | ə  |    |    |    |
-| Proto-Tiriyoan   | ɨhtə     | S_A_        |    |    |    |    | ɨ  | h  |    | t  | ə  |    |    |    |
-| Tiriyó           | ɨhtə     | S_A_        |    |    |    |    | ɨ  | h  |    | t  | ə  |    |    |    |
-| Akuriyó          | ɨhtə     | S_A_        |    |    |    |    | ɨ  | h  |    | t  | ə  |    |    |    |
-| Karijona         | ehɨtə    | –           |    |    |    |    | e  | h  | ɨ  | t  | ə  |    |    |    |
-| Wayana           | ɨptə     | S_A_ / S_P_ |    |    |    |    | ɨ  | p  |    | t  | ə  |    |    |    |
-| Apalaí           | ɨhto     | S_P_        |    |    |    |    | ɨ  | h  |    | t  | o  |    |    |    |
-| Kari'ña          | onɨʔto   | (S_A_)      | o  | -  | n  | -  | ɨ  | ʔ  |    | t  | o  |    |    |    |
-| Ye'kwana         | əʔtə     | S_P_        |    |    |    |    | ə  | ʔ  |    | t  | ə  |    |    |    |
-| Kapón            | (uʔtə)   | –           |    |    |    |    |    |    |    |    |    |    |    |    |
-| Pemón            | (uʔtə)   | –           |    |    |    |    |    |    |    |    |    |    |    |    |
-| Macushi          | (autɨ)   | –           |    |    |    |    |    |    |    |    |    |    |    |    |
-| Panare           | əhtə     | S_A_        |    |    |    |    | ə  | h  |    | t  | ə  |    |    |    |
-| Yawarana         | əhtə     | –           |    |    |    |    | ə  | h  |    | t  | ə  |    |    |    |
-| Yukpa            | (ewuhtu) | –           |    |    |    |    |    |    |    |    |    |    |    |    |
-| Waimiri-Atroari  | ɨtɨ      | –           |    |    |    |    | ɨ  |    |    | t  | ɨ  |    |    |    |
+| Language         | Form     | Class       |    |    |    |    |    |    |    |    |    |    |    |    |    |
+|:-----------------|:---------|:------------|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|
+| Proto-Parukotoan | ɨɸɨto    | S_P_        |    |    |    |    | ɨ  | ɸ  | ɨ  | t  | o  |    |    |    |    |
+| Werikyana        | ɨhɨto    | S_P_        |    |    |    |    | ɨ  | h  | ɨ  | t  | o  |    |    |    |    |
+| Proto-Waiwaian   | hto      | ?           |    |    |    |    |    | h  |    | t  | o  |    |    |    |    |
+| Hixkaryána       | hto      | ?           |    |    |    |    |    | h  |    | t  | o  |    |    |    |    |
+| Waiwai           | hto      | –           |    |    |    |    |    | h  |    | t  | o  |    |    |    |    |
+| Proto-Pekodian   | ɨptə     | S_A_        |    |    |    |    | ɨ  | p  |    | t  | ə  |    |    |    |    |
+| Arara            | iptoŋ    | S_A_        |    |    |    |    | i  | p  |    | t  | o  | -  | ŋ  |    |    |
+| Ikpeng           | iptoŋ    | ?           |    |    |    |    | i  | p  |    | t  | o  | -  | ŋ  |    |    |
+| Bakairi          | ɨtəgɨ    | S_A_        |    |    |    |    | ɨ  |    |    | t  | ə  | -  |    | g  | ɨ  |
+| Proto-Taranoan   | ɨpɨtə    | S_A_        |    |    |    |    | ɨ  | p  | ɨ  | t  | ə  |    |    |    |    |
+| Proto-Tiriyoan   | ɨhtə     | S_A_        |    |    |    |    | ɨ  | h  |    | t  | ə  |    |    |    |    |
+| Tiriyó           | ɨhtə     | S_A_        |    |    |    |    | ɨ  | h  |    | t  | ə  |    |    |    |    |
+| Akuriyó          | ɨhtə     | S_A_        |    |    |    |    | ɨ  | h  |    | t  | ə  |    |    |    |    |
+| Karijona         | ehɨtə    | –           |    |    |    |    | e  | h  | ɨ  | t  | ə  |    |    |    |    |
+| Wayana           | ɨptə     | S_A_ / S_P_ |    |    |    |    | ɨ  | p  |    | t  | ə  |    |    |    |    |
+| Apalaí           | ɨhto     | S_P_        |    |    |    |    | ɨ  | h  |    | t  | o  |    |    |    |    |
+| Kari'ña          | onɨʔto   | (S_A_)      | o  | -  | n  | -  | ɨ  | ʔ  |    | t  | o  |    |    |    |    |
+| Ye'kwana         | əʔtə     | S_P_        |    |    |    |    | ə  | ʔ  |    | t  | ə  |    |    |    |    |
+| Kapón            | (uʔtə)   | –           |    |    |    |    |    |    |    |    |    |    |    |    |    |
+| Pemón            | (uʔtə)   | –           |    |    |    |    |    |    |    |    |    |    |    |    |    |
+| Macushi          | (autɨ)   | –           |    |    |    |    |    |    |    |    |    |    |    |    |    |
+| Panare           | əhtə     | S_A_        |    |    |    |    | ə  | h  |    | t  | ə  |    |    |    |    |
+| Yawarana         | əhtə     | –           |    |    |    |    | ə  | h  |    | t  | ə  |    |    |    |    |
+| Yukpa            | (ewuhtu) | –           |    |    |    |    |    |    |    |    |    |    |    |    |    |
+| Waimiri-Atroari  | ɨtɨ      | –           |    |    |    |    |    |    | ɨ  | t  | ɨ  |    |    |    |    |
 ### Reflexes of \**(ət-)jəpɨ* 'to come' ([csv](come.csv)): 
 | Language          | Form   |    |    |    |    |    |    |    |
 |:------------------|:-------|:---|:---|:---|:---|:---|:---|:---|
@@ -153,34 +153,34 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 | Mapoyo            | epɨ    |    |    |    |    | e  | p  | ɨ  |
 | Upper Xingu Carib | ee     |    |    |    |    | ee |    |    |
 ### Reflexes of \**ɨtə[mə]* 'to go' ([csv](go.csv)): 
-| Language          | Form      |    |    |    |    |    |    |
-|:------------------|:----------|:---|:---|:---|:---|:---|:---|
-| Werikyana         | to[mo]    |    | t  | o  | m  | o  |    |
-| Proto-Waiwaian    | [ɨ]to[m]  | ɨ  | t  | o  | m  |    |    |
-| Hixkaryána        | [ɨ]to     | ɨ  | t  | o  |    |    |    |
-| Waiwai            | [e]to[m]  | e  | t  | o  | m  |    |    |
-| Proto-Pekodian    | ɨtən      | ɨ  | t  | ə  | n  |    |    |
-| Arara             | ɨdo       | ɨ  | d  | o  |    |    |    |
-| Ikpeng            | aran      |    |    | a  | r  | a  | n  |
-| Ikpeng            | ero       |    |    | e  | r  | o  |    |
-| Bakairi           | [ɨ]tə     | ɨ  | t  | ə  |    |    |    |
-| Proto-Tiriyoan    | təmɨ      |    | t  | ə  | m  | ɨ  |    |
-| Tiriyó            | tə[n]     |    | t  | ə  | n  |    |    |
-| Akuriyó           | [ə]tə[mɨ] | ə  | t  | ə  | m  | ɨ  |    |
-| Karijona          | təmə      |    | t  | ə  | m  | ə  |    |
-| Wayana            | [ɨ]tə[m]  | ɨ  | t  | ə  | m  |    |    |
-| Apalaí            | ɨto       | ɨ  | t  | o  |    |    |    |
-| Kari'ña           | to        |    | t  | o  |    |    |    |
-| Kari'ña           | [ɨ]ʔ      |    |    | ɨ  | ʔ  |    |    |
-| Ye'kwana          | ɨtə[mə]   | ɨ  | t  | ə  | m  | ə  |    |
-| Ingarikó          | ətə       | ə  | t  | ə  |    |    |    |
-| Pemón             | [e]tə     | e  | t  | ə  |    |    |    |
-| Macushi           | [a]tɨ     | a  | t  | ɨ  |    |    |    |
-| Panare            | tə[n]     |    | t  | ə  | n  |    |    |
-| Yawarana          | tə        |    | t  | ə  |    |    |    |
-| Mapoyo            | tə        |    | t  | ə  |    |    |    |
-| Upper Xingu Carib | [e]te     | e  | t  | e  |    |    |    |
-| Yukpa             | to        |    | t  | o  |    |    |    |
+| Language          | Form      |    |    |    |    |    |
+|:------------------|:----------|:---|:---|:---|:---|:---|
+| Werikyana         | to[mo]    |    | t  | o  | m  | o  |
+| Proto-Waiwaian    | [ɨ]to[m]  | ɨ  | t  | o  | m  |    |
+| Hixkaryána        | [ɨ]to     | ɨ  | t  | o  |    |    |
+| Waiwai            | [e]to[m]  | e  | t  | o  | m  |    |
+| Proto-Pekodian    | ɨtən      | ɨ  | t  | ə  | n  |    |
+| Arara             | ɨdo       | ɨ  | d  | o  |    |    |
+| Ikpeng            | aran      | a  | r  | a  | n  |    |
+| Ikpeng            | ero       | e  | r  | o  |    |    |
+| Bakairi           | [ɨ]tə     | ɨ  | t  | ə  |    |    |
+| Proto-Tiriyoan    | təmɨ      |    | t  | ə  | m  | ɨ  |
+| Tiriyó            | tə[n]     |    | t  | ə  | n  |    |
+| Akuriyó           | [ə]tə[mɨ] | ə  | t  | ə  | m  | ɨ  |
+| Karijona          | təmə      |    | t  | ə  | m  | ə  |
+| Wayana            | [ɨ]tə[m]  | ɨ  | t  | ə  | m  |    |
+| Apalaí            | ɨto       | ɨ  | t  | o  |    |    |
+| Kari'ña           | to        |    | t  | o  |    |    |
+| Kari'ña           | [ɨ]ʔ      | ɨ  | ʔ  |    |    |    |
+| Ye'kwana          | ɨtə[mə]   | ɨ  | t  | ə  | m  | ə  |
+| Ingarikó          | ətə       | ə  | t  | ə  |    |    |
+| Pemón             | [e]tə     | e  | t  | ə  |    |    |
+| Macushi           | [a]tɨ     | a  | t  | ɨ  |    |    |
+| Panare            | tə[n]     |    | t  | ə  | n  |    |
+| Yawarana          | tə        |    | t  | ə  |    |    |
+| Mapoyo            | tə        |    | t  | ə  |    |    |
+| Upper Xingu Carib | [e]te     | e  | t  | e  |    |    |
+| Yukpa             | to        |    | t  | o  |    |    |
 ### Reflexes of \**ka[ti]* 'to say' ([csv](say.csv)): 
 | Language          | Form   |    |    |    |    |
 |:------------------|:-------|:---|:---|:---|:---|
@@ -208,16 +208,16 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 ### Reflexes of \**e-pɨ* 'to bathe (INTR)' ([csv](bathe_intr_1.csv)): 
 | Language   | Form   |    |    |    |    |    |    |
 |:-----------|:-------|:---|:---|:---|:---|:---|:---|
-| Werikyana  | eehɨ   |    |    | ee | -  | h  | ɨ  |
+| Werikyana  | eehɨ   | ee |    |    | -  | h  | ɨ  |
 | Hixkaryána | ewehɨ  | e  | w  | e  | -  | h  | ɨ  |
 | Waiwai     | ejeɸu  | e  | j  | e  | -  | ɸ  | u  |
-| Arara      | ibɨ    |    |    | i  | -  | b  | ɨ  |
-| Ikpeng     | ip     |    |    | i  | -  | p  |    |
-| Bakairi    | i      |    |    | i  |    |    |    |
-| Tiriyó     | epɨ    |    |    | e  | -  | p  | ɨ  |
-| Akuriyó    | epɨ    |    |    | e  | -  | p  | ɨ  |
-| Wayana     | epɨ    |    |    | e  | -  | p  | ɨ  |
-| Apalaí     | epɨ    |    |    | e  | -  | p  | ɨ  |
+| Arara      | ibɨ    | i  |    |    | -  | b  | ɨ  |
+| Ikpeng     | ip     | i  |    |    | -  | p  |    |
+| Bakairi    | i      | i  |    |    |    |    |    |
+| Tiriyó     | epɨ    | e  |    |    | -  | p  | ɨ  |
+| Akuriyó    | epɨ    | e  |    |    | -  | p  | ɨ  |
+| Wayana     | epɨ    | e  |    |    | -  | p  | ɨ  |
+| Apalaí     | epɨ    | e  |    |    | -  | p  | ɨ  |
 ### Reflexes of \**e-kupi* 'to bathe (INTR)' ([csv](bathe_intr_2.csv)): 
 | Language   | Form   |    |    |    |    |    |    |    |
 |:-----------|:-------|:---|:---|:---|:---|:---|:---|:---|
@@ -237,7 +237,7 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 | Waiwai     | pɨ     |    | p  | ɨ  |
 | Arara      | ɨp     | ɨ  | p  |    |
 | Ikpeng     | ɨp     | ɨ  | p  |    |
-| Bakairi    | ɨ      |    |    | ɨ  |
+| Bakairi    | ɨ      | ɨ  |    |    |
 | Tiriyó     | pɨ     |    | p  | ɨ  |
 | Akuriyó    | pɨ     |    | p  | ɨ  |
 | Wayana     | upɨ    | u  | p  | ɨ  |
