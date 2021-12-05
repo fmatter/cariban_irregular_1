@@ -259,37 +259,38 @@ PTir_stem_140,PTir,ɨhtə,,,go_down,ɨ h t ə
 PTir_stem_141,PTir,əənɨkɨ,,,sleep,əə n ɨ k ɨ
 aku_stem_142,aku,əənɨkɨ,gildea1994akuriyo[87],,sleep,əə n ɨ k ɨ
 tri_stem_143,tri,əənɨkɨ,triomeira1999[294],,sleep,əə n ɨ k ɨ
-kax_stem_144,kax,eehɨ,pc[Spike Gildea],,bathe_intr,ee + h ɨ
-kax_stem_145,kax,ɨhɨ,pc[Spike Gildea],,bathe_tr,ɨ h ɨ
-hix_stem_146,hix,ewehɨ,hixkaryanaderby1979[198],,bathe_intr,e w e + h ɨ
-hix_stem_147,hix,ɨhɨ,hixkaryanaderby1979[198],,bathe_tr,ɨ h ɨ
-wai_stem_148,wai,ejeɸu,waiwaihawkins1998[203],,bathe_intr,e j e + ɸ u
-wai_stem_149,wai,pɨ,waiwaihawkins1998[192],,bathe_tr,p ɨ
-ara_stem_150,ara,ibɨ,alves2017arara[150],,bathe_intr,i + b ɨ
-ara_stem_151,ara,ɨp,alves2017arara[162],,bathe_tr,ɨ p
-ikp_stem_152,ikp,ip,ikpengpacheco1997[103],,bathe_intr,i + p
-ikp_stem_153,ikp,ɨp,campetela1997analise[123],,bathe_tr,ɨ p
-bak_stem_154,bak,i,meira2003bakairi[4],,bathe_intr,i
-bak_stem_155,bak,ɨ,meira2005bakairi[285],,bathe_tr,ɨ
-tri_stem_156,tri,epɨ,triomeira1999[697],,bathe_intr,e + p ɨ
-tri_stem_157,tri,pɨ,triomeira1999[697],,bathe_tr,p ɨ
-aku_stem_158,aku,epɨ,gildea1994akuriyo[87],,bathe_intr,e + p ɨ
-aku_stem_159,aku,pɨ,gildea1994akuriyo[87],,bathe_tr,p ɨ
-way_stem_160,way,epɨ,camargo2010wayana[24],,bathe_intr,e + p ɨ
-way_stem_161,way,upɨ,camargo2010wayana[52],,bathe_tr,u p ɨ
-apa_stem_162,apa,epɨ,meira2000split[218],,bathe_intr,e + p ɨ
-apa_stem_163,apa,pɨ,meira2000split[218],,bathe_tr,p ɨ
-kar_stem_164,kar,ekupi,courtz2008carib[304],,bathe_intr,e + k u p i
-kar_stem_165,kar,kupi,courtz2008carib[304],,bathe_tr,k u p i
-mak_stem_166,mak,eʔhi,maquiritaricaceres2011[439],,bathe_intr,e + ʔ h i
-mak_stem_167,mak,ɨhɨ,maquiritaricaceres2011[454],,bathe_tr,ɨ h ɨ
-kap_stem_168,kap,ekuʔpi,stegeman2014akawaio[37],Unexpected glottal stop.,bathe_intr,e + k u ʔ p i
-kap_stem_169,kap,kuʔpi,stegeman2014akawaio[37],Unexpected glottal stop.,bathe_tr,k u ʔ p i
-pem_stem_170,pem,ekupɨ,pemondearmellada1944dic[34],,bathe_intr,e + k u p ɨ
-pem_stem_171,pem,pɨ,pemondearmellada1944dic[129],,bathe_tr,p ɨ
-pan_stem_172,pan,akupɨ,mattei1994diccionario[8],Only detransitivized form not based on *e-.,bathe_intr,a + k u p ɨ
-pan_stem_173,pan,kupɨ,mattei1994diccionario[294],,bathe_tr,k u p ɨ
-pan_stem_174,pan,ɨpɨ,mattei1994diccionario[294],,bathe_tr,ɨ p ɨ
+PTir_stem_144,PTir,epɨ,,,come,e p ɨ
+kax_stem_145,kax,eehɨ,pc[Spike Gildea],,bathe_intr,ee + h ɨ
+kax_stem_146,kax,ɨhɨ,pc[Spike Gildea],,bathe_tr,ɨ h ɨ
+hix_stem_147,hix,ewehɨ,hixkaryanaderby1979[198],,bathe_intr,e w e + h ɨ
+hix_stem_148,hix,ɨhɨ,hixkaryanaderby1979[198],,bathe_tr,ɨ h ɨ
+wai_stem_149,wai,ejeɸu,waiwaihawkins1998[203],,bathe_intr,e j e + ɸ u
+wai_stem_150,wai,pɨ,waiwaihawkins1998[192],,bathe_tr,p ɨ
+ara_stem_151,ara,ibɨ,alves2017arara[150],,bathe_intr,i + b ɨ
+ara_stem_152,ara,ɨp,alves2017arara[162],,bathe_tr,ɨ p
+ikp_stem_153,ikp,ip,ikpengpacheco1997[103],,bathe_intr,i + p
+ikp_stem_154,ikp,ɨp,campetela1997analise[123],,bathe_tr,ɨ p
+bak_stem_155,bak,i,meira2003bakairi[4],,bathe_intr,i
+bak_stem_156,bak,ɨ,meira2005bakairi[285],,bathe_tr,ɨ
+tri_stem_157,tri,epɨ,triomeira1999[697],,bathe_intr,e + p ɨ
+tri_stem_158,tri,pɨ,triomeira1999[697],,bathe_tr,p ɨ
+aku_stem_159,aku,epɨ,gildea1994akuriyo[87],,bathe_intr,e + p ɨ
+aku_stem_160,aku,pɨ,gildea1994akuriyo[87],,bathe_tr,p ɨ
+way_stem_161,way,epɨ,camargo2010wayana[24],,bathe_intr,e + p ɨ
+way_stem_162,way,upɨ,camargo2010wayana[52],,bathe_tr,u p ɨ
+apa_stem_163,apa,epɨ,meira2000split[218],,bathe_intr,e + p ɨ
+apa_stem_164,apa,pɨ,meira2000split[218],,bathe_tr,p ɨ
+kar_stem_165,kar,ekupi,courtz2008carib[304],,bathe_intr,e + k u p i
+kar_stem_166,kar,kupi,courtz2008carib[304],,bathe_tr,k u p i
+mak_stem_167,mak,eʔhi,maquiritaricaceres2011[439],,bathe_intr,e + ʔ h i
+mak_stem_168,mak,ɨhɨ,maquiritaricaceres2011[454],,bathe_tr,ɨ h ɨ
+kap_stem_169,kap,ekuʔpi,stegeman2014akawaio[37],Unexpected glottal stop.,bathe_intr,e + k u ʔ p i
+kap_stem_170,kap,kuʔpi,stegeman2014akawaio[37],Unexpected glottal stop.,bathe_tr,k u ʔ p i
+pem_stem_171,pem,ekupɨ,pemondearmellada1944dic[34],,bathe_intr,e + k u p ɨ
+pem_stem_172,pem,pɨ,pemondearmellada1944dic[129],,bathe_tr,p ɨ
+pan_stem_173,pan,akupɨ,mattei1994diccionario[8],Only detransitivized form not based on *e-.,bathe_intr,a + k u p ɨ
+pan_stem_174,pan,kupɨ,mattei1994diccionario[294],,bathe_tr,k u p ɨ
+pan_stem_175,pan,ɨpɨ,mattei1994diccionario[294],,bathe_tr,ɨ p ɨ
 ara_other_0,ara,wɨna,alves2017arara[143],,DAT,w ɨ n a
 ikp_other_1,ikp,ɨna,ikpengpacheco2001[164],,DAT,ɨ n a
 ara_other_2,ara,wokori,desouza2010arara[9],,dog,w o k o r i
