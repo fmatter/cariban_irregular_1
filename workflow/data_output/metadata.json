@@ -35,10 +35,10 @@
     "pwaireg": {
         "caption": "Regular 'to fall' (Sa) and 'to sleep' (Sp) in Proto-Waiwaian",
         "sources": [
-            "waiwaihawkins1998[30]",
-            "",
             "howard2001wrought[150]",
+            "",
             "hixkaryanaderby1985[189, 190, 196]",
+            "waiwaihawkins1998[30]",
             "hawkins1953waiwai[209, 211]"
         ]
     },
@@ -55,9 +55,9 @@
     "ptirreg": {
         "caption": "Regular Proto-Tiriyoan Sa verbs",
         "sources": [
-            "",
             "gildea1994akuriyo[87]",
-            "triomeira1999[292, 294]"
+            "triomeira1999[292, 294]",
+            ""
         ]
     },
     "ptirverbs": {
@@ -84,8 +84,8 @@
     "yukreg": {
         "caption": "Regular Yukpa verbs",
         "sources": [
-            "meira2006syntactic[139]",
-            "largo2011yukpa[72, 76]"
+            "largo2011yukpa[72, 76]",
+            "meira2006syntactic[139]"
         ]
     },
     "pxinw": {

@@ -315,6 +315,7 @@ temp_df1 = grouped.get_group(1.0)
 temp_df2 = grouped.get_group(0.5)
 temp_df1["Segments"] = temp_df1.apply(lambda x: segmentify(x["Form"]), axis=1)
 temp_df1["Cognateset_ID"] = temp_df1["Cognateset_ID"].map(str2numcog)
+print(temp_df1)
 temp_df1 = calculate_alignment(temp_df1, fuzzy=True)
 temp_df1["Cognateset_ID"] = temp_df1["Cognateset_ID"].map(num2strcog)
 temp_df1.rename(columns={"Cognateset_ID1": "Cognateset_ID"}, inplace=True)
@@ -476,7 +477,8 @@ for table in bathe_tables:
         table[2],
         tabular,
     )
-bathe_out += r"\end{subtable}\end{table}"
+bathe_out += r"""\end{subtable}
+\end{table}"""
 f = open(f"../documents/floats/bathe.tex", "w")
 f.write(bathe_out)
 f.close()
@@ -593,7 +595,7 @@ for v in overview_legend.values():
 legend += "\\end{legendlist}"
 
 save_float(
-    print_latex(result, keep_index=True) + legend,
+    print_latex(result, keep_index=True) + legend + "\n",
     label,
     "Overview of extensions and (un-)affected verbs",
 )
