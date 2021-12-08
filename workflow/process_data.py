@@ -260,6 +260,28 @@ for lg, meanings in {
         short=f"Regular {print_shorthand(lg)} verbs",
     )
 
+# comparison of werikyana set 2 paradigms of Sa verbs
+prog_df = i_df[i_df["Inflection"].str.contains("PROG")]
+# remove prog suffix
+prog_df["Inflection"] = prog_df["Inflection"].str.replace(".PROG", "")
+pyd.x = ["Meaning_ID"]
+pyd.y = ["Inflection"]
+pyd.z = []
+pyd.filters = {}
+pyd.y_sort = person
+table = pyd.compose_paradigm(prog_df)
+table.index.name = None
+table.index = table.index.map(pynt.get_expex_code)
+table = table[["come", "dream", "go"]]
+table.columns = table.columns.map(lambda x: f"\\qu{{to {x}}}")
+table = table.applymap(objectify)
+save_float(
+    print_latex(table, keep_index=True),
+    "kaxprog",
+    "\\kaxui \\obj{johɨ} \\qu{to come} compared with other verbs (Spike Gildea, p.c.)",
+)
+
+
 i_df = i_df[~(pd.isnull(i_df["Verb_Cognateset_ID"]))]
 
 # pekodian lexical comparison
@@ -315,7 +337,6 @@ temp_df1 = grouped.get_group(1.0)
 temp_df2 = grouped.get_group(0.5)
 temp_df1["Segments"] = temp_df1.apply(lambda x: segmentify(x["Form"]), axis=1)
 temp_df1["Cognateset_ID"] = temp_df1["Cognateset_ID"].map(str2numcog)
-print(temp_df1)
 temp_df1 = calculate_alignment(temp_df1, fuzzy=True)
 temp_df1["Cognateset_ID"] = temp_df1["Cognateset_ID"].map(num2strcog)
 temp_df1.rename(columns={"Cognateset_ID1": "Cognateset_ID"}, inplace=True)
@@ -799,7 +820,6 @@ label = "resultsoverview"
 
 res_df = pd.DataFrame(all_explanations)
 res_df *= 100
-print(res_df)
 
 export_csv(
     res_df.rename(columns=lambda x: extension_string(x, latex=False), index=repl_latex),

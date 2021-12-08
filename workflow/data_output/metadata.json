@@ -27,6 +27,7 @@
             "",
             "alves2017arara[153, 200]",
             "von1892bakairi[76, 130, 131, 374, 397]",
+            "a\u014b-ka",
             "ikpengpacheco2001[42, 80, 139, 209]",
             "ikpengpacheco1997[68]",
             "meira2003bakairi[4]"
@@ -35,11 +36,11 @@
     "pwaireg": {
         "caption": "Regular 'to fall' (Sa) and 'to sleep' (Sp) in Proto-Waiwaian",
         "sources": [
+            "hawkins1953waiwai[209, 211]",
+            "howard2001wrought[150]",
             "",
             "hixkaryanaderby1985[189, 190, 196]",
-            "howard2001wrought[150]",
-            "waiwaihawkins1998[30]",
-            "hawkins1953waiwai[209, 211]"
+            "waiwaihawkins1998[30]"
         ]
     },
     "pwaiverbs": {
@@ -77,8 +78,8 @@
     "carreg": {
         "caption": "Regular Karijona verbs",
         "sources": [
-            "meira1998proto[106]",
-            "robayo2000avance[173]"
+            "robayo2000avance[173]",
+            "meira1998proto[106]"
         ]
     },
     "yukreg": {
@@ -137,7 +138,7 @@
             "meira1998proto[168]",
             "muller1975mapoyo[74]",
             "triomeira1999[294]",
-            "alves2017arara[150]",
+            "alves2017arara[113, 150]",
             "koehn1986apalai[37]",
             "ikpengpacheco2001[265]",
             "stegeman2014akawaio[160]",
@@ -156,7 +157,7 @@
             "triomeira1999[292]",
             "wayanatavares2005[195]",
             "gildea1994akuriyo[87]",
-            "alves2017arara[153]",
+            "alves2017arara[80, 153]",
             "hixkaryanaderby1985[27, 248]",
             "waiwaihawkins1998[45, 62]",
             "ikpengpacheco2001[54, 80]",
@@ -179,10 +180,11 @@
     "say": {
         "caption": "Reflexes of \\**ka[ti]* 'to say'",
         "sources": [
+            "meira2005bakairi[267]",
             "meira2003bakairi[4]",
             "franchetto2008absolutivo[48]",
-            "ikpengpacheco2001[209]",
-            "alves2017arara[153]",
+            "ikpengpacheco2001[209, 209, 279]",
+            "alves2017arara[80, 153]",
             "hixkaryanaderby1985[182]",
             "meira1998proto[113]",
             "koehn1986apalai[107]",
