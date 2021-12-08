@@ -7,12 +7,12 @@
 
 %\usepackage[section]{placeins}
 \captionsetup{compatibility=false}
-%\usepackage[nofiglist, notablist]{endfloat}
+\usepackage[nofiglist, notablist]{endfloat}
 
-%\AtBeginDocument{%                                                     
-%	\DeclareDelayedFloatFlavor{subtable}{table}
-%	\DeclareDelayedFloatFlavor{subfigure}{figure}
-%}
+\AtBeginDocument{%                                                     
+	\DeclareDelayedFloatFlavor{subtable}{table}
+	\DeclareDelayedFloatFlavor{subfigure}{figure}
+}
 
 %\usepackage[nomarkers, figuresfirst, nofiglist, notablist]{endfloat}
 %\let\Oldsection\section
