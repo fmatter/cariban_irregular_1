@@ -1,5 +1,6 @@
 from helper_functions import *
 
+verb_list = ["say", "go", "be_1", "be_2", "come", "go_down", "bathe_intr"]
 
 # tables for the introduction, featuring "regular" and "irregular" verbs from Trio and Hixkaryana
 person = ["1", "2", "1+2", "3"]
@@ -86,6 +87,7 @@ reconstructed_form_table(
     verbs,
     r"Verbs preserving \gl{1}\gl{s_a_} \rc{w-} in \PPek",
     "ppekverbs",
+    verb_list
 )
 
 
@@ -136,6 +138,7 @@ reconstructed_form_table(
     verbs,
     r"Verbs preserving \gl{1}\gl{s_a_} \rc{w-} in \PWai",
     "pwaiverbs",
+    verb_list
 )
 
 
@@ -184,6 +187,7 @@ reconstructed_form_table(
     ["go", "say", "come", "be_1", "be_2"],
     r"Verbs preserving \gl{1}\gl{s_a_} \rc{w-} in \PTir",
     "ptirverbs",
+    verb_list
 )
 
 # regular akuriyo Sa verbs
@@ -456,7 +460,7 @@ bathe_tables = [
         "bathe_intr_3",
         True,
     ),
-    (tr, r"Reflexes of \rc{(ɨ)pɨ} \qu{to bathe (\gl{tr})}", "bathe_tr_1", False),
+    (tr, r"Reflexes of \rc{[ɨ]pɨ} \qu{to bathe (\gl{tr})}", "bathe_tr_1", False),
     (tr_1, r"Reflexes of \rc{kupi} \qu{to bathe (\gl{tr})}", "bathe_tr_2", False),
 ]
 
@@ -506,7 +510,6 @@ f.close()
 
 # overview of what extensions affected what verbs
 i_df = i_df[i_df["Inflection"] == "1"]
-verb_list = ["say", "go", "be_1", "be_2", "come", "go_down", "bathe_intr"]
 
 
 overview_legend = {
@@ -603,9 +606,9 @@ export_csv(
 )
 
 # add nice-looking checkmarks and stuff
-repl_dic = {x: y["tex"] for x, y in overview_legend.items()}
+bool_repl_dic = {x: y["tex"] for x, y in overview_legend.items()}
 result.replace(
-    repl_dic,
+    bool_repl_dic,
     inplace=True,
 )
 
@@ -769,13 +772,17 @@ for i, ext in e_df.iterrows():
         predictions[row["ID"]], explanations[row["ID"]] = test_explanations(row.to_dict())
     r_df = pd.DataFrame(explanations)
     p_df = pd.DataFrame(predictions)
+    r_df.columns = sorted(r_df.columns, key=lambda x: {a: b for b, a in enumerate(verb_list)}[cog_meaning_dic[x]])
+    p_df.columns = sorted(p_df.columns, key=lambda x: {a: b for b, a in enumerate(verb_list)}[cog_meaning_dic[x]])
     r_df["Score"] = r_df.apply(sum, axis=1) / len(r_df.columns)
     all_explanations[ext["ID"]] = dict(zip(r_df.index, r_df["Score"]))
     
     r_df.sort_values(by=["Score"], inplace=True, ascending=False)
     r_df = r_df.applymap(lambda x: bool_map["latex"][x] if type(x)==bool else x)
+    # r_df.rename(columns=repl_dic, inplace=True)
     r_df.columns = r_df.columns.map(lambda x: get_verb_citation(x, lg, as_tuple=True) if x!="Score" else (x, ""))
     p_df = p_df.applymap(lambda x: bool_map["latex"][x] if type(x)==bool else x)
+    # p_df.rename(columns=repl_dic, inplace=True)
     p_df.columns = p_df.columns.map(lambda x: get_verb_citation(x, lg, as_tuple=True) if x!="Score" else (x, ""))
     
     label = f"{lg.lower()}-evaluations"

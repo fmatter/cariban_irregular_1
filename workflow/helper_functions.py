@@ -198,7 +198,7 @@ def get_verb_citation(v_id, l_id, latex=True, as_tuple=False):
         res = res.iloc[0]
     form = res["Form"].replace("+", "")
     if latex:
-        obj, gloss = f"""\\{get_obj_str(l_id)}{{{form}}}""", f"""\\qu{{{mean_dic[res["Parameter_ID"]].replace("to ", "")}}}"""
+        obj, gloss = f"""\\{get_obj_str(l_id)}{{{form}}}""", f"""\\qu{{{cog_trans_dic[cog_meaning_dic[res["Cognateset_ID"]]].replace("to ", "")}}}"""
     else:
         obj, gloss = f"""{form}""",  f"""'{mean_dic[res["Parameter_ID"]]}'"""
     if as_tuple:
@@ -213,12 +213,12 @@ def extension_string(id, latex=True):
     else:
         return name_dic[ext_lg_dic[id]] + " " + repl_latex(form)
 
-def reconstructed_form_table(lgs, proto, verbs, caption, name):
+def reconstructed_form_table(lgs, proto, verbs, caption, name, sort):
     pyd.x = ["Language_ID"]
     pyd.y = ["Concept"]
     pyd.filters = {"Inflection": ["1"], "Language_ID": lgs, "Concept": verbs}
     pyd.x_sort = lgs
-    pyd.y_sort = ["be_1", "be_2", "say", "go", "come", "go_down", "bathe_intr"]
+    pyd.y_sort = sort
     tabular = pyd.compose_paradigm(i_df.replace({"go_down+?": "go_down"}))
     sources = get_sources(i_df)
     raw_sources = get_sources(i_df, latexify=False)
