@@ -1,7 +1,7 @@
 ID,Language_ID,Form,Source,Comment,Parameter_ID,Segments
 ara_form_0,ara,wɨ-ge-,alves2017arara[153],Form in source: wy-geny.,1_say,w ɨ + g e
 ara_form_1,ara,w-ibɨ-,alves2017arara[153],Form in source: w-ibyny.,1_bathe_intr,w + i + b ɨ
-ara_form_2,ara,w-it͡ʃi-,aŋ-ka,Form in source: w-itxiny.,1_be,w + i t͡ʃ i
+ara_form_2,ara,w-it͡ʃi-,alves2017arara[153],Form in source: w-itxiny.,1_be,w + i t͡ʃ i
 ara_form_3,ara,w-ebɨ-,alves2017arara[153],Form in source: w-ebyny.,1_come,w + e b ɨ
 ara_form_4,ara,w-ɨdo-,alves2017arara[153],Form in source: w-ydoly.,1_go,w + ɨ d o
 ara_form_5,ara,w-iptoŋ-,alves2017arara[153],Form in source: w-iptongry.,1_go_down,w + i p t o + ŋ
@@ -252,11 +252,11 @@ PWai_stem_133,PWai,[ɨ]to[m],,,go,ɨ t o m
 PWai_stem_134,PWai,eeɸɨ,,,bathe_intr,ee + ɸ ɨ
 PPek_stem_135,PPek,ədepɨ,,,come,ə d + e p ɨ
 PPek_stem_136,PPek,epɨ,,,come,e p ɨ
-PPek_stem_137,PPek,ɨtən,,,go,ɨ t ə n
+PPek_stem_137,PPek,ɨtə[n],,,go,ɨ t ə n
 PPek_stem_138,PPek,ke,,,say,k e
 PPek_stem_139,PPek,ipɨ,,,bathe_intr,i + p ɨ
 PTir_stem_140,PTir,əʔepɨ,,,come,ə ʔ + e p ɨ
-PTir_stem_141,PTir,təmɨ,,,go,t ə m ɨ
+PTir_stem_141,PTir,ɨtə[mɨ],,,go,ɨ t ə m ɨ
 PTir_stem_142,PTir,ka,,,say,k a
 PTir_stem_143,PTir,epɨ,,,bathe_intr,e + p ɨ
 aku_stem_144,aku,epɨ,gildea1994akuriyo[87],,bathe_intr,e + p ɨ
