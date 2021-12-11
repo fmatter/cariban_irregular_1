@@ -283,6 +283,7 @@ save_float(
     print_latex(table, keep_index=True),
     "kaxprog",
     "\\kaxui \\obj{johɨ} \\qu{to come} compared with other verbs (Spike Gildea, p.c.)",
+    "\\kaxui \\obj{johɨ} \\qu{to come} compared with other verbs"
 )
 
 
