@@ -151,7 +151,7 @@ def delatexify(string):
 def sort_lg(df):
     df.Language_ID = df.Language_ID.astype("category")
     df.Language_ID.cat.set_categories(lg_list, ordered=True, inplace=True)
-    df.sort_values(["Language_ID"], inplace=True)
+    df.sort_values(["Language_ID", "Form"], inplace=True)
 
 
 def extract_sources(df, src_str="Source", keep=False, latexify=True):
@@ -256,6 +256,7 @@ def print_aligned_table(
         raw_sources = extract_sources(df, latexify=False, keep=True)
     df["Segments"] = df.apply(lambda x: segmentify(x["Form"]), axis=1)
     df["Cognateset_ID"] = df["Cognateset_ID"].map(str2numcog)
+    df.index += 1
     df = calculate_alignment(df, fuzzy=fuzzy)
     df = df[fields]
     sort_lg(df)

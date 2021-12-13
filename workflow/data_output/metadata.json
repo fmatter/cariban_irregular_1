@@ -36,9 +36,9 @@
         "caption": "Regular 'to fall' (Sa) and 'to sleep' (Sp) in Proto-Waiwaian",
         "sources": [
             "",
+            "waiwaihawkins1998[30]",
             "howard2001wrought[150]",
             "hixkaryanaderby1985[189, 190, 196]",
-            "waiwaihawkins1998[30]",
             "hawkins1953waiwai[209, 211]"
         ]
     },
@@ -84,8 +84,8 @@
     "yukreg": {
         "caption": "Regular Yukpa verbs",
         "sources": [
-            "meira2006syntactic[139]",
-            "largo2011yukpa[72, 76]"
+            "largo2011yukpa[72, 76]",
+            "meira2006syntactic[139]"
         ]
     },
     "pxinw": {
@@ -102,7 +102,7 @@
     "godown": {
         "caption": "Reflexes of \\**\u0268p\u0268t\u0259* 'to go down'",
         "sources": [
-            "pc[Angela Fabi\u0301ola Alves Chagas, Spike Gildea]",
+            "pc[Spike Gildea, Angela Fabi\u0301ola Alves Chagas]",
             "meira2003primeras",
             "hixkaryanaderby1979[196]",
             "waiwaihawkins1998[55]",
@@ -125,7 +125,7 @@
         ]
     },
     "come": {
-        "caption": "Reflexes of \\**(\u0259t-)j\u0259p\u0268* 'to come'",
+        "caption": "Reflexes of \\**(\u0259t-)ep\u0268* 'to come'",
         "sources": [
             "macushiabbott1991[32]",
             "alvarez2000construcciones[102]",
@@ -142,11 +142,13 @@
             "ikpengpacheco2001[265]",
             "stegeman2014akawaio[160]",
             "meira2003bakairi[4]",
-            "panarepayne2013[65]",
+            "panarepayne2013[65, 451]",
             "mendez1959yawarana[68]",
-            "courtz2008carib[429]",
+            "caceres2017yawarana",
+            "hoff1968carib[420, 437]",
             "meira2005southern[182]",
-            ""
+            "",
+            "franchetto1986kuikurotexts[42]"
         ]
     },
     "go": {

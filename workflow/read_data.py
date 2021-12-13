@@ -29,6 +29,7 @@ concept_dic = {
     "DETRZ1+bathe_1": "bathe_intr",
     "DETRZ+come": "come",
     "DETRZ1": "bathe_intr",
+    "DETRZ": "come"
 }
 
 i_df["Concept"] = i_df.apply(
@@ -56,7 +57,7 @@ cog_verb_df = cs_df[~(cs_df["Form"].str.contains("-"))]
 cog_trans_dic = dict(zip(cog_verb_df["ID"], cog_verb_df["Meaning"]))
 cog_form_dic = dict(zip(cog_verb_df["ID"], cog_verb_df["Form"]))
 cog_form_dic["bathe_intr"] = "e-pɨ"
-cog_form_dic["come"] = "(ət-)jəpɨ"
+cog_form_dic["come"] = "(ət-)epɨ"
 cog_trans_dic["bathe_intr"] = r"bathe"
 cog_trans_dic["be_1"] = r"be-1"
 cog_trans_dic["be_2"] = r"be-2"

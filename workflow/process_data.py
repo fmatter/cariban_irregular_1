@@ -1,9 +1,9 @@
 from helper_functions import *
 
 verb_list = ["say", "go", "be_1", "be_2", "come", "go_down", "bathe_intr"]
+person = ["1", "2", "1+2", "3"]
 
 # tables for the introduction, featuring "regular" and "irregular" verbs from Trio and Hixkaryana
-person = ["1", "2", "1+2", "3"]
 pyd.x = ["Meaning_ID"]
 pyd.y = ["Inflection"]
 pyd.y_sort = person
@@ -281,9 +281,9 @@ table.columns = table.columns.map(lambda x: f"\\qu{{to {x}}}")
 table = table.applymap(objectify)
 save_float(
     print_latex(table, keep_index=True),
-    "kaxprog",
-    "\\kaxui \\obj{johɨ} \\qu{to come} compared with other verbs (Spike Gildea, p.c.)",
-    "\\kaxui \\obj{johɨ} \\qu{to come} compared with other verbs"
+    label="kaxprog",
+    caption="\\kaxui \\qu{to come} and other \gl{s_a_} verbs (Spike Gildea, p.c.)",
+    short="\\kaxui \\qu{to come} and other \gl{s_a_} verbs"
 )
 
 
@@ -418,7 +418,7 @@ save_float(
 print_aligned_table(
     v_df[v_df["Parameter_ID"] == "come"],
     verb="come",
-    caption=r"Reflexes of \rc{(ət-)jəpɨ} \qu{to come}",
+    caption=r"Reflexes of \rc{(ət-)epɨ} \qu{to come}",
     fuzzy=True,
 )
 print_aligned_table(
@@ -430,6 +430,28 @@ print_aligned_table(
     v_df[v_df["Parameter_ID"] == "say"],
     verb="say",
     caption=r"Reflexes of \rc{ka[ti]} \qu{to say}",
+)
+
+#some paradigms for 'to come' 
+pyd.x = ["Language_ID"]
+pyd.y = ["Inflection"]
+pyd.y_sort = person
+pyd.x_sort = lg_list
+pyd.filters = {"Meaning_ID": ["come"], "Inflection": person, "Language_ID": ["ara", "tri", "kax"]}
+table = pyd.compose_paradigm(i_df)
+sources = get_sources(i_df)
+
+table.rename(columns=shorthand_dic, inplace=True)
+table.index = table.index.map(pynt.get_expex_code)
+table.index.name = ""
+table = table.applymap(objectify)
+table = print_latex(table, keep_index=True)
+
+save_float(
+    table,
+    "comepara",
+    r"\rc{ət-epɨ} \qu{to come} in paradigms " + sources,
+    short=r"\rc{ət-epɨ} \qu{to come} in paradigms",
 )
 
 # comparison of intransitive and transitive 'to bathe'
@@ -561,9 +583,11 @@ pyd.x = ["Cognateset_ID"]
 pyd.y = ["Orig_Language", "Prefix_Form", "Language_ID"]
 pyd.content_string = "Affected"
 pyd.x_sort = verb_list
+pyd.filters = {}
 
 repl_dic = {
     "DETRZ+come": "come",
+    "DETRZ": "come",
     "DETRZ1+bathe_1": "bathe_intr",
     "DETRZ1": "bathe_intr",
     "go_down+?": "go_down"
@@ -780,7 +804,6 @@ for i, ext in e_df.iterrows():
     
     r_df.sort_values(by=["Score"], inplace=True, ascending=False)
     r_df = r_df.applymap(lambda x: bool_map["latex"][x] if type(x)==bool else x)
-    # r_df.rename(columns=repl_dic, inplace=True)
     r_df.columns = r_df.columns.map(lambda x: get_verb_citation(x, lg, as_tuple=True) if x!="Score" else (x, ""))
     p_df = p_df.applymap(lambda x: bool_map["latex"][x] if type(x)==bool else x)
     # p_df.rename(columns=repl_dic, inplace=True)
