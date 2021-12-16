@@ -1,4 +1,4 @@
-## Verbs with conservative first person forms in Cariban languages
+## A comparative account of intransitive verbs with conservative first person forms in Cariban 
 A comparative study of conservative first person markers in 9 Cariban languages.
 More info about the study in general can be found here:
 
