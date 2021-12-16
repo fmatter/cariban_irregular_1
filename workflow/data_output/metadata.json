@@ -35,10 +35,10 @@
     "pwaireg": {
         "caption": "Regular 'to fall' (Sa) and 'to sleep' (Sp) in Proto-Waiwaian",
         "sources": [
-            "",
-            "hixkaryanaderby1985[189, 190, 196]",
             "howard2001wrought[150]",
+            "",
             "hawkins1953waiwai[209, 211]",
+            "hixkaryanaderby1985[189, 190, 196]",
             "waiwaihawkins1998[30]"
         ]
     },
@@ -77,15 +77,15 @@
     "carreg": {
         "caption": "Regular Karijona verbs",
         "sources": [
-            "robayo2000avance[173]",
-            "meira1998proto[106]"
+            "meira1998proto[106]",
+            "robayo2000avance[173]"
         ]
     },
     "yukreg": {
         "caption": "Regular Yukpa verbs",
         "sources": [
-            "largo2011yukpa[72, 76]",
-            "meira2006syntactic[139]"
+            "meira2006syntactic[139]",
+            "largo2011yukpa[72, 76]"
         ]
     },
     "pxinw": {
@@ -102,7 +102,7 @@
     "godown": {
         "caption": "Reflexes of \\**\u0268p\u0268t\u0259* 'to go down'",
         "sources": [
-            "pc[Spike Gildea, Angela Fabi\u0301ola Alves Chagas]",
+            "pc[Angela Fabi\u0301ola Alves Chagas, Spike Gildea]",
             "meira2003primeras",
             "hixkaryanaderby1979[196]",
             "waiwaihawkins1998[55]",

@@ -124,6 +124,8 @@ def upper_repl(match):
     return match.group(1).upper()
 
 web_checkmarks = {
+    "y": "✓",
+    "n": "×",
     True: "✓",
     False: "×",
     "\\checkmark": "✓",

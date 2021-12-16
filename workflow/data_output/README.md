@@ -73,18 +73,18 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 | əturu- 'to talk'    | ehpa- 'to bathe (INTR)' |
 | əənɨkɨ- 'to sleep'  |                         |
 ### Regular Karijona verbs ([csv](carreg.csv)): 
-|     | 'to dance'   | 'to arrive'   |
-|:----|:-------------|:--------------|
-| 1   | j-eharaga-   | ji-tuda-      |
-| 2   | m-eharaga-   | mɨ-tuda-      |
-| 1+2 | kɨs-eharaga- | kɨsi-tuda-    |
-| 3   | n-eharaga-   | ni-tuda-      |
+|     | 'to arrive'   | 'to dance'   |
+|:----|:--------------|:-------------|
+| 1   | ji-tuda-      | j-eharaga-   |
+| 2   | mɨ-tuda-      | m-eharaga-   |
+| 1+2 | kɨsi-tuda-    | kɨs-eharaga- |
+| 3   | ni-tuda-      | n-eharaga-   |
 ### Regular Yukpa verbs ([csv](yukreg.csv)): 
-|    | 'to sleep'   | 'to wash self'   | 'to fall'   |
-|---:|:-------------|:-----------------|:------------|
-|  1 | jɨ-nɨ-       | j-otum-          | j-ata-      |
-|  2 | mɨ-nɨ-       | m-otum-          | m-ata-      |
-|  3 | nɨ-nɨ-       | n-otum-          | n-ata-      |
+|    | 'to fall'   | 'to wash self'   | 'to sleep'   |
+|---:|:------------|:-----------------|:-------------|
+|  1 | j-ata-      | j-otum-          | jɨ-nɨ-       |
+|  2 | m-ata-      | m-otum-          | mɨ-nɨ-       |
+|  3 | n-ata-      | n-otum-          | nɨ-nɨ-       |
 ### Loss of \**w* in Ikpeng ([csv](pxinw.csv)): 
 |                 | Arara   | Ikpeng   |
 |:----------------|:--------|:---------|
@@ -265,19 +265,19 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 |                       | \**ka[ti]*   | \**ɨtə[mə]*   | \**a[p]*   | \**eti*   | \**(ət-)epɨ*   | \**ɨpɨtə*   | \**e-pɨ*   |
 |:----------------------|:-------------|:--------------|:-----------|:----------|:---------------|:------------|:-----------|
 |                       | 'say'        | 'go'          | 'be-1'     | 'be-2'    | 'come'         | 'go down'   | 'bathe'    |
-| Proto-Waiwaian \**k-* | n            | n             | n          | n         | –              | N/A         | y          |
-| Hixkaryána            | n            | n             | n          | n         | –              | N/A         | y          |
-| Waiwai                | n            | (y)           | n          | n         | –              | N/A         | y          |
-| Proto-Pekodian \**k-* | n            | n             | n          | n         | n              | n           | n          |
-| Arara                 | n            | n             | n          | n         | n              | n           | n          |
-| Ikpeng                | n            | y             | –          | n         | y              | ?           | n          |
-| Bakairi               | n            | n             | n          | n         | y              | y           | n          |
-| Proto-Tiriyoan \**t-* | n            | n             | n          | n         | n              | N/A         | y          |
-| Tiriyó                | n            | n             | n          | n         | n              | N/A         | y          |
-| Akuriyó               | n            | n             | n          | ?         | n              | N/A         | y          |
-| Akuriyó *k-*          | n            | n             | n          | ?         | n              | n           | n          |
-| Karijona *j-*         | n            | n             | n          | y         | y              | N/A         | ?          |
-| Yukpa *j-*            | ?            | n             | y          | y         | –              | N/A         | –          |
+| Proto-Waiwaian \**k-* | ×            | ×             | ×          | ×         | –              | N/A         | ✓          |
+| Hixkaryána            | ×            | ×             | ×          | ×         | –              | N/A         | ✓          |
+| Waiwai                | ×            | (y)           | ×          | ×         | –              | N/A         | ✓          |
+| Proto-Pekodian \**k-* | ×            | ×             | ×          | ×         | ×              | ×           | ×          |
+| Arara                 | ×            | ×             | ×          | ×         | ×              | ×           | ×          |
+| Ikpeng                | ×            | ✓             | –          | ×         | ✓              | ?           | ×          |
+| Bakairi               | ×            | ×             | ×          | ×         | ✓              | ✓           | ×          |
+| Proto-Tiriyoan \**t-* | ×            | ×             | ×          | ×         | ×              | N/A         | ✓          |
+| Tiriyó                | ×            | ×             | ×          | ×         | ×              | N/A         | ✓          |
+| Akuriyó               | ×            | ×             | ×          | ?         | ×              | N/A         | ✓          |
+| Akuriyó *k-*          | ×            | ×             | ×          | ?         | ×              | ×           | ×          |
+| Karijona *j-*         | ×            | ×             | ×          | ✓         | ✓              | N/A         | ?          |
+| Yukpa *j-*            | ?            | ×             | ✓          | ✓         | –              | N/A         | –          |
 ### Frequency counts of Sa verbs in three Apalai texts ([csv](apalaicounts.csv)): 
 | Form        | Meaning        | ID     |   Count |       % Sa |     % Words | High_Frequency   |
 |:------------|:---------------|:-------|--------:|-----------:|------------:|:-----------------|
