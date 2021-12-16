@@ -1,5 +1,5 @@
 ## A comparative account of intransitive verbs with conservative first person forms in Cariban 
-A comparative study of conservative first person markers in 9 Cariban languages.
+This repo contains data, code, and manuscript for a diachronic and functional study of verbs with conservative first person markers in 9 Cariban languages.
 More info about the study in general can be found here:
 
 * [Abstract](documents/talks_abstracts/extensions_SLE_abstract.pdf)
