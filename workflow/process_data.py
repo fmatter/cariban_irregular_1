@@ -627,7 +627,7 @@ result_exp.columns = [
 ]
 
 export_csv(
-    result_exp, label, "Overview of extensions and (un-)affected verbs", keep_index=True
+    result_exp.replace(web_checkmarks), label, "Overview of extensions and (un-)affected verbs", keep_index=True
 )
 
 # add nice-looking checkmarks and stuff
@@ -852,7 +852,7 @@ res_df = pd.DataFrame(all_explanations)
 res_df *= 100
 
 export_csv(
-    res_df.replace(web_checkmarks).rename(columns=lambda x: extension_string(x, latex=False), index=repl_latex),
+    res_df.rename(columns=lambda x: extension_string(x, latex=False), index=repl_latex),
     label,
     caption=caption,
     keep_index=True,

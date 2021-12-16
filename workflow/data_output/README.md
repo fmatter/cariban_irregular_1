@@ -73,12 +73,12 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 | əturu- 'to talk'    | ehpa- 'to bathe (INTR)' |
 | əənɨkɨ- 'to sleep'  |                         |
 ### Regular Karijona verbs ([csv](carreg.csv)): 
-|     | 'to arrive'   | 'to dance'   |
-|:----|:--------------|:-------------|
-| 1   | ji-tuda-      | j-eharaga-   |
-| 2   | mɨ-tuda-      | m-eharaga-   |
-| 1+2 | kɨsi-tuda-    | kɨs-eharaga- |
-| 3   | ni-tuda-      | n-eharaga-   |
+|     | 'to dance'   | 'to arrive'   |
+|:----|:-------------|:--------------|
+| 1   | j-eharaga-   | ji-tuda-      |
+| 2   | m-eharaga-   | mɨ-tuda-      |
+| 1+2 | kɨs-eharaga- | kɨsi-tuda-    |
+| 3   | n-eharaga-   | ni-tuda-      |
 ### Regular Yukpa verbs ([csv](yukreg.csv)): 
 |    | 'to sleep'   | 'to wash self'   | 'to fall'   |
 |---:|:-------------|:-----------------|:------------|
