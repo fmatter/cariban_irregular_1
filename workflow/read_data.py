@@ -24,6 +24,7 @@ ext_lg_dic = {x: y for x, y in dict(zip(e_df["ID"], e_df["Language_ID"])).items(
 ext_form_dic = {x: y for x, y in dict(zip(e_df["ID"], e_df["Form"])).items()}
 
 trans_dic = {x: "\\qu{%s}" % y for x, y in mean_dic.items()}
+plain_trans_dic = {x: "'%s'" % y for x, y in mean_dic.items()}
 
 concept_dic = {
     "DETRZ1+bathe_1": "bathe_intr",

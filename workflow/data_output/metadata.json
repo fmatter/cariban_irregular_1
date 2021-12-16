@@ -35,10 +35,10 @@
     "pwaireg": {
         "caption": "Regular 'to fall' (Sa) and 'to sleep' (Sp) in Proto-Waiwaian",
         "sources": [
-            "",
             "hawkins1953waiwai[209, 211]",
-            "howard2001wrought[150]",
+            "",
             "hixkaryanaderby1985[189, 190, 196]",
+            "howard2001wrought[150]",
             "waiwaihawkins1998[30]"
         ]
     },
@@ -55,8 +55,8 @@
     "ptirreg": {
         "caption": "Regular Proto-Tiriyoan Sa verbs",
         "sources": [
-            "triomeira1999[292, 294]",
             "",
+            "triomeira1999[292, 294]",
             "gildea1994akuriyo[87]"
         ]
     },
@@ -77,8 +77,8 @@
     "carreg": {
         "caption": "Regular Karijona verbs",
         "sources": [
-            "meira1998proto[106]",
-            "robayo2000avance[173]"
+            "robayo2000avance[173]",
+            "meira1998proto[106]"
         ]
     },
     "yukreg": {
@@ -262,7 +262,7 @@
         "caption": "Overview of extensions and (un-)affected verbs"
     },
     "apalaicounts": {
-        "caption": "Frequency counts of Sa verbs in two Apalai texts"
+        "caption": "Frequency counts of Sa verbs in three Apalai texts"
     },
     "pwai-evaluations": {
         "caption": "Evaluating predictions for Proto-Waiwaian"

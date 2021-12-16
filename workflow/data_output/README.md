@@ -14,23 +14,23 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 | 1+2 | kɨt-əənɨkɨ-  | k-əene-         | ke-epɨ-             | k-entapo-   | kɨ-tən-   |
 | 3   | n-əənɨkɨ-    | n-əene-         | n-epɨ-              | n-entapo-   | nɨ-tən-   |
 ### Regular Pekodian Sa verbs ([csv](pekreg.csv)): 
-|     | Bakairi   | Arara      | Ikpeng     |
-|:----|:----------|:-----------|:-----------|
-|     | go_up     | dance      | run        |
-| 1   | k-əku-    | k-origu-   | k-aranme-  |
-| 2   | m-əku-    | m-origu-   | m-aranme-  |
-| 1+2 | kɨd-əku-  | kud-origu- | kw-aranme- |
-| 3   | n-əku-    | ∅-origu    | ∅-aranme-  |
+|     | Bakairi    | Arara      | Ikpeng     |
+|:----|:-----------|:-----------|:-----------|
+|     | 'to go up' | 'to dance' | 'to run'   |
+| 1   | k-əku-     | k-origu-   | k-aranme-  |
+| 2   | m-əku-     | m-origu-   | m-aranme-  |
+| 1+2 | kɨd-əku-   | kud-origu- | kw-aranme- |
+| 3   | n-əku-     | ∅-origu    | ∅-aranme-  |
 ### Irregular Proto-Pekodian verbs ([csv](ppekverbs.csv)): 
-|            | Proto-Pekodian   | Arara    | Ikpeng   | Bakairi   |
-|:-----------|:-----------------|:---------|:---------|:----------|
-| say        | wɨ-ge-           | wɨ-ge-   | ɨ-ge-    | u-ge-     |
-| go         | w-ɨtən-          | w-ɨdo-   | k-aran-  | u-tə-     |
-| be_1       | w-ap-            | w-ap-    | –        | w-a-      |
-| be_2       | w-et͡ʃi-          | w-it͡ʃi-  | ∅-et͡ʃi-  | w-i-      |
-| come       | w-epɨ-           | w-ebɨ-   | k-arep-  | k-əewɨ-   |
-| go_down    | w-ɨptə-          | w-iptoŋ- | ?-iptoŋ- | k-ɨtəgɨ-  |
-| bathe_intr | w-ipɨ-           | w-ibɨ-   | ∅-ip-    | w-i-      |
+|                        | Proto-Pekodian   | Arara    | Ikpeng   | Bakairi   |
+|:-----------------------|:-----------------|:---------|:---------|:----------|
+| 'to say'               | wɨ-ge-           | wɨ-ge-   | ɨ-ge-    | u-ge-     |
+| 'to go'                | w-ɨtən-          | w-ɨdo-   | k-aran-  | u-tə-     |
+| be_1                   | w-ap-            | w-ap-    | –        | w-a-      |
+| be_2                   | w-et͡ʃi-          | w-it͡ʃi-  | ∅-et͡ʃi-  | w-i-      |
+| 'to come'              | w-epɨ-           | w-ebɨ-   | k-arep-  | k-əewɨ-   |
+| 'to go down'           | w-ɨptə-          | w-iptoŋ- | ?-iptoŋ- | k-ɨtəgɨ-  |
+| 'to bathe (\gl{intr})' | w-ipɨ-           | w-ibɨ-   | ∅-ip-    | w-i-      |
 ### Regular 'to fall' (Sa) and 'to sleep' (Sp) in Proto-Waiwaian ([csv](pwaireg.csv)): 
 | fall           | fall.1     | fall.2     | sleep          | sleep.1    | sleep.2     |
 |:---------------|:-----------|:-----------|:---------------|:-----------|:------------|
@@ -40,12 +40,12 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 | t-eɸurka-      | t-ehurka-  | t͡ʃ-eɸɨrka- | tɨt-wɨnɨkɨ-    | tɨ-nɨkɨ-   | tɨt-wɨnɨkɨ- |
 | ɲ-eɸurka-      | ɲ-ehurka-  | ɲ-eɸɨrka-  | nɨ-wɨnɨkɨ-     | nɨ-nɨkɨ-   | nɨ-wɨnɨkɨ-  |
 ### Irregular Proto-Waiwaian verbs ([csv](pwaiverbs.csv)): 
-|      | Proto-Waiwaian   | Hixkaryána   | Waiwai   |
-|:-----|:-----------------|:-------------|:---------|
-| say  | wɨ-ka-           | ɨ-ka-        | wɨ-ka-   |
-| go   | wɨ-tom-          | ɨ-to-        | kɨw-tom- |
-| be_1 | w-ah-            | w-ah-        | w-a-     |
-| be_2 | w-eʃi-           | w-eʃe-       | w-eeʃi-  |
+|          | Proto-Waiwaian   | Hixkaryána   | Waiwai   |
+|:---------|:-----------------|:-------------|:---------|
+| 'to say' | wɨ-ka-           | ɨ-ka-        | wɨ-ka-   |
+| 'to go'  | wɨ-tom-          | ɨ-to-        | kɨw-tom- |
+| be_1     | w-ah-            | w-ah-        | w-a-     |
+| be_2     | w-eʃi-           | w-eʃe-       | w-eeʃi-  |
 ### Regular Proto-Tiriyoan Sa verbs ([csv](ptirreg.csv)): 
 | bathe_intr     | bathe_intr.1   | bathe_intr.2   | sleep          | sleep.1     | sleep.2     |
 |:---------------|:---------------|:---------------|:---------------|:------------|:------------|
@@ -55,13 +55,13 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 | ke-epɨ-        | ke-epɨ-        | ke-epɨ-        | kɨt-əənɨkɨ-    | kɨt-əənɨkɨ- | kəʔ-əənɨkɨ- |
 | n-epɨ-         | n-epɨ-         | n-epɨ-         | n-əənɨkɨ-      | n-əənɨkɨ-   | n-əənɨkɨ-   |
 ### Irregular Proto-Tiriyoan verbs ([csv](ptirverbs.csv)): 
-|      | Proto-Tiriyoan   | Tiriyó   | Akuriyó   |
-|:-----|:-----------------|:---------|:----------|
-| say  | wɨ-ka-           | wɨ-ka-   | wɨ-ka-    |
-| go   | w-ɨtəmɨ-         | wɨ-tən-  | ə-təmɨ-   |
-| be_1 | w-a-             | w-a-     | ∅-a-      |
-| be_2 | w-eʔi-           | w-ei-    | ?-eʔi-    |
-| come | w-əʔepɨ-         | w-əepɨ-  | ∅-eepɨ-   |
+|           | Proto-Tiriyoan   | Tiriyó   | Akuriyó   |
+|:----------|:-----------------|:---------|:----------|
+| 'to say'  | wɨ-ka-           | wɨ-ka-   | wɨ-ka-    |
+| 'to go'   | w-ɨtəmɨ-         | wɨ-tən-  | ə-təmɨ-   |
+| be_1      | w-a-             | w-a-     | ∅-a-      |
+| be_2      | w-eʔi-           | w-ei-    | ?-eʔi-    |
+| 'to come' | w-əʔepɨ-         | w-əepɨ-  | ∅-eepɨ-   |
 ### Regular Akuriyo Sa verbs ([csv](aku1sa.csv)): 
 | first person *k-*   | first person *t͡ʃ-*      |
 |:--------------------|:------------------------|
@@ -73,26 +73,26 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 | əturu- 'to talk'    | ehpa- 'to bathe (INTR)' |
 | əənɨkɨ- 'to sleep'  |                         |
 ### Regular Karijona verbs ([csv](carreg.csv)): 
-|     | arrive     | dance        |
-|:----|:-----------|:-------------|
-| 1   | ji-tuda-   | j-eharaga-   |
-| 2   | mɨ-tuda-   | m-eharaga-   |
-| 1+2 | kɨsi-tuda- | kɨs-eharaga- |
-| 3   | ni-tuda-   | n-eharaga-   |
+|     | 'to dance'   | 'to arrive'   |
+|:----|:-------------|:--------------|
+| 1   | j-eharaga-   | ji-tuda-      |
+| 2   | m-eharaga-   | mɨ-tuda-      |
+| 1+2 | kɨs-eharaga- | kɨsi-tuda-    |
+| 3   | n-eharaga-   | ni-tuda-      |
 ### Regular Yukpa verbs ([csv](yukreg.csv)): 
-|    | fall   | wash_self   | sleep   |
-|---:|:-------|:------------|:--------|
-|  1 | j-ata- | j-otum-     | jɨ-nɨ-  |
-|  2 | m-ata- | m-otum-     | mɨ-nɨ-  |
-|  3 | n-ata- | n-otum-     | nɨ-nɨ-  |
+|    | 'to fall'   | 'to wash self'   | 'to sleep'   |
+|---:|:------------|:-----------------|:-------------|
+|  1 | j-ata-      | j-otum-          | jɨ-nɨ-       |
+|  2 | m-ata-      | m-otum-          | mɨ-nɨ-       |
+|  3 | n-ata-      | n-otum-          | nɨ-nɨ-       |
 ### Loss of \**w* in Ikpeng ([csv](pxinw.csv)): 
-|                 | ara    | ikp   |
-|:----------------|:-------|:------|
-| defecate        | watke  | atke  |
-| DAT             | wɨna   | ɨna   |
-| dog             | wokori | akari |
-| capuchin_monkey | tawe   | tae   |
-| sleep           | wɨnkɨ  | ɨnkɨ  |
+|                 | Arara   | Ikpeng   |
+|:----------------|:--------|:---------|
+| defecate        | watke   | atke     |
+| DAT             | wɨna    | ɨna      |
+| dog             | wokori  | akari    |
+| capuchin_monkey | tawe    | tae      |
+| sleep           | wɨnkɨ   | ɨnkɨ     |
 ### Reflexes of \**ɨpɨtə* 'to go down' ([csv](godown.csv)): 
 | Language         | Form       | Class       |    |    |    |    |    |    |    |    |    |    |    |    |    |
 |:-----------------|:-----------|:------------|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|
@@ -278,7 +278,7 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 | Akuriyó *k-*          | n            | n             | n          | ?         | n              | n           | n          |
 | Karijona *j-*         | n            | n             | n          | y         | y              | N/A         | ?          |
 | Yukpa *j-*            | ?            | n             | y          | y         | –              | N/A         | –          |
-### Frequency counts of Sa verbs in two Apalai texts ([csv](apalaicounts.csv)): 
+### Frequency counts of Sa verbs in three Apalai texts ([csv](apalaicounts.csv)): 
 | Form        | Meaning        | ID     |   Count |       % Sa |     % Words | High_Frequency   |
 |:------------|:---------------|:-------|--------:|-----------:|------------:|:-----------------|
 | a           | be-1           | be_1   |      49 | 0.300613   | 0.0457944   | True             |
@@ -304,14 +304,14 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 | at-apiaka   | divide_up      | reg_sa |       1 | 0.00613497 | 0.000934579 | False            |
 | e-sɨrɨʔma   | move           | reg_sa |       1 | 0.00613497 | 0.000934579 | False            |
 ### Evaluating predictions for Proto-Waiwaian ([csv](pwai-evaluations.csv)): 
-|            | \**ka[s]* 'say'   | \**[ɨ]to[m]* 'go'   | \**ah* 'be-1'   | \**eʃi* 'be-2'   | \**eeɸɨ* 'bathe'   | Score    |
-|:-----------|:------------------|:--------------------|:----------------|:-----------------|:-------------------|:---------|
-| DETRZ      | ✓                 | ✓                   | ✓               | ✓                | ✓                  | ✓        |
-| DETRZ+freq | ✓                 | ✓                   | ✓               | ✓                | ✓                  | ✓        |
-| phono+freq | ✓                 | ✓                   | ✓               | ✓                | ✓                  | ✓        |
-| infl+freq  | ✓                 | ✓                   | ✓               | ✓                | ✓                  | ✓        |
-| phono      | ✓                 | ✓                   | ×               | ×                | ✓                  | 0.6      |
-| infl       | ×                 | ×                   | ×               | ×                | ✓                  | 0.2      |
+|            | \**ka[s]* 'say'   | \**[ɨ]to[m]* 'go'   | \**ah* 'be-1'   | \**eʃi* 'be-2'   | \**eeɸɨ* 'bathe'   |   Score  |
+|:-----------|:------------------|:--------------------|:----------------|:-----------------|:-------------------|---------:|
+| DETRZ      | ✓                 | ✓                   | ✓               | ✓                | ✓                  |      1   |
+| DETRZ+freq | ✓                 | ✓                   | ✓               | ✓                | ✓                  |      1   |
+| phono+freq | ✓                 | ✓                   | ✓               | ✓                | ✓                  |      1   |
+| infl+freq  | ✓                 | ✓                   | ✓               | ✓                | ✓                  |      1   |
+| phono      | ✓                 | ✓                   | ×               | ×                | ✓                  |      0.6 |
+| infl       | ×                 | ×                   | ×               | ×                | ✓                  |      0.2 |
 ### Predictions for Proto-Waiwaian ([csv](pwai-predictions.csv)): 
 |                            | \**ka[s]* 'say'   | \**[ɨ]to[m]* 'go'   | \**ah* 'be-1'   | \**eʃi* 'be-2'   | \**eeɸɨ* 'bathe'   |
 |:---------------------------|:------------------|:--------------------|:----------------|:-----------------|:-------------------|
@@ -322,14 +322,14 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 | infl (\**w-*)              | ✓                 | ✓                   | ✓               | ✓                | ✓                  |
 | infl+freq                  | ×                 | ×                   | ×               | ×                | ✓                  |
 ### Evaluating predictions for Proto-Pekodian ([csv](ppek-evaluations.csv)): 
-|            | \**ke* 'say'   | \**ɨtə[n]* 'go'   | \**ap* 'be-1'   | \**et͡ʃi* 'be-2'   | \**epɨ* 'come'   | \**ɨptə* 'go down'   | \**ipɨ* 'bathe'   | Score              |
-|:-----------|:---------------|:------------------|:----------------|:------------------|:-----------------|:---------------------|:------------------|:-------------------|
-| DETRZ      | ✓              | ✓                 | ✓               | ✓                 | ✓                | ✓                    | ✓                 | ✓                  |
-| DETRZ+freq | ✓              | ✓                 | ✓               | ✓                 | ✓                | ✓                    | ✓                 | ✓                  |
-| phono+freq | ✓              | ✓                 | ✓               | ✓                 | ✓                | ✓                    | ✓                 | ✓                  |
-| phono      | ✓              | ✓                 | ✓               | ×                 | ×                | ✓                    | ✓                 | 0.7142857142857143 |
-| infl+freq  | ✓              | ✓                 | ✓               | ✓                 | ✓                | ×                    | ×                 | 0.7142857142857143 |
-| infl       | ×              | ×                 | ×               | ×                 | ×                | ×                    | ×                 | ×                  |
+|            | \**ke* 'say'   | \**ɨtə[n]* 'go'   | \**ap* 'be-1'   | \**et͡ʃi* 'be-2'   | \**epɨ* 'come'   | \**ɨptə* 'go down'   | \**ipɨ* 'bathe'   |   Score  |
+|:-----------|:---------------|:------------------|:----------------|:------------------|:-----------------|:---------------------|:------------------|---------:|
+| DETRZ      | ✓              | ✓                 | ✓               | ✓                 | ✓                | ✓                    | ✓                 | 1        |
+| DETRZ+freq | ✓              | ✓                 | ✓               | ✓                 | ✓                | ✓                    | ✓                 | 1        |
+| phono+freq | ✓              | ✓                 | ✓               | ✓                 | ✓                | ✓                    | ✓                 | 1        |
+| phono      | ✓              | ✓                 | ✓               | ×                 | ×                | ✓                    | ✓                 | 0.714286 |
+| infl+freq  | ✓              | ✓                 | ✓               | ✓                 | ✓                | ×                    | ×                 | 0.714286 |
+| infl       | ×              | ×                 | ×               | ×                 | ×                | ×                    | ×                 | 0        |
 ### Predictions for Proto-Pekodian ([csv](ppek-predictions.csv)): 
 |                       | \**ke* 'say'   | \**ɨtə[n]* 'go'   | \**ap* 'be-1'   | \**et͡ʃi* 'be-2'   | \**epɨ* 'come'   | \**ɨptə* 'go down'   | \**ipɨ* 'bathe'   |
 |:----------------------|:---------------|:------------------|:----------------|:------------------|:-----------------|:---------------------|:------------------|
@@ -340,14 +340,14 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 | infl (\**w-*)         | ✓              | ✓                 | ✓               | ✓                 | ✓                | ✓                    | ✓                 |
 | infl+freq             | ×              | ×                 | ×               | ×                 | ×                | ✓                    | ✓                 |
 ### Evaluating predictions for Proto-Tiriyoan ([csv](ptir-evaluations.csv)): 
-|            | \**ka* 'say'   | \**[ə]tə[mɨ]* 'go'   | \**a* 'be-1'   | \**eʔi* 'be-2'   | \**əʔepɨ* 'come'   | \**epɨ* 'bathe'   | Score               |
-|:-----------|:---------------|:---------------------|:---------------|:-----------------|:-------------------|:------------------|:--------------------|
-| DETRZ+freq | ✓              | ✓                    | ✓              | ✓                | ✓                  | ✓                 | ✓                   |
-| phono+freq | ✓              | ✓                    | ✓              | ✓                | ✓                  | ✓                 | ✓                   |
-| infl+freq  | ✓              | ✓                    | ✓              | ✓                | ✓                  | ✓                 | ✓                   |
-| DETRZ      | ✓              | ✓                    | ✓              | ✓                | ×                  | ✓                 | 0.8333333333333334  |
-| phono      | ✓              | ✓                    | ✓              | ×                | ×                  | ✓                 | 0.6666666666666666  |
-| infl       | ×              | ×                    | ×              | ×                | ×                  | ✓                 | 0.16666666666666666 |
+|            | \**ka* 'say'   | \**[ə]tə[mɨ]* 'go'   | \**a* 'be-1'   | \**eʔi* 'be-2'   | \**əʔepɨ* 'come'   | \**epɨ* 'bathe'   |   Score  |
+|:-----------|:---------------|:---------------------|:---------------|:-----------------|:-------------------|:------------------|---------:|
+| DETRZ+freq | ✓              | ✓                    | ✓              | ✓                | ✓                  | ✓                 | 1        |
+| phono+freq | ✓              | ✓                    | ✓              | ✓                | ✓                  | ✓                 | 1        |
+| infl+freq  | ✓              | ✓                    | ✓              | ✓                | ✓                  | ✓                 | 1        |
+| DETRZ      | ✓              | ✓                    | ✓              | ✓                | ×                  | ✓                 | 0.833333 |
+| phono      | ✓              | ✓                    | ✓              | ×                | ×                  | ✓                 | 0.666667 |
+| infl       | ×              | ×                    | ×              | ×                | ×                  | ✓                 | 0.166667 |
 ### Predictions for Proto-Tiriyoan ([csv](ptir-predictions.csv)): 
 |                       | \**ka* 'say'   | \**[ə]tə[mɨ]* 'go'   | \**a* 'be-1'   | \**eʔi* 'be-2'   | \**əʔepɨ* 'come'   | \**epɨ* 'bathe'   |
 |:----------------------|:---------------|:---------------------|:---------------|:-----------------|:-------------------|:------------------|
@@ -358,14 +358,14 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 | infl (\**w-*)         | ✓              | ✓                    | ✓              | ✓                | ✓                  | ✓                 |
 | infl+freq             | ×              | ×                    | ×              | ×                | ×                  | ✓                 |
 ### Evaluating predictions for Akuriyó ([csv](aku-evaluations.csv)): 
-|            | *ka* 'say'   | *[ə]tə[mɨ]* 'go'   | *a* 'be-1'   | *eepɨ* 'come'   | *ɨ[h]tə* 'go down'   | *epɨ* 'bathe'   | Score              |
-|:-----------|:-------------|:-------------------|:-------------|:----------------|:---------------------|:----------------|:-------------------|
-| phono      | ✓            | ✓                  | ✓            | ✓               | ✓                    | ✓               | ✓                  |
-| phono+freq | ✓            | ✓                  | ✓            | ✓               | ✓                    | ✓               | ✓                  |
-| infl       | ✓            | ✓                  | ✓            | ✓               | ✓                    | ✓               | ✓                  |
-| infl+freq  | ✓            | ✓                  | ✓            | ✓               | ✓                    | ✓               | ✓                  |
-| DETRZ+freq | ✓            | ✓                  | ✓            | ✓               | ✓                    | ×               | 0.8333333333333334 |
-| DETRZ      | ✓            | ✓                  | ✓            | ×               | ✓                    | ×               | 0.6666666666666666 |
+|            | *ka* 'say'   | *[ə]tə[mɨ]* 'go'   | *a* 'be-1'   | *eepɨ* 'come'   | *ɨ[h]tə* 'go down'   | *epɨ* 'bathe'   |   Score  |
+|:-----------|:-------------|:-------------------|:-------------|:----------------|:---------------------|:----------------|---------:|
+| phono      | ✓            | ✓                  | ✓            | ✓               | ✓                    | ✓               | 1        |
+| phono+freq | ✓            | ✓                  | ✓            | ✓               | ✓                    | ✓               | 1        |
+| infl       | ✓            | ✓                  | ✓            | ✓               | ✓                    | ✓               | 1        |
+| infl+freq  | ✓            | ✓                  | ✓            | ✓               | ✓                    | ✓               | 1        |
+| DETRZ+freq | ✓            | ✓                  | ✓            | ✓               | ✓                    | ×               | 0.833333 |
+| DETRZ      | ✓            | ✓                  | ✓            | ×               | ✓                    | ×               | 0.666667 |
 ### Predictions for Akuriyó ([csv](aku-predictions.csv)): 
 |                | *ka* 'say'   | *[ə]tə[mɨ]* 'go'   | *a* 'be-1'   | *eepɨ* 'come'   | *ɨ[h]tə* 'go down'   | *epɨ* 'bathe'   |
 |:---------------|:-------------|:-------------------|:-------------|:----------------|:---------------------|:----------------|
@@ -376,14 +376,14 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 | infl (*k-*)    | ×            | ×                  | ×            | ×               | ×                    | ×               |
 | infl+freq      | ×            | ×                  | ×            | ×               | ×                    | ×               |
 ### Evaluating predictions for Karijona ([csv](car-evaluations.csv)): 
-|            | *ka* 'say'   | *tə[mə]* 'go'   | *a* 'be-1'   | *et͡ʃi* 'be-2'   | *eh[ɨ]* 'come'   | Score    |
-|:-----------|:-------------|:----------------|:-------------|:----------------|:-----------------|:---------|
-| phono      | ✓            | ✓               | ✓            | ✓               | ✓                | ✓        |
-| DETRZ      | ✓            | ✓               | ✓            | ×               | ×                | 0.6      |
-| DETRZ+freq | ✓            | ✓               | ✓            | ×               | ×                | 0.6      |
-| phono+freq | ✓            | ✓               | ✓            | ×               | ×                | 0.6      |
-| infl+freq  | ✓            | ✓               | ✓            | ×               | ×                | 0.6      |
-| infl       | ×            | ×               | ×            | ✓               | ✓                | 0.4      |
+|            | *ka* 'say'   | *tə[mə]* 'go'   | *a* 'be-1'   | *et͡ʃi* 'be-2'   | *eh[ɨ]* 'come'   |   Score  |
+|:-----------|:-------------|:----------------|:-------------|:----------------|:-----------------|---------:|
+| phono      | ✓            | ✓               | ✓            | ✓               | ✓                |      1   |
+| DETRZ      | ✓            | ✓               | ✓            | ×               | ×                |      0.6 |
+| DETRZ+freq | ✓            | ✓               | ✓            | ×               | ×                |      0.6 |
+| phono+freq | ✓            | ✓               | ✓            | ×               | ×                |      0.6 |
+| infl+freq  | ✓            | ✓               | ✓            | ×               | ×                |      0.6 |
+| infl       | ×            | ×               | ×            | ✓               | ✓                |      0.4 |
 ### Predictions for Karijona ([csv](car-predictions.csv)): 
 |                     | *ka* 'say'   | *tə[mə]* 'go'   | *a* 'be-1'   | *et͡ʃi* 'be-2'   | *eh[ɨ]* 'come'   |
 |:--------------------|:-------------|:----------------|:-------------|:----------------|:-----------------|
@@ -394,14 +394,14 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 | infl (\**w-*)       | ✓            | ✓               | ✓            | ✓               | ✓                |
 | infl+freq           | ×            | ×               | ×            | ×               | ×                |
 ### Evaluating predictions for Yukpa ([csv](yuk-evaluations.csv)): 
-|            | *to* 'go'   | *a* 'be-1'   | *e* 'be-2'   | Score              |
-|:-----------|:------------|:-------------|:-------------|:-------------------|
-| phono      | ✓           | ✓            | ✓            | ✓                  |
-| infl       | ×           | ✓            | ✓            | 0.6666666666666666 |
-| DETRZ      | ✓           | ×            | ×            | 0.3333333333333333 |
-| DETRZ+freq | ✓           | ×            | ×            | 0.3333333333333333 |
-| phono+freq | ✓           | ×            | ×            | 0.3333333333333333 |
-| infl+freq  | ✓           | ×            | ×            | 0.3333333333333333 |
+|            | *to* 'go'   | *a* 'be-1'   | *e* 'be-2'   |   Score  |
+|:-----------|:------------|:-------------|:-------------|---------:|
+| phono      | ✓           | ✓            | ✓            | 1        |
+| infl       | ×           | ✓            | ✓            | 0.666667 |
+| DETRZ      | ✓           | ×            | ×            | 0.333333 |
+| DETRZ+freq | ✓           | ×            | ×            | 0.333333 |
+| phono+freq | ✓           | ×            | ×            | 0.333333 |
+| infl+freq  | ✓           | ×            | ×            | 0.333333 |
 ### Predictions for Yukpa ([csv](yuk-predictions.csv)): 
 |               | *to* 'go'   | *a* 'be-1'   | *e* 'be-2'   |
 |:--------------|:------------|:-------------|:-------------|

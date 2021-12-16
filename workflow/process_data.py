@@ -57,7 +57,7 @@ sources = cldfh.cite_a_bunch(sources_list, parens=True)
 label = "pekreg"
 tabular.index.names = [None]
 export_csv(
-    tabular.rename(columns=name_dic, level="Language_ID"),
+    tabular.rename(columns=name_dic, level="Language_ID").rename(columns=plain_trans_dic, level="Meaning_ID"),
     label,
     "Regular Pekodian Sa verbs",
     keep_index=True,
@@ -159,7 +159,7 @@ tabular = pyd.compose_paradigm(tir_reg, multi_index=True)
 sources = get_sources(tir_reg)
 
 export_csv(
-    tabular.rename(columns=name_dic, level="Language_ID"),
+    tabular.rename(columns=name_dic, level="Language_ID").rename(columns=plain_trans_dic, level="Language_ID"),
     label,
     "Regular Proto-Tiriyoan Sa verbs",
     sources=get_sources(tir_reg, latexify=False),
@@ -244,7 +244,7 @@ for lg, meanings in {
     tabular = pyd.compose_paradigm(i_df, multi_index=False)
     label = lg + "reg"
     export_csv(
-        tabular,
+        tabular.rename(columns=plain_trans_dic),
         label,
         f"Regular {name_dic[lg]} verbs",
         keep_index=True,
@@ -307,7 +307,7 @@ pyd.y_sort = meanings
 tabular = pyd.compose_paradigm(forms)
 label = "pxinw"
 export_csv(
-    tabular,
+    tabular.rename(columns=name_dic),
     label,
     "Loss of \**w* in Ikpeng",
     keep_index=True,
@@ -710,7 +710,7 @@ label = "apalaicounts"
 export_csv(
     apalai_data,
     label,
-    "Frequency counts of Sa verbs in two Apalai texts",
+    "Frequency counts of Sa verbs in three Apalai texts",
     keep_index=False,
     sources="",
 )

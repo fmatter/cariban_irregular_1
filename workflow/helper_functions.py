@@ -124,8 +124,6 @@ def upper_repl(match):
     return match.group(1).upper()
 
 web_checkmarks = {
-    1: "✓",
-    0: "×",
     True: "✓",
     False: "×",
     "\\checkmark": "✓",
@@ -224,7 +222,7 @@ def reconstructed_form_table(lgs, proto, verbs, caption, name, sort):
     raw_sources = get_sources(i_df, latexify=False)
     tabular.index.name = None
     export_csv(
-        tabular.rename(columns=name_dic),
+        tabular.rename(columns=name_dic).rename(index=plain_trans_dic),
         name,
         f"Irregular {cah.get_name(proto)} verbs",
         True,

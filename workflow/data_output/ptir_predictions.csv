@@ -1,8 +1,0 @@
-,\rc{a},\rc{eʔi},\rc{əʔepɨ},\rc{təmɨ},\rc{ka},\rc{epɨ},Score
-,\qu{be},\qu{be},\qu{come},\qu{go},\qu{say},\qu{bathe (\gl{intr})},
-DETRZ+freq,\checkmark,\checkmark,\checkmark,\checkmark,\checkmark,\checkmark,1.0
-phono+freq,\checkmark,\checkmark,\checkmark,\checkmark,\checkmark,\checkmark,1.0
-infl+freq,\checkmark,\checkmark,\checkmark,\checkmark,\checkmark,\checkmark,1.0
-DETRZ,\checkmark,\checkmark,×,\checkmark,\checkmark,\checkmark,0.8333333333333334
-phono,\checkmark,×,×,\checkmark,\checkmark,\checkmark,0.6666666666666666
-infl,×,×,×,×,×,\checkmark,0.16666666666666666

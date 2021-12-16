@@ -1,7 +1,7 @@
 ,\**ka[s]* 'say',\**[ɨ]to[m]* 'go',\**ah* 'be-1',\**eʃi* 'be-2',\**eeɸɨ* 'bathe',Score 
-DETRZ,✓,✓,✓,✓,✓,✓
-DETRZ+freq,✓,✓,✓,✓,✓,✓
-phono+freq,✓,✓,✓,✓,✓,✓
-infl+freq,✓,✓,✓,✓,✓,✓
+DETRZ,✓,✓,✓,✓,✓,1.0
+DETRZ+freq,✓,✓,✓,✓,✓,1.0
+phono+freq,✓,✓,✓,✓,✓,1.0
+infl+freq,✓,✓,✓,✓,✓,1.0
 phono,✓,✓,×,×,✓,0.6
 infl,×,×,×,×,✓,0.2
