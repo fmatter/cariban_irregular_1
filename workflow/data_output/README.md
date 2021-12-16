@@ -73,18 +73,18 @@ These are the various tables produced by [process_data.py](../process_data.py), 
 | əturu- 'to talk'    | ehpa- 'to bathe (INTR)' |
 | əənɨkɨ- 'to sleep'  |                         |
 ### Regular Karijona verbs ([csv](carreg.csv)): 
-|     | 'to dance'   | 'to arrive'   |
-|:----|:-------------|:--------------|
-| 1   | j-eharaga-   | ji-tuda-      |
-| 2   | m-eharaga-   | mɨ-tuda-      |
-| 1+2 | kɨs-eharaga- | kɨsi-tuda-    |
-| 3   | n-eharaga-   | ni-tuda-      |
+|     | 'to arrive'   | 'to dance'   |
+|:----|:--------------|:-------------|
+| 1   | ji-tuda-      | j-eharaga-   |
+| 2   | mɨ-tuda-      | m-eharaga-   |
+| 1+2 | kɨsi-tuda-    | kɨs-eharaga- |
+| 3   | ni-tuda-      | n-eharaga-   |
 ### Regular Yukpa verbs ([csv](yukreg.csv)): 
-|    | 'to fall'   | 'to wash self'   | 'to sleep'   |
-|---:|:------------|:-----------------|:-------------|
-|  1 | j-ata-      | j-otum-          | jɨ-nɨ-       |
-|  2 | m-ata-      | m-otum-          | mɨ-nɨ-       |
-|  3 | n-ata-      | n-otum-          | nɨ-nɨ-       |
+|    | 'to sleep'   | 'to wash self'   | 'to fall'   |
+|---:|:-------------|:-----------------|:------------|
+|  1 | jɨ-nɨ-       | j-otum-          | j-ata-      |
+|  2 | mɨ-nɨ-       | m-otum-          | m-ata-      |
+|  3 | nɨ-nɨ-       | n-otum-          | n-ata-      |
 ### Loss of \**w* in Ikpeng ([csv](pxinw.csv)): 
 |                 | Arara   | Ikpeng   |
 |:----------------|:--------|:---------|

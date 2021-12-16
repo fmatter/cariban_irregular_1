@@ -852,7 +852,7 @@ res_df = pd.DataFrame(all_explanations)
 res_df *= 100
 
 export_csv(
-    res_df.rename(columns=lambda x: extension_string(x, latex=False), index=repl_latex),
+    res_df.replace(web_checkmarks).rename(columns=lambda x: extension_string(x, latex=False), index=repl_latex),
     label,
     caption=caption,
     keep_index=True,
