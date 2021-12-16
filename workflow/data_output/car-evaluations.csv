@@ -1,7 +1,7 @@
-,*ka* 'say',*təmə* 'go',*a* 'be-1',*et͡ʃi* 'be-2',*eh[ɨ]* 'come',Score 
+,*ka* 'say',*tə[mə]* 'go',*a* 'be-1',*et͡ʃi* 'be-2',*eh[ɨ]* 'come',Score 
 phono,✓,✓,✓,✓,✓,✓
-DETRZ,×,✓,×,✓,✓,0.6
-DETRZ+freq,×,✓,×,✓,✓,0.6
-phono+freq,×,✓,×,✓,✓,0.6
-infl+freq,×,✓,×,✓,✓,0.6
-infl,✓,×,✓,×,×,0.4
+DETRZ,✓,✓,✓,×,×,0.6
+DETRZ+freq,✓,✓,✓,×,×,0.6
+phono+freq,✓,✓,✓,×,×,0.6
+infl+freq,✓,✓,✓,×,×,0.6
+infl,×,×,×,✓,✓,0.4

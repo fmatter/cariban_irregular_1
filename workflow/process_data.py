@@ -94,7 +94,7 @@ reconstructed_form_table(
 # regular proto-waiwaian verbs
 meanings = ["fall", "sleep"]
 lgs = ["PWai", "hix", "wai"]
-pyd.x = ["Language_ID", "Meaning_ID"]
+pyd.x = ["Meaning_ID", "Language_ID"]
 pyd.y = ["Inflection"]
 pyd.filters = {"Language_ID": lgs, "Meaning_ID": meanings}
 pyd.sort_orders = {
@@ -282,8 +282,8 @@ table = table.applymap(objectify)
 save_float(
     print_latex(table, keep_index=True),
     label="kaxprog",
-    caption="\\kaxui \\qu{to come} and other \gl{s_a_} verbs (Spike Gildea, p.c.)",
-    short="\\kaxui \\qu{to come} and other \gl{s_a_} verbs"
+    caption="\\kaxui \gl{s_a_} verbs in the Progressive (Spike Gildea, p.c.)",
+    short="\\kaxui \gl{s_a_} verbs in the Progressive"
 )
 
 
@@ -737,6 +737,27 @@ save_float(
 )
 
 
+affectedness = overview[overview["Language_ID"] == overview["Orig_Language"]]
+affectedness = affectedness[affectedness["Affected"].isin(["y", "n"])]
+affectedness = affectedness[affectedness["Concept"].isin(verb_list)]
+affectedness["Form"] = affectedness["Form"].apply(lambda x: x.split("-")[1])
+
+# # add fake Sa verbs
+# for lg, conds in phon_preds.items():
+#     for i in range(0, 1000):
+#         affectedness = affectedness.append({"Form": conds[0]+"turu", "Language_ID": lg, "Verb_Cognateset_ID": f"DETRZ+talk{i}", "Affected": "y", "Meaning_ID": "talk"}, ignore_index=True)
+
+bool_map = {
+    "latex": {
+        True: "\checkmark",
+        False: "×"
+    },
+    "csv": {
+        True: "correct",
+        False: "incorrect"
+    }
+}
+
 def predict_frequency(lexeme, frequencies):
     if lexeme in frequencies:
         return not frequencies[lexeme]
@@ -761,28 +782,6 @@ def test_explanations(word_form):
         explanations[combo] = predictions[combo] == actual
     return predictions, explanations
 
-
-affectedness = overview[overview["Language_ID"] == overview["Orig_Language"]]
-affectedness = affectedness[affectedness["Affected"].isin(["y", "n"])]
-affectedness = affectedness[affectedness["Concept"].isin(verb_list)]
-affectedness["Form"] = affectedness["Form"].apply(lambda x: x.split("-")[1])
-
-# # add fake Sa verbs
-# for lg, conds in phon_preds.items():
-#     for i in range(0, 1000):
-#         affectedness = affectedness.append({"Form": conds[0]+"turu", "Language_ID": lg, "Verb_Cognateset_ID": f"DETRZ+talk{i}", "Affected": "y", "Meaning_ID": "talk"}, ignore_index=True)
-
-bool_map = {
-    "latex": {
-        True: "\checkmark",
-        False: "×"
-    },
-    "csv": {
-        True: "correct",
-        False: "incorrect"
-    }
-}
-
 all_explanations = {}
 
 for i, ext in e_df.iterrows():
@@ -797,8 +796,8 @@ for i, ext in e_df.iterrows():
         predictions[row["ID"]], explanations[row["ID"]] = test_explanations(row.to_dict())
     r_df = pd.DataFrame(explanations)
     p_df = pd.DataFrame(predictions)
-    r_df.columns = sorted(r_df.columns, key=lambda x: {a: b for b, a in enumerate(verb_list)}[cog_meaning_dic[x]])
-    p_df.columns = sorted(p_df.columns, key=lambda x: {a: b for b, a in enumerate(verb_list)}[cog_meaning_dic[x]])
+    r_df = r_df.reindex(sorted(r_df.columns, key=lambda x: {a: b for b, a in enumerate(verb_list)}[cog_meaning_dic[x]]), axis=1)
+    p_df = p_df.reindex(sorted(p_df.columns, key=lambda x: {a: b for b, a in enumerate(verb_list)}[cog_meaning_dic[x]]), axis=1)
     r_df["Score"] = r_df.apply(sum, axis=1) / len(r_df.columns)
     all_explanations[ext["ID"]] = dict(zip(r_df.index, r_df["Score"]))
     

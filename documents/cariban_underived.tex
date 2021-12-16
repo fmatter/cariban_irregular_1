@@ -5,6 +5,8 @@
 \usepackage{phonrule}
 \usepackage{amsthm,etoolbox,xcolor}
 
+\captionsetup{compatibility=false}
+
 %\usepackage[section]{placeins}
 %\let\Oldsection\section
 %\renewcommand{\section}{\FloatBarrier\Oldsection}
@@ -15,7 +17,7 @@
 %\let\Oldsubsubsection\subsubsection
 %\renewcommand{\subsubsection}{\FloatBarrier\Oldsubsubsection}
 
-\captionsetup{compatibility=false}
+
 \usepackage[nofiglist, notablist]{endfloat}
 
 \AtBeginDocument{%                                                     
@@ -73,8 +75,9 @@
 %\date{}
 
 \begin{document}
-\pagestyle{empty}
 \maketitle	
+\thispagestyle{empty}
+\pagestyle{empty}
 
 \begin{abstract}
 \input{sections/abstract.tex}
