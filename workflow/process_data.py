@@ -450,8 +450,8 @@ table = print_latex(table, keep_index=True)
 save_float(
     table,
     "comepara",
-    r"\rc{ət-epɨ} \qu{to come} in paradigms " + sources,
-    short=r"\rc{ət-epɨ} \qu{to come} in paradigms",
+    r"\rc{(ət-)epɨ} \qu{to come} in paradigms " + sources,
+    short=r"\rc{(ət-)epɨ} \qu{to come} in paradigms",
 )
 
 # comparison of intransitive and transitive 'to bathe'

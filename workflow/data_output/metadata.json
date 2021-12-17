@@ -2,8 +2,8 @@
     "hixintro": {
         "caption": "Some Hixkary\u00e1na verbs",
         "sources": [
-            "howard2001wrought[150, 510, 511, 513, 520]",
-            "hixkaryanaderby1985[197, 198]"
+            "howard2001wrought[150, 510, 513, 520]",
+            "hixkaryanaderby1985[197]"
         ]
     },
     "triintro": {
@@ -27,7 +27,7 @@
             "",
             "alves2017arara[153, 200]",
             "ikpengpacheco2001[42, 80, 139, 209]",
-            "von1892bakairi[76, 130, 131, 374, 397]",
+            "von1892bakairi[76, 130, 374, 397]",
             "ikpengpacheco1997[68]",
             "meira2003bakairi[4]"
         ]
@@ -35,10 +35,10 @@
     "pwaireg": {
         "caption": "Regular 'to fall' (Sa) and 'to sleep' (Sp) in Proto-Waiwaian",
         "sources": [
-            "howard2001wrought[150]",
+            "hixkaryanaderby1985[189, 196]",
             "",
             "hawkins1953waiwai[209, 211]",
-            "hixkaryanaderby1985[189, 190, 196]",
+            "howard2001wrought[150]",
             "waiwaihawkins1998[30]"
         ]
     },
@@ -48,7 +48,7 @@
             "",
             "hixkaryanaderby1979[4]",
             "waiwaihawkins1998[71, 85]",
-            "hixkaryanaderby1985[70, 197, 198]",
+            "hixkaryanaderby1985[70, 197]",
             "pc[Spike Gildea]"
         ]
     },
@@ -56,8 +56,8 @@
         "caption": "Regular Proto-Tiriyoan Sa verbs",
         "sources": [
             "",
-            "triomeira1999[292, 294]",
-            "gildea1994akuriyo[87]"
+            "gildea1994akuriyo[87]",
+            "triomeira1999[292, 294]"
         ]
     },
     "ptirverbs": {
@@ -65,7 +65,7 @@
         "sources": [
             "",
             "triomeira1999[292, 294, 339]",
-            "meira1998proto[112, 113, 114, 115, 165]"
+            "meira1998proto[112-114, 165]"
         ]
     },
     "aku1sa": {
@@ -77,15 +77,15 @@
     "carreg": {
         "caption": "Regular Karijona verbs",
         "sources": [
-            "meira1998proto[106]",
-            "robayo2000avance[173]"
+            "robayo2000avance[173]",
+            "meira1998proto[106]"
         ]
     },
     "yukreg": {
         "caption": "Regular Yukpa verbs",
         "sources": [
-            "meira2006syntactic[139]",
-            "largo2011yukpa[72, 76]"
+            "largo2011yukpa[72, 76]",
+            "meira2006syntactic[139]"
         ]
     },
     "pxinw": {
@@ -185,7 +185,7 @@
             "meira2005bakairi[267]",
             "meira2003bakairi[4]",
             "franchetto2008absolutivo[48]",
-            "ikpengpacheco2001[209, 209, 279]",
+            "ikpengpacheco2001[209, 279]",
             "alves2017arara[80, 153]",
             "hixkaryanaderby1985[182]",
             "meira1998proto[113]",
