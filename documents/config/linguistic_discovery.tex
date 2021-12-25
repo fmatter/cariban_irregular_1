@@ -1,0 +1,62 @@
+\documentclass[letterpaper, 12pt]{article}
+
+%LAYOUT
+\usepackage[left=2.54cm, right=2.54cm, top=2.54cm, bottom=2.54cm]{geometry}
+
+%SPACING
+%\usepackage{setspace}
+%\doublespacing
+
+%GLOSSES
+\usepackage{glossingtool}
+\definelingstyle{IJAL}{labelwidth=2em,labelanchor=numleft, labeloffset=0pt,labelformat=(A),everylabel=\actualexno, textanchor=normal,textoffset=1em,preambleanchor=text, preambleoffset=0pt,avoidnumlabelclash, appendtopexarg={samplelabel=(\actualexno a)}}
+\lingset{aboveglftskip=-0.3ex, everygla=\itshape, belowglpreambleskip=-0.5ex, everyglpreamble=\itshape, lingstyle=IJAL}
+\input{config/own_abbreviations.tex}
+
+%FONTS
+\usepackage{fontspec}
+\setmainfont{Linux Libertine}
+\newfontfamily\objfont{Linux Libertine} %Doulos SIL does not have italics...
+\renewcommand{\obj}[1]{\textit{\objfont#1}}
+\renewcommand{\rc}[1]{*\textit{\objfont#1}}
+\renewcommand{\ort}[1]{$\langle$\objfont#1$\rangle$}
+
+\lingset{everygla=\itshape\objfont, everyglpreamble=\itshape\objfont, everyglb=\objfont}
+\usepackage{newunicodechar}
+\newunicodechar{∅}{{\objfont∅}}
+
+%HEADERS AND FOOTERS
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[L,C,R]{}
+\renewcommand{\headrulewidth}{0pt}
+%\fancyhead[R]{}
+%\fancyfoot[L]{}
+\fancyfoot[C]{\thepage}
+%\setlength{\headheight}{14.5pt}
+
+%SECTION HEADERS
+\usepackage{titlesec}
+\titleformat{\section}
+{\normalfont\fontsize{14}{14}\bfseries}{\thesection.}{1ex}{}
+
+\titleformat{\subsection}
+{\normalfont\fontsize{12}{12}\bfseries}{\thesubsection.}{1ex}{}
+
+
+%FIRST MENTIONS
+\newcommand{\firstmention}[1]{\textit{#1}}
+
+%TITLE AND ABSTRACT
+\date{}
+\usepackage{etoolbox}
+\AtBeginEnvironment{abstract}{\itshape}
+
+\usepackage{placeins}
+
+%FLOATS AND FOOTNOTES
+\usepackage[bottom]{footmisc}
+
+% LINENUMBERS
+%\usepackage{lineno}
+\newcommand{\linenumbers}{}

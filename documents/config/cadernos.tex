@@ -1,0 +1,16 @@
+\documentclass[a4paper, 11pt, twoside]{article}
+
+%LAYOUT
+\usepackage[left=2.4cm,right=2.4cm, top=2.5cm, bottom=2.4cm]{geometry}
+
+%FONTS
+\usepackage{fontspec}
+\setmainfont{Linux Libertine}
+
+%GLOSSES
+\usepackage{glossingtool}
+\lingset{aboveglftskip=-0.3ex, everygla=\itshape, belowglpreambleskip=-0.5ex, everyglpreamble=\itshape}
+\input{config/own_abbreviations.tex}
+
+%FIRST MENTIONS
+\newcommand{\firstmention}[1]{\textsc{#1}}

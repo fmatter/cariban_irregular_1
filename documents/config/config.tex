@@ -1,14 +1,8 @@
-\documentclass[a4paper, 11pt]{article}
 \usepackage[toc]{appendix}
-%FONTS
-\usepackage{fontspec}
-\setmainfont{Brill}
 
-%LAYOUT
-\usepackage[a4paper]{geometry}
+
 %
-%\usepackage{setspace}
-%\onehalfspacing
+
 
 %\usepackage{titling}
 %\setlength{\droptitle}{-3cm}
@@ -16,17 +10,13 @@
 \renewcommand{\abstractname}{\vspace{-1.5\baselineskip}}
 
 %CAPTIONS
-%\usepackage{caption}
+\usepackage{caption}
 \usepackage{threeparttable}
 \usepackage{subcaption}
 
 %TABLES
 \input{booktabs_config}
 
-%GLOSSES
-\usepackage{glossingtool}
-\lingset{aboveglftskip=-0.3ex, everygla=\itshape, belowglpreambleskip=-0.5ex, everyglpreamble=\itshape}
-\input{config/own_abbreviations.tex}
 
 %CUSTOM COMMANDS
 \input{cariban_language_names.tex}
@@ -45,14 +35,14 @@
 %\usepackage{draftwatermark}
 %\SetWatermarkLightness{0.95}
 
-%\usepackage{lineno}
-\newcommand{\linenumbers}{}
+
+
 
 %STUBBORN BROKEN SUFFIXES IN RUNNING TEXT
 %\usepackage[shortcuts]{extdash}
 
 %HYPHENATION
-\hyphenation{Wa-ya-na mar-ker Ti-ri-yó Des-mond An-tro-po-ló-gi-ca}
+\hyphenation{Wa-ya-na mar-ker Ti-ri-yó Des-mond An-tro-po-ló-gi-ca Hix-ka-ryá-na}
 
 %BIBLIOGRAPHY
 %For diachronica
@@ -77,13 +67,6 @@
 
 \usepackage{amsfonts}
 
-\usepackage{fancyhdr}
-\pagestyle{fancy}
- \fancyhead[L,C]{}
- \fancyhead[R]{DRAFT (\today)}
- \fancyfoot[L]{}
- \fancyfoot[C]{\thepage}
-  \setlength{\headheight}{14.5pt}
 %CROSSREFS
 \usepackage{hyperref}
 \usepackage[capitalise,noabbrev]{cleveref}
@@ -112,3 +95,6 @@
 \newenvironment{quotebox}[1]
   {\savebox\mybox{#1}\begin{quotation}}
   {\signed{\usebox\mybox}\end{quotation}}
+
+
+\usepackage[shortcuts]{extdash}

@@ -1,0 +1,5 @@
+Nine Cariban languages have a group of intransitive verbs irregularly inflected for first person.
+Irregular first person markers are conservative, a result of person marker extensions not affecting some verbs, in six distinct developments.
+The six incomplete extensions left between one and seven conservatively inflected verbs, which show a great overlap across (proto-)languages.
+Bybee's network model of morphology was used to generate predictions about the distribution of conservative and innovative markers in each language, which were tested against the data.
+Due to patterns reconstructible to Proto-Cariban, the hypothesized factors largely overlap in their predictions, though phonology (and frequency) shows a strong overall performance.
