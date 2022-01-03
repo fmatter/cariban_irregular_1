@@ -81,14 +81,14 @@ aku_form_83,aku,k-əiwa-,gildea1994akuriyo[84],Form in source: kéìʔwai.,1_t
 aku_form_84,aku,k-əməmɨ-,gildea1994akuriyo[87],Form in source: kəməəʔmɨ.,1_enter,k + ə m ə m ɨ
 aku_form_85,aku,k-ətajiŋka-,gildea1994akuriyo[85],Form in source: kə̀táyiŋkae.,1_run,k + ə t a j i ŋ k a
 aku_form_86,aku,k-əturu-,gildea1994akuriyo[86],Form in source: kə̀túùrú.,1_talk,k + ə t u r u
-aku_form_87,aku,k-əənɨkɨ-,gildea1994akuriyo[87],Length according to meira1998proto[184]. Form in source: kəʔnɨkɨ.,1_sleep,k + əə n ɨ k ɨ
+aku_form_87,aku,k-əənɨkɨ-,gildea1994akuriyo[87],Length according to meira1998proto[184]. Form in source: kəʔnɨkɨ.,1_sleep,k + əə + n ɨ k ɨ
 aku_form_88,aku,t͡ʃ-ekɨrɨka-,gildea1994akuriyo[79],Form in source: šekɨ́ɨrɨka.,1_stay_back,t͡ʃ + e k ɨ r ɨ k a
 aku_form_89,aku,t͡ʃ-entapo-,gildea1994akuriyo[77],Form in source: šentapoe.,1_yawn,t͡ʃ + e n t a p o
 aku_form_90,aku,t͡ʃ-etonema-,gildea1994akuriyo[84],Form in source: šetóòʔnema.,1_lie_down,t͡ʃ + e t o n e m a
 aku_form_91,aku,t͡ʃ-ewai-,gildea1994akuriyo[84],Form in source: čewaiʔne.,1_sit_down,t͡ʃ + e w a i
 aku_form_92,aku,t͡ʃ-ehpa-,gildea1994akuriyo[87],Form in source: šéhpa.,1_bathe_intr,t͡ʃ + e h p a
-tri_form_93,tri,t-əənɨkɨ-,triomeira1999[294],Form in source: t-ëënïkï.,1_sleep,t + əə n ɨ k ɨ
-PTir_form_94,PTir,t-əənɨkɨ-,,,1_sleep,t + əə n ɨ k ɨ
+tri_form_93,tri,t-əənɨkɨ-,triomeira1999[294],Form in source: t-ëënïkï.,1_sleep,t + əə + n ɨ k ɨ
+PTir_form_94,PTir,t-əənɨkɨ-,,,1_sleep,t + əə + n ɨ k ɨ
 PTir_form_95,PTir,t͡ʃ-epɨ-,,,1_bathe_intr,t͡ʃ + e + p ɨ
 wai_form_96,wai,kɨ-wɨnɨkɨ-,waiwaihawkins1998[30],"Form in source: kî-wînîkî-o, kîwînko.",1_sleep,k ɨ + w ɨ n ɨ k ɨ
 hix_form_97,hix,kɨ-nɨkɨ-,hixkaryanaderby1985[189],"Form in source: kɨ-nɨkɨ-no, dɨkno.",1_sleep,k ɨ + n ɨ k ɨ
@@ -262,9 +262,9 @@ PTir_stem_142,PTir,ka,,,say,k a
 PTir_stem_143,PTir,epɨ,,,bathe_intr,e + p ɨ
 aku_stem_144,aku,epɨ,gildea1994akuriyo[87],,bathe_intr,e + p ɨ
 PTir_stem_145,PTir,ɨhtə,,,go_down,ɨ h t ə
-PTir_stem_146,PTir,əənɨkɨ,,,sleep,əə n ɨ k ɨ
-aku_stem_147,aku,əənɨkɨ,gildea1994akuriyo[87],,sleep,əə n ɨ k ɨ
-tri_stem_148,tri,əənɨkɨ,triomeira1999[294],,sleep,əə n ɨ k ɨ
+PTir_stem_146,PTir,əənɨkɨ,,,sleep,əə + n ɨ k ɨ
+aku_stem_147,aku,əənɨkɨ,gildea1994akuriyo[87],,sleep,əə + n ɨ k ɨ
+tri_stem_148,tri,əənɨkɨ,triomeira1999[294],,sleep,əə + n ɨ k ɨ
 PTir_stem_149,PTir,epɨ,,,come,e p ɨ
 PPek_stem_150,PPek,ge,,,say,g e
 uxc_stem_151,uxc,i,franchetto1986kuikurotexts[42],,come,i

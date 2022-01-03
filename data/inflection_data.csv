@@ -197,23 +197,23 @@
 "enter",,"aku",1,"k-əməmɨ-","k","gildea1994akuriyo[87]","kəməəʔmɨ",
 "run",,"aku",1,"k-ətajiŋka-","k","gildea1994akuriyo[85]","kə̀táyiŋkae",
 "talk",,"aku",1,"k-əturu-","k","gildea1994akuriyo[86]","kə̀túùrú",
-"sleep","DETRZ+sleep","aku",1,"k-əənɨkɨ-","k","gildea1994akuriyo[87]","kəʔnɨkɨ","Length according to meira1998proto[184]."
-"sleep","DETRZ+sleep","aku",2,"m-əənɨkɨ-","2sa","gildea1994akuriyo[87]","mə́ʔnɨ̀kɨ́","Length according to meira1998proto[184]."
-"sleep","DETRZ+sleep","aku","1+2","kəʔ-əənɨkɨ-","kut","gildea1994akuriyo[87]","kə́ə̀ʔnɨkɨ","Length according to meira1998proto[184]."
-"sleep","DETRZ+sleep","aku",3,"n-əənɨkɨ-","3sa","gildea1994akuriyo[87]","nə́əʔnɨkɨ","Length according to meira1998proto[184]."
+"sleep","DETRZ+sleep","aku",1,"k-əə+nɨkɨ-","k","gildea1994akuriyo[87]","kəʔnɨkɨ","Length according to meira1998proto[184]."
+"sleep","DETRZ+sleep","aku",2,"m-əə+nɨkɨ-","2sa","gildea1994akuriyo[87]","mə́ʔnɨ̀kɨ́","Length according to meira1998proto[184]."
+"sleep","DETRZ+sleep","aku","1+2","kəʔ-əə+nɨkɨ-","kut","gildea1994akuriyo[87]","kə́ə̀ʔnɨkɨ","Length according to meira1998proto[184]."
+"sleep","DETRZ+sleep","aku",3,"n-əə+nɨkɨ-","3sa","gildea1994akuriyo[87]","nə́əʔnɨkɨ","Length according to meira1998proto[184]."
 "stay_back",,"aku",1,"t͡ʃ-ekɨrɨka-","1t","gildea1994akuriyo[79]","šekɨ́ɨrɨka",
 "yawn",,"aku",1,"t͡ʃ-entapo-","1t","gildea1994akuriyo[77]","šentapoe",
 "lie_down",,"aku",1,"t͡ʃ-etonema-","1t","gildea1994akuriyo[84]","šetóòʔnema",
 "sit_down",,"aku",1,"t͡ʃ-ewai-","1t","gildea1994akuriyo[84]","čewaiʔne",
 "bathe_intr",,"aku",1,"t͡ʃ-ehpa-","1t","gildea1994akuriyo[87]","šéhpa",
-"sleep","DETRZ+sleep","tri",1,"t-əənɨkɨ-","1t","triomeira1999[294]","t-ëënïkï",
-"sleep","DETRZ+sleep","tri",2,"m-əənɨkɨ-","2sa","triomeira1999[294]","m-ëënïkï",
-"sleep","DETRZ+sleep","tri","1+2","kɨt-əənɨkɨ-","kut","triomeira1999[294]","kït-ëënïkï",
-"sleep","DETRZ+sleep","tri",3,"n-əənɨkɨ-","3sa","triomeira1999[294]","n-ëënïkï",
-"sleep","DETRZ+sleep","PTir",1,"t-əənɨkɨ-","1t",,,
-"sleep","DETRZ+sleep","PTir",2,"m-əənɨkɨ-","2sa",,,
-"sleep","DETRZ+sleep","PTir","1+2","kɨt-əənɨkɨ-","kut",,,
-"sleep","DETRZ+sleep","PTir",3,"n-əənɨkɨ-","3sa",,,
+"sleep","DETRZ+sleep","tri",1,"t-əə+nɨkɨ-","1t","triomeira1999[294]","t-ëënïkï",
+"sleep","DETRZ+sleep","tri",2,"m-əə+nɨkɨ-","2sa","triomeira1999[294]","m-ëënïkï",
+"sleep","DETRZ+sleep","tri","1+2","kɨt-əə+nɨkɨ-","kut","triomeira1999[294]","kït-ëënïkï",
+"sleep","DETRZ+sleep","tri",3,"n-əə+nɨkɨ-","3sa","triomeira1999[294]","n-ëënïkï",
+"sleep","DETRZ+sleep","PTir",1,"t-əə+nɨkɨ-","1t",,,
+"sleep","DETRZ+sleep","PTir",2,"m-əə+nɨkɨ-","2sa",,,
+"sleep","DETRZ+sleep","PTir","1+2","kɨt-əə+nɨkɨ-","kut",,,
+"sleep","DETRZ+sleep","PTir",3,"n-əə+nɨkɨ-","3sa",,,
 "bathe_intr","DETRZ1+bathe_1","PTir",1,"t͡ʃ-e+pɨ-","1t",,,
 "bathe_intr","DETRZ1+bathe_1","PTir",2,"m-e+pɨ-","2sa",,,
 "bathe_intr","DETRZ1+bathe_1","PTir","1+2","ke-e+pɨ-","kut",,,

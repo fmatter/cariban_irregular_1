@@ -2,6 +2,13 @@ import pycldf
 import pandas as pd
 import re
 from segments import Profile, Tokenizer
+from cldfbench.cldf import CLDFWriter
+from cldfbench import CLDFSpec
+import pybtex
+import os
+import cldf_helpers as cldfh
+from pycldf.sources import Source
+import lingpy
 
 pd.set_option("display.max_rows", 500)
 pd.options.mode.chained_assignment = None
@@ -124,10 +131,12 @@ def split_cogset_ids(
 ):
     out = []
     for i, row in df[[id, cogset_col]].iterrows():
-        if pd.isnull(row[cogset_col]): continue
+        if pd.isnull(row[cogset_col]):
+            continue
         if sep in row[cogset_col]:
             for j, cog in enumerate(row[cogset_col].split(sep)):
-                if cog == "?": continue
+                if cog == "?":
+                    continue
                 out.append(
                     {
                         "ID": row[id] + "_" + bare + "_" + suffixes[j],
@@ -137,7 +146,8 @@ def split_cogset_ids(
                     }
                 )
         else:
-            if row[cogset_col] == "?": continue
+            if row[cogset_col] == "?":
+                continue
             out.append(
                 {
                     "ID": row[id] + "_" + bare,
@@ -194,6 +204,7 @@ lex_df["Segments"] = lex_df["Form"].map(segmentify)
 lex_df["Comment"] = "Form in source: " + lex_df["Full_Form"] + "."
 lex_df.drop(columns=["Full_Form"], inplace=True)
 
+
 def fix_cog_count(row, prev_df):
     others = prev_df[prev_df["Form_ID"] == row["Form_ID"]]
     if len(others) < 1:
@@ -216,7 +227,9 @@ v_forms["Cognateset_ID"] = (
 v_forms["Full_Form"] = "Form in source: " + v_forms["Full_Form"] + "."
 
 v_forms["Comment"] = v_forms[["Comment", "Full_Form"]].values.tolist()
-v_forms["Comment"] = v_forms.apply(lambda row: " ".join([x for x in row["Comment"] if not pd.isnull(x)]), axis=1)
+v_forms["Comment"] = v_forms.apply(
+    lambda row: " ".join([x for x in row["Comment"] if not pd.isnull(x)]), axis=1
+)
 v_forms.drop(
     columns=["Verb_Cognateset_ID", "Prefix_Cognateset_ID", "Full_Form", "Inflection"],
     inplace=True,
@@ -228,6 +241,31 @@ cognates.sort_values(by=["Form_ID", "Segment_Slice"], inplace=True)
 cognates.reset_index(inplace=True, drop=True)
 
 forms = v_forms.append(verbs).append(lex_df)
+
+alignments = {}
+for i, row in cogsets.iterrows():
+    cog_df = cldfh.get_cognates(
+        forms.replace(to_replace={"Form": "-"}, value="+", regex=True),
+        row["ID"],
+        cog_col="Cognateset_ID",
+        form_sep="+",
+    )
+    cog_df["Segments"] = cog_df["Form"].apply(segmentify)
+    cog_df = cog_df[cog_df["Segments"] != "∅"]
+    seglist = lingpy.align.multiple.Multiple(list(cog_df["Segments"]))
+    seglist.align(method="library", model="asjp")
+    cog_df["Alignment"] = seglist.alm_matrix
+    cog_df["Alignment"] = cog_df["Alignment"].apply(lambda x: " ".join(x))
+    for i, row_i in cog_df.iterrows():
+        alignments[f"""{row_i["ID"]}-{row_i["Slice"]}"""] = row_i["Alignment"]
+
+print(alignments)
+cognates["Alignment"] = cognates.apply(
+    lambda x: alignments[x["Form_ID"] + "-" + x["Segment_Slice"]]
+    if x["Form_ID"] + "-" + x["Segment_Slice"] in alignments
+    else "",
+    axis=1,
+)
 forms["Form"] = forms["Form"].str.replace("+", "", regex=False)
 forms.drop(columns=["Cognateset_ID", "Meaning_ID"], inplace=True)
 
@@ -256,24 +294,9 @@ lgs.rename(
 )
 lgs = lgs[["ID", "Name", "Glottocode", "Longitude", "Latitude"]]
 
-print("Saving files")
-lgs.to_csv("../data/cldf/languages.csv", index=False)
-lgs.to_csv("../data/languages.csv", index=False)
-forms.to_csv("../data/cldf/forms.csv", index=False)
-meanings.to_csv("../data/cldf/parameters.csv", index=False)
-cogsets.to_csv("../data/cldf/cognatesets.csv", index=False)
-examples.to_csv("../data/cldf/examples.csv", index=False)
-cognates.to_csv("../data/cldf/cognates.csv", index=False)
-
 print("Bib stuff")
-import pandas as pd
-import cldf_helpers
-import os
-from pybtex.database.input import bibtex
-from pybtex.database import BibliographyData
-
-data_path = "../data"
 found_refs = []
+data_path = "../data"
 for filename in os.listdir(data_path):
     if not filename.endswith(".csv"):
         continue
@@ -284,20 +307,96 @@ for filename in os.listdir(data_path):
         for i in df["Source"]:
             if pd.isnull(i):
                 continue
-            found_refs.append(cldf_helpers.split_ref(i)[0])
+            for r in i.split("; "):
+                found_refs.append(cldfh.split_ref(r)[0])
 found_refs = list(set(found_refs))
 found_refs.remove("pc")
 
-bibfile = "../../../tools/cariban_cldf/raw/cariban_resolved.bib"
-bib_parser = bibtex.Parser()
-bib_data = bib_parser.parse_file(bibfile)
-filtered_bib_data = BibliographyData()
-for key, entry in bib_data.entries.items():
-    if key in found_refs:
-        # print(entry)
-        filtered_bib_data.add_entry(entry.key, entry)
+print("Saving files")
+spec = CLDFSpec(dir="../data/cldf", module="Wordlist", metadata_fname="metadata.json")
 
-s = filtered_bib_data.to_string("bibtex")
-f = open(os.path.join(data_path, "cldf", "references.bib"), "w")
-f.write(s)
-f.close()
+with CLDFWriter(spec) as writer:
+    writer.cldf.add_component("CognateTable")
+    writer.cldf.remove_columns("CognateTable", "Source")
+    writer.cldf.add_component("CognatesetTable")
+    writer.cldf.remove_columns("CognatesetTable", "Source")
+    writer.cldf.add_component("LanguageTable")
+    writer.cldf.add_component("ParameterTable")
+    writer.cldf.add_component("ExampleTable")
+    writer.cldf.add_columns(
+        "ExampleTable",
+        {
+            "dc:description": "The original object language words in the cited source.",
+            "dc:extent": "singlevalued",
+            "datatype": "string",
+            "required": False,
+            "name": "Orig_Analyzed_Word",
+        },
+        {
+            "dc:description": "The original glosses in the cited source.",
+            "dc:extent": "singlevalued",
+            "datatype": "string",
+            "required": False,
+            "name": "Orig_Gloss",
+        },
+        {
+            "name": "Orig_Translated_Text",
+            "required": False,
+            "dc:extent": "singlevalued",
+            "dc:description": "The original translation of the example text in the cited source.",
+            "datatype": "string",
+        },
+        {
+            "name": "Source",
+            "required": False,
+            "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source",
+            "datatype": {"base": "string"},
+            "separator": ";",
+        },
+    )
+    bib = pybtex.database.parse_file(
+        os.path.join(data_path, "bib", "cariban.bib"), bib_format="bibtex"
+    )
+    sources = [
+        Source.from_entry(k, e) for k, e in bib.entries.items() if k in found_refs
+    ]
+    pc = pybtex.database.Entry(
+        "misc",
+        [
+            ("title", "Placeholder for data obtained from personal communication."),
+        ],
+    )
+    sources.append(Source.from_entry("pc", pc))
+    writer.cldf.add_sources(*sources)
+    writer.write()
+
+lgs.to_csv("../data/cldf/languages.csv", index=False)
+lgs.to_csv("../data/languages.csv", index=False)
+forms.to_csv("../data/cldf/forms.csv", index=False)
+meanings.to_csv("../data/cldf/parameters.csv", index=False)
+cogsets.to_csv("../data/cldf/cognatesets.csv", index=False)
+examples.to_csv("../data/cldf/examples.csv", index=False)
+cognates.to_csv("../data/cldf/cognates.csv", index=False)
+
+# print("Bib stuff")
+# import pandas as pd
+# import os
+# from pybtex.database.input import bibtex
+# from pybtex.database import BibliographyData
+
+# cldf_bib = os.path.join(data_path, "cldf", "references.bib")
+
+
+# bibfile =
+# bib_parser = bibtex.Parser()
+# bib_data = bib_parser.parse_file(bibfile)
+# filtered_bib_data = BibliographyData()
+# for key, entry in bib_data.entries.items():
+#     if key in found_refs:
+#         # print(entry)
+#         filtered_bib_data.add_entry(entry.key, entry)
+
+# s = filtered_bib_data.to_string("bibtex")
+# f = open(cldf_bib, "w")
+# f.write(s)
+# f.close()
