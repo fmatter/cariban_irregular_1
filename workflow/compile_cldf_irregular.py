@@ -259,7 +259,6 @@ for i, row in cogsets.iterrows():
     for i, row_i in cog_df.iterrows():
         alignments[f"""{row_i["ID"]}-{row_i["Slice"]}"""] = row_i["Alignment"]
 
-print(alignments)
 cognates["Alignment"] = cognates.apply(
     lambda x: alignments[x["Form_ID"] + "-" + x["Segment_Slice"]]
     if x["Form_ID"] + "-" + x["Segment_Slice"] in alignments
