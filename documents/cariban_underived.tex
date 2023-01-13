@@ -1,7 +1,7 @@
 %!TEX TS-program = xelatex
-\input{config/generic.tex}
+%\input{config/generic.tex}
 %\input{config/linguistic_discovery.tex}
-%\input{config/cadernos.tex}
+\input{config/cadernos.tex}
 \input{config/config.tex}
 
 \newcommand{\detrz}{\rc{əte}\slash{}\obj{e-}}
@@ -10,7 +10,9 @@
 
 \captionsetup{compatibility=false}
 
-%\usepackage[section]{placeins}
+%\usepackage{placeins}
+
+\usepackage[section]{placeins}
 %\let\Oldsection\section
 %\renewcommand{\section}{\FloatBarrier\Oldsection}
 %
@@ -88,19 +90,25 @@
 \input{sections/verbs.tex}
 \input{sections/reasons.tex}
 \input{sections/discussion.tex}
+\section{Abbreviations}
+The following abbreviations were used in this paper: \allAbbrevsComma.9
+\section{Acknowledgments}
+REDACTED
 
-
-\newpage
-\glosssection{}
 \printbibliography
 
 \newpage
 \appendix
 \section{Predictions for the behavior of individual verbs}
+\FloatBarrier
+This appendix shows all predictions and the comparison with the attested data.
+
 \input{floats/pwai-predictions.tex}
 \input{floats/pwai-evaluations.tex}
 \input{floats/ppek-predictions.tex}
 \input{floats/ppek-evaluations.tex}
+\input{floats/ptir-predictions.tex}
+\input{floats/ptir-evaluations.tex}
 \input{floats/aku-predictions.tex}
 \input{floats/aku-evaluations.tex}
 \input{floats/car-predictions.tex}
