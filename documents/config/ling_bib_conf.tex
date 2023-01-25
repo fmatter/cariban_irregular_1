@@ -1,0 +1,123 @@
+%Citation and bibliography with biblatex according to general use in linguistics
+
+%Loading the biblatex package
+\usepackage[style=authoryear-comp, %author-year style common in the humanities
+maxcitenames=2, %3+ authors trigger "et al."
+mincitenames=1, %when et al. is used we only want one name
+uniquelist=false, %so we don't get redundant information
+natbib, %natbib option for more citation commands
+%alldates=iso, %change all dates to the same format
+language=auto,
+autolang=other, %break foreign titles correctly
+useprefix=true, %print name prefixes
+]{biblatex}
+
+%\usepackage[bibstyle=biblatex-sp-unified,citestyle=sp-authoryear-comp]{biblatex}
+
+%%%%%%CITATIONS%%%%%
+
+%just a space between author and year in citations, instead of the default comma
+\renewcommand*{\nameyeardelim}{\space}
+    
+%no "p(p)." in citation
+\DeclareFieldFormat{postnote}{#1}
+
+%colon before pages
+\renewcommand{\postnotedelim}{\addcolon\addspace}
+
+
+%%%%%BIBLIOGRAPHY%%%%%
+
+%Separate authors with an ampersand (&)
+\renewcommand{\finalnamedelim}{\addspace\&\space}
+
+%No italics or quotation marks in any titles. I prefer having them, but you can uncomment the following lines
+%\DeclareFieldFormat[incollection,article,book,collection,inproceedings,unpublished,thesis]{title}{#1}
+%\DeclareFieldFormat[article]{journaltitle}{#1}
+%\DeclareFieldFormat[inproceedings,incollection]{booktitle}{#1}
+
+%remove "in:" in bibliography, if you want to
+%\renewbibmacro{in:}{}
+
+
+%Customize phdthesis string
+\DefineBibliographyStrings{english}{%
+  phdthesis = {Ph.D.\ dissertation},
+    bibliography = {References},
+}
+
+%remove "pp." in bibliography
+\DeclareFieldFormat{pages}{#1}
+
+%add colon between journal and pages in bibliography
+\renewcommand{\bibpagespunct}{\addcolon\space}
+
+%put colon between title and subtitle, not period
+\renewcommand{\subtitlepunct}{\addcolon\addspace}
+
+%Use “Title” for online entries
+\DeclareFieldFormat[online]{title}{\mkbibquote{#1\isdot}}
+
+%Add "Online: URL" for online entries
+\DeclareFieldFormat[online]{url}{Online\addcolon\space\url{#1}}
+
+%Place "edited by" *after* the list of editors and also, use "eds." in its place
+\renewbibmacro*{byeditor+others}{%
+  \ifnameundef{editor}
+    {}
+    {\printnames[byeditor]{editor}%
+     \addspace%
+     \mkbibparens{\usebibmacro{editor+othersstrg}}%
+     \clearname{editor}%
+     \setunit{\addperiod}%
+     \newunit}%
+  \usebibmacro{byeditorx}%
+  \usebibmacro{bytranslator+others}}
+
+%Don't automatically capitalise bib entries (important for lowercase name prefixes)
+\renewbibmacro{begentry}{\midsentence}
+
+%Experimental possessive cite, works for me
+\DeclareNameFormat{labelname:poss}{%
+  \nameparts{#1}%
+  \ifcase\value{uniquename}%
+    \usebibmacro{name:family}{\namepartfamily}{\namepartgiven}{\namepartprefix}{\namepartsuffix}%
+  \or
+    \ifuseprefix
+      {\usebibmacro{name:given-family}{\namepartfamily}{\namepartgiveni}{\namepartprefix}{\namepartsuffixi}}
+      {\usebibmacro{name:given-family}{\namepartfamily}{\namepartgiveni}{\namepartprefixi}{\namepartsuffixi}}%
+  \or
+    \usebibmacro{name:given-family}{\namepartfamily}{\namepartgiven}{\namepartprefix}{\namepartsuffix}%
+  \fi
+  \usebibmacro{name:andothers}%
+  \ifnumequal{\value{listcount}}{\value{liststop}}{'s}{}}
+\DeclareFieldFormat{shorthand:poss}{%
+  \ifnameundef{labelname}{#1's}{#1}}
+\DeclareFieldFormat{citetitle:poss}{\mkbibemph{#1}'s}
+\DeclareFieldFormat{label:poss}{#1's}
+\newrobustcmd*{\posscitealias}{%
+  \AtNextCite{%
+    \DeclareNameAlias{labelname}{labelname:poss}%
+    \DeclareFieldAlias{shorthand}{shorthand:poss}%
+    \DeclareFieldAlias{citetitle}{citetitle:poss}%
+    \DeclareFieldAlias{label}{label:poss}}}
+\newrobustcmd*{\posscite}{%
+  \posscitealias%
+  \textcite}
+\newrobustcmd*{\Posscite}{\bibsentence\posscite}
+\newrobustcmd*{\posscites}{%
+  \posscitealias%
+  \textcites}
+  
+%experimental command for citing full titles
+\DeclareCiteCommand*{\citetitle}
+{\boolfalse{citetracker}%
+\boolfalse{pagetracker}%
+\usebibmacro{prenote}}
+{\indexfield{indextitle}%
+\printtext[citetitle]{%
+\printfield[noformat]{title}%
+\iffieldundef{subtitle}{}{\subtitlepunct}%
+\printfield[noformat]{subtitle}}}%
+{\multicitedelim}
+{\usebibmacro{postnote}}
