@@ -2,7 +2,7 @@
 
 * **169**: *Example 5 is not aligned*
 
-	* There is nothing that could be “aligned” in this example. I interpreted it as "make the distance between object language and translation identical to example 4", and added translations for all wordforms in the paradigm.
+	* There is nothing that could be “aligned” in this example. I interpreted the comment as "make the distance between object language and translation identical to example 4", and added translations for all wordforms in the paradigm.
 
 
 * **188**: *The author Alves Chagas (2013) is known as Chagas (2013)*
@@ -211,8 +211,12 @@ in Proto-Pekodian, since it has exact cognates elsewhere in Cariban.*
 	* TBD
 
 
-* **Table 8**: *Asterisks are missing in PW forms.
-example 11: consider swapping (c) and (d)*
+* **Table 8**: *Asterisks are missing in PW forms.*
+
+	* TBD
+
+
+* **example 11**: *consider swapping (c) and (d)*
 
 	* TBD
 
@@ -253,7 +257,7 @@ on Akuriyó, since this form is also attested in Tiriyó.*
 * **lines 332–4**: *“a choice not only motivated by a desire to avoid an idiosyncratic intransitive
 first person prefix ɨ- instead of regular kɨ-” — the period is unfinished*
 
-	* TBD
+	* I do not understand what is meant by this comment.
 
 
 * **Table 15 and subsequent tables**: *This reviewer doesn’t think the aligned presentation of
@@ -287,12 +291,20 @@ Proto-Cariban?*
 
 
 * **lines 498–499**: *“These verbs formed a lexical connection with prototypical members of the
-group, developing new past tense forms as a result” — did you mean ‘patient participle’?
-section 4: Please justify the choice of Apalaí texts for the frequency count — why not the
+group, developing new past tense forms as a result” — did you mean ‘patient participle’?*
+
+	* I did, thank you.
+
+
+* **section 4**: *Please justify the choice of Apalaí texts for the frequency count — why not the
 exceptionally-well described Kari’ña? It is true that there are no ready-to-use corpora for
 Cariban languages, but there are many glossed texts available. Another good start would be
-the Kuhikugu and Kalapalo texts in Stenzel & Franchetto (2017).
-section 4: In frequency counts, it should be made clear if one counts the frequency of
+the Kuhikugu and Kalapalo texts in Stenzel & Franchetto (2017).*
+
+	* TBD
+
+
+* **section 4**: *In frequency counts, it should be made clear if one counts the frequency of
 verbal lexemes or specifically of verbs inflected for 1st person (some verb may only be
 frequent in the 3rd person).*
 
@@ -307,29 +319,14 @@ frequent in the 3rd person).*
 * **References**: *consider citing the recently published version of Cáceres and Gildea’s
 Amazonicas presentation on Tense-Aspect constructions in Yawarana (<http://www.etnolinguistica.org/article:vol10n1-7>).*
 
-	* TBD
+	* I only cite works that I reference in the text.
 
 
 * **lines 29–30**: *“like in Tables 1 and 2 .” — remove the space*
 
-	* TBD
+	* Space removed.
 
 
 * **Table 22**: *something is wrong with the table’s width and the layout of the label*
-
-	* TBD
-
-
-* **Abbreviations**: *uncertainty.9 → uncertainty.*
-
-	* TBD
-
-
-* **References**: *(Franchetto 1986): Estudo Etnolinguistico → Estudo etnolinguístico*
-
-	* TBD
-
-
-* **References**: *The use of capital letters in Spanish and Portuguese titles is inconsistent.*
 
 	* TBD
