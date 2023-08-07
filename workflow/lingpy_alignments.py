@@ -33,7 +33,7 @@ lingpy_cldf = {y: x for x, y in cldf_lingpy.items()}
 def merge_sequences(seq1, seq2):
     sm = SequenceMatcher(a=seq1, b=seq2)
     res = []
-    for (op, start1, end1, start2, end2) in sm.get_opcodes():
+    for op, start1, end1, start2, end2 in sm.get_opcodes():
         if op == "equal" or op == "delete":
             # This range appears in both sequences, or only in the first one.
             res += seq1[start1:end1]

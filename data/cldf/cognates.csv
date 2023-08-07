@@ -1,443 +1,474 @@
 ID,Form_ID,Cognateset_ID,Segment_Slice,Alignment
-PPar_stem_93_cog,PPar_stem_93,go_down,1,- - ɨ ɸ ɨ t o
-PPek_form_62_infl,PPek_form_62,1w,1,w -
-PPek_form_62_stem,PPek_form_62,be_1,2,a p -
-PPek_form_65_infl,PPek_form_65,1w,1,w -
-PPek_form_65_stem,PPek_form_65,be_2,2,e t͡ʃ i
-PPek_form_67_infl,PPek_form_67,1w,1,w -
-PPek_form_67_stem,PPek_form_67,come,2,- e p ɨ
-PPek_form_69_infl,PPek_form_69,1w,1,w -
-PPek_form_69_stem,PPek_form_69,go,2,ɨ t ə n -
-PPek_form_71_infl,PPek_form_71,1w,1,w -
-PPek_form_71_stem,PPek_form_71,go_down,2,- - ɨ p - t ə
-PPek_form_73_infl,PPek_form_73,1w,1,w ɨ
-PPek_form_73_stem,PPek_form_73,say,2,g e - - -
-PPek_form_79_infl,PPek_form_79,1w,1,w -
-PPek_form_79_stem_pfx,PPek_form_79,DETRZ1,2,i - -
-PPek_form_79_stem_root,PPek_form_79,bathe_1,3,- p ɨ
-PPek_stem_124_cog,PPek_stem_124,be_1,1,a p -
-PPek_stem_127_cog,PPek_stem_127,be_2,1,e t͡ʃ i
-PPek_stem_135_cog_1,PPek_stem_135,DETRZ,1,ə d
-PPek_stem_135_cog_2,PPek_stem_135,come,2,- e p ɨ
-PPek_stem_136_cog,PPek_stem_136,come,1,- e p ɨ
-PPek_stem_137_cog,PPek_stem_137,go,1,ɨ t ə n -
-PPek_stem_138_cog,PPek_stem_138,say,1,k e - - -
-PPek_stem_139_cog_1,PPek_stem_139,DETRZ1,1,i - -
-PPek_stem_139_cog_2,PPek_stem_139,bathe_1,2,- p ɨ
-PPek_stem_150_cog,PPek_stem_150,say,1,g e - - -
-PPek_stem_75_cog,PPek_stem_75,go_down,1,- - ɨ p - t ə
-PTar_stem_76_cog,PTar_stem_76,go_down,1,- - ɨ p ɨ t ə
-PTir_form_63_infl,PTir_form_63,1w,1,w -
-PTir_form_63_stem,PTir_form_63,be_1,2,a - -
-PTir_form_66_infl,PTir_form_66,1w,1,w -
-PTir_form_66_stem,PTir_form_66,be_2,2,e ʔ i
-PTir_form_68_infl,PTir_form_68,1w,1,w -
-PTir_form_68_stem_pfx,PTir_form_68,DETRZ,2,ə ʔ
-PTir_form_68_stem_root,PTir_form_68,come,3,- e p ɨ
-PTir_form_70_infl,PTir_form_70,1w,1,w -
-PTir_form_70_stem,PTir_form_70,go,2,ɨ t ə m ɨ
-PTir_form_72_infl,PTir_form_72,tri1p,1,p
-PTir_form_72_stem,PTir_form_72,go_down,2,- - ɨ h - t ə
-PTir_form_74_infl,PTir_form_74,1w,1,w ɨ
-PTir_form_74_stem,PTir_form_74,say,2,k a - - -
-PTir_form_94_infl,PTir_form_94,1t,1,t
-PTir_form_94_stem_pfx,PTir_form_94,DETRZ,2,əə -
-PTir_form_94_stem_root,PTir_form_94,sleep,3,n ɨ - k ɨ
-PTir_form_95_infl,PTir_form_95,1t,1,t͡ʃ
-PTir_form_95_stem_pfx,PTir_form_95,DETRZ1,2,e - -
-PTir_form_95_stem_root,PTir_form_95,bathe_1,3,- p ɨ
-PTir_stem_125_cog,PTir_stem_125,be_1,1,a - -
-PTir_stem_128_cog,PTir_stem_128,be_2,1,e ʔ i
-PTir_stem_140_cog_1,PTir_stem_140,DETRZ,1,ə ʔ
-PTir_stem_140_cog_2,PTir_stem_140,come,2,- e p ɨ
-PTir_stem_141_cog,PTir_stem_141,go,1,ə t ə m ɨ
-PTir_stem_142_cog,PTir_stem_142,say,1,k a - - -
-PTir_stem_143_cog_1,PTir_stem_143,DETRZ1,1,e - -
-PTir_stem_143_cog_2,PTir_stem_143,bathe_1,2,- p ɨ
-PTir_stem_145_cog,PTir_stem_145,go_down,1,- - ɨ h - t ə
-PTir_stem_146_cog_1,PTir_stem_146,DETRZ,1,əə -
-PTir_stem_146_cog_2,PTir_stem_146,sleep,2,n ɨ - k ɨ
-PTir_stem_149_cog,PTir_stem_149,come,1,- e p ɨ
-PWai_form_101_infl,PWai_form_101,k,1,
-PWai_form_75_infl,PWai_form_75,1w,1,w ɨ
-PWai_form_75_stem,PWai_form_75,say,2,k a - - -
-PWai_form_76_infl,PWai_form_76,1w,1,w -
-PWai_form_76_stem,PWai_form_76,be_2,2,e ʃ i
-PWai_form_77_infl,PWai_form_77,1w,1,w -
-PWai_form_77_stem,PWai_form_77,be_1,2,a h -
-PWai_form_78_infl,PWai_form_78,1w,1,w ɨ
-PWai_form_78_stem,PWai_form_78,go,2,- t o m -
-PWai_form_80_infl,PWai_form_80,k,1,k -
-PWai_form_80_stem_pfx,PWai_form_80,DETRZ1,2,ee - -
-PWai_form_80_stem_root,PWai_form_80,bathe_1,3,- ɸ ɨ
-PWai_form_98_infl,PWai_form_98,k,1,
-PWai_stem_129_cog,PWai_stem_129,be_2,1,e ʃ i
-PWai_stem_130_cog,PWai_stem_130,be_1,1,a h -
-PWai_stem_132_cog,PWai_stem_132,say,1,k a s - -
-PWai_stem_133_cog,PWai_stem_133,go,1,ɨ t o m -
-PWai_stem_134_cog_1,PWai_stem_134,DETRZ1,1,ee - -
-PWai_stem_134_cog_2,PWai_stem_134,bathe_1,2,- ɸ ɨ
-PWai_stem_73_cog,PWai_stem_73,go_down,1,- - - h - t o
-aka_stem_19_cog_1,aka_stem_19,DETRZ,1,ə s
-aka_stem_19_cog_2,aka_stem_19,come,2,- i p ɨ
-aka_stem_2_cog,aka_stem_2,come,1,j e p ɨ
-aku_form_28_infl,aku_form_28,1w,1,- ə
-aku_form_28_stem,aku_form_28,go,2,- t ə m ɨ
-aku_form_30_infl,aku_form_30,1w,1,w ɨ
-aku_form_30_stem,aku_form_30,say,2,k a - - -
-aku_form_31_infl,aku_form_31,1w,1,
-aku_form_31_stem_pfx,aku_form_31,DETRZ,2,ee -
-aku_form_31_stem_root,aku_form_31,come,3,- - p ɨ
-aku_form_32_infl,aku_form_32,1w,1,
-aku_form_32_stem,aku_form_32,be_1,2,a - -
-aku_form_7_infl,aku_form_7,tri1p,1,p
-aku_form_7_stem,aku_form_7,go_down,2,- - ɨ - - t ə
-aku_form_8_infl,aku_form_8,1t,1,t͡ʃ
-aku_form_8_stem_pfx,aku_form_8,DETRZ1,2,e - -
-aku_form_8_stem_root,aku_form_8,bathe_1,3,- p ɨ
-aku_form_81_infl,aku_form_81,k,1,
-aku_form_82_infl,aku_form_82,k,1,
-aku_form_83_infl,aku_form_83,k,1,
-aku_form_84_infl,aku_form_84,k,1,
-aku_form_85_infl,aku_form_85,k,1,
-aku_form_86_infl,aku_form_86,k,1,
-aku_form_87_infl,aku_form_87,k,1,k -
-aku_form_87_stem_pfx,aku_form_87,DETRZ,2,əə -
-aku_form_87_stem_root,aku_form_87,sleep,3,n ɨ - k ɨ
-aku_form_88_infl,aku_form_88,1t,1,
-aku_form_89_infl,aku_form_89,1t,1,
-aku_form_90_infl,aku_form_90,1t,1,
-aku_form_91_infl,aku_form_91,1t,1,
-aku_form_92_infl,aku_form_92,1t,1,
-aku_stem_10_cog_1,aku_stem_10,DETRZ,1,ee -
-aku_stem_10_cog_2,aku_stem_10,come,2,- - p ɨ
-aku_stem_113_cog,aku_stem_113,be_1,1,a - -
-aku_stem_126_cog,aku_stem_126,be_2,1,e ʔ i
-aku_stem_144_cog_1,aku_stem_144,DETRZ1,1,e - -
-aku_stem_144_cog_2,aku_stem_144,bathe_1,2,- p ɨ
-aku_stem_147_cog_1,aku_stem_147,DETRZ,1,əə -
-aku_stem_147_cog_2,aku_stem_147,sleep,2,n ɨ - k ɨ
-aku_stem_167_cog_1,aku_stem_167,DETRZ1,1,e - -
-aku_stem_167_cog_2,aku_stem_167,bathe_1,2,- p ɨ
-aku_stem_168_cog,aku_stem_168,bathe_1,1,- p ɨ
-aku_stem_30_cog,aku_stem_30,go,1,ə t ə m ɨ
-aku_stem_64_cog,aku_stem_64,say,1,k a - - -
-aku_stem_88_cog,aku_stem_88,go_down,1,- - ɨ h - t ə
-apa_stem_102_cog,apa_stem_102,defecate,1,- w e - k a
-apa_stem_105_cog,apa_stem_105,go,1,ɨ t o - -
-apa_stem_15_cog_1,apa_stem_15,DETRZ,1,o -
-apa_stem_15_cog_2,apa_stem_15,come,2,- e p ɨ
-apa_stem_171_cog_1,apa_stem_171,DETRZ1,1,e - -
-apa_stem_171_cog_2,apa_stem_171,bathe_1,2,- p ɨ
-apa_stem_172_cog,apa_stem_172,bathe_1,1,- p ɨ
-apa_stem_59_cog,apa_stem_59,say,1,k a ʃ i -
-apa_stem_79_cog,apa_stem_79,go_down,1,- - ɨ h - t o
-ara_form_0_infl,ara_form_0,1w,1,w ɨ
-ara_form_0_stem,ara_form_0,say,2,g e - - -
-ara_form_1_infl,ara_form_1,1w,1,w -
-ara_form_1_stem_pfx,ara_form_1,DETRZ1,2,i - -
-ara_form_1_stem_root,ara_form_1,bathe_1,3,- b ɨ
-ara_form_103_infl,ara_form_103,k,1,
-ara_form_2_infl,ara_form_2,1w,1,w -
-ara_form_2_stem,ara_form_2,be_2,2,i t͡ʃ i
-ara_form_3_infl,ara_form_3,1w,1,w -
-ara_form_3_stem,ara_form_3,come,2,- e b ɨ
-ara_form_4_infl,ara_form_4,1w,1,w -
-ara_form_4_stem,ara_form_4,go,2,ɨ d o - -
-ara_form_5_infl,ara_form_5,1w,1,w -
-ara_form_5_stem_pfx,ara_form_5,go_down,2,- - i p - t o
-ara_form_6_infl,ara_form_6,1w,1,w -
-ara_form_6_stem,ara_form_6,be_1,2,a p -
-ara_stem_107_cog,ara_stem_107,be_2,1,i t͡ʃ i
-ara_stem_108_cog,ara_stem_108,be_1,1,a p -
-ara_stem_14_cog,ara_stem_14,come,1,- e b ɨ
-ara_stem_159_cog_1,ara_stem_159,DETRZ1,1,i - -
-ara_stem_159_cog_2,ara_stem_159,bathe_1,2,- b ɨ
-ara_stem_160_cog,ara_stem_160,bathe_1,1,ɨ b ɨ
-ara_stem_18_cog_1,ara_stem_18,DETRZ,1,o d
-ara_stem_18_cog_2,ara_stem_18,come,2,- e b ɨ
-ara_stem_31_cog,ara_stem_31,go,1,ɨ d o - -
-ara_stem_32_cog,ara_stem_32,go,1,- t o - -
-ara_stem_55_cog,ara_stem_55,say,1,g e - - -
-ara_stem_56_cog,ara_stem_56,say,1,k e - - -
-ara_stem_89_cog_1,ara_stem_89,go_down,1,- - i p - t o
-ara_stem_97_cog,ara_stem_97,defecate,1,- w a t k e
-bak_form_102_infl,bak_form_102,k,1,
-bak_form_36_infl,bak_form_36,1w,1,w -
-bak_form_36_stem,bak_form_36,DETRZ1,2,i - -
-bak_form_50_infl,bak_form_50,1w,1,w -
-bak_form_50_stem,bak_form_50,be_1,2,a - -
-bak_form_51_infl,bak_form_51,1w,1,- u
-bak_form_51_stem,bak_form_51,say,2,g e - - -
-bak_form_52_infl,bak_form_52,k,1,k -
-bak_form_52_stem_pfx,bak_form_52,go_down,2,- - ɨ - - t ə
-bak_form_53_infl,bak_form_53,1w,1,- u
-bak_form_53_stem,bak_form_53,go,2,- t ə - -
-bak_form_54_infl,bak_form_54,1w,1,w -
-bak_form_54_stem,bak_form_54,be_2,2,i - -
-bak_form_55_infl,bak_form_55,k,1,k -
-bak_form_55_stem_pfx,bak_form_55,DETRZ,2,ə -
-bak_form_55_stem_root,bak_form_55,come,3,- e w ɨ
-bak_stem_101_cog_1,bak_stem_101,DETRZ,1,ə -
-bak_stem_101_cog_2,bak_stem_101,defecate,2,- - e - k e
-bak_stem_121_cog,bak_stem_121,be_1,1,a - -
-bak_stem_122_cog,bak_stem_122,be_2,1,i - -
-bak_stem_163_cog,bak_stem_163,DETRZ1,1,i - -
-bak_stem_164_cog,bak_stem_164,bathe_1,1,- - ɨ
-bak_stem_20_cog_1,bak_stem_20,DETRZ,1,ə -
-bak_stem_20_cog_2,bak_stem_20,come,2,- e w ɨ
-bak_stem_37_cog,bak_stem_37,go,1,ɨ t ə - -
-bak_stem_50_cog,bak_stem_50,say,1,k e - - -
-bak_stem_51_cog,bak_stem_51,say,1,g e - - -
-bak_stem_90_cog_1,bak_stem_90,go_down,1,- - ɨ - - t ə
-car_form_10_infl,car_form_10,1w,1,
-car_form_10_stem,car_form_10,say,2,k a - - -
-car_form_105_infl,car_form_105,1p,1,
-car_form_106_infl,car_form_106,1p,1,
-car_form_11_infl,car_form_11,1p,1,j
-car_form_11_stem,car_form_11,be_2,2,e t͡ʃ i
-car_form_29_infl,car_form_29,1w,1,w ɨ
-car_form_29_stem,car_form_29,go,2,- t ə m ə
-car_form_33_infl,car_form_33,1w,1,w -
-car_form_33_stem,car_form_33,be_1,2,a - -
-car_form_42_infl,car_form_42,1p,1,j
-car_form_42_stem,car_form_42,go_down,2,- - e h ɨ t ə
-car_form_9_infl,car_form_9,1p,1,j
-car_form_9_stem,car_form_9,come,2,- e h -
-car_stem_109_cog,car_stem_109,be_2,1,e t͡ʃ i
-car_stem_114_cog,car_stem_114,be_1,1,a - -
-car_stem_39_cog,car_stem_39,go,1,- t ə m ə
-car_stem_58_cog,car_stem_58,say,1,k a - - -
-car_stem_77_cog,car_stem_77,go_down,1,- - e h ɨ t ə
-car_stem_9_cog,car_stem_9,come,1,- e h ɨ
-hix_form_100_infl,hix_form_100,k,1,
-hix_form_113_infl,hix_form_113,k,1,
-hix_form_114_infl,hix_form_114,k,1,
-hix_form_12_infl,hix_form_12,1w,1,- ɨ
-hix_form_12_stem,hix_form_12,say,2,k a - - -
-hix_form_123_infl,hix_form_123,k,1,
-hix_form_13_infl,hix_form_13,k,1,k -
-hix_form_13_stem_pfx,hix_form_13,DETRZ1,2,e w e
-hix_form_13_stem_root,hix_form_13,bathe_1,3,- h ɨ
-hix_form_14_infl,hix_form_14,1w,1,w -
-hix_form_14_stem,hix_form_14,be_1,2,a h -
-hix_form_15_infl,hix_form_15,1w,1,w -
-hix_form_15_stem,hix_form_15,be_2,2,e ʃ e
-hix_form_16_infl,hix_form_16,1w,1,- ɨ
-hix_form_16_stem,hix_form_16,go,2,- t o - -
-hix_form_97_infl,hix_form_97,k,1,
-hix_stem_110_cog,hix_stem_110,be_1,1,a h -
-hix_stem_111_cog,hix_stem_111,be_2,1,e ʃ e
-hix_stem_155_cog_1,hix_stem_155,DETRZ1,1,e w e
-hix_stem_155_cog_2,hix_stem_155,bathe_1,2,- h ɨ
-hix_stem_156_cog,hix_stem_156,bathe_1,1,ɨ h ɨ
-hix_stem_33_cog,hix_stem_33,go,1,ɨ t o - -
-hix_stem_57_cog,hix_stem_57,say,1,k a s - -
-hix_stem_72_cog,hix_stem_72,go_down,1,- - - h - t o
-ikp_form_104_infl,ikp_form_104,k,1,
-ikp_form_20_infl,ikp_form_20,1w,1,
-ikp_form_20_stem_pfx,ikp_form_20,DETRZ1,2,i - -
-ikp_form_20_stem_root,ikp_form_20,bathe_1,3,- p -
-ikp_form_21_infl,ikp_form_21,1w,1,
-ikp_form_21_stem,ikp_form_21,be_2,2,e t͡ʃ i
-ikp_form_22_infl,ikp_form_22,1w,1,- ɨ
-ikp_form_22_stem,ikp_form_22,say,2,g e - - -
-ikp_form_23_infl,ikp_form_23,k,1,k -
-ikp_form_23_stem_pfx,ikp_form_23,DETRZ,2,a r
-ikp_form_23_stem_root,ikp_form_23,come,3,- e p -
-ikp_form_24_infl,ikp_form_24,k,1,k -
-ikp_form_24_stem,ikp_form_24,go,2,a r a n -
-ikp_stem_112_cog,ikp_stem_112,be_2,1,e t͡ʃ i
-ikp_stem_123_cog,ikp_stem_123,be_1,1,e t͡ʃ i
-ikp_stem_161_cog_1,ikp_stem_161,DETRZ1,1,i - -
-ikp_stem_161_cog_2,ikp_stem_161,bathe_1,2,- p -
-ikp_stem_162_cog,ikp_stem_162,bathe_1,1,ɨ p -
-ikp_stem_17_cog_1,ikp_stem_17,DETRZ,1,a r
-ikp_stem_17_cog_2,ikp_stem_17,come,2,- e p -
-ikp_stem_35_cog,ikp_stem_35,go,1,a r a n -
-ikp_stem_36_cog,ikp_stem_36,go,1,e r o - -
-ikp_stem_53_cog,ikp_stem_53,say,1,g e - - -
-ikp_stem_54_cog,ikp_stem_54,say,1,k e - - -
-ikp_stem_91_cog_1,ikp_stem_91,go_down,1,- - i p - t o
-ikp_stem_98_cog,ikp_stem_98,defecate,1,- - a t k e
-ing_stem_27_cog,ing_stem_27,go,1,ə t ə - -
-ing_stem_3_cog,ing_stem_3,come,1,j e p ə
-ing_stem_4_cog,ing_stem_4,come,1,j ə - -
-kap_stem_177_cog_1,kap_stem_177,DETRZ1,1,e - -
-kap_stem_177_cog_2,kap_stem_177,bathe_2,2,k u ʔ p i
-kap_stem_178_cog,kap_stem_178,bathe_2,1,k u ʔ p i
-kap_stem_68_cog,kap_stem_68,say,1,k a - - -
-kap_stem_82_cog,kap_stem_82,go_down,1,- - u ʔ - t ə
-kar_form_17_infl,kar_form_17,1w,1,w ɨ
-kar_form_17_stem,kar_form_17,go,2,- ʔ - - -
-kar_form_18_infl,kar_form_18,1w,1,
-kar_form_18_stem,kar_form_18,say,2,k a - - -
-kar_form_19_infl,kar_form_19,1w,1,w -
-kar_form_19_stem_pfx,kar_form_19,DETRZ,2,o -
-kar_form_19_stem_root,kar_form_19,come,3,- - p ɨ
-kar_stem_173_cog_1,kar_stem_173,DETRZ1,1,e - -
-kar_stem_173_cog_2,kar_stem_173,bathe_2,2,k u - p i
-kar_stem_174_cog,kar_stem_174,bathe_2,1,k u - p i
-kar_stem_24_cog_1,kar_stem_24,DETRZ,1,oo -
-kar_stem_24_cog_2,kar_stem_24,come,2,- - p ɨ
-kar_stem_40_cog,kar_stem_40,go,1,- t o - -
-kar_stem_41_cog,kar_stem_41,go,1,ɨ ʔ - - -
-kar_stem_67_cog,kar_stem_67,say,1,k a - - -
-kar_stem_80_cog_1,kar_stem_80,DETRZ,1,o -
-kar_stem_80_cog_2,kar_stem_80,CAUS,2,n
-kar_stem_80_cog_3,kar_stem_80,go_down,3,- - ɨ ʔ - t o
-kar_stem_94_cog,kar_stem_94,defecate,1,u w e - k a
-kax_form_124_infl,kax_form_124,1w,1,w -
-kax_form_124_stem_pfx,kax_form_124,DETRZ,2,oo -
-kax_form_124_stem_root,kax_form_124,come,3,- - h ɨ
-kax_stem_12_cog,kax_stem_12,come,1,- e h ɨ
-kax_stem_153_cog_1,kax_stem_153,DETRZ1,1,ee - -
-kax_stem_153_cog_2,kax_stem_153,bathe_1,2,- h ɨ
-kax_stem_154_cog,kax_stem_154,bathe_1,1,ɨ h ɨ
-kax_stem_26_cog_1,kax_stem_26,DETRZ,1,oo -
-kax_stem_26_cog_2,kax_stem_26,come,2,- - h ɨ
-kax_stem_48_cog,kax_stem_48,go,1,- t o m o
-kax_stem_5_cog,kax_stem_5,come,1,j o h ɨ
-kax_stem_61_cog,kax_stem_61,say,1,k a s - -
-kax_stem_70_cog,kax_stem_70,go_down,1,- - ɨ h ɨ t o
-kax_stem_96_cog,kax_stem_96,defecate,1,- w e - k a
-mac_stem_0_cog,mac_stem_0,come,1,- i p ɨ
-mac_stem_46_cog,mac_stem_46,go,1,a t ɨ - -
-mac_stem_65_cog,mac_stem_65,say,1,k a - - -
-mac_stem_84_cog,mac_stem_84,go_down,1,- - a - u t ɨ
-mak_form_118_infl,mak_form_118,1w,1,w -
-mak_form_118_stem,mak_form_118,go,2,ɨ t ə - -
-mak_form_119_infl,mak_form_119,1w,1,
-mak_form_120_infl,mak_form_120,1w,1,
-mak_form_121_infl,mak_form_121,1w,1,w -
-mak_form_121_stem,mak_form_121,be_2,2,e - i
-mak_form_27_infl,mak_form_27,1w,1,w -
-mak_form_27_stem,mak_form_27,come,2,- e h ə
-mak_stem_131_cog,mak_stem_131,be_2,1,e - i
-mak_stem_175_cog_1,mak_stem_175,DETRZ1,1,e - -
-mak_stem_175_cog_2,mak_stem_175,bathe_2,2,ʔ - - h i
-mak_stem_176_cog,mak_stem_176,bathe_1,1,ɨ h ɨ
-mak_stem_38_cog,mak_stem_38,go,1,ɨ t ə m ə
-mak_stem_8_cog,mak_stem_8,come,1,- e h ə
-mak_stem_81_cog,mak_stem_81,go_down,1,- - ə ʔ - t ə
-mak_stem_95_cog,mak_stem_95,defecate,1,- w e - k a
-map_stem_11_cog,map_stem_11,come,1,- e p ɨ
-map_stem_44_cog,map_stem_44,go,1,- t ə - -
-pan_stem_103_cog,pan_stem_103,defecate,1,- - i ʔ k a
-pan_stem_104_cog_1,pan_stem_104,DETRZ,1,a -
-pan_stem_104_cog_2,pan_stem_104,defecate,2,- - i ʔ k a
-pan_stem_181_cog_1,pan_stem_181,DETRZ,1,a -
-pan_stem_181_cog_2,pan_stem_181,bathe_2,2,k u - p ɨ
-pan_stem_182_cog,pan_stem_182,bathe_2,1,k u - p ɨ
-pan_stem_183_cog,pan_stem_183,bathe_1,1,ɨ p ɨ
-pan_stem_21_cog_1,pan_stem_21,DETRZ,1,əə -
-pan_stem_21_cog_2,pan_stem_21,come,2,- - p ɨ
-pan_stem_45_cog,pan_stem_45,go,1,- t ə n -
-pan_stem_69_cog,pan_stem_69,say,1,k a - - h
-pan_stem_85_cog,pan_stem_85,go_down,1,- - ə h - t ə
-pat_stem_6_cog,pat_stem_6,come,1,j ə p ɨ
-pat_stem_7_cog,pat_stem_7,come,1,j e p ɨ
-pem_stem_1_cog,pem_stem_1,come,1,j e p ɨ
-pem_stem_179_cog_1,pem_stem_179,DETRZ1,1,e - -
-pem_stem_179_cog_2,pem_stem_179,bathe_2,2,k u - p ɨ
-pem_stem_180_cog,pem_stem_180,bathe_1,1,- p ɨ
-pem_stem_47_cog,pem_stem_47,go,1,e t ə - -
-pem_stem_66_cog,pem_stem_66,say,1,k a - - -
-pem_stem_83_cog,pem_stem_83,go_down,1,- - u ʔ - t ə
-tri_form_115_infl,tri_form_115,1t,1,
-tri_form_116_infl,tri_form_116,1t,1,
-tri_form_122_infl,tri_form_122,1t,1,
-tri_form_34_infl,tri_form_34,1w,1,w -
-tri_form_34_stem,tri_form_34,be_1,2,a - -
-tri_form_35_infl,tri_form_35,tri1p,1,p
-tri_form_35_stem,tri_form_35,go_down,2,- - ɨ h - t ə
-tri_form_45_infl,tri_form_45,1w,1,w ɨ
-tri_form_45_stem,tri_form_45,go,2,- t ə n -
-tri_form_46_infl,tri_form_46,1w,1,w -
-tri_form_46_stem_pfx,tri_form_46,DETRZ,2,ə -
-tri_form_46_stem_root,tri_form_46,come,3,- e p ɨ
-tri_form_47_infl,tri_form_47,1w,1,w ɨ
-tri_form_47_stem,tri_form_47,say,2,k a - - -
-tri_form_48_infl,tri_form_48,1w,1,w -
-tri_form_48_stem,tri_form_48,be_2,2,e - i
-tri_form_49_infl,tri_form_49,1t,1,s
-tri_form_49_stem_pfx,tri_form_49,DETRZ1,2,e - -
-tri_form_49_stem_root,tri_form_49,bathe_1,3,- p ɨ
-tri_form_93_infl,tri_form_93,1t,1,t
-tri_form_93_stem_pfx,tri_form_93,DETRZ,2,əə -
-tri_form_93_stem_root,tri_form_93,sleep,3,n ɨ - k ɨ
-tri_stem_100_cog,tri_stem_100,defecate,1,- w e - k a
-tri_stem_115_cog,tri_stem_115,be_1,1,a - -
-tri_stem_120_cog,tri_stem_120,be_2,1,e - i
-tri_stem_13_cog,tri_stem_13,come,1,- e p ɨ
-tri_stem_148_cog_1,tri_stem_148,DETRZ,1,əə -
-tri_stem_148_cog_2,tri_stem_148,sleep,2,n ɨ - k ɨ
-tri_stem_16_cog_1,tri_stem_16,DETRZ,1,ə -
-tri_stem_16_cog_2,tri_stem_16,come,2,- e p ɨ
-tri_stem_165_cog_1,tri_stem_165,DETRZ1,1,e - -
-tri_stem_165_cog_2,tri_stem_165,bathe_1,2,- p ɨ
-tri_stem_166_cog,tri_stem_166,bathe_1,1,- p ɨ
-tri_stem_28_cog,tri_stem_28,go,1,- t ə n -
-tri_stem_62_cog,tri_stem_62,say,1,k a - - -
-tri_stem_92_cog,tri_stem_92,go_down,1,- - ɨ h - t ə
-uxc_stem_151_cog,uxc_stem_151,come,1,- i - -
-uxc_stem_25_cog,uxc_stem_25,DETRZ,1,ee -
-uxc_stem_49_cog,uxc_stem_49,go,1,e t e - -
-uxc_stem_52_cog,uxc_stem_52,say,1,k i - - -
-wai_form_43_infl,wai_form_43,1w,1,w -
-wai_form_43_stem,wai_form_43,be_1,2,a - -
-wai_form_44_infl,wai_form_44,1w,1,w -
-wai_form_44_stem,wai_form_44,be_2,2,ee ʃ i
-wai_form_56_infl,wai_form_56,k,1,k -
-wai_form_56_stem_pfx,wai_form_56,DETRZ1,2,e j e
-wai_form_56_stem_root,wai_form_56,bathe_1,3,- ɸ u
-wai_form_57_infl,wai_form_57,1w,1,w ɨ
-wai_form_57_stem,wai_form_57,say,2,k a - - -
-wai_form_58_infl_pfx1,wai_form_58,k,1,k ɨ
-wai_form_58_infl_pfx2,wai_form_58,1w,2,w -
-wai_form_58_stem,wai_form_58,go,3,- t o m -
-wai_form_96_infl,wai_form_96,k,1,
-wai_form_99_infl,wai_form_99,k,1,
-wai_stem_118_cog,wai_stem_118,be_1,1,a - -
-wai_stem_119_cog,wai_stem_119,be_2,1,ee ʃ i
-wai_stem_157_cog_1,wai_stem_157,DETRZ1,1,e j e
-wai_stem_157_cog_2,wai_stem_157,bathe_1,2,- ɸ u
-wai_stem_158_cog,wai_stem_158,bathe_1,1,- p ɨ
-wai_stem_34_cog,wai_stem_34,go,1,e t o m -
-wai_stem_60_cog,wai_stem_60,say,1,k a s - -
-wai_stem_74_cog,wai_stem_74,go_down,1,- - - h - t o
-way_form_117_infl,way_form_117,1w,1,
-way_form_59_infl,way_form_59,1w,1,w ɨ
-way_form_59_stem,way_form_59,go,2,- t ə m -
-way_form_60_infl,way_form_60,1w,1,w ɨ
-way_form_60_stem,way_form_60,say,2,k a - - -
-way_stem_169_cog_1,way_stem_169,DETRZ1,1,e - -
-way_stem_169_cog_2,way_stem_169,bathe_1,2,- p ɨ
-way_stem_170_cog,way_stem_170,bathe_1,1,u p ɨ
-way_stem_29_cog,way_stem_29,go,1,ɨ t ə m -
-way_stem_63_cog,way_stem_63,say,1,k a - i -
-way_stem_78_cog,way_stem_78,go_down,1,- - ɨ p - t ə
-way_stem_99_cog,way_stem_99,defecate,1,u - i - k a
-wmr_stem_152_cog,wmr_stem_152,go,1,ɨ ʔ - - -
-wmr_stem_87_cog,wmr_stem_87,go_down,1,- - ɨ - - t ɨ
-yab_stem_22_cog_1,yab_stem_22,DETRZ,1,əə -
-yab_stem_22_cog_2,yab_stem_22,come,2,- - p ɨ
-yab_stem_23_cog,yab_stem_23,come,1,- e p ɨ
-yab_stem_43_cog,yab_stem_43,go,1,- t ə - -
-yab_stem_86_cog,yab_stem_86,go_down,1,- - ə h - t ə
-yuk_form_107_infl,yuk_form_107,1p,1,
-yuk_form_108_infl,yuk_form_108,1p,1,
-yuk_form_109_infl,yuk_form_109,1p,1,
-yuk_form_37_infl,yuk_form_37,1p,1,j
-yuk_form_37_stem,yuk_form_37,go_down,2,- - e w - t u
-yuk_form_38_infl,yuk_form_38,1w,1,
-yuk_form_38_stem,yuk_form_38,go,2,- t o - -
-yuk_form_39_infl,yuk_form_39,1p,1,j
-yuk_form_39_stem,yuk_form_39,be_1,2,a - -
-yuk_form_40_infl,yuk_form_40,1p,1,j
-yuk_form_40_stem,yuk_form_40,be_2,2,e - -
-yuk_stem_106_cog,yuk_stem_106,say,1,k a - - -
-yuk_stem_116_cog,yuk_stem_116,be_1,1,a - -
-yuk_stem_117_cog,yuk_stem_117,be_2,1,e - -
-yuk_stem_42_cog,yuk_stem_42,go,1,- t o - -
-yuk_stem_71_cog,yuk_stem_71,go_down,1,e w u h - t u
+aku_form_0_1,aku_form_0,1t,1,t͡ʃ
+aku_form_0_2,aku_form_0,DETRZ1,2,e - -
+aku_form_0_3,aku_form_0,bathe_1,3,- p ɨ
+aku_form_1_1,aku_form_1,1t,1,t͡ʃ
+aku_form_2_1,aku_form_2,1w,1,
+aku_form_2_2,aku_form_2,be_1,2,a - -
+aku_form_3_1,aku_form_3,1w,1,
+aku_form_3_2,aku_form_3,be_2,2,e ʔ i
+aku_form_4_1,aku_form_4,1w,1,
+aku_form_4_2,aku_form_4,DETRZ,2,ee -
+aku_form_4_3,aku_form_4,come,3,- - - p ɨ
+aku_form_5_1,aku_form_5,k,1,k -
+aku_form_6_1,aku_form_6,k,1,k -
+aku_form_7_1,aku_form_7,1w,1,- ə
+aku_form_7_2,aku_form_7,go,2,- t ə m ɨ
+aku_form_8_1,aku_form_8,tri1p,1,p
+aku_form_8_2,aku_form_8,go_down,2,- - ɨ - - t ə
+aku_form_9_1,aku_form_9,k,1,k -
+aku_form_10_1,aku_form_10,1t,1,t͡ʃ
+aku_form_11_1,aku_form_11,k,1,k -
+aku_form_12_1,aku_form_12,1w,1,w ɨ
+aku_form_12_2,aku_form_12,say,2,k a - - -
+aku_form_13_1,aku_form_13,1t,1,t͡ʃ
+aku_form_14_1,aku_form_14,k,1,k -
+aku_form_14_2,aku_form_14,DETRZ,2,əə -
+aku_form_14_3,aku_form_14,sleep,3,n ɨ - k ɨ
+aku_form_15_1,aku_form_15,1t,1,t͡ʃ
+aku_form_16_1,aku_form_16,k,1,k -
+aku_form_17_1,aku_form_17,k,1,k -
+aku_form_18_1,aku_form_18,1t,1,t͡ʃ
+ara_form_19_1,ara_form_19,1w,1,w -
+ara_form_19_2,ara_form_19,DETRZ1,2,i - -
+ara_form_19_3,ara_form_19,bathe_1,3,- b ɨ
+ara_form_20_1,ara_form_20,1w,1,w -
+ara_form_20_2,ara_form_20,be_2,2,i t͡ʃ i
+ara_form_21_1,ara_form_21,1w,1,w -
+ara_form_21_2,ara_form_21,be_1,2,a p -
+ara_form_22_1,ara_form_22,1w,1,w -
+ara_form_22_2,ara_form_22,come,2,- - e b ɨ
+ara_form_23_1,ara_form_23,k,1,k -
+ara_form_24_1,ara_form_24,1w,1,w -
+ara_form_24_2,ara_form_24,go,2,ɨ d o - -
+ara_form_25_1,ara_form_25,1w,1,w -
+ara_form_25_2,ara_form_25,go_down,2,- - i p - t o
+ara_form_26_1,ara_form_26,1w,1,w ɨ
+ara_form_26_2,ara_form_26,say,2,g e - - -
+ebak_form_27_1,ebak_form_27,1w,1,w -
+ebak_form_27_2,ebak_form_27,DETRZ1,2,i - -
+pbak_form_28_1,pbak_form_28,1w,1,w -
+pbak_form_28_2,pbak_form_28,be_1,2,a - -
+pbak_form_29_1,pbak_form_29,1w,1,w -
+pbak_form_29_2,pbak_form_29,be_2,2,i - -
+pbak_form_30_1,pbak_form_30,k,1,k -
+pbak_form_30_2,pbak_form_30,DETRZ,2,ə -
+pbak_form_30_3,pbak_form_30,come,3,- - e w ɨ
+pbak_form_31_1,pbak_form_31,1w,1,- u
+pbak_form_31_2,pbak_form_31,go,2,- t ə - -
+pbak_form_32_1,pbak_form_32,k,1,k -
+pbak_form_32_2,pbak_form_32,go_down,2,- - ɨ - - t ə
+ebak_form_33_1,ebak_form_33,k,1,k -
+pbak_form_34_1,pbak_form_34,1w,1,- u
+pbak_form_34_2,pbak_form_34,say,2,g e - - -
+car_form_35_1,car_form_35,1p,1,j i
+car_form_36_1,car_form_36,1w,1,
+car_form_36_2,car_form_36,DETRZ1,2,e - -
+car_form_36_3,car_form_36,bathe_1,3,- h ɨ
+car_form_37_1,car_form_37,1p,1,j -
+car_form_37_2,car_form_37,be_2,2,e t͡ʃ i
+car_form_38_1,car_form_38,1w,1,w -
+car_form_38_2,car_form_38,be_1,2,a - -
+car_form_39_1,car_form_39,1p,1,j -
+car_form_39_2,car_form_39,come,2,- - e h -
+car_form_40_1,car_form_40,1p,1,j -
+car_form_41_1,car_form_41,1w,1,w ɨ
+car_form_41_2,car_form_41,go,2,- t ə m ə
+car_form_42_1,car_form_42,1p,1,j -
+car_form_42_2,car_form_42,go_down,2,- - e h ɨ t ə
+car_form_43_1,car_form_43,1w,1,
+car_form_43_2,car_form_43,say,2,k a - - -
+hix_form_44_1,hix_form_44,k,1,k -
+hix_form_44_2,hix_form_44,DETRZ1,2,e w e
+hix_form_44_3,hix_form_44,bathe_1,3,- h ɨ
+hix_form_45_1,hix_form_45,1w,1,w -
+hix_form_45_2,hix_form_45,be_1,2,a h -
+hix_form_46_1,hix_form_46,1w,1,w -
+hix_form_46_2,hix_form_46,be_2,2,e ʃ e
+hix_form_47_1,hix_form_47,k,1,k -
+hix_form_48_1,hix_form_48,k,1,k -
+hix_form_49_1,hix_form_49,k,1,k -
+hix_form_50_1,hix_form_50,1w,1,- ɨ
+hix_form_50_2,hix_form_50,go,2,- t o - -
+hix_form_52_1,hix_form_52,1w,1,- ɨ
+hix_form_52_2,hix_form_52,say,2,k a - - -
+hix_form_53_1,hix_form_53,k,1,k ɨ
+hix_form_54_1,hix_form_54,k,1,k -
+ikp_form_55_1,ikp_form_55,1w,1,
+ikp_form_55_2,ikp_form_55,DETRZ1,2,i - -
+ikp_form_55_3,ikp_form_55,bathe_1,3,- p -
+ikp_form_56_1,ikp_form_56,1w,1,
+ikp_form_56_2,ikp_form_56,be_2,2,e t͡ʃ i
+ikp_form_58_1,ikp_form_58,k,1,k -
+ikp_form_58_2,ikp_form_58,DETRZ,2,a r
+ikp_form_58_3,ikp_form_58,come,3,- - e p -
+ikp_form_59_1,ikp_form_59,k,1,k -
+ikp_form_59_2,ikp_form_59,go,2,a r a n -
+ikp_form_60_1,ikp_form_60,k,1,k -
+ikp_form_61_1,ikp_form_61,1w,1,- ɨ
+ikp_form_61_2,ikp_form_61,say,2,g e - - -
+kar_form_62_1,kar_form_62,1w,1,w -
+kar_form_62_2,kar_form_62,DETRZ,2,o -
+kar_form_62_3,kar_form_62,come,3,- - - p ɨ
+kar_form_63_1,kar_form_63,1w,1,w ɨ
+kar_form_63_2,kar_form_63,go,2,- - - ʔ -
+kar_form_64_1,kar_form_64,1w,1,
+kar_form_64_2,kar_form_64,say,2,k a - - -
+kax_form_65_1,kax_form_65,1w,1,w -
+kax_form_65_2,kax_form_65,DETRZ,2,oo -
+kax_form_65_3,kax_form_65,come,3,- - - h ɨ
+mak_form_66_1,mak_form_66,1w,1,w -
+mak_form_67_1,mak_form_67,1w,1,w -
+mak_form_67_2,mak_form_67,be_2,2,e - i
+mak_form_68_1,mak_form_68,1w,1,w -
+mak_form_68_2,mak_form_68,come,2,- - e h ə
+mak_form_69_1,mak_form_69,1w,1,w -
+mak_form_70_1,mak_form_70,1w,1,w -
+mak_form_70_2,mak_form_70,go,2,ɨ t ə - -
+PPek_form_71_1,PPek_form_71,1w,1,w -
+PPek_form_71_2,PPek_form_71,DETRZ1,2,i - -
+PPek_form_71_3,PPek_form_71,bathe_1,3,- p ɨ
+PPek_form_72_1,PPek_form_72,1w,1,w -
+PPek_form_72_2,PPek_form_72,be_1,2,a p -
+PPek_form_73_1,PPek_form_73,1w,1,w -
+PPek_form_73_2,PPek_form_73,be_2,2,e t͡ʃ i
+PPek_form_74_1,PPek_form_74,1w,1,w -
+PPek_form_74_2,PPek_form_74,come,2,- - e p ɨ
+PPek_form_75_1,PPek_form_75,1w,1,w -
+PPek_form_75_2,PPek_form_75,go,2,ɨ t ə n -
+PPek_form_76_1,PPek_form_76,1w,1,w -
+PPek_form_76_2,PPek_form_76,go_down,2,- - ɨ p - t ə
+PPek_form_77_1,PPek_form_77,1w,1,w ɨ
+PPek_form_77_2,PPek_form_77,say,2,g e - - -
+PTir_form_78_1,PTir_form_78,1t,1,t͡ʃ
+PTir_form_78_2,PTir_form_78,DETRZ1,2,e - -
+PTir_form_78_3,PTir_form_78,bathe_1,3,- p ɨ
+PTir_form_79_1,PTir_form_79,1w,1,w -
+PTir_form_79_2,PTir_form_79,be_1,2,a - -
+PTir_form_80_1,PTir_form_80,1w,1,w -
+PTir_form_80_2,PTir_form_80,be_2,2,e ʔ i
+PTir_form_81_1,PTir_form_81,1w,1,w -
+PTir_form_81_2,PTir_form_81,DETRZ,2,ə ʔ
+PTir_form_81_3,PTir_form_81,come,3,- - e p ɨ
+PTir_form_82_1,PTir_form_82,1w,1,w -
+PTir_form_82_2,PTir_form_82,go,2,ɨ t ə m ɨ
+PTir_form_83_1,PTir_form_83,tri1p,1,p
+PTir_form_83_2,PTir_form_83,go_down,2,- - ɨ h - t ə
+PTir_form_84_1,PTir_form_84,1w,1,w ɨ
+PTir_form_84_2,PTir_form_84,say,2,k a - - -
+PTir_form_85_1,PTir_form_85,1t,1,t
+PTir_form_85_2,PTir_form_85,DETRZ,2,əə -
+PTir_form_85_3,PTir_form_85,sleep,3,n ɨ - k ɨ
+PWai_form_86_1,PWai_form_86,k,1,k -
+PWai_form_86_2,PWai_form_86,DETRZ1,2,ee - -
+PWai_form_86_3,PWai_form_86,bathe_1,3,- ɸ ɨ
+PWai_form_87_1,PWai_form_87,1w,1,w -
+PWai_form_87_2,PWai_form_87,be_2,2,e ʃ i
+PWai_form_88_1,PWai_form_88,1w,1,w -
+PWai_form_88_2,PWai_form_88,be_1,2,a h -
+PWai_form_89_1,PWai_form_89,k,1,k -
+PWai_form_90_1,PWai_form_90,1w,1,w ɨ
+PWai_form_90_2,PWai_form_90,go,2,- t o m -
+PWai_form_92_1,PWai_form_92,1w,1,w ɨ
+PWai_form_92_2,PWai_form_92,say,2,k a - - -
+PWai_form_93_1,PWai_form_93,k,1,k ɨ
+tri_form_94_1,tri_form_94,1t,1,s
+tri_form_94_2,tri_form_94,DETRZ1,2,e - -
+tri_form_94_3,tri_form_94,bathe_1,3,- p ɨ
+tri_form_95_1,tri_form_95,1w,1,w -
+tri_form_95_2,tri_form_95,be_1,2,a - -
+tri_form_96_1,tri_form_96,1w,1,w -
+tri_form_96_2,tri_form_96,be_2,2,e - i
+tri_form_97_1,tri_form_97,1w,1,w -
+tri_form_97_2,tri_form_97,DETRZ,2,ə -
+tri_form_97_3,tri_form_97,come,3,- - e p ɨ
+tri_form_98_1,tri_form_98,1w,1,w ɨ
+tri_form_98_2,tri_form_98,go,2,- t ə n -
+tri_form_99_1,tri_form_99,tri1p,1,p
+tri_form_99_2,tri_form_99,go_down,2,- - ɨ h - t ə
+tri_form_100_1,tri_form_100,1w,1,w ɨ
+tri_form_100_2,tri_form_100,say,2,k a - - -
+tri_form_101_1,tri_form_101,1t,1,t
+tri_form_102_1,tri_form_102,1t,1,t
+tri_form_102_2,tri_form_102,DETRZ,2,əə -
+tri_form_102_3,tri_form_102,sleep,3,n ɨ - k ɨ
+tri_form_103_1,tri_form_103,1t,1,t
+tri_form_104_1,tri_form_104,1t,1,s
+wai_form_105_1,wai_form_105,k,1,k -
+wai_form_105_2,wai_form_105,DETRZ1,2,e j e
+wai_form_105_3,wai_form_105,bathe_1,3,- ɸ u
+wai_form_106_1,wai_form_106,1w,1,w -
+wai_form_106_2,wai_form_106,be_1,2,a - -
+wai_form_107_1,wai_form_107,1w,1,w -
+wai_form_107_2,wai_form_107,be_2,2,ee ʃ i
+wai_form_108_1,wai_form_108,k,1,k -
+wai_form_109_1,wai_form_109,k,1,k ɨ
+wai_form_109_2,wai_form_109,1w,2,w -
+wai_form_109_3,wai_form_109,go,3,- t o m -
+wai_form_111_1,wai_form_111,1w,1,w ɨ
+wai_form_111_2,wai_form_111,say,2,k a - - -
+wai_form_112_1,wai_form_112,k,1,k ɨ
+way_form_113_1,way_form_113,1w,1,w ɨ
+way_form_113_2,way_form_113,go,2,- t ə m -
+way_form_114_1,way_form_114,1w,1,w ɨ
+way_form_114_2,way_form_114,say,2,k a - - -
+way_form_115_1,way_form_115,1w,1,w -
+yuk_form_116_1,yuk_form_116,1p,1,j -
+yuk_form_116_2,yuk_form_116,be_1,2,a - -
+yuk_form_117_1,yuk_form_117,1p,1,j -
+yuk_form_117_2,yuk_form_117,be_2,2,e - -
+yuk_form_118_1,yuk_form_118,1p,1,j -
+yuk_form_119_1,yuk_form_119,1w,1,
+yuk_form_119_2,yuk_form_119,go,2,- t o - -
+yuk_form_120_1,yuk_form_120,1p,1,j -
+yuk_form_120_2,yuk_form_120,go_down,2,- - e w - t u
+yuk_form_122_1,yuk_form_122,1p,1,j ɨ
+yuk_form_123_1,yuk_form_123,1p,1,j -
+ebak_form_124_1,ebak_form_124,1w,1,- u
+ebak_form_124_2,ebak_form_124,go,2,- d ə - -
+wbak_form_125_1,wbak_form_125,1w,1,- u
+wbak_form_125_2,wbak_form_125,go,2,- d ə - -
+wbak_form_126_1,wbak_form_126,1w,1,- u
+wbak_form_126_2,wbak_form_126,go,2,- g u - e
+ebak_form_127_1,ebak_form_127,1w,1,- u
+ebak_form_127_2,ebak_form_127,go,2,- g u - e
+ebak_form_128_1,ebak_form_128,1w,1,- u
+ebak_form_128_2,ebak_form_128,go,2,- g e - -
+wbak_form_129_1,wbak_form_129,k,1,k -
+wbak_form_129_2,wbak_form_129,come,2,ə - e w ə
+ebak_form_130_1,ebak_form_130,k,1,k -
+ebak_form_130_2,ebak_form_130,come,2,ə - e w ɨ
+ikp_form_131_1,ikp_form_131,1w,1,
+ikp_form_131_2,ikp_form_131,go_down,2,- - i p - t o
+mac_stem_0_1,mac_stem_0,come,1,- - i p ɨ
+pem_stem_1_1,pem_stem_1,come,1,- j e p ɨ
+aka_stem_2_1,aka_stem_2,come,1,- j e p ɨ
+ing_stem_3_1,ing_stem_3,come,1,- j e p ə
+ing_stem_4_1,ing_stem_4,come,1,- j ə - -
+kax_stem_5_1,kax_stem_5,come,1,- j o h ɨ
+pat_stem_6_1,pat_stem_6,come,1,- j ə p ɨ
+pat_stem_7_1,pat_stem_7,come,1,- j e p ɨ
+mak_stem_8_1,mak_stem_8,come,1,- - e h ə
+car_stem_9_1,car_stem_9,come,1,- - e h ɨ
+aku_stem_10_1,aku_stem_10,DETRZ,1,ee -
+aku_stem_10_2,aku_stem_10,come,2,- - - p ɨ
+map_stem_11_1,map_stem_11,come,1,- - e p ɨ
+kax_stem_12_1,kax_stem_12,come,1,- - e h ɨ
+tri_stem_13_1,tri_stem_13,come,1,- - e p ɨ
+ara_stem_14_1,ara_stem_14,come,1,- - e b ɨ
+apa_stem_15_1,apa_stem_15,DETRZ,1,o -
+apa_stem_15_2,apa_stem_15,come,2,- - e p ɨ
+tri_stem_16_1,tri_stem_16,DETRZ,1,ə -
+tri_stem_16_2,tri_stem_16,come,2,- - e p ɨ
+ikp_stem_17_1,ikp_stem_17,DETRZ,1,a r
+ikp_stem_17_2,ikp_stem_17,come,2,- - e p -
+ara_stem_18_1,ara_stem_18,DETRZ,1,o d
+ara_stem_18_2,ara_stem_18,come,2,- - e b ɨ
+aka_stem_19_1,aka_stem_19,DETRZ,1,ə s
+aka_stem_19_2,aka_stem_19,come,2,- - i p ɨ
+ebak_stem_20_1,ebak_stem_20,DETRZ,1,ə -
+ebak_stem_20_2,ebak_stem_20,come,2,- - e w ɨ
+wbak_stem_21_1,wbak_stem_21,DETRZ,1,ə -
+wbak_stem_21_2,wbak_stem_21,come,2,- - e w ə
+pan_stem_22_1,pan_stem_22,DETRZ,1,əə -
+pan_stem_22_2,pan_stem_22,come,2,- - - p ɨ
+yab_stem_23_1,yab_stem_23,DETRZ,1,əə -
+yab_stem_23_2,yab_stem_23,come,2,- - - p ɨ
+yab_stem_24_1,yab_stem_24,come,1,- - e p ɨ
+kar_stem_25_1,kar_stem_25,DETRZ,1,oo -
+kar_stem_25_2,kar_stem_25,come,2,- - - p ɨ
+uxc_stem_26_1,uxc_stem_26,DETRZ,1,ee -
+kax_stem_27_1,kax_stem_27,DETRZ,1,oo -
+kax_stem_27_2,kax_stem_27,come,2,- - - h ɨ
+ing_stem_28_1,ing_stem_28,go,1,ə t ə - -
+tri_stem_29_1,tri_stem_29,go,1,- t ə n -
+way_stem_30_1,way_stem_30,go,1,ɨ t ə m -
+aku_stem_31_1,aku_stem_31,go,1,ə t ə m ɨ
+ara_stem_32_1,ara_stem_32,go,1,ɨ d o - -
+ara_stem_33_1,ara_stem_33,go,1,- t o - -
+hix_stem_34_1,hix_stem_34,go,1,ɨ t o - -
+wai_stem_35_1,wai_stem_35,go,1,e t o m -
+ikp_stem_36_1,ikp_stem_36,go,1,a r a n -
+ikp_stem_37_1,ikp_stem_37,go,1,e r o - -
+bak_stem_38_1,bak_stem_38,go,1,ɨ t ə - -
+mak_stem_39_1,mak_stem_39,go,1,ɨ t ə m ə
+car_stem_40_1,car_stem_40,go,1,- t ə m ə
+kar_stem_41_1,kar_stem_41,go,1,- t o - -
+kar_stem_42_1,kar_stem_42,go,1,- - ɨ ʔ -
+yuk_stem_43_1,yuk_stem_43,go,1,- t o - -
+yab_stem_44_1,yab_stem_44,go,1,- t ə - -
+map_stem_45_1,map_stem_45,go,1,- t ə - -
+pan_stem_46_1,pan_stem_46,go,1,- t ə n -
+mac_stem_47_1,mac_stem_47,go,1,a t ɨ - -
+pem_stem_48_1,pem_stem_48,go,1,e t ə - -
+kax_stem_49_1,kax_stem_49,go,1,- t o m o
+uxc_stem_50_1,uxc_stem_50,go,1,e t e - -
+bak_stem_51_1,bak_stem_51,say,1,k e - - -
+bak_stem_52_1,bak_stem_52,say,1,g e - - -
+uxc_stem_53_1,uxc_stem_53,say,1,k i - - -
+ikp_stem_54_1,ikp_stem_54,say,1,g e - - -
+ikp_stem_55_1,ikp_stem_55,say,1,k e - - -
+ara_stem_56_1,ara_stem_56,say,1,g e - - -
+ara_stem_57_1,ara_stem_57,say,1,k e - - -
+hix_stem_58_1,hix_stem_58,say,1,k a s - -
+car_stem_59_1,car_stem_59,say,1,k a - - -
+apa_stem_60_1,apa_stem_60,say,1,k a ʃ i -
+wai_stem_61_1,wai_stem_61,say,1,k a s - -
+kax_stem_62_1,kax_stem_62,say,1,k a s - -
+tri_stem_63_1,tri_stem_63,say,1,k a - - -
+way_stem_64_1,way_stem_64,say,1,k a - i -
+aku_stem_65_1,aku_stem_65,say,1,k a - - -
+mac_stem_66_1,mac_stem_66,say,1,k a - - -
+pem_stem_67_1,pem_stem_67,say,1,k a - - -
+kar_stem_68_1,kar_stem_68,say,1,k a - - -
+kap_stem_69_1,kap_stem_69,say,1,k a - - -
+pan_stem_70_1,pan_stem_70,say,1,k a - - h
+kax_stem_71_1,kax_stem_71,go_down,1,- - ɨ h ɨ t o
+yuk_stem_72_1,yuk_stem_72,go_down,1,e w u h - t u
+hix_stem_73_1,hix_stem_73,go_down,1,- - - h - t o
+PWai_stem_74_1,PWai_stem_74,go_down,1,- - - h - t o
+wai_stem_75_1,wai_stem_75,go_down,1,- - - h - t o
+PPek_stem_76_1,PPek_stem_76,go_down,1,- - ɨ p - t ə
+PTar_stem_77_1,PTar_stem_77,go_down,1,- - ɨ p ɨ t ə
+car_stem_78_1,car_stem_78,go_down,1,- - e h ɨ t ə
+way_stem_79_1,way_stem_79,go_down,1,- - ɨ p - t ə
+apa_stem_80_1,apa_stem_80,go_down,1,- - ɨ h - t o
+kar_stem_81_1,kar_stem_81,DETRZ,1,o -
+kar_stem_81_2,kar_stem_81,CAUS,2,n
+kar_stem_81_3,kar_stem_81,go_down,3,- - ɨ ʔ - t o
+mak_stem_82_1,mak_stem_82,go_down,1,- - ə ʔ - t ə
+kap_stem_83_1,kap_stem_83,go_down,1,- - u ʔ - t ə
+pem_stem_84_1,pem_stem_84,go_down,1,- - u ʔ - t ə
+mac_stem_85_1,mac_stem_85,go_down,1,a - u - - t ɨ
+pan_stem_86_1,pan_stem_86,go_down,1,- - ə h - t ə
+yab_stem_87_1,yab_stem_87,go_down,1,- - ə h - t ə
+wmr_stem_88_1,wmr_stem_88,go_down,1,- - ɨ - - t ɨ
+aku_stem_89_1,aku_stem_89,go_down,1,- - ɨ h - t ə
+ara_stem_90_1,ara_stem_90,go_down,1,- - i p - t o
+bak_stem_91_1,bak_stem_91,go_down,1,- - ɨ - - t ə
+ikp_stem_92_1,ikp_stem_92,go_down,1,- - i p - t o
+tri_stem_93_1,tri_stem_93,go_down,1,- - ɨ h - t ə
+PPar_stem_94_1,PPar_stem_94,go_down,1,ɨ ɸ ɨ - - t o
+kar_stem_95_1,kar_stem_95,defecate,1,u w e - k a
+mak_stem_96_1,mak_stem_96,defecate,1,- w e - k a
+kax_stem_97_1,kax_stem_97,defecate,1,- w e - k a
+ara_stem_98_1,ara_stem_98,defecate,1,- w a t k e
+ikp_stem_99_1,ikp_stem_99,defecate,1,- - a t k e
+way_stem_100_1,way_stem_100,defecate,1,u - i - k a
+tri_stem_101_1,tri_stem_101,defecate,1,- w e - k a
+bak_stem_102_1,bak_stem_102,DETRZ,1,ə -
+bak_stem_102_2,bak_stem_102,defecate,2,- - e - k e
+apa_stem_103_1,apa_stem_103,defecate,1,- w e - k a
+pan_stem_104_1,pan_stem_104,defecate,1,- - i ʔ k a
+pan_stem_105_1,pan_stem_105,DETRZ,1,a -
+pan_stem_105_2,pan_stem_105,defecate,2,- - i ʔ k a
+apa_stem_106_1,apa_stem_106,go,1,ɨ t o - -
+yuk_stem_107_1,yuk_stem_107,say,1,k a - - -
+ara_stem_108_1,ara_stem_108,be_2,1,i t͡ʃ i
+ara_stem_109_1,ara_stem_109,be_1,1,a p -
+car_stem_110_1,car_stem_110,be_2,1,e t͡ʃ i
+hix_stem_111_1,hix_stem_111,be_1,1,a h -
+hix_stem_112_1,hix_stem_112,be_2,1,e ʃ e
+ikp_stem_113_1,ikp_stem_113,be_2,1,e t͡ʃ i
+aku_stem_114_1,aku_stem_114,be_1,1,a - -
+car_stem_115_1,car_stem_115,be_1,1,a - -
+tri_stem_116_1,tri_stem_116,be_1,1,a - -
+yuk_stem_117_1,yuk_stem_117,be_1,1,a - -
+yuk_stem_118_1,yuk_stem_118,be_2,1,e - -
+wai_stem_119_1,wai_stem_119,be_1,1,a - -
+wai_stem_120_1,wai_stem_120,be_2,1,ee ʃ i
+tri_stem_121_1,tri_stem_121,be_2,1,e - i
+bak_stem_122_1,bak_stem_122,be_1,1,a - -
+bak_stem_123_1,bak_stem_123,be_2,1,i - -
+ikp_stem_124_1,ikp_stem_124,be_1,1,e t͡ʃ i
+PPek_stem_125_1,PPek_stem_125,be_1,1,a p -
+PTir_stem_126_1,PTir_stem_126,be_1,1,a - -
+aku_stem_127_1,aku_stem_127,be_2,1,e ʔ i
+PPek_stem_128_1,PPek_stem_128,be_2,1,e t͡ʃ i
+PTir_stem_129_1,PTir_stem_129,be_2,1,e ʔ i
+PWai_stem_130_1,PWai_stem_130,be_2,1,e ʃ i
+PWai_stem_131_1,PWai_stem_131,be_1,1,a h -
+mak_stem_132_1,mak_stem_132,be_2,1,e - i
+PWai_stem_133_1,PWai_stem_133,say,1,k a s - -
+PWai_stem_134_1,PWai_stem_134,go,1,ɨ t o m -
+PWai_stem_135_1,PWai_stem_135,DETRZ1,1,ee - -
+PWai_stem_135_2,PWai_stem_135,bathe_1,2,- ɸ ɨ
+PPek_stem_136_1,PPek_stem_136,DETRZ,1,ə d
+PPek_stem_136_2,PPek_stem_136,come,2,- - e p ɨ
+PPek_stem_137_1,PPek_stem_137,come,1,- - e p ɨ
+PPek_stem_138_1,PPek_stem_138,go,1,ɨ t ə n -
+PPek_stem_139_1,PPek_stem_139,say,1,k e - - -
+PPek_stem_140_1,PPek_stem_140,DETRZ1,1,i - -
+PPek_stem_140_2,PPek_stem_140,bathe_1,2,- p ɨ
+PTir_stem_141_1,PTir_stem_141,DETRZ,1,ə ʔ
+PTir_stem_141_2,PTir_stem_141,come,2,- - e p ɨ
+PTir_stem_142_1,PTir_stem_142,go,1,ə t ə m ɨ
+PTir_stem_143_1,PTir_stem_143,say,1,k a - - -
+PTir_stem_144_1,PTir_stem_144,DETRZ1,1,e - -
+PTir_stem_144_2,PTir_stem_144,bathe_1,2,- p ɨ
+aku_stem_145_1,aku_stem_145,DETRZ1,1,e - -
+aku_stem_145_2,aku_stem_145,bathe_1,2,- p ɨ
+PTir_stem_146_1,PTir_stem_146,go_down,1,- - ɨ h - t ə
+PTir_stem_147_1,PTir_stem_147,DETRZ,1,əə -
+PTir_stem_147_2,PTir_stem_147,sleep,2,n ɨ - k ɨ
+aku_stem_148_1,aku_stem_148,DETRZ,1,əə -
+aku_stem_148_2,aku_stem_148,sleep,2,n ɨ - k ɨ
+tri_stem_149_1,tri_stem_149,DETRZ,1,əə -
+tri_stem_149_2,tri_stem_149,sleep,2,n ɨ - k ɨ
+PTir_stem_150_1,PTir_stem_150,come,1,- - e p ɨ
+PPek_stem_151_1,PPek_stem_151,say,1,g e - - -
+uxc_stem_152_1,uxc_stem_152,come,1,- - i - -
+wmr_stem_153_1,wmr_stem_153,go,1,- - ɨ ʔ -
+kax_stem_154_1,kax_stem_154,DETRZ1,1,ee - -
+kax_stem_154_2,kax_stem_154,bathe_1,2,- h ɨ
+kax_stem_155_1,kax_stem_155,bathe_1,1,ɨ h ɨ
+hix_stem_156_1,hix_stem_156,DETRZ1,1,e w e
+hix_stem_156_2,hix_stem_156,bathe_1,2,- h ɨ
+hix_stem_157_1,hix_stem_157,bathe_1,1,ɨ h ɨ
+wai_stem_158_1,wai_stem_158,DETRZ1,1,e j e
+wai_stem_158_2,wai_stem_158,bathe_1,2,- ɸ u
+wai_stem_159_1,wai_stem_159,bathe_1,1,- p ɨ
+ara_stem_160_1,ara_stem_160,DETRZ1,1,i - -
+ara_stem_160_2,ara_stem_160,bathe_1,2,- b ɨ
+ara_stem_161_1,ara_stem_161,bathe_1,1,ɨ b ɨ
+ikp_stem_162_1,ikp_stem_162,DETRZ1,1,i - -
+ikp_stem_162_2,ikp_stem_162,bathe_1,2,- p -
+ikp_stem_163_1,ikp_stem_163,bathe_1,1,ɨ p -
+bak_stem_164_1,bak_stem_164,DETRZ1,1,i - -
+bak_stem_165_1,bak_stem_165,bathe_1,1,- - ɨ
+tri_stem_166_1,tri_stem_166,DETRZ1,1,e - -
+tri_stem_166_2,tri_stem_166,bathe_1,2,- p ɨ
+tri_stem_167_1,tri_stem_167,bathe_1,1,- p ɨ
+aku_stem_168_1,aku_stem_168,DETRZ1,1,e - -
+aku_stem_168_2,aku_stem_168,bathe_1,2,- p ɨ
+aku_stem_169_1,aku_stem_169,bathe_1,1,- p ɨ
+way_stem_170_1,way_stem_170,DETRZ1,1,e - -
+way_stem_170_2,way_stem_170,bathe_1,2,- p ɨ
+way_stem_171_1,way_stem_171,bathe_1,1,u p ɨ
+apa_stem_172_1,apa_stem_172,DETRZ1,1,e - -
+apa_stem_172_2,apa_stem_172,bathe_1,2,- p ɨ
+apa_stem_173_1,apa_stem_173,bathe_1,1,- p ɨ
+kar_stem_174_1,kar_stem_174,DETRZ1,1,e - -
+kar_stem_174_2,kar_stem_174,bathe_2,2,k u - p i
+kar_stem_175_1,kar_stem_175,bathe_2,1,k u - p i
+mak_stem_176_1,mak_stem_176,DETRZ1,1,e - -
+mak_stem_176_2,mak_stem_176,bathe_2,2,ʔ - - h i
+mak_stem_177_1,mak_stem_177,bathe_1,1,ɨ h ɨ
+kap_stem_178_1,kap_stem_178,DETRZ1,1,e - -
+kap_stem_178_2,kap_stem_178,bathe_2,2,k u ʔ p i
+kap_stem_179_1,kap_stem_179,bathe_2,1,k u ʔ p i
+pem_stem_180_1,pem_stem_180,DETRZ1,1,e - -
+pem_stem_180_2,pem_stem_180,bathe_2,2,k u - p ɨ
+pem_stem_181_1,pem_stem_181,bathe_1,1,- p ɨ
+pan_stem_182_1,pan_stem_182,DETRZ,1,a -
+pan_stem_182_2,pan_stem_182,bathe_2,2,k u - p ɨ
+pan_stem_183_1,pan_stem_183,bathe_2,1,k u - p ɨ
+pan_stem_184_1,pan_stem_184,bathe_1,1,ɨ p ɨ
+ara_other_0_1,ara_other_0,dat_pek,1,w ɨ n a
+ikp_other_1_1,ikp_other_1,dat_pek,1,- ɨ n a
+ara_other_2_1,ara_other_2,dog_1,1,w o k o r i
+ikp_other_3_1,ikp_other_3,dog_1,1,- a k a r i
+ara_other_4_1,ara_other_4,capuchin,1,t a w e
+ikp_other_5_1,ikp_other_5,capuchin,1,t a - e
+ara_other_6_1,ara_other_6,sleep,1,w ɨ n k ɨ
+ikp_other_7_1,ikp_other_7,sleep,1,- ɨ n k ɨ

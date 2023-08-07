@@ -9,10 +9,13 @@ from lingpy_alignments import calculate_alignment
 
 warnings.filterwarnings("ignore")
 
+
 def print_shorthand(abbrev):
     return "\\" + cah.get_shorthand(abbrev)
 
+
 shorthand_dic = {x: print_shorthand(x) for x in lg_list}
+
 
 def str2numcog(cogsets):
     return " ".join([cognum[x] for x in cogsets.split("+")])
@@ -30,14 +33,25 @@ def segmentify(form):
 
 
 # functions for creating latex tables
-def print_latex(df, ex=False, keep_index=False, formatters=None, multicolumn=False, float_format=None):
+def print_latex(
+    df,
+    ex=False,
+    keep_index=False,
+    formatters=None,
+    multicolumn=False,
+    float_format=None,
+):
     if keep_index:
         df.columns.name = df.index.name
         df.index.name = None
 
     with pd.option_context("max_colwidth", 1000):
         lines = df.to_latex(
-            escape=False, index=keep_index, formatters=formatters, multicolumn=multicolumn,float_format=float_format
+            escape=False,
+            index=keep_index,
+            formatters=formatters,
+            multicolumn=multicolumn,
+            float_format=float_format,
         ).split("\n")
     lines[0] = lines[0].replace("tabular}{l", "tabular}[t]{@{}l").replace("l}", "l@{}}")
     if ex:
@@ -46,7 +60,13 @@ def print_latex(df, ex=False, keep_index=False, formatters=None, multicolumn=Fal
         del lines[-2]
         return "\n".join(lines)
     else:
-        return "\n".join(lines).replace(r"\toprule", "\mytoprule").replace(r"\midrule", "\mymidrule").replace(r"\bottomrule", "\mybottomrule").replace("%", "\\%")
+        return (
+            "\n".join(lines)
+            .replace(r"\toprule", "\mytoprule")
+            .replace(r"\midrule", "\mymidrule")
+            .replace(r"\bottomrule", "\mybottomrule")
+            .replace("%", "\\%")
+        )
 
 
 def save_float(tabular, label, caption, filename=None, short=None):
@@ -123,14 +143,16 @@ def get_sources(df, parens=True, latexify=True):
 def upper_repl(match):
     return match.group(1).upper()
 
+
 web_checkmarks = {
     "y": "✓",
     "n": "×",
     True: "✓",
     False: "×",
     "\\checkmark": "✓",
-    "×": "×"
+    "×": "×",
 }
+
 
 def repl_latex(string):
     string = re.sub(r"\\rc\{(.*?)\}", r"\**\1*", string)
@@ -139,7 +161,8 @@ def repl_latex(string):
     string = re.sub(r"\\qu\{(.*?)\}", r"'\1'", string)
     string = re.sub(r"\\envr\{\}\{(.*?)\}", r"/ _\1", string)
     return string
-    
+
+
 def delatexify(string):
     string = re.sub(r"\\rc\{(.*?)\}", r"\1", string)
     string = re.sub(r"\\gl\{(.*?)\}", upper_repl, string)
@@ -198,13 +221,17 @@ def get_verb_citation(v_id, l_id, latex=True, as_tuple=False):
         res = res.iloc[0]
     form = res["Form"].replace("+", "")
     if latex:
-        obj, gloss = f"""\\{get_obj_str(l_id)}{{{form}}}""", f"""\\qu{{{cog_trans_dic[cog_meaning_dic[res["Cognateset_ID"]]].replace("to ", "")}}}"""
+        obj, gloss = (
+            f"""\\{get_obj_str(l_id)}{{{form}}}""",
+            f"""\\qu{{{cog_trans_dic[cog_meaning_dic[res["Cognateset_ID"]]].replace("to ", "")}}}""",
+        )
     else:
-        obj, gloss = f"""{form}""",  f"""'{mean_dic[res["Parameter_ID"]]}'"""
+        obj, gloss = f"""{form}""", f"""'{mean_dic[res["Parameter_ID"]]}'"""
     if as_tuple:
         return (obj, gloss)
     else:
         return obj + " " + gloss
+
 
 def extension_string(id, latex=True):
     form = objectify(ext_form_dic[id], obj_string=get_obj_str(ext_lg_dic[id]))
@@ -212,6 +239,7 @@ def extension_string(id, latex=True):
         return print_shorthand(ext_lg_dic[id]) + " " + form
     else:
         return name_dic[ext_lg_dic[id]] + " " + repl_latex(form)
+
 
 def reconstructed_form_table(lgs, proto, verbs, caption, name, sort):
     pyd.x = ["Language_ID"]
@@ -244,6 +272,7 @@ def reconstructed_form_table(lgs, proto, verbs, caption, name, sort):
         short=caption,
     )
     pyd.filters = {}
+
 
 def print_aligned_table(
     df, verb="new_verb", caption="", fuzzy=False, only_tab=False, do_sources=True
@@ -297,7 +326,9 @@ def print_aligned_table(
                 caption,
             )
 
+
 exported_tables = {}
+
 
 # determine whether verb was affected by extensions based on cognacy of prefixes
 def identify_affected(cogset, row):
@@ -340,6 +371,7 @@ def identify_affected(cogset, row):
         else:
             return "n"
 
+
 def modify_index(idx, latex=True):
     o = get_obj_str(idx[2][0])
     if idx[0] != idx[2]:
@@ -355,7 +387,6 @@ def modify_index(idx, latex=True):
     return idx
 
 
-
 def export_csv(
     tabular,
     label,
@@ -364,7 +395,7 @@ def export_csv(
     sources=None,
     print_i_name=False,
     print_c_name=False,
-    float_format=None
+    float_format=None,
 ):
     tabular = tabular.copy()
     # if caption:
@@ -379,7 +410,9 @@ def export_csv(
         #         c = (None for x in c)
 
     # print(tabular)
-    tabular.to_csv(f"data_output/{label}.csv", index=keep_index, float_format=float_format)
+    tabular.to_csv(
+        f"data_output/{label}.csv", index=keep_index, float_format=float_format
+    )
     exported_tables[label] = {"caption": caption}
     if sources:
         src = cldfh.combine_refs(sources)

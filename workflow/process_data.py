@@ -57,7 +57,9 @@ sources = cldfh.cite_a_bunch(sources_list, parens=True)
 label = "pekreg"
 tabular.index.names = [None]
 export_csv(
-    tabular.rename(columns=name_dic, level="Language_ID").rename(columns=plain_trans_dic, level="Meaning_ID"),
+    tabular.rename(columns=name_dic, level="Language_ID").rename(
+        columns=plain_trans_dic, level="Meaning_ID"
+    ),
     label,
     "Regular Pekodian Sa verbs",
     keep_index=True,
@@ -87,7 +89,7 @@ reconstructed_form_table(
     verbs,
     r"Verbs preserving \gl{1}\gl{s_a_} \rc{w-} in \PPek",
     "ppekverbs",
-    verb_list
+    verb_list,
 )
 
 
@@ -138,7 +140,7 @@ reconstructed_form_table(
     verbs,
     r"Verbs preserving \gl{1}\gl{s_a_} \rc{w-} in \PWai",
     "pwaiverbs",
-    verb_list
+    verb_list,
 )
 
 
@@ -159,7 +161,9 @@ tabular = pyd.compose_paradigm(tir_reg, multi_index=True)
 sources = get_sources(tir_reg)
 
 export_csv(
-    tabular.rename(columns=name_dic, level="Language_ID").rename(columns=plain_trans_dic, level="Language_ID"),
+    tabular.rename(columns=name_dic, level="Language_ID").rename(
+        columns=plain_trans_dic, level="Language_ID"
+    ),
     label,
     "Regular Proto-Tiriyoan Sa verbs",
     sources=get_sources(tir_reg, latexify=False),
@@ -187,7 +191,7 @@ reconstructed_form_table(
     ["go", "say", "come", "be_1", "be_2"],
     r"Verbs preserving \gl{1}\gl{s_a_} \rc{w-} in \PTir",
     "ptirverbs",
-    verb_list
+    verb_list,
 )
 
 # regular akuriyo Sa verbs
@@ -283,7 +287,7 @@ save_float(
     print_latex(table, keep_index=True),
     label="kaxprog",
     caption="\\kaxui \gl{s_a_} verbs in the Progressive (Spike Gildea, p.c.)",
-    short="\\kaxui \gl{s_a_} verbs in the Progressive"
+    short="\\kaxui \gl{s_a_} verbs in the Progressive",
 )
 
 
@@ -432,12 +436,16 @@ print_aligned_table(
     caption=r"Reflexes of \rc{ka[ti]} \qu{to say}",
 )
 
-#some paradigms for 'to come' 
+# some paradigms for 'to come'
 pyd.x = ["Language_ID"]
 pyd.y = ["Inflection"]
 pyd.y_sort = person
 pyd.x_sort = lg_list
-pyd.filters = {"Meaning_ID": ["come"], "Inflection": person, "Language_ID": ["ara", "tri", "kax"]}
+pyd.filters = {
+    "Meaning_ID": ["come"],
+    "Inflection": person,
+    "Language_ID": ["ara", "tri", "kax"],
+}
 table = pyd.compose_paradigm(i_df)
 sources = get_sources(i_df)
 
@@ -590,7 +598,7 @@ repl_dic = {
     "DETRZ": "come",
     "DETRZ1+bathe_1": "bathe_intr",
     "DETRZ1": "bathe_intr",
-    "go_down+?": "go_down"
+    "go_down+?": "go_down",
 }
 
 overview["Cognateset_ID"] = overview["Verb_Cognateset_ID"].replace(repl_dic)
@@ -627,7 +635,10 @@ result_exp.columns = [
 ]
 
 export_csv(
-    result_exp.replace(web_checkmarks), label, "Overview of extensions and (un-)affected verbs", keep_index=True
+    result_exp.replace(web_checkmarks),
+    label,
+    "Overview of extensions and (un-)affected verbs",
+    keep_index=True,
 )
 
 # add nice-looking checkmarks and stuff
@@ -681,12 +692,16 @@ def predict_phonology(form):
     if len(phon_preds[form["Language_ID"]]) > 4:
         detail = "\\envr{}{V}"
     else:
-        obj = objectify(" OR ".join(phon_preds[form["Language_ID"]]), get_obj_str(form['Language_ID']))
+        obj = objectify(
+            " OR ".join(phon_preds[form["Language_ID"]]),
+            get_obj_str(form["Language_ID"]),
+        )
         detail = f"""\\envr{{}}{{{obj}}}"""
-    return "phono", detail , prediction
-    
+    return "phono", detail, prediction
+
+
 def predict_inflection(form):
-    #akuriyo is the only case where the previous first person inflection was not *w-
+    # akuriyo is the only case where the previous first person inflection was not *w-
     if form["Language_ID"] == "aku":
         detail = "\\obj{k-}"
         # this assumes t-ə as distinct from t͡ʃ-e
@@ -698,6 +713,7 @@ def predict_inflection(form):
         detail = "\\rc{w-}"
         prediction = True
     return "infl", detail, prediction
+
 
 factors = [predict_detrz, predict_phonology, predict_inflection]
 
@@ -748,21 +764,17 @@ affectedness["Form"] = affectedness["Form"].apply(lambda x: x.split("-")[1])
 #         affectedness = affectedness.append({"Form": conds[0]+"turu", "Language_ID": lg, "Verb_Cognateset_ID": f"DETRZ+talk{i}", "Affected": "y", "Meaning_ID": "talk"}, ignore_index=True)
 
 bool_map = {
-    "latex": {
-        True: "\checkmark",
-        False: "×"
-    },
-    "csv": {
-        True: "correct",
-        False: "incorrect"
-    }
+    "latex": {True: "\checkmark", False: "×"},
+    "csv": {True: "correct", False: "incorrect"},
 }
+
 
 def predict_frequency(lexeme, frequencies):
     if lexeme in frequencies:
         return not frequencies[lexeme]
     else:
         return True
+
 
 def test_explanations(word_form):
     predictions = {}
@@ -771,16 +783,19 @@ def test_explanations(word_form):
         actual = word_form["Affected"]
         factor, detail, fact_pred = factor_function(word_form)
         combo = factor + "+freq"
-        freq_pred = predict_frequency(word_form["ID"].replace("DETRZ+come", "come"), frequencies)
+        freq_pred = predict_frequency(
+            word_form["ID"].replace("DETRZ+come", "come"), frequencies
+        )
         if detail:
             detail_string = f" ({detail})"
         else:
             detail_string = ""
-        predictions[factor+detail_string] = fact_pred
-        predictions[combo] = (freq_pred and fact_pred)
+        predictions[factor + detail_string] = fact_pred
+        predictions[combo] = freq_pred and fact_pred
         explanations[factor] = fact_pred == actual
         explanations[combo] = predictions[combo] == actual
     return predictions, explanations
+
 
 all_explanations = {}
 
@@ -793,21 +808,39 @@ for i, ext in e_df.iterrows():
     predictions = {}
     explanations = {}
     for i, row in df_temp.iterrows():
-        predictions[row["ID"]], explanations[row["ID"]] = test_explanations(row.to_dict())
+        predictions[row["ID"]], explanations[row["ID"]] = test_explanations(
+            row.to_dict()
+        )
     r_df = pd.DataFrame(explanations)
     p_df = pd.DataFrame(predictions)
-    r_df = r_df.reindex(sorted(r_df.columns, key=lambda x: {a: b for b, a in enumerate(verb_list)}[cog_meaning_dic[x]]), axis=1)
-    p_df = p_df.reindex(sorted(p_df.columns, key=lambda x: {a: b for b, a in enumerate(verb_list)}[cog_meaning_dic[x]]), axis=1)
+    r_df = r_df.reindex(
+        sorted(
+            r_df.columns,
+            key=lambda x: {a: b for b, a in enumerate(verb_list)}[cog_meaning_dic[x]],
+        ),
+        axis=1,
+    )
+    p_df = p_df.reindex(
+        sorted(
+            p_df.columns,
+            key=lambda x: {a: b for b, a in enumerate(verb_list)}[cog_meaning_dic[x]],
+        ),
+        axis=1,
+    )
     r_df["Score"] = r_df.apply(sum, axis=1) / len(r_df.columns)
     all_explanations[ext["ID"]] = dict(zip(r_df.index, r_df["Score"]))
-    
+
     r_df.sort_values(by=["Score"], inplace=True, ascending=False)
-    r_df = r_df.applymap(lambda x: bool_map["latex"][x] if type(x)==bool else x)
-    r_df.columns = r_df.columns.map(lambda x: get_verb_citation(x, lg, as_tuple=True) if x!="Score" else (x, ""))
-    p_df = p_df.applymap(lambda x: bool_map["latex"][x] if type(x)==bool else x)
+    r_df = r_df.applymap(lambda x: bool_map["latex"][x] if type(x) == bool else x)
+    r_df.columns = r_df.columns.map(
+        lambda x: get_verb_citation(x, lg, as_tuple=True) if x != "Score" else (x, "")
+    )
+    p_df = p_df.applymap(lambda x: bool_map["latex"][x] if type(x) == bool else x)
     # p_df.rename(columns=repl_dic, inplace=True)
-    p_df.columns = p_df.columns.map(lambda x: get_verb_citation(x, lg, as_tuple=True) if x!="Score" else (x, ""))
-    
+    p_df.columns = p_df.columns.map(
+        lambda x: get_verb_citation(x, lg, as_tuple=True) if x != "Score" else (x, "")
+    )
+
     label = f"{lg.lower()}-evaluations"
 
     csv_df = r_df.rename(index=repl_latex, columns=repl_latex)
@@ -819,7 +852,7 @@ for i, ext in e_df.iterrows():
         caption=f"Evaluating predictions for {name_dic[lg]}",
         keep_index=True,
     )
-    
+
     r_df["Score"] *= 100
     save_float(
         print_latex(r_df, keep_index=True, multicolumn=False, float_format="%.1f%%"),
@@ -837,7 +870,7 @@ for i, ext in e_df.iterrows():
         caption=f"Predictions for {name_dic[lg]}",
         keep_index=True,
         print_i_name=True,
-        float_format="%.1f%%"
+        float_format="%.1f%%",
     )
     save_float(
         print_latex(p_df, keep_index=True, multicolumn=False),
@@ -856,11 +889,16 @@ export_csv(
     label,
     caption=caption,
     keep_index=True,
-    float_format="%.1f%%"
+    float_format="%.1f%%",
 )
 
 save_float(
-    print_latex(res_df.rename(columns=extension_string).transpose(), keep_index=True, multicolumn=False, float_format="%.1f%%"),
+    print_latex(
+        res_df.rename(columns=extension_string).transpose(),
+        keep_index=True,
+        multicolumn=False,
+        float_format="%.1f%%",
+    ),
     label,
     caption,
 )

@@ -1,5 +1,6 @@
 import cariban_helpers as cah
 import pandas as pd
+
 pd.options.mode.chained_assignment = None
 import pynterlinear as pynt
 from segments import Tokenizer, Profile
@@ -30,7 +31,7 @@ concept_dic = {
     "DETRZ1+bathe_1": "bathe_intr",
     "DETRZ+come": "come",
     "DETRZ1": "bathe_intr",
-    "DETRZ": "come"
+    "DETRZ": "come",
 }
 
 i_df["Concept"] = i_df.apply(
