@@ -27,13 +27,13 @@ ara_form_24,ara,1_go,w-ɨdo-,w   +   ɨ   d   o, Form in source: w-ydoly.,alves2
 ara_form_25,ara,1_go_down,w-iptoŋ-,w   +   i   p   t   o   +   ŋ, Form in source: w-iptongry.,alves2017arara[153]
 ara_form_26,ara,1_say,wɨ-ge-,w   ɨ   +   g   e, Form in source: wy-geny.,alves2017arara[153]
 ebak_form_27,ebak,1_bathe_intr,w-i-,w   +   i, Form in source: w-i-də.,meira2003bakairi[4]
-pbak_form_28,pbak,1_be,w-a-,w   +   a, Form in source: töre-wakine.,von1892bakairi[130]
-pbak_form_29,pbak,1_be,w-i-,w   +   i, Form in source: wí-ta.,von1892bakairi[397]
-pbak_form_30,pbak,1_come,k-əewɨ-,k   +   ə   +   e   w   ɨ, Form in source: kχ-aewí-le.,von1892bakairi[76]
-pbak_form_31,pbak,1_go,u-tə-,u   +   t   ə, Form in source: ū́ta.,von1892bakairi[374]
-pbak_form_32,pbak,1_go_down,k-ɨtəgɨ-,k   +   ɨ   t   ə   +   g   ɨ, Form in source: kχ-itaké-he.,von1892bakairi[137]
+bak_form_28,bak,1_be,w-a-,w   +   a, Form in source: töre-wakine.,von1892bakairi[130]
+bak_form_29,bak,1_be,w-i-,w   +   i, Form in source: wí-ta.,von1892bakairi[397]
+bak_form_30,bak,1_come,k-əewɨ-,k   +   ə   +   e   w   ɨ, Form in source: kχ-aewí-le.,von1892bakairi[76]
+bak_form_31,bak,1_go,u-tə-,u   +   t   ə, Form in source: ū́ta.,von1892bakairi[374]
+bak_form_32,bak,1_go_down,k-ɨtəgɨ-,k   +   ɨ   t   ə   +   g   ɨ, Form in source: kχ-itaké-he.,von1892bakairi[137]
 ebak_form_33,ebak,1_go_up,k-əku-,k   +   ə   k   u, Form in source: k-əku.,meira2003bakairi[4]
-pbak_form_34,pbak,1_say,u-ge-,u   +   g   e, Form in source: u-ɣépa.,von1892bakairi[131]
+bak_form_34,bak,1_say,u-ge-,u   +   g   e, Form in source: u-ɣépa.,von1892bakairi[131]
 car_form_35,car,1_arrive,ji-tuda-,j   i   +   t   u   d   a, Form in source: ji-tuda.,meira1998proto[106]
 car_form_36,car,1_bathe_intr,∅-ehɨ-,∅   +   e   +   h   ɨ,Cited as “Robayo 1996: 534”. Other forms on page are likely supines; this one has *-ya*. Form in source: ehüyae.,meiraDBcarijo
 car_form_37,car,1_be,j-et͡ʃi-,j   +   e   t ͡ ʃ   i, Form in source: ʤeʧi.,guerrero2019carijo[92]
@@ -147,7 +147,7 @@ ikp_stem_17,ikp,come,arep,a   r   +   e   p,,ikpengpacheco2001[265]
 ara_stem_18,ara,come,odebɨ,o   d   +   e   b   ɨ,,alves2017arara[150]
 aka_stem_19,aka,come,əsipɨ,ə   s   +   i   p   ɨ,,stegeman2014akawaio[160]
 ebak_stem_20,ebak,come,əewɨ,ə   +   e   w   ɨ,,meira2003bakairi[4]
-wbak_stem_21,wbak,come,əewə,ə   +   e   w   ə,,meiraDBwbkairi
+wbak_stem_21,wbak,come,əewə,ə   +   e   w   ə,,meiraDBwbakairi
 pan_stem_22,pan,come,ə[ə]pɨ,ə ə   +   p   ɨ,,"panarepayne2013[65, 451]"
 yab_stem_23,yab,come,əəpɨ,ə ə   +   p   ɨ,,mendez1959yawarana[68]
 yab_stem_24,yab,come,epɨ,e   p   ɨ,,caceres2017yawarana
@@ -225,7 +225,7 @@ kar_stem_95,kar,defecate,uweka,u   w   e   k   a,,courtz2008carib[418]
 mak_stem_96,mak,defecate,weka,w   e   k   a,,maquiritaricaceres2011[455]
 kax_stem_97,kax,defecate,weka,w   e   k   a,,pc[Spike Gildea]
 ara_stem_98,ara,defecate,watke,w   a   t   k   e,,souza1993arara[44]
-ikp_stem_99,ikp,defecate,atke,a   t   k   e,,alves2013verbo[118]
+ikp_stem_99,ikp,defecate,atke,a   t   k   e,,chagas2013verbo[118]
 way_stem_100,way,defecate,uika,u   i   k   a,,"wayanatavares2005[86, 206]"
 tri_stem_101,tri,defecate,weka,w   e   k   a,,triomeira1999[294]
 bak_stem_102,bak,defecate,əeke,ə   +   e   k   e,,meira2005bakairi
