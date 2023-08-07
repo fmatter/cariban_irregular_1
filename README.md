@@ -2,6 +2,7 @@
 This repo contains data, code, and manuscript for a diachronic and functional study of verbs with conservative first person markers in 9 Cariban languages.
 
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
+[![CLDF](https://img.shields.io/github/actions/workflow/status/fmatter/cariban_irregular_1/validation.yml?label=cldf)](https://github.com/fmatter/cariban_irregular_1/validation.yml)
 
 Nine Cariban languages have a group of intransitive verbs irregularly inflected for first person.
 The irregular first person markers are conservative, contrasting with innovative regular markers.
