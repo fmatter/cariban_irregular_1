@@ -25,5 +25,5 @@ This repository is organized as follows:
 	* [data_output](workflow/data_output) contains tables with the qualitative and quantitative results
 * [documents](documents) contains the current version of the manuscript as well as materials used in presentations.
 
-[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
+[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgreen.svg
 [cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
