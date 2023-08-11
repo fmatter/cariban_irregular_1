@@ -1,130 +1,134 @@
 ID,Language_ID,Parameter_ID,Form,Segments,Comment,Source
-aku_form_0,aku,1_bathe_intr,t͡ʃ-epɨ-,t ͡ ʃ   +   e   +   p   ɨ, Form in source: šeépɨ̀.,gildea1994akuriyo[87]
-aku_form_1,aku,1_bathe_intr,t͡ʃ-ehpa-,t ͡ ʃ   +   e   h   p   a, Form in source: šéhpa.,gildea1994akuriyo[87]
-aku_form_2,aku,1_be,∅-a-,∅   +   a, Form in source: aʔe.,meira1998proto[115]
-aku_form_3,aku,1_be,∅-eʔi-,∅   +   e   ʔ   i, Form in source: e'ine.,meiraDBakuriyo
-aku_form_4,aku,1_come,∅-eepɨ-,∅   +   e e   +   p   ɨ, Form in source: ∅-e:pɨ.,meira1998proto[114]
-aku_form_5,aku,1_cry,k-əət͡ʃena-,k   +   ə ə   t ͡ ʃ   e   n   a, Form in source: kə́ə̀čena.,gildea1994akuriyo[86]
-aku_form_6,aku,1_enter,k-əməmɨ-,k   +   ə   m   ə   m   ɨ, Form in source: kəməəʔmɨ.,gildea1994akuriyo[87]
-aku_form_7,aku,1_go,ə-təmɨ-,ə   +   t   ə   m   ɨ, Form in source: ə-təmɨ.,meira1998proto[112]
-aku_form_8,aku,1_go_down,p-ɨtə-,p   +   ɨ   t   ə, Form in source: pɨ́ɨ̀ʔtəpa.,gildea1994akuriyo[84]
-aku_form_9,aku,1_learn,k-əempa-,k   +   ə   e   m   p   a, Form in source: kə̀ém̀pà.,gildea1994akuriyo[82]
-aku_form_10,aku,1_lie_down,t͡ʃ-etonema-,t ͡ ʃ   +   e   t   o   n   e   m   a, Form in source: šetóòʔnema.,gildea1994akuriyo[84]
-aku_form_11,aku,1_run,k-ətajiŋka-,k   +   ə   t   a   j   i   ŋ   k   a, Form in source: kə̀táyiŋkae.,gildea1994akuriyo[85]
-aku_form_12,aku,1_say,wɨ-ka-,w   ɨ   +   k   a, Form in source: wɨ-ka.,meira1998proto[113]
-aku_form_13,aku,1_sit_down,t͡ʃ-ewai-,t ͡ ʃ   +   e   w   a   i, Form in source: čewaiʔne.,gildea1994akuriyo[84]
-aku_form_14,aku,1_sleep,k-əənɨkɨ-,k   +   ə ə   +   n   ɨ   k   ɨ,Length according to meira1998proto[184]. Form in source: kəʔnɨkɨ.,gildea1994akuriyo[87]
-aku_form_15,aku,1_stay_back,t͡ʃ-ekɨrɨka-,t ͡ ʃ   +   e   k   ɨ   r   ɨ   k   a, Form in source: šekɨ́ɨrɨka.,gildea1994akuriyo[79]
-aku_form_16,aku,1_talk,k-əturu-,k   +   ə   t   u   r   u, Form in source: kə̀túùrú.,gildea1994akuriyo[86]
-aku_form_17,aku,1_tremble,k-əiwa-,k   +   ə   i   w   a, Form in source: kéìʔwai.,gildea1994akuriyo[84]
-aku_form_18,aku,1_yawn,t͡ʃ-entapo-,t ͡ ʃ   +   e   n   t   a   p   o, Form in source: šentapoe.,gildea1994akuriyo[77]
-ara_form_19,ara,1_bathe_intr,w-ibɨ-,w   +   i   +   b   ɨ, Form in source: w-ibyny.,alves2017arara[153]
-ara_form_20,ara,1_be,w-it͡ʃi-,w   +   i   t ͡ ʃ   i, Form in source: w-itxiny.,alves2017arara[153]
-ara_form_21,ara,1_be,w-ap-,w   +   a   p, Form in source: w-aptam.,alves2017arara[200]
-ara_form_22,ara,1_come,w-ebɨ-,w   +   e   b   ɨ, Form in source: w-ebyny.,alves2017arara[153]
-ara_form_23,ara,1_dance,k-origu-,k   +   o   r   i   g   u, Form in source: k-origu-ny.,alves2017arara[150]
-ara_form_24,ara,1_go,w-ɨdo-,w   +   ɨ   d   o, Form in source: w-ydoly.,alves2017arara[153]
-ara_form_25,ara,1_go_down,w-iptoŋ-,w   +   i   p   t   o   +   ŋ, Form in source: w-iptongry.,alves2017arara[153]
-ara_form_26,ara,1_say,wɨ-ge-,w   ɨ   +   g   e, Form in source: wy-geny.,alves2017arara[153]
-ebak_form_27,ebak,1_bathe_intr,w-i-,w   +   i, Form in source: w-i-də.,meira2003bakairi[4]
-bak_form_28,bak,1_be,w-a-,w   +   a, Form in source: töre-wakine.,von1892bakairi[130]
-bak_form_29,bak,1_be,w-i-,w   +   i, Form in source: wí-ta.,von1892bakairi[397]
-bak_form_30,bak,1_come,k-əewɨ-,k   +   ə   +   e   w   ɨ, Form in source: kχ-aewí-le.,von1892bakairi[76]
-bak_form_31,bak,1_go,u-tə-,u   +   t   ə, Form in source: ū́ta.,von1892bakairi[374]
-bak_form_32,bak,1_go_down,k-ɨtəgɨ-,k   +   ɨ   t   ə   +   g   ɨ, Form in source: kχ-itaké-he.,von1892bakairi[137]
-ebak_form_33,ebak,1_go_up,k-əku-,k   +   ə   k   u, Form in source: k-əku.,meira2003bakairi[4]
-bak_form_34,bak,1_say,u-ge-,u   +   g   e, Form in source: u-ɣépa.,von1892bakairi[131]
-car_form_35,car,1_arrive,ji-tuda-,j   i   +   t   u   d   a, Form in source: ji-tuda.,meira1998proto[106]
-car_form_37,car,1_be,j-et͡ʃi-,j   +   e   t ͡ ʃ   i, Form in source: ʤeʧi.,guerrero2019carijo[92]
-car_form_38,car,1_be,w-a-,w   +   a, Form in source: wae.,meira1998proto[115]
-car_form_39,car,1_come,j-eh-,j   +   e   h, Form in source: ʤehɨ.,guerrero2019carijo[82]
-car_form_40,car,1_dance,j-eharaga-,j   +   e   h   a   r   a   g   a, Form in source: ʤi-eharaga-ɨ.,robayo2000avance[173]
-car_form_41,car,1_go,wɨ-təmə-,w   ɨ   +   t   ə   m   ə, Form in source: wɨ-təmə.,meira1998proto[112]
-car_form_42,car,1_go_down,j-ehɨtə-,j   +   e   h   ɨ   t   ə, Form in source: y-ejïtë-e.,pc[David Felipe Guerrero]
-car_form_43,car,1_say,∅-ka-,∅   +   k   a, Form in source: ka-e.,pc[David Felipe Guerrero]
-hix_form_44,hix,1_bathe_intr,k-ewehɨ-,k   +   e   w   e   +   h   ɨ, Form in source: kewehtano.,hixkaryanaderby1985[195]
-hix_form_45,hix,1_be,w-ah-,w   +   a   h, Form in source: wahko.,hixkaryanaderby1985[197]
-hix_form_46,hix,1_be,w-eʃe-,w   +   e   ʃ   e, Form in source: wexeye.,hixkaryanaderby1985[198]
-hix_form_47,hix,1_be_afraid,k-oserʲehɨ-,k   +   o   s   e   r ʲ   e   h   ɨ, Form in source: koseřehyano.,howard2001wrought[510]
-hix_form_48,hix,1_cut_self,k-atama-,k   +   a   t   a   m   a, Form in source: katamano.,howard2001wrought[520]
-hix_form_49,hix,1_fall,k-ehurka-,k   +   e   h   u   r   k   a, Form in source: kehurkehe.,howard2001wrought[150]
-hix_form_50,hix,1_go,ɨ-to-,ɨ   +   t   o, Form in source: ɨtono.,hixkaryanaderby1985[70]
-hix_form_52,hix,1_say,ɨ-ka-,ɨ   +   k   a, Form in source: ɨkano.,hixkaryanaderby1979[4]
-hix_form_53,hix,1_sleep,kɨ-nɨkɨ-,k   ɨ   +   n   ɨ   k   ɨ," Form in source: kɨ-nɨkɨ-no, dɨkno.",hixkaryanaderby1985[189]
-hix_form_54,hix,1_walk,k-atarʲeknohɨ-,k   +   a   t   a   r ʲ   e   k   n   o   h   ɨ, Form in source: katařeknohyaha.,howard2001wrought[513]
-ikp_form_55,ikp,1_bathe_intr,∅-ip-,∅   +   i   +   p, Form in source: i-p-txi.,ikpengpacheco1997[68]
-ikp_form_56,ikp,1_be,∅-et͡ʃi-,∅   +   e   t ͡ ʃ   i, Form in source: etʃi.,ikpengpacheco2001[139]
-ikp_form_58,ikp,1_come,k-arep-,k   +   a   r   +   e   p, Form in source: k-arep-lɨ.,ikpengpacheco2001[42]
-ikp_form_59,ikp,1_go,k-aran-,k   +   a   r   a   n, Form in source: k-aran-tʃi.,ikpengpacheco2001[80]
-ikp_form_60,ikp,1_run,k-aranme-,k   +   a   r   a   n   m   e, Form in source: k-aranme-lɨ.,ikpengpacheco2001[52]
-ikp_form_61,ikp,1_say,ɨ-ge-,ɨ   +   g   e, Form in source: ɨ-ge-lɨ.,ikpengpacheco2001[209]
-kar_form_62,kar,1_come,w-opɨ-,w   +   o   +   p   ɨ, Form in source: woxsakóŋ̑.,hoff1968carib[304]
-kar_form_63,kar,1_go,wɨ-ʔ-,w   ɨ   +   ʔ, Form in source: wïxsa.,hoff1968carib[168]
-kar_form_64,kar,1_say,∅-ka-,∅   +   k   a, Form in source: ka:e.,hoff1968carib[168]
-kax_form_65,kax,1_come,w-oohɨ-,w   +   o o   +   h   ɨ, Form in source: woohïwï.,pc[Spike Gildea]
-mak_form_66,mak,1_arrive,w-əʔrɨ-,w   +   ə   ʔ   r   ɨ, Form in source: w-ö’dü-a.,maquiritaricaceres2011[223]
-mak_form_67,mak,1_be,w-ei-,w   +   e   i, Form in source: weiya.,maquiritaricaceres2011[292]
-mak_form_68,mak,1_come,w-ehə-,w   +   e   h   ə, Form in source: w-ejö-ne.,maquiritaricaceres2011[216]
-mak_form_69,mak,1_eat,w-ətəwasint͡ʃə-,w   +   ə   t   ə   w   a   s   i   n   t ͡ ʃ   ə, Form in source: w-öt-öwasinchö-i.,maquiritaricaceres2011[180]
-mak_form_70,mak,1_go,w-ɨtə-,w   +   ɨ   t   ə, Form in source: w-ütö-a.,maquiritaricaceres2011[180]
-PPek_form_71,PPek,1_bathe_intr,w-ipɨ-,w   +   i   +   p   ɨ, Form in source: .,
-PPek_form_72,PPek,1_be,w-ap-,w   +   a   p, Form in source: .,
-PPek_form_73,PPek,1_be,w-et͡ʃi-,w   +   e   t ͡ ʃ   i, Form in source: .,
-PPek_form_74,PPek,1_come,w-epɨ-,w   +   e   p   ɨ, Form in source: .,
-PPek_form_75,PPek,1_go,w-ɨtən-,w   +   ɨ   t   ə   n, Form in source: .,
-PPek_form_76,PPek,1_go_down,w-ɨptə-,w   +   ɨ   p   t   ə, Form in source: .,
-PPek_form_77,PPek,1_say,wɨ-ge-,w   ɨ   +   g   e, Form in source: .,
-PTir_form_78,PTir,1_bathe_intr,t͡ʃ-epɨ-,t ͡ ʃ   +   e   +   p   ɨ, Form in source: .,
-PTir_form_79,PTir,1_be,w-a-,w   +   a, Form in source: .,
-PTir_form_80,PTir,1_be,w-eʔi-,w   +   e   ʔ   i, Form in source: .,
-PTir_form_81,PTir,1_come,w-əʔepɨ-,w   +   ə   ʔ   +   e   p   ɨ, Form in source: .,
-PTir_form_82,PTir,1_go,w-ɨtəmɨ-,w   +   ɨ   t   ə   m   ɨ, Form in source: .,
-PTir_form_83,PTir,1_go_down,p-ɨhtə-,p   +   ɨ   h   t   ə, Form in source: .,
-PTir_form_84,PTir,1_say,wɨ-ka-,w   ɨ   +   k   a, Form in source: .,
-PTir_form_85,PTir,1_sleep,t-əənɨkɨ-,t   +   ə ə   +   n   ɨ   k   ɨ, Form in source: .,
-PWai_form_86,PWai,1_bathe_intr,k-eeɸɨ-,k   +   e e   +   ɸ   ɨ,"Werikyana has long e in this verb, assuming the same pattern for Proto-Waiwaian allows reconciling the divergent Waiwai and Hixkaryána forms. Form in source: .",
-PWai_form_87,PWai,1_be,w-eʃi-,w   +   e   ʃ   i, Form in source: .,
-PWai_form_88,PWai,1_be,w-ah-,w   +   a   h, Form in source: .,
-PWai_form_89,PWai,1_fall,k-eɸurka-,k   +   e   ɸ   u   r   k   a, Form in source: .,
-PWai_form_90,PWai,1_go,wɨ-tom-,w   ɨ   +   t   o   m, Form in source: .,
-PWai_form_92,PWai,1_say,wɨ-ka-,w   ɨ   +   k   a, Form in source: .,
-PWai_form_93,PWai,1_sleep,kɨ-wɨnɨkɨ-,k   ɨ   +   w   ɨ   n   ɨ   k   ɨ, Form in source: .,
-tri_form_94,tri,1_bathe_intr,s-epɨ-,s   +   e   +   p   ɨ, Form in source: s-epï.,triomeira1999[292]
-tri_form_95,tri,1_be,w-a-,w   +   a, Form in source: wae.,meira1998proto[115]
+ara_form_0,ara,1_dance,k-origu-,k   +   o   r   i   g   u, Form in source: k-origu-ny.,alves2017arara[150]
+ara_form_1,ara,1_bathe_intr,w-ibɨ-,w   +   i   +   b   ɨ, Form in source: w-ibyny.,alves2017arara[153]
+ara_form_2,ara,1_be,w-it͡ʃi-,w   +   i   t ͡ ʃ   i, Form in source: w-itxiny.,alves2017arara[153]
+ara_form_3,ara,1_come,w-ebɨ-,w   +   e   b   ɨ, Form in source: w-ebyny.,alves2017arara[153]
+ara_form_4,ara,1_go,w-ɨdo-,w   +   ɨ   d   o, Form in source: w-ydoly.,alves2017arara[153]
+ara_form_5,ara,1_go_down,w-iptoŋ-,w   +   i   p   t   o   +   ŋ, Form in source: w-iptongry.,alves2017arara[153]
+ara_form_6,ara,1_say,wɨ-ge-,w   ɨ   +   g   e, Form in source: wy-geny.,alves2017arara[153]
+ara_form_7,ara,1_be,w-ap-,w   +   a   p, Form in source: w-aptam.,alves2017arara[200]
+aku_form_9,aku,1_yawn,t͡ʃ-entapo-,t ͡ ʃ   +   e   n   t   a   p   o, Form in source: šentapoe.,gildea1994akuriyo[77]
+aku_form_10,aku,1_stay_back,t͡ʃ-ekɨrɨka-,t ͡ ʃ   +   e   k   ɨ   r   ɨ   k   a, Form in source: šekɨ́ɨrɨka.,gildea1994akuriyo[79]
+aku_form_11,aku,1_learn,k-əempa-,k   +   ə   e   m   p   a, Form in source: kə̀ém̀pà.,gildea1994akuriyo[82]
+aku_form_12,aku,1_go_down,p-ɨtə-,p   +   ɨ   t   ə, Form in source: pɨ́ɨ̀ʔtəpa.,gildea1994akuriyo[84]
+aku_form_13,aku,1_lie_down,t͡ʃ-etonema-,t ͡ ʃ   +   e   t   o   n   e   m   a, Form in source: šetóòʔnema.,gildea1994akuriyo[84]
+aku_form_14,aku,1_sit_down,t͡ʃ-ewai-,t ͡ ʃ   +   e   w   a   i, Form in source: čewaiʔne.,gildea1994akuriyo[84]
+aku_form_15,aku,1_tremble,k-əiwa-,k   +   ə   i   w   a, Form in source: kéìʔwai.,gildea1994akuriyo[84]
+aku_form_16,aku,1_run,k-ətajiŋka-,k   +   ə   t   a   j   i   ŋ   k   a, Form in source: kə̀táyiŋkae.,gildea1994akuriyo[85]
+aku_form_17,aku,1_cry,k-əət͡ʃena-,k   +   ə ə   t ͡ ʃ   e   n   a, Form in source: kə́ə̀čena.,gildea1994akuriyo[86]
+aku_form_18,aku,1_talk,k-əturu-,k   +   ə   t   u   r   u, Form in source: kə̀túùrú.,gildea1994akuriyo[86]
+aku_form_19,aku,1_bathe_intr,t͡ʃ-epɨ-,t ͡ ʃ   +   e   +   p   ɨ, Form in source: šeépɨ̀.,gildea1994akuriyo[87]
+aku_form_20,aku,1_bathe_intr,t͡ʃ-ehpa-,t ͡ ʃ   +   e   h   p   a, Form in source: šéhpa.,gildea1994akuriyo[87]
+aku_form_21,aku,1_enter,k-əməmɨ-,k   +   ə   m   ə   m   ɨ, Form in source: kəməəʔmɨ.,gildea1994akuriyo[87]
+aku_form_22,aku,1_sleep,k-əənɨkɨ-,k   +   ə ə   +   n   ɨ   k   ɨ,Length according to meira1998proto[184]. Form in source: kəʔnɨkɨ.,gildea1994akuriyo[87]
+car_form_23,car,1_come,j-eh-,j   +   e   h, Form in source: ʤehɨ.,guerrero2019carijo[82]
+car_form_24,car,1_be,j-et͡ʃi-,j   +   e   t ͡ ʃ   i, Form in source: ʤeʧi.,guerrero2019carijo[92]
+hix_form_25,hix,1_say,ɨ-ka-,ɨ   +   k   a, Form in source: ɨkano.,hixkaryanaderby1979[4]
+hix_form_26,hix,1_sleep,kɨ-nɨkɨ-,k   ɨ   +   n   ɨ   k   ɨ," Form in source: kɨ-nɨkɨ-no, dɨkno.",hixkaryanaderby1985[189]
+hix_form_27,hix,1_bathe_intr,k-ewehɨ-,k   +   e   w   e   +   h   ɨ, Form in source: kewehtano.,hixkaryanaderby1985[195]
+hix_form_28,hix,1_be,w-ah-,w   +   a   h, Form in source: wahko.,hixkaryanaderby1985[197]
+hix_form_29,hix,1_be,w-eʃe-,w   +   e   ʃ   e, Form in source: wexeye.,hixkaryanaderby1985[198]
+hix_form_30,hix,1_go,ɨ-to-,ɨ   +   t   o, Form in source: ɨtono.,hixkaryanaderby1985[70]
+kar_form_31,kar,1_go,wɨ-ʔ-,w   ɨ   +   ʔ, Form in source: wïxsa.,hoff1968carib[168]
+kar_form_32,kar,1_say,∅-ka-,∅   +   k   a, Form in source: ka:e.,hoff1968carib[168]
+kar_form_33,kar,1_come,w-opɨ-,w   +   o   +   p   ɨ, Form in source: woxsakóŋ̑.,hoff1968carib[304]
+hix_form_34,hix,1_fall,k-ehurka-,k   +   e   h   u   r   k   a, Form in source: kehurkehe.,howard2001wrought[150]
+wai_form_35,wai,1_fall,k-eɸɨrka-,k   +   e   ɸ   ɨ   r   k   a, Form in source: kepîrkesî.,howard2001wrought[150]
+hix_form_36,hix,1_be_afraid,k-oserʲehɨ-,k   +   o   s   e   r ʲ   e   h   ɨ, Form in source: koseřehyano.,howard2001wrought[510]
+hix_form_37,hix,1_walk,k-atarʲeknohɨ-,k   +   a   t   a   r ʲ   e   k   n   o   h   ɨ, Form in source: katařeknohyaha.,howard2001wrought[513]
+hix_form_38,hix,1_cut_self,k-atama-,k   +   a   t   a   m   a, Form in source: katamano.,howard2001wrought[520]
+ikp_form_39,ikp,1_bathe_intr,∅-ip-,∅   +   i   +   p, Form in source: i-p-txi.,ikpengpacheco1997[68]
+ikp_form_40,ikp,1_be,∅-et͡ʃi-,∅   +   e   t ͡ ʃ   i, Form in source: etʃi.,ikpengpacheco2001[139]
+ikp_form_41,ikp,1_say,ɨ-ge-,ɨ   +   g   e, Form in source: ɨ-ge-lɨ.,ikpengpacheco2001[209]
+ikp_form_42,ikp,1_come,k-arep-,k   +   a   r   +   e   p, Form in source: k-arep-lɨ.,ikpengpacheco2001[42]
+ikp_form_43,ikp,1_run,k-aranme-,k   +   a   r   a   n   m   e, Form in source: k-aranme-lɨ.,ikpengpacheco2001[52]
+ikp_form_44,ikp,1_go,k-aran-,k   +   a   r   a   n, Form in source: k-aran-tʃi.,ikpengpacheco2001[80]
+yuk_form_47,yuk,1_wash_self,j-otum-,j   +   o   t   u   m, Form in source: yotumna.,largo2011yukpa[72]
+yuk_form_48,yuk,1_sleep,jɨ-nɨ-,j   ɨ   +   n   ɨ,"As all verbs except to ‘to go’, this verb is analyzed as V-initial by meira2003primeras, but unprefixed forms are consistently C-initial. Form in source: yʉnʉna.",largo2011yukpa[76]
+mak_form_49,mak,1_eat,w-ətəwasint͡ʃə-,w   +   ə   t   ə   w   a   s   i   n   t ͡ ʃ   ə, Form in source: w-öt-öwasinchö-i.,maquiritaricaceres2011[180]
+mak_form_50,mak,1_go,w-ɨtə-,w   +   ɨ   t   ə, Form in source: w-ütö-a.,maquiritaricaceres2011[180]
+mak_form_51,mak,1_come,w-ehə-,w   +   e   h   ə, Form in source: w-ejö-ne.,maquiritaricaceres2011[216]
+mak_form_52,mak,1_arrive,w-əʔrɨ-,w   +   ə   ʔ   r   ɨ, Form in source: w-ö’dü-a.,maquiritaricaceres2011[223]
+mak_form_53,mak,1_be,w-ei-,w   +   e   i, Form in source: weiya.,maquiritaricaceres2011[292]
+car_form_54,car,1_arrive,ji-tuda-,j   i   +   t   u   d   a, Form in source: ji-tuda.,meira1998proto[106]
+aku_form_55,aku,1_go,ə-təmɨ-,ə   +   t   ə   m   ɨ, Form in source: ə-təmɨ.,meira1998proto[112]
+car_form_56,car,1_go,wɨ-təmə-,w   ɨ   +   t   ə   m   ə, Form in source: wɨ-təmə.,meira1998proto[112]
+aku_form_57,aku,1_say,wɨ-ka-,w   ɨ   +   k   a, Form in source: wɨ-ka.,meira1998proto[113]
+aku_form_58,aku,1_come,∅-eepɨ-,∅   +   e e   +   p   ɨ, Form in source: ∅-e:pɨ.,meira1998proto[114]
+aku_form_59,aku,1_be,∅-a-,∅   +   a, Form in source: aʔe.,meira1998proto[115]
+car_form_60,car,1_be,w-a-,w   +   a, Form in source: wae.,meira1998proto[115]
+tri_form_61,tri,1_be,w-a-,w   +   a, Form in source: wae.,meira1998proto[115]
+tri_form_62,tri,1_go_down,p-ɨhtə-,p   +   ɨ   h   t   ə, Form in source: p-ɨhtə.,meira1998proto[116]
+ebak_form_63,ebak,1_bathe_intr,w-i-,w   +   i, Form in source: w-i-də.,meira2003bakairi[4]
+ebak_form_64,ebak,1_go_up,k-əku-,k   +   ə   k   u, Form in source: k-əku.,meira2003bakairi[4]
+yuk_form_65,yuk,1_go_down,j-ewtu-,j   +   e   w   t   u,ewuhtu only looks partially cognate. Form in source: aw y-éwtu.,meira2003primeras
+yuk_form_66,yuk,1_fall,j-ata-,j   +   a   t   a, Form in source: y-ata.,meira2006syntactic[139]
+yuk_form_67,yuk,1_go,∅-to-,∅   +   t   o, Form in source: to.,meira2006syntactic[139]
+yuk_form_68,yuk,1_be,j-a-,j   +   a, Form in source: patume=ya.,meira2006syntactic[142]
+yuk_form_69,yuk,1_be,j-e-,j   +   e, Form in source: yukpa=p=ye.,meira2006syntactic[143]
+aku_form_70,aku,1_be,∅-eʔi-,∅   +   e   ʔ   i, Form in source: e'ine.,meiraDBakuriyo
+ebak_form_71,ebak,1_go,u-də-,u   +   d   ə,Confirmed by pinto2022bakairi Form in source: u-dâ-ly; u-dâ-0; u-dâ-aki.,meiraDBebakairi
+ebak_form_72,ebak,1_go,u-gue-,u   +   g   u   e, Form in source: u-gue-ly; u-ge-aki; u-ge-0.,meiraDBebakairi
+ebak_form_73,ebak,1_go,u-ge-,u   +   g   e, Form in source: u-ge-ly.,meiraDBebakairi
+ebak_form_74,ebak,1_come,k-əewɨ-,k   +   ə   e   w   ɨ, Form in source: k-âewy-ly; k-âe-tai; k-âe-dâ; k-âewy-se.,meiraDBebakairi
+wbak_form_75,wbak,1_go,u-də-,u   +   d   ə,Confirmed by pinto2022bakairi Form in source: u-dâ-li; u-dâ-0; u-dâ-raki.,meiraDBwbakairi
+wbak_form_76,wbak,1_go,u-gue-,u   +   g   u   e, Form in source: u-gue-di'e; u-gue-li; u-gue-raki.,meiraDBwbakairi
+wbak_form_77,wbak,1_come,k-əewə-,k   +   ə   e   w   ə, Form in source: k-âewâ-li.,meiraDBwbakairi
+car_form_78,car,1_go_down,j-ehɨtə-,j   +   e   h   ɨ   t   ə, Form in source: y-ejïtë-e.,pc[David Felipe Guerrero]
+car_form_79,car,1_say,∅-ka-,∅   +   k   a, Form in source: ka-e.,pc[David Felipe Guerrero]
+ikp_form_80,ikp,1_go_down,∅-iptoŋ-,∅   +   i   p   t   o   +   ŋ, Form in source: ∅-iptoŋ-tʃi.,pc[Fael Ikpeng]
+kax_form_81,kax,1_come,w-oohɨ-,w   +   o o   +   h   ɨ, Form in source: woohïwï.,pc[Spike Gildea]
+wai_form_82,wai,1_be,w-a-,w   +   a, Form in source: way.,pc[Spike Gildea]
+wai_form_83,wai,1_be,w-eeʃi-,w   +   e e   ʃ   i, Form in source: weexi.,pc[Spike Gildea]
+ebak_form_84,ebak,1_be,w-awɨ-,w   +   a   w   ɨ, Form in source: u-a-uɨlɨ.,pinto2022bakairi[111]
+ebak_form_85,ebak,1_be,w-i-,w   +   i, Form in source: u-i-dɨlɨ.,pinto2022bakairi[112]
+ebak_form_86,ebak,1_come,k-əewɨ-,k   +   ə   +   e   w   ɨ, Form in source: k-əe-uɨlɨ.,pinto2022bakairi[129]
+car_form_87,car,1_dance,j-eharaga-,j   +   e   h   a   r   a   g   a, Form in source: ʤi-eharaga-ɨ.,robayo2000avance[173]
+tri_form_88,tri,1_see_self,t-əene-,t   +   ə   e   n   e, Form in source: t-ə-ene-∅.,triocarlin2004[274]
+tri_form_89,tri,1_bathe_intr,s-epɨ-,s   +   e   +   p   ɨ, Form in source: s-epï.,triomeira1999[292]
+tri_form_90,tri,1_go,wɨ-tən-,w   ɨ   +   t   ə   n, Form in source: wï-tën.,triomeira1999[292]
+tri_form_91,tri,1_talk,t-əturu-,t   +   ə   t   u   r   u, Form in source: t-ëturu.,triomeira1999[292]
+tri_form_92,tri,1_yawn,s-entapo-,s   +   e   n   t   a   p   o, Form in source: s-entapo.,triomeira1999[292]
+tri_form_93,tri,1_come,w-əepɨ-,w   +   ə   +   e   p   ɨ, Form in source: w-ëepï.,triomeira1999[294]
+tri_form_94,tri,1_say,wɨ-ka-,w   ɨ   +   k   a, Form in source: wï-ka.,triomeira1999[294]
+tri_form_95,tri,1_sleep,t-əənɨkɨ-,t   +   ə ə   +   n   ɨ   k   ɨ, Form in source: t-ëënïkï.,triomeira1999[294]
 tri_form_96,tri,1_be,w-ei-,w   +   e   i, Form in source: w-ei.,triomeira1999[339]
-tri_form_97,tri,1_come,w-əepɨ-,w   +   ə   +   e   p   ɨ, Form in source: w-ëepï.,triomeira1999[294]
-tri_form_98,tri,1_go,wɨ-tən-,w   ɨ   +   t   ə   n, Form in source: wï-tën.,triomeira1999[292]
-tri_form_99,tri,1_go_down,p-ɨhtə-,p   +   ɨ   h   t   ə, Form in source: p-ɨhtə.,meira1998proto[116]
-tri_form_100,tri,1_say,wɨ-ka-,w   ɨ   +   k   a, Form in source: wï-ka.,triomeira1999[294]
-tri_form_101,tri,1_see_self,t-əene-,t   +   ə   e   n   e, Form in source: t-ə-ene-∅.,triocarlin2004[274]
-tri_form_102,tri,1_sleep,t-əənɨkɨ-,t   +   ə ə   +   n   ɨ   k   ɨ, Form in source: t-ëënïkï.,triomeira1999[294]
-tri_form_103,tri,1_talk,t-əturu-,t   +   ə   t   u   r   u, Form in source: t-ëturu.,triomeira1999[292]
-tri_form_104,tri,1_yawn,s-entapo-,s   +   e   n   t   a   p   o, Form in source: s-entapo.,triomeira1999[292]
-wai_form_105,wai,1_bathe_intr,k-ejeɸu-,k   +   e   j   e   +   ɸ   u, Form in source: k-eyepu.,waiwaihawkins1998[166]
-wai_form_106,wai,1_be,w-a-,w   +   a, Form in source: way.,pc[Spike Gildea]
-wai_form_107,wai,1_be,w-eeʃi-,w   +   e e   ʃ   i, Form in source: weexi.,pc[Spike Gildea]
-wai_form_108,wai,1_fall,k-eɸɨrka-,k   +   e   ɸ   ɨ   r   k   a, Form in source: kepîrkesî.,howard2001wrought[150]
-wai_form_109,wai,1_go,kɨw-tom-,k   ɨ   +   w   +   t   o   m,"The w could potentially also be a reflex of the Sa class marker *w-, rather than 1Sa *w-. Form in source: kî-wtom-o.",waiwaihawkins1998[85]
-wai_form_111,wai,1_say,wɨ-ka-,w   ɨ   +   k   a, Form in source: wîî-k-e-kn̂e.,waiwaihawkins1998[71]
-wai_form_112,wai,1_sleep,kɨ-wɨnɨkɨ-,k   ɨ   +   w   ɨ   n   ɨ   k   ɨ," Form in source: kî-wînîkî-o, kîwînko.",waiwaihawkins1998[30]
-way_form_113,way,1_go,wɨ-təm-,w   ɨ   +   t   ə   m, Form in source: wïtëm.,wayanatavares2005[195]
-way_form_114,way,1_say,wɨ-ka-,w   ɨ   +   k   a, Form in source: wïka.,wayanatavares2005[195]
-way_form_115,way,1_talk,w-əturu-,w   +   ə   t   u   r   u, Form in source: w-ëtulu.,wayanatavares2005[208]
-yuk_form_116,yuk,1_be,j-a-,j   +   a, Form in source: patume=ya.,meira2006syntactic[142]
-yuk_form_117,yuk,1_be,j-e-,j   +   e, Form in source: yukpa=p=ye.,meira2006syntactic[143]
-yuk_form_118,yuk,1_fall,j-ata-,j   +   a   t   a, Form in source: y-ata.,meira2006syntactic[139]
-yuk_form_119,yuk,1_go,∅-to-,∅   +   t   o, Form in source: to.,meira2006syntactic[139]
-yuk_form_120,yuk,1_go_down,j-ewtu-,j   +   e   w   t   u,ewuhtu only looks partially cognate. Form in source: aw y-éwtu.,meira2003primeras
-yuk_form_122,yuk,1_sleep,jɨ-nɨ-,j   ɨ   +   n   ɨ,"As all verbs except to ‘to go’, this verb is analyzed as V-initial by meira2003primeras, but unprefixed forms are consistently C-initial. Form in source: yʉnʉna.",largo2011yukpa[76]
-yuk_form_123,yuk,1_wash_self,j-otum-,j   +   o   t   u   m, Form in source: yotumna.,largo2011yukpa[72]
-ebak_form_124,ebak,1_go,u-də-,u   +   d   ə, Form in source: u-dâ-ly; u-dâ-0; u-dâ-aki.,meiraDBebakairi
-wbak_form_125,wbak,1_go,u-də-,u   +   d   ə, Form in source: u-dâ-li; u-dâ-0; u-dâ-raki.,meiraDBwbakairi
-wbak_form_126,wbak,1_go,u-gue-,u   +   g   u   e, Form in source: u-gue-di'e; u-gue-li; u-gue-raki.,meiraDBwbakairi
-ebak_form_127,ebak,1_go,u-gue-,u   +   g   u   e, Form in source: u-gue-ly; u-ge-aki; u-ge-0.,meiraDBebakairi
-ebak_form_128,ebak,1_go,u-ge-,u   +   g   e, Form in source: u-ge-ly.,meiraDBebakairi
-wbak_form_129,wbak,1_come,k-əewə-,k   +   ə   e   w   ə, Form in source: k-âewâ-li.,meiraDBwbakairi
-ebak_form_130,ebak,1_come,k-əewɨ-,k   +   ə   e   w   ɨ, Form in source: k-âewy-ly; k-âe-tai; k-âe-dâ; k-âewy-se.,meiraDBebakairi
-ikp_form_131,ikp,1_go_down,∅-iptoŋ-,∅   +   i   p   t   o   +   ŋ, Form in source: ∅-iptoŋ-tʃi.,pc[Fael Ikpeng]
+bak_form_97,bak,1_be,w-a-,w   +   a, Form in source: töre-wakine.,von1892bakairi[130]
+bak_form_98,bak,1_say,u-ge-,u   +   g   e, Form in source: u-ɣépa.,von1892bakairi[131]
+bak_form_99,bak,1_go_down,k-ɨtəgɨ-,k   +   ɨ   t   ə   +   g   ɨ, Form in source: kχ-itaké-he.,von1892bakairi[137]
+bak_form_100,bak,1_go,u-tə-,u   +   t   ə, Form in source: ū́ta.,von1892bakairi[374]
+bak_form_101,bak,1_be,w-i-,w   +   i, Form in source: wí-ta.,von1892bakairi[397]
+bak_form_102,bak,1_come,k-əewɨ-,k   +   ə   +   e   w   ɨ, Form in source: kχ-aewí-le.,von1892bakairi[76]
+wai_form_103,wai,1_bathe_intr,k-ejeɸu-,k   +   e   j   e   +   ɸ   u, Form in source: k-eyepu.,waiwaihawkins1998[166]
+wai_form_104,wai,1_sleep,kɨ-wɨnɨkɨ-,k   ɨ   +   w   ɨ   n   ɨ   k   ɨ," Form in source: kî-wînîkî-o, kîwînko.",waiwaihawkins1998[30]
+wai_form_106,wai,1_say,wɨ-ka-,w   ɨ   +   k   a, Form in source: wîî-k-e-kn̂e.,waiwaihawkins1998[71]
+wai_form_107,wai,1_go,kɨw-tom-,k   ɨ   +   w   +   t   o   m,"The w could potentially also be a reflex of the Sa class marker *w-, rather than 1Sa *w-. Form in source: kî-wtom-o.",waiwaihawkins1998[85]
+way_form_108,way,1_go,wɨ-təm-,w   ɨ   +   t   ə   m, Form in source: wïtëm.,wayanatavares2005[195]
+way_form_109,way,1_say,wɨ-ka-,w   ɨ   +   k   a, Form in source: wïka.,wayanatavares2005[195]
+way_form_110,way,1_talk,w-əturu-,w   +   ə   t   u   r   u, Form in source: w-ëtulu.,wayanatavares2005[208]
+PPek_form_112,PPek,1_bathe_intr,w-ipɨ-,w   +   i   +   p   ɨ, Form in source: .,
+PPek_form_113,PPek,1_be,w-ap-,w   +   a   p, Form in source: .,
+PPek_form_114,PPek,1_be,w-et͡ʃi-,w   +   e   t ͡ ʃ   i, Form in source: .,
+PPek_form_115,PPek,1_come,w-epɨ-,w   +   e   p   ɨ, Form in source: .,
+PPek_form_116,PPek,1_go,w-ɨtən-,w   +   ɨ   t   ə   n, Form in source: .,
+PPek_form_117,PPek,1_go_down,w-ɨptə-,w   +   ɨ   p   t   ə, Form in source: .,
+PPek_form_118,PPek,1_say,wɨ-ge-,w   ɨ   +   g   e, Form in source: .,
+PTir_form_119,PTir,1_bathe_intr,t͡ʃ-epɨ-,t ͡ ʃ   +   e   +   p   ɨ, Form in source: .,
+PTir_form_120,PTir,1_be,w-a-,w   +   a, Form in source: .,
+PTir_form_121,PTir,1_be,w-eʔi-,w   +   e   ʔ   i, Form in source: .,
+PTir_form_122,PTir,1_come,w-əʔepɨ-,w   +   ə   ʔ   +   e   p   ɨ, Form in source: .,
+PTir_form_123,PTir,1_go,w-ɨtəmɨ-,w   +   ɨ   t   ə   m   ɨ, Form in source: .,
+PTir_form_124,PTir,1_go_down,p-ɨhtə-,p   +   ɨ   h   t   ə, Form in source: .,
+PTir_form_125,PTir,1_say,wɨ-ka-,w   ɨ   +   k   a, Form in source: .,
+PTir_form_126,PTir,1_sleep,t-əənɨkɨ-,t   +   ə ə   +   n   ɨ   k   ɨ, Form in source: .,
+PWai_form_127,PWai,1_bathe_intr,k-eeɸɨ-,k   +   e e   +   ɸ   ɨ,"Werikyana has long e in this verb, assuming the same pattern for Proto-Waiwaian allows reconciling the divergent Waiwai and Hixkaryána forms. Form in source: .",
+PWai_form_128,PWai,1_be,w-eʃi-,w   +   e   ʃ   i, Form in source: .,
+PWai_form_129,PWai,1_be,w-ah-,w   +   a   h, Form in source: .,
+PWai_form_130,PWai,1_fall,k-eɸurka-,k   +   e   ɸ   u   r   k   a, Form in source: .,
+PWai_form_131,PWai,1_go,wɨ-tom-,w   ɨ   +   t   o   m, Form in source: .,
+PWai_form_133,PWai,1_say,wɨ-ka-,w   ɨ   +   k   a, Form in source: .,
+PWai_form_134,PWai,1_sleep,kɨ-wɨnɨkɨ-,k   ɨ   +   w   ɨ   n   ɨ   k   ɨ, Form in source: .,
+ebak_form_135,ebak,1_say,u-ge-,u   +   g   e, Form in source: u-ge-lɨ.,pinto2022bakairi[170]
 mac_stem_0,mac,come,ipɨ,i   p   ɨ,,macushiabbott1991[32]
 pem_stem_1,pem,come,jepɨ,j   e   p   ɨ,,alvarez2000construcciones[102]
 aka_stem_2,aka,come,jepɨ,j   e   p   ɨ,,akawaiocaesar2003[125]

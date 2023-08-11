@@ -1,242 +1,251 @@
 ID,Form_ID,Cognateset_ID,Segment_Slice,Alignment
-aku_form_0_1,aku_form_0,1t,1,t͡ʃ
-aku_form_0_2,aku_form_0,DETRZ1,2,e - -
-aku_form_0_3,aku_form_0,bathe_1,3,- p ɨ
-aku_form_1_1,aku_form_1,1t,1,t͡ʃ
-aku_form_2_1,aku_form_2,1w,1,
-aku_form_2_2,aku_form_2,be_1,2,a - -
-aku_form_3_1,aku_form_3,1w,1,
-aku_form_3_2,aku_form_3,be_2,2,e ʔ i
-aku_form_4_1,aku_form_4,1w,1,
-aku_form_4_2,aku_form_4,DETRZ,2,ee -
-aku_form_4_3,aku_form_4,come,3,- - - p ɨ
-aku_form_5_1,aku_form_5,k,1,k -
-aku_form_6_1,aku_form_6,k,1,k -
-aku_form_7_1,aku_form_7,1w,1,- ə
-aku_form_7_2,aku_form_7,go,2,- t ə m ɨ
-aku_form_8_1,aku_form_8,tri1p,1,p
-aku_form_8_2,aku_form_8,go_down,2,- - ɨ - - t ə
-aku_form_9_1,aku_form_9,k,1,k -
+ara_form_0_1,ara_form_0,k,1,k -
+ara_form_1_1,ara_form_1,1w,1,w -
+ara_form_1_2,ara_form_1,DETRZ1,2,i - -
+ara_form_1_3,ara_form_1,bathe_1,3,- b ɨ
+ara_form_2_1,ara_form_2,1w,1,w -
+ara_form_2_2,ara_form_2,be_2,2,i t͡ʃ i
+ara_form_3_1,ara_form_3,1w,1,w -
+ara_form_3_2,ara_form_3,come,2,- - e b ɨ
+ara_form_4_1,ara_form_4,1w,1,w -
+ara_form_4_2,ara_form_4,go,2,ɨ d o - -
+ara_form_5_1,ara_form_5,1w,1,w -
+ara_form_5_2,ara_form_5,go_down,2,- - i p - t o
+ara_form_6_1,ara_form_6,1w,1,w ɨ
+ara_form_6_2,ara_form_6,say,2,g e - - -
+ara_form_7_1,ara_form_7,1w,1,w -
+ara_form_7_2,ara_form_7,be_1,2,a p -
+aku_form_9_1,aku_form_9,1t,1,t͡ʃ
 aku_form_10_1,aku_form_10,1t,1,t͡ʃ
 aku_form_11_1,aku_form_11,k,1,k -
-aku_form_12_1,aku_form_12,1w,1,w ɨ
-aku_form_12_2,aku_form_12,say,2,k a - - -
+aku_form_12_1,aku_form_12,tri1p,1,p
+aku_form_12_2,aku_form_12,go_down,2,- - ɨ - - t ə
 aku_form_13_1,aku_form_13,1t,1,t͡ʃ
-aku_form_14_1,aku_form_14,k,1,k -
-aku_form_14_2,aku_form_14,DETRZ,2,əə -
-aku_form_14_3,aku_form_14,sleep,3,n ɨ - k ɨ
-aku_form_15_1,aku_form_15,1t,1,t͡ʃ
+aku_form_14_1,aku_form_14,1t,1,t͡ʃ
+aku_form_15_1,aku_form_15,k,1,k -
 aku_form_16_1,aku_form_16,k,1,k -
 aku_form_17_1,aku_form_17,k,1,k -
-aku_form_18_1,aku_form_18,1t,1,t͡ʃ
-ara_form_19_1,ara_form_19,1w,1,w -
-ara_form_19_2,ara_form_19,DETRZ1,2,i - -
-ara_form_19_3,ara_form_19,bathe_1,3,- b ɨ
-ara_form_20_1,ara_form_20,1w,1,w -
-ara_form_20_2,ara_form_20,be_2,2,i t͡ʃ i
-ara_form_21_1,ara_form_21,1w,1,w -
-ara_form_21_2,ara_form_21,be_1,2,a p -
-ara_form_22_1,ara_form_22,1w,1,w -
-ara_form_22_2,ara_form_22,come,2,- - e b ɨ
-ara_form_23_1,ara_form_23,k,1,k -
-ara_form_24_1,ara_form_24,1w,1,w -
-ara_form_24_2,ara_form_24,go,2,ɨ d o - -
-ara_form_25_1,ara_form_25,1w,1,w -
-ara_form_25_2,ara_form_25,go_down,2,- - i p - t o
-ara_form_26_1,ara_form_26,1w,1,w ɨ
-ara_form_26_2,ara_form_26,say,2,g e - - -
-ebak_form_27_1,ebak_form_27,1w,1,w -
-ebak_form_27_2,ebak_form_27,DETRZ1,2,i - -
-bak_form_28_1,bak_form_28,1w,1,w -
-bak_form_28_2,bak_form_28,be_1,2,a - -
-bak_form_29_1,bak_form_29,1w,1,w -
-bak_form_29_2,bak_form_29,be_2,2,i - -
-bak_form_30_1,bak_form_30,k,1,k -
-bak_form_30_2,bak_form_30,DETRZ,2,ə -
-bak_form_30_3,bak_form_30,come,3,- - e w ɨ
-bak_form_31_1,bak_form_31,1w,1,- u
-bak_form_31_2,bak_form_31,go,2,- t ə - -
-bak_form_32_1,bak_form_32,k,1,k -
-bak_form_32_2,bak_form_32,go_down,2,- - ɨ - - t ə
-ebak_form_33_1,ebak_form_33,k,1,k -
-bak_form_34_1,bak_form_34,1w,1,- u
-bak_form_34_2,bak_form_34,say,2,g e - - -
-car_form_35_1,car_form_35,1p,1,j i
-car_form_37_1,car_form_37,1p,1,j -
-car_form_37_2,car_form_37,be_2,2,e t͡ʃ i
-car_form_38_1,car_form_38,1w,1,w -
-car_form_38_2,car_form_38,be_1,2,a - -
-car_form_39_1,car_form_39,1p,1,j -
-car_form_39_2,car_form_39,come,2,- - e h -
-car_form_40_1,car_form_40,1p,1,j -
-car_form_41_1,car_form_41,1w,1,w ɨ
-car_form_41_2,car_form_41,go,2,- t ə m ə
-car_form_42_1,car_form_42,1p,1,j -
-car_form_42_2,car_form_42,go_down,2,- - e h ɨ t ə
-car_form_43_1,car_form_43,1w,1,
-car_form_43_2,car_form_43,say,2,k a - - -
-hix_form_44_1,hix_form_44,k,1,k -
-hix_form_44_2,hix_form_44,DETRZ1,2,e w e
-hix_form_44_3,hix_form_44,bathe_1,3,- h ɨ
-hix_form_45_1,hix_form_45,1w,1,w -
-hix_form_45_2,hix_form_45,be_1,2,a h -
-hix_form_46_1,hix_form_46,1w,1,w -
-hix_form_46_2,hix_form_46,be_2,2,e ʃ e
-hix_form_47_1,hix_form_47,k,1,k -
-hix_form_48_1,hix_form_48,k,1,k -
-hix_form_49_1,hix_form_49,k,1,k -
-hix_form_50_1,hix_form_50,1w,1,- ɨ
-hix_form_50_2,hix_form_50,go,2,- t o - -
-hix_form_52_1,hix_form_52,1w,1,- ɨ
-hix_form_52_2,hix_form_52,say,2,k a - - -
-hix_form_53_1,hix_form_53,k,1,k ɨ
-hix_form_54_1,hix_form_54,k,1,k -
-ikp_form_55_1,ikp_form_55,1w,1,
-ikp_form_55_2,ikp_form_55,DETRZ1,2,i - -
-ikp_form_55_3,ikp_form_55,bathe_1,3,- p -
-ikp_form_56_1,ikp_form_56,1w,1,
-ikp_form_56_2,ikp_form_56,be_2,2,e t͡ʃ i
-ikp_form_58_1,ikp_form_58,k,1,k -
-ikp_form_58_2,ikp_form_58,DETRZ,2,a r
-ikp_form_58_3,ikp_form_58,come,3,- - e p -
-ikp_form_59_1,ikp_form_59,k,1,k -
-ikp_form_59_2,ikp_form_59,go,2,a r a n -
-ikp_form_60_1,ikp_form_60,k,1,k -
-ikp_form_61_1,ikp_form_61,1w,1,- ɨ
-ikp_form_61_2,ikp_form_61,say,2,g e - - -
-kar_form_62_1,kar_form_62,1w,1,w -
-kar_form_62_2,kar_form_62,DETRZ,2,o -
-kar_form_62_3,kar_form_62,come,3,- - - p ɨ
-kar_form_63_1,kar_form_63,1w,1,w ɨ
-kar_form_63_2,kar_form_63,go,2,- - - ʔ -
-kar_form_64_1,kar_form_64,1w,1,
-kar_form_64_2,kar_form_64,say,2,k a - - -
-kax_form_65_1,kax_form_65,1w,1,w -
-kax_form_65_2,kax_form_65,DETRZ,2,oo -
-kax_form_65_3,kax_form_65,come,3,- - - h ɨ
-mak_form_66_1,mak_form_66,1w,1,w -
-mak_form_67_1,mak_form_67,1w,1,w -
-mak_form_67_2,mak_form_67,be_2,2,e - i
-mak_form_68_1,mak_form_68,1w,1,w -
-mak_form_68_2,mak_form_68,come,2,- - e h ə
-mak_form_69_1,mak_form_69,1w,1,w -
-mak_form_70_1,mak_form_70,1w,1,w -
-mak_form_70_2,mak_form_70,go,2,ɨ t ə - -
-PPek_form_71_1,PPek_form_71,1w,1,w -
-PPek_form_71_2,PPek_form_71,DETRZ1,2,i - -
-PPek_form_71_3,PPek_form_71,bathe_1,3,- p ɨ
-PPek_form_72_1,PPek_form_72,1w,1,w -
-PPek_form_72_2,PPek_form_72,be_1,2,a p -
-PPek_form_73_1,PPek_form_73,1w,1,w -
-PPek_form_73_2,PPek_form_73,be_2,2,e t͡ʃ i
-PPek_form_74_1,PPek_form_74,1w,1,w -
-PPek_form_74_2,PPek_form_74,come,2,- - e p ɨ
-PPek_form_75_1,PPek_form_75,1w,1,w -
-PPek_form_75_2,PPek_form_75,go,2,ɨ t ə n -
-PPek_form_76_1,PPek_form_76,1w,1,w -
-PPek_form_76_2,PPek_form_76,go_down,2,- - ɨ p - t ə
-PPek_form_77_1,PPek_form_77,1w,1,w ɨ
-PPek_form_77_2,PPek_form_77,say,2,g e - - -
-PTir_form_78_1,PTir_form_78,1t,1,t͡ʃ
-PTir_form_78_2,PTir_form_78,DETRZ1,2,e - -
-PTir_form_78_3,PTir_form_78,bathe_1,3,- p ɨ
-PTir_form_79_1,PTir_form_79,1w,1,w -
-PTir_form_79_2,PTir_form_79,be_1,2,a - -
-PTir_form_80_1,PTir_form_80,1w,1,w -
-PTir_form_80_2,PTir_form_80,be_2,2,e ʔ i
-PTir_form_81_1,PTir_form_81,1w,1,w -
-PTir_form_81_2,PTir_form_81,DETRZ,2,ə ʔ
-PTir_form_81_3,PTir_form_81,come,3,- - e p ɨ
-PTir_form_82_1,PTir_form_82,1w,1,w -
-PTir_form_82_2,PTir_form_82,go,2,ɨ t ə m ɨ
-PTir_form_83_1,PTir_form_83,tri1p,1,p
-PTir_form_83_2,PTir_form_83,go_down,2,- - ɨ h - t ə
-PTir_form_84_1,PTir_form_84,1w,1,w ɨ
-PTir_form_84_2,PTir_form_84,say,2,k a - - -
-PTir_form_85_1,PTir_form_85,1t,1,t
-PTir_form_85_2,PTir_form_85,DETRZ,2,əə -
-PTir_form_85_3,PTir_form_85,sleep,3,n ɨ - k ɨ
-PWai_form_86_1,PWai_form_86,k,1,k -
-PWai_form_86_2,PWai_form_86,DETRZ1,2,ee - -
-PWai_form_86_3,PWai_form_86,bathe_1,3,- ɸ ɨ
-PWai_form_87_1,PWai_form_87,1w,1,w -
-PWai_form_87_2,PWai_form_87,be_2,2,e ʃ i
-PWai_form_88_1,PWai_form_88,1w,1,w -
-PWai_form_88_2,PWai_form_88,be_1,2,a h -
-PWai_form_89_1,PWai_form_89,k,1,k -
-PWai_form_90_1,PWai_form_90,1w,1,w ɨ
-PWai_form_90_2,PWai_form_90,go,2,- t o m -
-PWai_form_92_1,PWai_form_92,1w,1,w ɨ
-PWai_form_92_2,PWai_form_92,say,2,k a - - -
-PWai_form_93_1,PWai_form_93,k,1,k ɨ
-tri_form_94_1,tri_form_94,1t,1,s
-tri_form_94_2,tri_form_94,DETRZ1,2,e - -
-tri_form_94_3,tri_form_94,bathe_1,3,- p ɨ
-tri_form_95_1,tri_form_95,1w,1,w -
-tri_form_95_2,tri_form_95,be_1,2,a - -
+aku_form_18_1,aku_form_18,k,1,k -
+aku_form_19_1,aku_form_19,1t,1,t͡ʃ
+aku_form_19_2,aku_form_19,DETRZ1,2,e - -
+aku_form_19_3,aku_form_19,bathe_1,3,- p ɨ
+aku_form_20_1,aku_form_20,1t,1,t͡ʃ
+aku_form_21_1,aku_form_21,k,1,k -
+aku_form_22_1,aku_form_22,k,1,k -
+aku_form_22_2,aku_form_22,DETRZ,2,əə -
+aku_form_22_3,aku_form_22,sleep,3,n ɨ - k ɨ
+car_form_23_1,car_form_23,1p,1,j -
+car_form_23_2,car_form_23,come,2,- - e h -
+car_form_24_1,car_form_24,1p,1,j -
+car_form_24_2,car_form_24,be_2,2,e t͡ʃ i
+hix_form_25_1,hix_form_25,1w,1,- ɨ
+hix_form_25_2,hix_form_25,say,2,k a - - -
+hix_form_26_1,hix_form_26,k,1,k ɨ
+hix_form_27_1,hix_form_27,k,1,k -
+hix_form_27_2,hix_form_27,DETRZ1,2,e w e
+hix_form_27_3,hix_form_27,bathe_1,3,- h ɨ
+hix_form_28_1,hix_form_28,1w,1,w -
+hix_form_28_2,hix_form_28,be_1,2,a h -
+hix_form_29_1,hix_form_29,1w,1,w -
+hix_form_29_2,hix_form_29,be_2,2,e ʃ e
+hix_form_30_1,hix_form_30,1w,1,- ɨ
+hix_form_30_2,hix_form_30,go,2,- t o - -
+kar_form_31_1,kar_form_31,1w,1,w ɨ
+kar_form_31_2,kar_form_31,go,2,- - - ʔ -
+kar_form_32_1,kar_form_32,1w,1,
+kar_form_32_2,kar_form_32,say,2,k a - - -
+kar_form_33_1,kar_form_33,1w,1,w -
+kar_form_33_2,kar_form_33,DETRZ,2,o -
+kar_form_33_3,kar_form_33,come,3,- - - p ɨ
+hix_form_34_1,hix_form_34,k,1,k -
+wai_form_35_1,wai_form_35,k,1,k -
+hix_form_36_1,hix_form_36,k,1,k -
+hix_form_37_1,hix_form_37,k,1,k -
+hix_form_38_1,hix_form_38,k,1,k -
+ikp_form_39_1,ikp_form_39,1w,1,
+ikp_form_39_2,ikp_form_39,DETRZ1,2,i - -
+ikp_form_39_3,ikp_form_39,bathe_1,3,- p -
+ikp_form_40_1,ikp_form_40,1w,1,
+ikp_form_40_2,ikp_form_40,be_2,2,e t͡ʃ i
+ikp_form_41_1,ikp_form_41,1w,1,- ɨ
+ikp_form_41_2,ikp_form_41,say,2,g e - - -
+ikp_form_42_1,ikp_form_42,k,1,k -
+ikp_form_42_2,ikp_form_42,DETRZ,2,a r
+ikp_form_42_3,ikp_form_42,come,3,- - e p -
+ikp_form_43_1,ikp_form_43,k,1,k -
+ikp_form_44_1,ikp_form_44,k,1,k -
+ikp_form_44_2,ikp_form_44,go,2,a r a n -
+yuk_form_47_1,yuk_form_47,1p,1,j -
+yuk_form_48_1,yuk_form_48,1p,1,j ɨ
+mak_form_49_1,mak_form_49,1w,1,w -
+mak_form_50_1,mak_form_50,1w,1,w -
+mak_form_50_2,mak_form_50,go,2,ɨ t ə - -
+mak_form_51_1,mak_form_51,1w,1,w -
+mak_form_51_2,mak_form_51,come,2,- - e h ə
+mak_form_52_1,mak_form_52,1w,1,w -
+mak_form_53_1,mak_form_53,1w,1,w -
+mak_form_53_2,mak_form_53,be_2,2,e - i
+car_form_54_1,car_form_54,1p,1,j i
+aku_form_55_1,aku_form_55,1w,1,- ə
+aku_form_55_2,aku_form_55,go,2,- t ə m ɨ
+car_form_56_1,car_form_56,1w,1,w ɨ
+car_form_56_2,car_form_56,go,2,- t ə m ə
+aku_form_57_1,aku_form_57,1w,1,w ɨ
+aku_form_57_2,aku_form_57,say,2,k a - - -
+aku_form_58_1,aku_form_58,1w,1,
+aku_form_58_2,aku_form_58,DETRZ,2,ee -
+aku_form_58_3,aku_form_58,come,3,- - - p ɨ
+aku_form_59_1,aku_form_59,1w,1,
+aku_form_59_2,aku_form_59,be_1,2,a - -
+car_form_60_1,car_form_60,1w,1,w -
+car_form_60_2,car_form_60,be_1,2,a - -
+tri_form_61_1,tri_form_61,1w,1,w -
+tri_form_61_2,tri_form_61,be_1,2,a - -
+tri_form_62_1,tri_form_62,tri1p,1,p
+tri_form_62_2,tri_form_62,go_down,2,- - ɨ h - t ə
+ebak_form_63_1,ebak_form_63,1w,1,w -
+ebak_form_63_2,ebak_form_63,DETRZ1,2,i - -
+ebak_form_64_1,ebak_form_64,k,1,k -
+yuk_form_65_1,yuk_form_65,1p,1,j -
+yuk_form_65_2,yuk_form_65,go_down,2,- - e w - t u
+yuk_form_66_1,yuk_form_66,1p,1,j -
+yuk_form_67_1,yuk_form_67,1w,1,
+yuk_form_67_2,yuk_form_67,go,2,- t o - -
+yuk_form_68_1,yuk_form_68,1p,1,j -
+yuk_form_68_2,yuk_form_68,be_1,2,a - -
+yuk_form_69_1,yuk_form_69,1p,1,j -
+yuk_form_69_2,yuk_form_69,be_2,2,e - -
+aku_form_70_1,aku_form_70,1w,1,
+aku_form_70_2,aku_form_70,be_2,2,e ʔ i
+ebak_form_71_1,ebak_form_71,1w,1,- u
+ebak_form_71_2,ebak_form_71,go,2,- d ə - -
+ebak_form_72_1,ebak_form_72,1w,1,- u
+ebak_form_72_2,ebak_form_72,go,2,- g u - e
+ebak_form_73_1,ebak_form_73,1w,1,- u
+ebak_form_73_2,ebak_form_73,go,2,- g e - -
+ebak_form_74_1,ebak_form_74,k,1,k -
+ebak_form_74_2,ebak_form_74,come,2,ə - e w ɨ
+wbak_form_75_1,wbak_form_75,1w,1,- u
+wbak_form_75_2,wbak_form_75,go,2,- d ə - -
+wbak_form_76_1,wbak_form_76,1w,1,- u
+wbak_form_76_2,wbak_form_76,go,2,- g u - e
+wbak_form_77_1,wbak_form_77,k,1,k -
+wbak_form_77_2,wbak_form_77,come,2,ə - e w ə
+car_form_78_1,car_form_78,1p,1,j -
+car_form_78_2,car_form_78,go_down,2,- - e h ɨ t ə
+car_form_79_1,car_form_79,1w,1,
+car_form_79_2,car_form_79,say,2,k a - - -
+ikp_form_80_1,ikp_form_80,1w,1,
+ikp_form_80_2,ikp_form_80,go_down,2,- - i p - t o
+kax_form_81_1,kax_form_81,1w,1,w -
+kax_form_81_2,kax_form_81,DETRZ,2,oo -
+kax_form_81_3,kax_form_81,come,3,- - - h ɨ
+wai_form_82_1,wai_form_82,1w,1,w -
+wai_form_82_2,wai_form_82,be_1,2,a - -
+wai_form_83_1,wai_form_83,1w,1,w -
+wai_form_83_2,wai_form_83,be_2,2,ee ʃ i
+ebak_form_84_1,ebak_form_84,1w,1,w -
+ebak_form_84_2,ebak_form_84,be_1,2,a w ɨ
+ebak_form_85_1,ebak_form_85,1w,1,w -
+ebak_form_85_2,ebak_form_85,be_2,2,i - -
+ebak_form_86_1,ebak_form_86,k,1,k -
+ebak_form_86_2,ebak_form_86,DETRZ,2,ə -
+ebak_form_86_3,ebak_form_86,come,3,- - e w ɨ
+car_form_87_1,car_form_87,1p,1,j -
+tri_form_88_1,tri_form_88,1t,1,t
+tri_form_89_1,tri_form_89,1t,1,s
+tri_form_89_2,tri_form_89,DETRZ1,2,e - -
+tri_form_89_3,tri_form_89,bathe_1,3,- p ɨ
+tri_form_90_1,tri_form_90,1w,1,w ɨ
+tri_form_90_2,tri_form_90,go,2,- t ə n -
+tri_form_91_1,tri_form_91,1t,1,t
+tri_form_92_1,tri_form_92,1t,1,s
+tri_form_93_1,tri_form_93,1w,1,w -
+tri_form_93_2,tri_form_93,DETRZ,2,ə -
+tri_form_93_3,tri_form_93,come,3,- - e p ɨ
+tri_form_94_1,tri_form_94,1w,1,w ɨ
+tri_form_94_2,tri_form_94,say,2,k a - - -
+tri_form_95_1,tri_form_95,1t,1,t
+tri_form_95_2,tri_form_95,DETRZ,2,əə -
+tri_form_95_3,tri_form_95,sleep,3,n ɨ - k ɨ
 tri_form_96_1,tri_form_96,1w,1,w -
 tri_form_96_2,tri_form_96,be_2,2,e - i
-tri_form_97_1,tri_form_97,1w,1,w -
-tri_form_97_2,tri_form_97,DETRZ,2,ə -
-tri_form_97_3,tri_form_97,come,3,- - e p ɨ
-tri_form_98_1,tri_form_98,1w,1,w ɨ
-tri_form_98_2,tri_form_98,go,2,- t ə n -
-tri_form_99_1,tri_form_99,tri1p,1,p
-tri_form_99_2,tri_form_99,go_down,2,- - ɨ h - t ə
-tri_form_100_1,tri_form_100,1w,1,w ɨ
-tri_form_100_2,tri_form_100,say,2,k a - - -
-tri_form_101_1,tri_form_101,1t,1,t
-tri_form_102_1,tri_form_102,1t,1,t
-tri_form_102_2,tri_form_102,DETRZ,2,əə -
-tri_form_102_3,tri_form_102,sleep,3,n ɨ - k ɨ
-tri_form_103_1,tri_form_103,1t,1,t
-tri_form_104_1,tri_form_104,1t,1,s
-wai_form_105_1,wai_form_105,k,1,k -
-wai_form_105_2,wai_form_105,DETRZ1,2,e j e
-wai_form_105_3,wai_form_105,bathe_1,3,- ɸ u
-wai_form_106_1,wai_form_106,1w,1,w -
-wai_form_106_2,wai_form_106,be_1,2,a - -
-wai_form_107_1,wai_form_107,1w,1,w -
-wai_form_107_2,wai_form_107,be_2,2,ee ʃ i
-wai_form_108_1,wai_form_108,k,1,k -
-wai_form_109_1,wai_form_109,k,1,k ɨ
-wai_form_109_2,wai_form_109,1w,2,w -
-wai_form_109_3,wai_form_109,go,3,- t o m -
-wai_form_111_1,wai_form_111,1w,1,w ɨ
-wai_form_111_2,wai_form_111,say,2,k a - - -
-wai_form_112_1,wai_form_112,k,1,k ɨ
-way_form_113_1,way_form_113,1w,1,w ɨ
-way_form_113_2,way_form_113,go,2,- t ə m -
-way_form_114_1,way_form_114,1w,1,w ɨ
-way_form_114_2,way_form_114,say,2,k a - - -
-way_form_115_1,way_form_115,1w,1,w -
-yuk_form_116_1,yuk_form_116,1p,1,j -
-yuk_form_116_2,yuk_form_116,be_1,2,a - -
-yuk_form_117_1,yuk_form_117,1p,1,j -
-yuk_form_117_2,yuk_form_117,be_2,2,e - -
-yuk_form_118_1,yuk_form_118,1p,1,j -
-yuk_form_119_1,yuk_form_119,1w,1,
-yuk_form_119_2,yuk_form_119,go,2,- t o - -
-yuk_form_120_1,yuk_form_120,1p,1,j -
-yuk_form_120_2,yuk_form_120,go_down,2,- - e w - t u
-yuk_form_122_1,yuk_form_122,1p,1,j ɨ
-yuk_form_123_1,yuk_form_123,1p,1,j -
-ebak_form_124_1,ebak_form_124,1w,1,- u
-ebak_form_124_2,ebak_form_124,go,2,- d ə - -
-wbak_form_125_1,wbak_form_125,1w,1,- u
-wbak_form_125_2,wbak_form_125,go,2,- d ə - -
-wbak_form_126_1,wbak_form_126,1w,1,- u
-wbak_form_126_2,wbak_form_126,go,2,- g u - e
-ebak_form_127_1,ebak_form_127,1w,1,- u
-ebak_form_127_2,ebak_form_127,go,2,- g u - e
-ebak_form_128_1,ebak_form_128,1w,1,- u
-ebak_form_128_2,ebak_form_128,go,2,- g e - -
-wbak_form_129_1,wbak_form_129,k,1,k -
-wbak_form_129_2,wbak_form_129,come,2,ə - e w ə
-ebak_form_130_1,ebak_form_130,k,1,k -
-ebak_form_130_2,ebak_form_130,come,2,ə - e w ɨ
-ikp_form_131_1,ikp_form_131,1w,1,
-ikp_form_131_2,ikp_form_131,go_down,2,- - i p - t o
+bak_form_97_1,bak_form_97,1w,1,w -
+bak_form_97_2,bak_form_97,be_1,2,a - -
+bak_form_98_1,bak_form_98,1w,1,- u
+bak_form_98_2,bak_form_98,say,2,g e - - -
+bak_form_99_1,bak_form_99,k,1,k -
+bak_form_99_2,bak_form_99,go_down,2,- - ɨ - - t ə
+bak_form_100_1,bak_form_100,1w,1,- u
+bak_form_100_2,bak_form_100,go,2,- t ə - -
+bak_form_101_1,bak_form_101,1w,1,w -
+bak_form_101_2,bak_form_101,be_2,2,i - -
+bak_form_102_1,bak_form_102,k,1,k -
+bak_form_102_2,bak_form_102,DETRZ,2,ə -
+bak_form_102_3,bak_form_102,come,3,- - e w ɨ
+wai_form_103_1,wai_form_103,k,1,k -
+wai_form_103_2,wai_form_103,DETRZ1,2,e j e
+wai_form_103_3,wai_form_103,bathe_1,3,- ɸ u
+wai_form_104_1,wai_form_104,k,1,k ɨ
+wai_form_106_1,wai_form_106,1w,1,w ɨ
+wai_form_106_2,wai_form_106,say,2,k a - - -
+wai_form_107_1,wai_form_107,k,1,k ɨ
+wai_form_107_2,wai_form_107,1w,2,w -
+wai_form_107_3,wai_form_107,go,3,- t o m -
+way_form_108_1,way_form_108,1w,1,w ɨ
+way_form_108_2,way_form_108,go,2,- t ə m -
+way_form_109_1,way_form_109,1w,1,w ɨ
+way_form_109_2,way_form_109,say,2,k a - - -
+way_form_110_1,way_form_110,1w,1,w -
+PPek_form_112_1,PPek_form_112,1w,1,w -
+PPek_form_112_2,PPek_form_112,DETRZ1,2,i - -
+PPek_form_112_3,PPek_form_112,bathe_1,3,- p ɨ
+PPek_form_113_1,PPek_form_113,1w,1,w -
+PPek_form_113_2,PPek_form_113,be_1,2,a p -
+PPek_form_114_1,PPek_form_114,1w,1,w -
+PPek_form_114_2,PPek_form_114,be_2,2,e t͡ʃ i
+PPek_form_115_1,PPek_form_115,1w,1,w -
+PPek_form_115_2,PPek_form_115,come,2,- - e p ɨ
+PPek_form_116_1,PPek_form_116,1w,1,w -
+PPek_form_116_2,PPek_form_116,go,2,ɨ t ə n -
+PPek_form_117_1,PPek_form_117,1w,1,w -
+PPek_form_117_2,PPek_form_117,go_down,2,- - ɨ p - t ə
+PPek_form_118_1,PPek_form_118,1w,1,w ɨ
+PPek_form_118_2,PPek_form_118,say,2,g e - - -
+PTir_form_119_1,PTir_form_119,1t,1,t͡ʃ
+PTir_form_119_2,PTir_form_119,DETRZ1,2,e - -
+PTir_form_119_3,PTir_form_119,bathe_1,3,- p ɨ
+PTir_form_120_1,PTir_form_120,1w,1,w -
+PTir_form_120_2,PTir_form_120,be_1,2,a - -
+PTir_form_121_1,PTir_form_121,1w,1,w -
+PTir_form_121_2,PTir_form_121,be_2,2,e ʔ i
+PTir_form_122_1,PTir_form_122,1w,1,w -
+PTir_form_122_2,PTir_form_122,DETRZ,2,ə ʔ
+PTir_form_122_3,PTir_form_122,come,3,- - e p ɨ
+PTir_form_123_1,PTir_form_123,1w,1,w -
+PTir_form_123_2,PTir_form_123,go,2,ɨ t ə m ɨ
+PTir_form_124_1,PTir_form_124,tri1p,1,p
+PTir_form_124_2,PTir_form_124,go_down,2,- - ɨ h - t ə
+PTir_form_125_1,PTir_form_125,1w,1,w ɨ
+PTir_form_125_2,PTir_form_125,say,2,k a - - -
+PTir_form_126_1,PTir_form_126,1t,1,t
+PTir_form_126_2,PTir_form_126,DETRZ,2,əə -
+PTir_form_126_3,PTir_form_126,sleep,3,n ɨ - k ɨ
+PWai_form_127_1,PWai_form_127,k,1,k -
+PWai_form_127_2,PWai_form_127,DETRZ1,2,ee - -
+PWai_form_127_3,PWai_form_127,bathe_1,3,- ɸ ɨ
+PWai_form_128_1,PWai_form_128,1w,1,w -
+PWai_form_128_2,PWai_form_128,be_2,2,e ʃ i
+PWai_form_129_1,PWai_form_129,1w,1,w -
+PWai_form_129_2,PWai_form_129,be_1,2,a h -
+PWai_form_130_1,PWai_form_130,k,1,k -
+PWai_form_131_1,PWai_form_131,1w,1,w ɨ
+PWai_form_131_2,PWai_form_131,go,2,- t o m -
+PWai_form_133_1,PWai_form_133,1w,1,w ɨ
+PWai_form_133_2,PWai_form_133,say,2,k a - - -
+PWai_form_134_1,PWai_form_134,k,1,k ɨ
+ebak_form_135_1,ebak_form_135,1w,1,- u
+ebak_form_135_2,ebak_form_135,say,2,g e - - -
 mac_stem_0_1,mac_stem_0,come,1,- - i p ɨ
 pem_stem_1_1,pem_stem_1,come,1,- j e p ɨ
 aka_stem_2_1,aka_stem_2,come,1,- j e p ɨ
@@ -336,7 +345,7 @@ kar_stem_81_3,kar_stem_81,go_down,3,- - ɨ ʔ - t o
 mak_stem_82_1,mak_stem_82,go_down,1,- - ə ʔ - t ə
 kap_stem_83_1,kap_stem_83,go_down,1,- - u ʔ - t ə
 pem_stem_84_1,pem_stem_84,go_down,1,- - u ʔ - t ə
-mac_stem_85_1,mac_stem_85,go_down,1,a - u - - t ɨ
+mac_stem_85_1,mac_stem_85,go_down,1,- - a - u t ɨ
 pan_stem_86_1,pan_stem_86,go_down,1,- - ə h - t ə
 yab_stem_87_1,yab_stem_87,go_down,1,- - ə h - t ə
 wmr_stem_88_1,wmr_stem_88,go_down,1,- - ɨ - - t ɨ
@@ -345,7 +354,7 @@ ara_stem_90_1,ara_stem_90,go_down,1,- - i p - t o
 bak_stem_91_1,bak_stem_91,go_down,1,- - ɨ - - t ə
 ikp_stem_92_1,ikp_stem_92,go_down,1,- - i p - t o
 tri_stem_93_1,tri_stem_93,go_down,1,- - ɨ h - t ə
-PPar_stem_94_1,PPar_stem_94,go_down,1,ɨ ɸ ɨ - - t o
+PPar_stem_94_1,PPar_stem_94,go_down,1,- - ɨ ɸ ɨ t o
 kar_stem_95_1,kar_stem_95,defecate,1,u w e - k a
 mak_stem_96_1,mak_stem_96,defecate,1,- w e - k a
 kax_stem_97_1,kax_stem_97,defecate,1,- w e - k a
