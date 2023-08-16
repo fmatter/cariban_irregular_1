@@ -8,7 +8,7 @@ ara_form_2_2,ara_form_2,be_2,2,i t͡ʃ i
 ara_form_3_1,ara_form_3,1w,1,w -
 ara_form_3_2,ara_form_3,come,2,- - e b ɨ
 ara_form_4_1,ara_form_4,1w,1,w -
-ara_form_4_2,ara_form_4,go,2,ɨ d o - -
+ara_form_4_2,ara_form_4,go,2,- ɨ d o - -
 ara_form_5_1,ara_form_5,1w,1,w -
 ara_form_5_2,ara_form_5,go_down,2,- - i p - t o
 ara_form_6_1,ara_form_6,1w,1,w ɨ
@@ -49,9 +49,9 @@ hix_form_28_2,hix_form_28,be_1,2,a h -
 hix_form_29_1,hix_form_29,1w,1,w -
 hix_form_29_2,hix_form_29,be_2,2,e ʃ e
 hix_form_30_1,hix_form_30,1w,1,- ɨ
-hix_form_30_2,hix_form_30,go,2,- t o - -
+hix_form_30_2,hix_form_30,go,2,- - t o - -
 kar_form_31_1,kar_form_31,1w,1,w ɨ
-kar_form_31_2,kar_form_31,go,2,- - - ʔ -
+kar_form_31_2,kar_form_31,go,2,- - ʔ - - -
 kar_form_32_1,kar_form_32,1w,1,
 kar_form_32_2,kar_form_32,say,2,k a - - -
 kar_form_33_1,kar_form_33,1w,1,w -
@@ -74,12 +74,12 @@ ikp_form_42_2,ikp_form_42,DETRZ,2,a r
 ikp_form_42_3,ikp_form_42,come,3,- - e p -
 ikp_form_43_1,ikp_form_43,k,1,k -
 ikp_form_44_1,ikp_form_44,k,1,k -
-ikp_form_44_2,ikp_form_44,go,2,a r a n -
+ikp_form_44_2,ikp_form_44,go,2,- a r a n -
 yuk_form_47_1,yuk_form_47,1p,1,j -
 yuk_form_48_1,yuk_form_48,1p,1,j ɨ
 mak_form_49_1,mak_form_49,1w,1,w -
 mak_form_50_1,mak_form_50,1w,1,w -
-mak_form_50_2,mak_form_50,go,2,ɨ t ə - -
+mak_form_50_2,mak_form_50,go,2,- ɨ t ə - -
 mak_form_51_1,mak_form_51,1w,1,w -
 mak_form_51_2,mak_form_51,come,2,- - e h ə
 mak_form_52_1,mak_form_52,1w,1,w -
@@ -87,9 +87,9 @@ mak_form_53_1,mak_form_53,1w,1,w -
 mak_form_53_2,mak_form_53,be_2,2,e - i
 car_form_54_1,car_form_54,1p,1,j i
 aku_form_55_1,aku_form_55,1w,1,- ə
-aku_form_55_2,aku_form_55,go,2,- t ə m ɨ
+aku_form_55_2,aku_form_55,go,2,- - t ə m ɨ
 car_form_56_1,car_form_56,1w,1,w ɨ
-car_form_56_2,car_form_56,go,2,- t ə m ə
+car_form_56_2,car_form_56,go,2,- - t ə m ə
 aku_form_57_1,aku_form_57,1w,1,w ɨ
 aku_form_57_2,aku_form_57,say,2,k a - - -
 aku_form_58_1,aku_form_58,1w,1,
@@ -110,7 +110,7 @@ yuk_form_65_1,yuk_form_65,1p,1,j -
 yuk_form_65_2,yuk_form_65,go_down,2,- - e w - t u
 yuk_form_66_1,yuk_form_66,1p,1,j -
 yuk_form_67_1,yuk_form_67,1w,1,
-yuk_form_67_2,yuk_form_67,go,2,- t o - -
+yuk_form_67_2,yuk_form_67,go,2,- - t o - -
 yuk_form_68_1,yuk_form_68,1p,1,j -
 yuk_form_68_2,yuk_form_68,be_1,2,a - -
 yuk_form_69_1,yuk_form_69,1p,1,j -
@@ -118,17 +118,17 @@ yuk_form_69_2,yuk_form_69,be_2,2,e - -
 aku_form_70_1,aku_form_70,1w,1,
 aku_form_70_2,aku_form_70,be_2,2,e ʔ i
 ebak_form_71_1,ebak_form_71,1w,1,- u
-ebak_form_71_2,ebak_form_71,go,2,- d ə - -
+ebak_form_71_2,ebak_form_71,go,2,- - d ə - -
 ebak_form_72_1,ebak_form_72,1w,1,- u
-ebak_form_72_2,ebak_form_72,go,2,- g u - e
+ebak_form_72_2,ebak_form_72,say,2,g u - e -
 ebak_form_73_1,ebak_form_73,1w,1,- u
-ebak_form_73_2,ebak_form_73,go,2,- g e - -
+ebak_form_73_2,ebak_form_73,say,2,g e - - -
 ebak_form_74_1,ebak_form_74,k,1,k -
 ebak_form_74_2,ebak_form_74,come,2,ə - e w ɨ
 wbak_form_75_1,wbak_form_75,1w,1,- u
-wbak_form_75_2,wbak_form_75,go,2,- d ə - -
+wbak_form_75_2,wbak_form_75,go,2,- - d ə - -
 wbak_form_76_1,wbak_form_76,1w,1,- u
-wbak_form_76_2,wbak_form_76,go,2,- g u - e
+wbak_form_76_2,wbak_form_76,go,2,g u - e - -
 wbak_form_77_1,wbak_form_77,k,1,k -
 wbak_form_77_2,wbak_form_77,come,2,ə - e w ə
 car_form_78_1,car_form_78,1p,1,j -
@@ -157,7 +157,7 @@ tri_form_89_1,tri_form_89,1t,1,s
 tri_form_89_2,tri_form_89,DETRZ1,2,e - -
 tri_form_89_3,tri_form_89,bathe_1,3,- p ɨ
 tri_form_90_1,tri_form_90,1w,1,w ɨ
-tri_form_90_2,tri_form_90,go,2,- t ə n -
+tri_form_90_2,tri_form_90,go,2,- - t ə n -
 tri_form_91_1,tri_form_91,1t,1,t
 tri_form_92_1,tri_form_92,1t,1,s
 tri_form_93_1,tri_form_93,1w,1,w -
@@ -177,7 +177,7 @@ bak_form_98_2,bak_form_98,say,2,g e - - -
 bak_form_99_1,bak_form_99,k,1,k -
 bak_form_99_2,bak_form_99,go_down,2,- - ɨ - - t ə
 bak_form_100_1,bak_form_100,1w,1,- u
-bak_form_100_2,bak_form_100,go,2,- t ə - -
+bak_form_100_2,bak_form_100,go,2,- - t ə - -
 bak_form_101_1,bak_form_101,1w,1,w -
 bak_form_101_2,bak_form_101,be_2,2,i - -
 bak_form_102_1,bak_form_102,k,1,k -
@@ -191,9 +191,9 @@ wai_form_106_1,wai_form_106,1w,1,w ɨ
 wai_form_106_2,wai_form_106,say,2,k a - - -
 wai_form_107_1,wai_form_107,k,1,k ɨ
 wai_form_107_2,wai_form_107,1w,2,w -
-wai_form_107_3,wai_form_107,go,3,- t o m -
+wai_form_107_3,wai_form_107,go,3,- - t o m -
 way_form_108_1,way_form_108,1w,1,w ɨ
-way_form_108_2,way_form_108,go,2,- t ə m -
+way_form_108_2,way_form_108,go,2,- - t ə m -
 way_form_109_1,way_form_109,1w,1,w ɨ
 way_form_109_2,way_form_109,say,2,k a - - -
 way_form_110_1,way_form_110,1w,1,w -
@@ -207,7 +207,7 @@ PPek_form_114_2,PPek_form_114,be_2,2,e t͡ʃ i
 PPek_form_115_1,PPek_form_115,1w,1,w -
 PPek_form_115_2,PPek_form_115,come,2,- - e p ɨ
 PPek_form_116_1,PPek_form_116,1w,1,w -
-PPek_form_116_2,PPek_form_116,go,2,ɨ t ə n -
+PPek_form_116_2,PPek_form_116,go,2,- ɨ t ə n -
 PPek_form_117_1,PPek_form_117,1w,1,w -
 PPek_form_117_2,PPek_form_117,go_down,2,- - ɨ p - t ə
 PPek_form_118_1,PPek_form_118,1w,1,w ɨ
@@ -223,7 +223,7 @@ PTir_form_122_1,PTir_form_122,1w,1,w -
 PTir_form_122_2,PTir_form_122,DETRZ,2,ə ʔ
 PTir_form_122_3,PTir_form_122,come,3,- - e p ɨ
 PTir_form_123_1,PTir_form_123,1w,1,w -
-PTir_form_123_2,PTir_form_123,go,2,ɨ t ə m ɨ
+PTir_form_123_2,PTir_form_123,go,2,- ɨ t ə m ɨ
 PTir_form_124_1,PTir_form_124,tri1p,1,p
 PTir_form_124_2,PTir_form_124,go_down,2,- - ɨ h - t ə
 PTir_form_125_1,PTir_form_125,1w,1,w ɨ
@@ -240,7 +240,7 @@ PWai_form_129_1,PWai_form_129,1w,1,w -
 PWai_form_129_2,PWai_form_129,be_1,2,a h -
 PWai_form_130_1,PWai_form_130,k,1,k -
 PWai_form_131_1,PWai_form_131,1w,1,w ɨ
-PWai_form_131_2,PWai_form_131,go,2,- t o m -
+PWai_form_131_2,PWai_form_131,go,2,- - t o m -
 PWai_form_133_1,PWai_form_133,1w,1,w ɨ
 PWai_form_133_2,PWai_form_133,say,2,k a - - -
 PWai_form_134_1,PWai_form_134,k,1,k ɨ
@@ -286,29 +286,29 @@ kar_stem_25_2,kar_stem_25,come,2,- - - p ɨ
 uxc_stem_26_1,uxc_stem_26,DETRZ,1,ee -
 kax_stem_27_1,kax_stem_27,DETRZ,1,oo -
 kax_stem_27_2,kax_stem_27,come,2,- - - h ɨ
-ing_stem_28_1,ing_stem_28,go,1,ə t ə - -
-tri_stem_29_1,tri_stem_29,go,1,- t ə n -
-way_stem_30_1,way_stem_30,go,1,ɨ t ə m -
-aku_stem_31_1,aku_stem_31,go,1,ə t ə m ɨ
-ara_stem_32_1,ara_stem_32,go,1,ɨ d o - -
-ara_stem_33_1,ara_stem_33,go,1,- t o - -
-hix_stem_34_1,hix_stem_34,go,1,ɨ t o - -
-wai_stem_35_1,wai_stem_35,go,1,e t o m -
-ikp_stem_36_1,ikp_stem_36,go,1,a r a n -
-ikp_stem_37_1,ikp_stem_37,go,1,e r o - -
-bak_stem_38_1,bak_stem_38,go,1,ɨ t ə - -
-mak_stem_39_1,mak_stem_39,go,1,ɨ t ə m ə
-car_stem_40_1,car_stem_40,go,1,- t ə m ə
-kar_stem_41_1,kar_stem_41,go,1,- t o - -
-kar_stem_42_1,kar_stem_42,go,1,- - ɨ ʔ -
-yuk_stem_43_1,yuk_stem_43,go,1,- t o - -
-yab_stem_44_1,yab_stem_44,go,1,- t ə - -
-map_stem_45_1,map_stem_45,go,1,- t ə - -
-pan_stem_46_1,pan_stem_46,go,1,- t ə n -
-mac_stem_47_1,mac_stem_47,go,1,a t ɨ - -
-pem_stem_48_1,pem_stem_48,go,1,e t ə - -
-kax_stem_49_1,kax_stem_49,go,1,- t o m o
-uxc_stem_50_1,uxc_stem_50,go,1,e t e - -
+ing_stem_28_1,ing_stem_28,go,1,- ə t ə - -
+tri_stem_29_1,tri_stem_29,go,1,- - t ə n -
+way_stem_30_1,way_stem_30,go,1,- ɨ t ə m -
+aku_stem_31_1,aku_stem_31,go,1,- ə t ə m ɨ
+ara_stem_32_1,ara_stem_32,go,1,- ɨ d o - -
+ara_stem_33_1,ara_stem_33,go,1,- - t o - -
+hix_stem_34_1,hix_stem_34,go,1,- ɨ t o - -
+wai_stem_35_1,wai_stem_35,go,1,- e t o m -
+ikp_stem_36_1,ikp_stem_36,go,1,- a r a n -
+ikp_stem_37_1,ikp_stem_37,go,1,- e r o - -
+bak_stem_38_1,bak_stem_38,go,1,- ɨ t ə - -
+mak_stem_39_1,mak_stem_39,go,1,- ɨ t ə m ə
+car_stem_40_1,car_stem_40,go,1,- - t ə m ə
+kar_stem_41_1,kar_stem_41,go,1,- - t o - -
+kar_stem_42_1,kar_stem_42,go,1,- ɨ ʔ - - -
+yuk_stem_43_1,yuk_stem_43,go,1,- - t o - -
+yab_stem_44_1,yab_stem_44,go,1,- - t ə - -
+map_stem_45_1,map_stem_45,go,1,- - t ə - -
+pan_stem_46_1,pan_stem_46,go,1,- - t ə n -
+mac_stem_47_1,mac_stem_47,go,1,- a t ɨ - -
+pem_stem_48_1,pem_stem_48,go,1,- e t ə - -
+kax_stem_49_1,kax_stem_49,go,1,- - t o m o
+uxc_stem_50_1,uxc_stem_50,go,1,- e t e - -
 bak_stem_51_1,bak_stem_51,say,1,k e - - -
 bak_stem_52_1,bak_stem_52,say,1,g e - - -
 uxc_stem_53_1,uxc_stem_53,say,1,k i - - -
@@ -368,7 +368,7 @@ apa_stem_103_1,apa_stem_103,defecate,1,- w e - k a
 pan_stem_104_1,pan_stem_104,defecate,1,- - i ʔ k a
 pan_stem_105_1,pan_stem_105,DETRZ,1,a -
 pan_stem_105_2,pan_stem_105,defecate,2,- - i ʔ k a
-apa_stem_106_1,apa_stem_106,go,1,ɨ t o - -
+apa_stem_106_1,apa_stem_106,go,1,- ɨ t o - -
 yuk_stem_107_1,yuk_stem_107,say,1,k a - - -
 ara_stem_108_1,ara_stem_108,be_2,1,i t͡ʃ i
 ara_stem_109_1,ara_stem_109,be_1,1,a p -
@@ -396,19 +396,19 @@ PWai_stem_130_1,PWai_stem_130,be_2,1,e ʃ i
 PWai_stem_131_1,PWai_stem_131,be_1,1,a h -
 mak_stem_132_1,mak_stem_132,be_2,1,e - i
 PWai_stem_133_1,PWai_stem_133,say,1,k a s - -
-PWai_stem_134_1,PWai_stem_134,go,1,ɨ t o m -
+PWai_stem_134_1,PWai_stem_134,go,1,- ɨ t o m -
 PWai_stem_135_1,PWai_stem_135,DETRZ1,1,ee - -
 PWai_stem_135_2,PWai_stem_135,bathe_1,2,- ɸ ɨ
 PPek_stem_136_1,PPek_stem_136,DETRZ,1,ə d
 PPek_stem_136_2,PPek_stem_136,come,2,- - e p ɨ
 PPek_stem_137_1,PPek_stem_137,come,1,- - e p ɨ
-PPek_stem_138_1,PPek_stem_138,go,1,ɨ t ə n -
+PPek_stem_138_1,PPek_stem_138,go,1,- ɨ t ə n -
 PPek_stem_139_1,PPek_stem_139,say,1,k e - - -
 PPek_stem_140_1,PPek_stem_140,DETRZ1,1,i - -
 PPek_stem_140_2,PPek_stem_140,bathe_1,2,- p ɨ
 PTir_stem_141_1,PTir_stem_141,DETRZ,1,ə ʔ
 PTir_stem_141_2,PTir_stem_141,come,2,- - e p ɨ
-PTir_stem_142_1,PTir_stem_142,go,1,ə t ə m ɨ
+PTir_stem_142_1,PTir_stem_142,go,1,- ə t ə m ɨ
 PTir_stem_143_1,PTir_stem_143,say,1,k a - - -
 PTir_stem_144_1,PTir_stem_144,DETRZ1,1,e - -
 PTir_stem_144_2,PTir_stem_144,bathe_1,2,- p ɨ
@@ -424,7 +424,7 @@ tri_stem_149_2,tri_stem_149,sleep,2,n ɨ - k ɨ
 PTir_stem_150_1,PTir_stem_150,come,1,- - e p ɨ
 PPek_stem_151_1,PPek_stem_151,say,1,g e - - -
 uxc_stem_152_1,uxc_stem_152,come,1,- - i - -
-wmr_stem_153_1,wmr_stem_153,go,1,- - ɨ ʔ -
+wmr_stem_153_1,wmr_stem_153,go,1,- ɨ ʔ - - -
 kax_stem_154_1,kax_stem_154,DETRZ1,1,ee - -
 kax_stem_154_2,kax_stem_154,bathe_1,2,- h ɨ
 kax_stem_155_1,kax_stem_155,bathe_1,1,ɨ h ɨ
