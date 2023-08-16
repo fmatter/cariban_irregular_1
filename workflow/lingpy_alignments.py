@@ -1,8 +1,9 @@
-import lingpy
-from lingpy.compare.partial import Partial
-import pandas as pd
 import os
 from difflib import SequenceMatcher
+
+import lingpy
+import pandas as pd
+from lingpy.compare.partial import Partial
 
 tempfile = "lingpy_temp.tsv"
 

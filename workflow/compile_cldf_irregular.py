@@ -1,16 +1,16 @@
-import pycldf
-import pandas as pd
-import re
-from segments import Profile, Tokenizer
-from cldfbench.cldf import CLDFWriter
-from cldfbench import CLDFSpec
-import pybtex
 import os
-from pycldf.sources import Source
-import lingpy
-from writio import load
-
+import re
 from pathlib import Path
+
+import lingpy
+import pandas as pd
+import pybtex
+import pycldf
+from cldfbench import CLDFSpec
+from cldfbench.cldf import CLDFWriter
+from pycldf.sources import Source
+from segments import Profile, Tokenizer
+from writio import load
 
 data_dir = Path("../data")
 import logging
@@ -288,7 +288,12 @@ with CLDFWriter(spec) as writer:
         "CognateTable": cognates,
         "ExampleTable": examples,
     }.items():
-        for sepcol, sep in {"Source": "; ", "Alignment": " ", "Analyzed_Word": "\t", "Gloss": "\t"}.items():
+        for sepcol, sep in {
+            "Source": "; ",
+            "Alignment": " ",
+            "Analyzed_Word": "\t",
+            "Gloss": "\t",
+        }.items():
             if sepcol in df.columns:
                 df[sepcol] = df[sepcol].apply(lambda x: x.split(sep))
         for rec in df.to_dict("records"):
@@ -298,7 +303,7 @@ with CLDFWriter(spec) as writer:
                     found_refs.append(s.split("[")[0])
 
     found_refs = list(set(found_refs))
-    bib = pybtex.database.parse_file(data_dir/"cariban.bib")
+    bib = pybtex.database.parse_file(data_dir / "cariban.bib")
     sources = [
         Source.from_entry(k, e) for k, e in bib.entries.items() if k in found_refs
     ]
@@ -310,7 +315,6 @@ with CLDFWriter(spec) as writer:
     )
     sources.append(Source.from_entry("pc", pc))
     writer.cldf.add_sources(*sources)
-
 
     writer.write()
     ds = writer.cldf

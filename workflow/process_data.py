@@ -1,22 +1,48 @@
-from helper_functions import *
+import pyradigms
+from pylingdocs.helpers import decorate_gloss_string
 
-verb_list = ["say", "go", "be_1", "be_2", "come", "go_down", "bathe_intr"]
-person = ["1", "2", "1+2", "3"]
+from helpers import (
+    export_csv,
+    get_sources,
+    infl_data,
+    mean_dic,
+    name_dic,
+    objectify,
+    print_latex,
+    print_shorthand,
+    repl_latex,
+    save_float,
+    trans_dic,
+)
+
+verb_list = [
+    "say",
+    "go",
+    "be_1",
+    "be_2",
+    "come",
+    "go_down",
+    "bathe_intr",
+]  # relevant verb cognates
+person = ["1", "2", "1+2", "3"]  # relevant person values
+
 
 # tables for the introduction, featuring "regular" and "irregular" verbs from Trio and Hixkaryana
-pyd.x = ["Meaning_ID"]
-pyd.y = ["Inflection"]
-pyd.y_sort = person
 for lg, meanings in {
     "hix": ["fall", "be_afraid", "walk", "cut_self", "be"],
     "tri": ["sleep", "see_self", "bathe_intr", "yawn", "go"],
     # "mak": ["eat", "arrive", "go", "be"]
     # "yuk": ["wash_self", "sleep", "fall"],
 }.items():
-    pyd.filters = {"Language_ID": [lg], "Meaning_ID": meanings, "Inflection": person}
-    pyd.x_sort = meanings
+    pyd = pyradigms.Pyradigm(
+        infl_data[infl_data["Verb_Cognateset_ID"] != "be_1"],
+        x="Meaning_ID",
+        y="Inflection",
+        filters={"Language_ID": [lg], "Meaning_ID": meanings, "Inflection": person},
+        sort_orders={"Inflection": person, "Meaning_ID": meanings},
+    )
     tabular = pyd.compose_paradigm(
-        i_df[i_df["Verb_Cognateset_ID"] != "be_1"], multi_index=False
+        multi_index=False,
     )
     label = lg + "intro"
     tabular_raw = tabular.rename(columns=mean_dic)
@@ -26,10 +52,10 @@ for lg, meanings in {
         label,
         f"Some {name_dic[lg]} verbs",
         keep_index=True,
-        sources=get_sources(i_df, latexify=False),
+        sources=get_sources(pyd, latexify=False),
     )
-    sources = get_sources(i_df)
-    tabular.index = tabular.index.map(pynt.get_expex_code)
+    sources = get_sources(pyd)
+    tabular.index = tabular.index.map(decorate_gloss_string)
     tabular.index.name = None
     tabular.rename(columns=trans_dic, inplace=True)
     tabular = tabular.apply(lambda x: x.apply(objectify))
@@ -49,8 +75,8 @@ pyd.x = ["Language_ID", "Meaning_ID"]
 for lg, meaning in {"bak": "go_up", "ara": "dance", "ikp": "run"}.items():
     pyd.filters = {"Language_ID": [lg], "Meaning_ID": [meaning]}
     pyd.sort_orders = {"Inflection": person}
-    temp = pyd.compose_paradigm(i_df, multi_index=True)
-    sources_list.extend(get_sources(i_df, latexify=False))
+    temp = pyd.compose_paradigm(infl_data, multi_index=True)
+    sources_list.extend(get_sources(infl_data, latexify=False))
     tabular = pd.concat([tabular, temp], axis=1)
 
 sources = cldfh.cite_a_bunch(sources_list, parens=True)
@@ -104,14 +130,14 @@ pyd.sort_orders = {
     "Meaning_ID": meanings,
     "Inflection": ["1", "2", "1+2", "3"],
 }
-tabular = pyd.compose_paradigm(i_df, multi_index=True)
+tabular = pyd.compose_paradigm(infl_data, multi_index=True)
 label = "pwaireg"
 
 export_csv(
     tabular.rename(columns=name_dic, level="Language_ID"),
     label,
     "Regular 'to fall' (Sa) and 'to sleep' (Sp) in Proto-Waiwaian",
-    sources=get_sources(i_df, latexify=False),
+    sources=get_sources(infl_data, latexify=False),
 )
 
 tabular = tabular.apply(lambda x: x.apply(objectify, obj_string=get_obj_str(x.name[0])))
@@ -128,7 +154,7 @@ save_float(
     print_latex(tabular, keep_index=True),
     label,
     "Regular \qu{to fall} (\gl{s_a_}) and \qu{to sleep} (\gl{s_p_}) in \PWai "
-    + get_sources(i_df),
+    + get_sources(infl_data),
     short="Regular \PWai verbs",
 )
 
@@ -146,7 +172,7 @@ reconstructed_form_table(
 
 # regular proto-tiriyoan verbs
 label = "ptirreg"
-tir_reg = i_df[~(pd.isnull(i_df["Verb_Cognateset_ID"]))]
+tir_reg = infl_data[~(pd.isnull(infl_data["Verb_Cognateset_ID"]))]
 meanings = ["bathe_intr", "sleep"]
 lgs = ["PTir", "tri", "aku"]
 pyd.filters = {"Language_ID": lgs, "Meaning_ID": meanings}
@@ -196,8 +222,9 @@ reconstructed_form_table(
 
 # regular akuriyo Sa verbs
 label = "aku1sa"
-aku_verbs = i_df[
-    (i_df["Language_ID"] == "aku") & (i_df["Prefix_Cognateset_ID"].isin(["k", "1t"]))
+aku_verbs = infl_data[
+    (infl_data["Language_ID"] == "aku")
+    & (infl_data["Prefix_Cognateset_ID"].isin(["k", "1t"]))
 ]
 aku_verbs["Form"] = aku_verbs["Form"].apply(lambda x: x.split("-", 1)[1])
 aku_verbs["Meaning"] = aku_verbs["Meaning_ID"].map(mean_dic)
@@ -245,16 +272,16 @@ for lg, meanings in {
     "yuk": ["wash_self", "sleep", "fall"],
 }.items():
     pyd.filters = {"Language_ID": [lg], "Meaning_ID": meanings}
-    tabular = pyd.compose_paradigm(i_df, multi_index=False)
+    tabular = pyd.compose_paradigm(infl_data, multi_index=False)
     label = lg + "reg"
     export_csv(
         tabular.rename(columns=plain_trans_dic),
         label,
         f"Regular {name_dic[lg]} verbs",
         keep_index=True,
-        sources=get_sources(i_df, latexify=False),
+        sources=get_sources(infl_data, latexify=False),
     )
-    sources = get_sources(i_df)
+    sources = get_sources(infl_data)
     tabular.index = tabular.index.map(pynt.get_expex_code)
     tabular.index.name = None
     tabular.rename(columns=trans_dic, inplace=True)
@@ -269,7 +296,7 @@ for lg, meanings in {
     )
 
 # comparison of werikyana set 2 paradigms of Sa verbs
-prog_df = i_df[i_df["Inflection"].str.contains("PROG")]
+prog_df = infl_data[infl_data["Inflection"].str.contains("PROG")]
 # remove prog suffix
 prog_df["Inflection"] = prog_df["Inflection"].str.replace(".PROG", "")
 pyd.x = ["Meaning_ID"]
@@ -291,7 +318,7 @@ save_float(
 )
 
 
-i_df = i_df[~(pd.isnull(i_df["Verb_Cognateset_ID"]))]
+infl_data = infl_data[~(pd.isnull(infl_data["Verb_Cognateset_ID"]))]
 
 # pekodian lexical comparison
 forms = pd.read_csv("../data/cldf/forms.csv")
@@ -446,8 +473,8 @@ pyd.filters = {
     "Inflection": person,
     "Language_ID": ["ara", "tri", "kax"],
 }
-table = pyd.compose_paradigm(i_df)
-sources = get_sources(i_df)
+table = pyd.compose_paradigm(infl_data)
+sources = get_sources(infl_data)
 
 table.rename(columns=shorthand_dic, inplace=True)
 table.index = table.index.map(pynt.get_expex_code)
@@ -540,7 +567,7 @@ f.write(bathe_out)
 f.close()
 
 # overview of what extensions affected what verbs
-i_df = i_df[i_df["Inflection"] == "1"]
+infl_data = infl_data[infl_data["Inflection"] == "1"]
 
 
 overview_legend = {
@@ -566,7 +593,7 @@ for i, row in e_df.iterrows():
     else:
         lgs = [row["Language_ID"]]
     for lg in lgs:
-        t_df = i_df[i_df["Language_ID"] == lg]
+        t_df = infl_data[infl_data["Language_ID"] == lg]
         t_df["Prefix_Form"] = row["Form"]
         t_df["Orig_Language"] = row["Language_ID"]
         t_df["Extension_ID"] = row["ID"]

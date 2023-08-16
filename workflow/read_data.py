@@ -1,9 +1,9 @@
-import cariban_helpers as cah
+import karipona as cah
 import pandas as pd
 
 pd.options.mode.chained_assignment = None
 import pynterlinear as pynt
-from segments import Tokenizer, Profile
+from segments import Profile, Tokenizer
 
 lg_list = list(cah.lg_order().keys())
 
@@ -12,8 +12,8 @@ cs_df = pd.read_csv("../data/cognate_sets.csv")
 v_df = pd.read_csv("../data/verb_stem_data.csv")
 v_df.rename(columns={"Meaning_ID": "Parameter_ID"}, inplace=True)
 e_df = pd.read_csv("../data/extensions.csv")
-i_df = pd.read_csv("../data/inflection_data.csv")
-i_df["Form"] = i_df["Form"].str.replace("+", "", regex=True)
+infl_data = pd.read_csv("../data/inflection_data.csv")
+infl_data["Form"] = infl_data["Form"].str.replace("+", "", regex=True)
 
 m_df = pd.read_csv("../data/cldf/parameters.csv")
 m_df["Description"] = m_df["Description"].str.strip("'").map(pynt.get_expex_code)
@@ -34,7 +34,7 @@ concept_dic = {
     "DETRZ": "come",
 }
 
-i_df["Concept"] = i_df.apply(
+infl_data["Concept"] = infl_data.apply(
     lambda x: concept_dic[x["Verb_Cognateset_ID"]]
     if x["Verb_Cognateset_ID"] in concept_dic
     else x["Verb_Cognateset_ID"],
