@@ -1,17 +1,24 @@
+import pandas as pd
 import pyradigms
 from pylingdocs.helpers import decorate_gloss_string
 
 from helpers import (
+    combine_sources,
     export_csv,
+    get_obj_str,
     get_sources,
     infl_data,
     mean_dic,
     name_dic,
     objectify,
+    plain_trans_dic,
     print_latex,
     print_shorthand,
+    reconstructed_form_table,
     repl_latex,
     save_float,
+    shorthand_dic,
+    src,
     trans_dic,
 )
 
@@ -67,19 +74,21 @@ for lg, meanings in {
         short=f"Some {print_shorthand(lg)} verbs",
     )
 
-# regular pekodian verbs
-tabular = pd.DataFrame()
+
+# regular pekodian sa verbs
+entries = []
 sources_list = []
-pyd.x = ["Language_ID", "Meaning_ID"]
+pyd = pyradigms.Pyradigm(infl_data, x=["Language_ID", "Meaning_ID"], y="Inflection")
 # no reconstructable paradigms, so we use regular Sa verbs
-for lg, meaning in {"bak": "go_up", "ara": "dance", "ikp": "run"}.items():
+for lg, meaning in {"ebak": "go_up", "ara": "dance", "ikp": "run"}.items():
     pyd.filters = {"Language_ID": [lg], "Meaning_ID": [meaning]}
     pyd.sort_orders = {"Inflection": person}
-    temp = pyd.compose_paradigm(infl_data, multi_index=True)
-    sources_list.extend(get_sources(infl_data, latexify=False))
-    tabular = pd.concat([tabular, temp], axis=1)
+    temp = pyd.compose_paradigm(with_multi_index=True)
+    entries.append(temp)
+    sources_list.extend(get_sources(pyd, combine=False))
 
-sources = cldfh.cite_a_bunch(sources_list, parens=True)
+tabular = pd.concat(entries, axis=1)
+
 label = "pekreg"
 tabular.index.names = [None]
 export_csv(
@@ -92,22 +101,25 @@ export_csv(
     sources=sources_list,
 )
 
+
 tabular = tabular.apply(lambda x: x.apply(objectify, obj_string=get_obj_str(x.name)))
 tabular.rename(columns=trans_dic, level="Meaning_ID", inplace=True)
 tabular.rename(columns=shorthand_dic, level="Language_ID", inplace=True)
 tabular.columns.names = [None, None]
-tabular.index = tabular.index.map(pynt.get_expex_code)
+tabular.index = tabular.index.map(decorate_gloss_string)
 tabular.columns = [" ".join([x, y]) for x, y in tabular.columns]
 
 save_float(
     print_latex(tabular, keep_index=True),
     label,
-    "Regular Pekodian \gl{s_a_} verbs " + sources,
+    "Regular Pekodian \gl{s_a_} verbs "
+    + src(combine_sources(sources_list), parens=True, mode="biblatex"),
     short="Regular Pekodian \gl{s_a_} verbs",
 )
 
+
 # conservative pekodian verbs
-lgs = ["PPek", "ara", "ikp", "bak"]
+lgs = ["PPek", "ara", "ikp", "ebak"]
 verbs = ["say", "bathe_intr", "be_1", "be_2", "come", "go_down", "go"]
 reconstructed_form_table(
     lgs,
@@ -124,20 +136,20 @@ meanings = ["fall", "sleep"]
 lgs = ["PWai", "hix", "wai"]
 pyd.x = ["Meaning_ID", "Language_ID"]
 pyd.y = ["Inflection"]
-pyd.filters = {"Language_ID": lgs, "Meaning_ID": meanings}
+pyd.filters = {"Meaning_ID": meanings, "Language_ID": lgs}
 pyd.sort_orders = {
     "Language_ID": lgs,
     "Meaning_ID": meanings,
     "Inflection": ["1", "2", "1+2", "3"],
 }
-tabular = pyd.compose_paradigm(infl_data, multi_index=True)
+tabular = pyd.compose_paradigm(with_multi_index=True)
 label = "pwaireg"
 
 export_csv(
     tabular.rename(columns=name_dic, level="Language_ID"),
     label,
     "Regular 'to fall' (Sa) and 'to sleep' (Sp) in Proto-Waiwaian",
-    sources=get_sources(infl_data, latexify=False),
+    sources=get_sources(pyd, latexify=False),
 )
 
 tabular = tabular.apply(lambda x: x.apply(objectify, obj_string=get_obj_str(x.name[0])))
@@ -147,14 +159,14 @@ tabular.rename(
     inplace=True,
 )
 tabular.rename(columns=shorthand_dic, level="Language_ID", inplace=True)
-tabular.index = tabular.index.map(pynt.get_expex_code)
+tabular.index = tabular.index.map(decorate_gloss_string)
 tabular.index.names = [None]
 tabular.columns.names = [None, None]
 save_float(
     print_latex(tabular, keep_index=True),
     label,
     "Regular \qu{to fall} (\gl{s_a_}) and \qu{to sleep} (\gl{s_p_}) in \PWai "
-    + get_sources(infl_data),
+    + get_sources(pyd),
     short="Regular \PWai verbs",
 )
 
@@ -175,16 +187,19 @@ label = "ptirreg"
 tir_reg = infl_data[~(pd.isnull(infl_data["Verb_Cognateset_ID"]))]
 meanings = ["bathe_intr", "sleep"]
 lgs = ["PTir", "tri", "aku"]
-pyd.filters = {"Language_ID": lgs, "Meaning_ID": meanings}
-pyd.x = ["Meaning_ID", "Language_ID"]
-pyd.y = ["Inflection"]
-pyd.sort_orders = {
-    "Language_ID": lgs,
-    "Meaning_ID": meanings,
-    "Inflection": ["1", "2", "1+2", "3"],
-}
-tabular = pyd.compose_paradigm(tir_reg, multi_index=True)
-sources = get_sources(tir_reg)
+pyd = pyradigms.Pyradigm(
+    tir_reg,
+    filters={"Language_ID": lgs, "Meaning_ID": meanings},
+    x=["Meaning_ID", "Language_ID"],
+    y=["Inflection"],
+    sort_orders={
+        "Language_ID": lgs,
+        "Meaning_ID": meanings,
+        "Inflection": ["1", "2", "1+2", "3"],
+    },
+)
+tabular = pyd.compose_paradigm(with_multi_index=True)
+sources = get_sources(pyd)
 
 export_csv(
     tabular.rename(columns=name_dic, level="Language_ID").rename(
@@ -192,7 +207,7 @@ export_csv(
     ),
     label,
     "Regular Proto-Tiriyoan Sa verbs",
-    sources=get_sources(tir_reg, latexify=False),
+    sources=get_sources(pyd, latexify=False),
 )
 
 tabular = tabular.apply(lambda x: x.apply(objectify, obj_string=get_obj_str(x.name[1])))
@@ -200,7 +215,7 @@ tabular = tabular.apply(lambda x: x.apply(objectify, obj_string=get_obj_str(x.na
 tabular.rename(columns=trans_dic, level="Meaning_ID", inplace=True)
 tabular.rename(columns=shorthand_dic, level="Language_ID", inplace=True)
 
-tabular.index = tabular.index.map(pynt.get_expex_code)
+tabular.index = tabular.index.map(decorate_gloss_string)
 tabular.index.names = [None]
 tabular.columns.names = [None, None]
 save_float(
@@ -209,6 +224,7 @@ save_float(
     "Regular \PTir \gl{s_a_} verbs " + sources,
     short="Regular \PTir \gl{s_a_} verbs",
 )
+exit()
 
 # conservative proto-tiriyoan verbs
 reconstructed_form_table(
