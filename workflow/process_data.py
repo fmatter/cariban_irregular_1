@@ -1,7 +1,7 @@
 import pandas as pd
 import pyradigms
 from pylingdocs.helpers import decorate_gloss_string
-
+from writio import dump
 from helpers import (
     combine_form_meaning,
     combine_sources,
@@ -14,6 +14,8 @@ from helpers import (
     name_dic,
     objectify,
     plain_trans_dic,
+    print_aligned_table,
+    glossify_index,
     sort_lg,
     print_latex,
     print_shorthand,
@@ -25,7 +27,9 @@ from helpers import (
     trans_dic,
     v_df,
     add_obj_markdown,
-    repl_lg_id
+    repl_lg_id,
+    translate_cols,
+    x_infl_y_trans,
 )
 
 verb_list = [
@@ -53,11 +57,7 @@ for lg, meanings in {
         sort_orders={"Inflection": person, "Meaning_ID": meanings},
     )
     tabular = pyd.compose_paradigm()
-    tabular.index = tabular.index.map(decorate_gloss_string)
-    tabular.index.name = None
-    tabular.rename(columns=trans_dic, inplace=True)
-    tabular = tabular.apply(lambda x: x.apply(objectify))
-    tabular.columns.names = [None]
+    tabular = x_infl_y_trans(tabular)
     export_table(
         df=tabular,
         label=lg + "intro",
@@ -78,13 +78,11 @@ for lg, meaning in {"ebak": "go_up", "ara": "dance", "ikp": "run"}.items():
     sources_list.extend(get_sources(pyd, combine=False))
 
 tabular = pd.concat(entries, axis=1)
-tabular.index.names = [None]
-tabular = tabular.apply(lambda x: x.apply(objectify, obj_string=get_obj_str(x.name)))
 tabular.rename(columns=trans_dic, level="Meaning_ID", inplace=True)
 tabular.rename(columns=shorthand_dic, level="Language_ID", inplace=True)
 tabular.columns.names = [None, None]
-tabular.index = tabular.index.map(decorate_gloss_string)
 tabular.columns = [" ".join([x, y]) for x, y in tabular.columns]
+tabular = glossify_index(tabular)
 export_table(
     tabular,
     label="pekreg",
@@ -118,22 +116,16 @@ pyd.sort_orders = {
     "Inflection": ["1", "2", "1+2", "3"],
 }
 tabular = pyd.compose_paradigm(with_multi_index=True)
-tabular = tabular.apply(lambda x: x.apply(objectify, obj_string=get_obj_str(x.name[0])))
-tabular.rename(
-    columns={"sleep": r"\qu{to sleep}", "fall": "\qu{to fall}"},
-    level="Meaning_ID",
-    inplace=True,
-)
+tabular.rename(columns=trans_dic, level="Meaning_ID", inplace=True)
 tabular.rename(columns=shorthand_dic, level="Language_ID", inplace=True)
-tabular.index = tabular.index.map(decorate_gloss_string)
-tabular.index.names = [None]
 tabular.columns.names = [None, None]
+tabular = glossify_index(tabular)
 export_table(
     tabular,
     label="pwaireg",
     caption="Regular \qu{to fall} (\gl{s_a_}) and \qu{to sleep} (\gl{s_p_}) in \PWai",
     sources=get_sources(pyd),
-    # short_caption="Regular \\PWai verbs",
+    short_caption="Regular \\PWai verbs",
 )
 
 # conservative proto-waiwaian verbs
@@ -166,15 +158,18 @@ pyd = pyradigms.Pyradigm(
 )
 tabular = pyd.compose_paradigm(with_multi_index=True)
 
-tabular = tabular.apply(lambda x: x.apply(objectify, obj_string=get_obj_str(x.name[1])))
-
 tabular.rename(columns=trans_dic, level="Meaning_ID", inplace=True)
 tabular.rename(columns=shorthand_dic, level="Language_ID", inplace=True)
 
-tabular.index = tabular.index.map(decorate_gloss_string)
-tabular.index.names = [None]
+tabular = glossify_index(tabular)
+
 tabular.columns.names = [None, None]
-export_table(df=tabular, label="ptirreg", caption="Regular \PTir \gl{s_a_} verbs", sources=get_sources(pyd))
+export_table(
+    df=tabular,
+    label="ptirreg",
+    caption="Regular \PTir \gl{s_a_} verbs",
+    sources=get_sources(pyd),
+)
 
 # conservative proto-tiriyoan verbs
 reconstructed_form_table(
@@ -192,7 +187,7 @@ aku_verbs = infl_data[
     (infl_data["Language_ID"] == "aku")
     & (infl_data["Prefix_Cognateset_ID"].isin(["k", "1t"]))
 ]
-aku_verbs["Form"] = aku_verbs["Form"].apply(lambda x: x.split("-", 1)[1])
+aku_verbs["Form"] = aku_verbs["Orig"].apply(lambda x: x.split("-", 1)[1])
 aku_verbs["Meaning"] = aku_verbs["Meaning_ID"].map(mean_dic)
 aku_verbs["String"] = aku_verbs.apply(combine_form_meaning, axis=1)
 
@@ -202,24 +197,18 @@ k_list = aku_verbs[aku_verbs["Prefix_Cognateset_ID"] == "k"]["String"].reset_ind
 t_list = aku_verbs[aku_verbs["Prefix_Cognateset_ID"] == "1t"]["String"].reset_index(
     drop=True
 )
-
-raw_sources = combine_sources(list(aku_verbs["Source"]))
-sources = src(raw_sources, mode="biblatex", parens=True)
+sources = combine_sources(list(aku_verbs["Source"]))
 aku_verbs = pd.DataFrame.from_dict(
     {r"first person \obj{k-}": k_list, r"first person \obj{t͡ʃ-}": t_list}
 )
 aku_verbs.fillna("", inplace=True)
-
-save_float(
-    print_latex(aku_verbs),
-    label,
-    r"Regular \akuriyo \gl{1}\gl{s_a_} markers " + sources,
-    short=r"Regular \akuriyo \gl{1}\gl{s_a_} markers",
+export_table(
+    aku_verbs,
+    label="aku1sa",
+    caption=r"Regular \akuriyo \gl{1}\gl{s_a_} markers",
+    sources=sources,
+    index=False,
 )
-
-aku_verbs = aku_verbs.applymap(delatexify)
-aku_verbs.columns = map(repl_latex, aku_verbs.columns)
-
 
 # regular carijo and yukpa verbs
 pyd = pyradigms.Pyradigm(
@@ -231,12 +220,13 @@ for lg, meanings in {
 }.items():
     pyd.filters = {"Language_ID": [lg], "Meaning_ID": meanings}
     tabular = pyd.compose_paradigm()
-    tabular.index = tabular.index.map(decorate_gloss_string)
-    tabular.index.name = None
-    tabular.rename(columns=trans_dic, inplace=True)
-    tabular = tabular.apply(lambda x: x.apply(objectify))
-    tabular.columns.names = [None]
-    export_table(df=tabular, sources=get_sources(pyd), label=lg + "reg", caption=f"Regular {print_shorthand(lg)} verbs")
+    tabular = x_infl_y_trans(tabular)
+    export_table(
+        df=tabular,
+        sources=get_sources(pyd),
+        label=lg + "reg",
+        caption=f"Regular {print_shorthand(lg)} verbs",
+    )
 
 # comparison of werikyana set 2 paradigms of Sa verbs
 prog_df = infl_data[infl_data["Inflection"].str.contains("PROG")]
@@ -246,12 +236,15 @@ pyd = pyradigms.Pyradigm(
     prog_df, x="Meaning_ID", y="Inflection", sort_orders={"Inflection": person}
 )
 table = pyd.compose_paradigm()
-table.index.name = None
-table.index = table.index.map(decorate_gloss_string)
+table = glossify_index(table)
 table = table[["come", "dream", "go"]]
 table.columns = table.columns.map(lambda x: f"\\qu{{to {x}}}")
-table = table.applymap(objectify)
-export_table(table, label="kaxprog", caption="\\kaxui \gl{s_a_} verbs in the Progressive (Spike Gildea, p.c.)", short_caption="\\kaxui \gl{s_a_} verbs in the Progressive")
+export_table(
+    table,
+    label="kaxprog",
+    caption="\\kaxui \gl{s_a_} verbs in the Progressive (Spike Gildea, p.c.)",
+    short_caption="\\kaxui \gl{s_a_} verbs in the Progressive",
+)
 
 
 infl_data = infl_data[~(pd.isnull(infl_data["Verb_Cognateset_ID"]))]
@@ -277,11 +270,11 @@ tabular = pyd.compose_paradigm()
 sources = get_sources(pyd)
 tabular = tabular.apply(lambda x: x.apply(objectify, obj_string=get_obj_str(x.name)))
 tabular.columns = tabular.columns.map(print_shorthand)
-tabular.index.name = "Meaning"
-tabular.reset_index(inplace=True)
-tabular["Meaning"] = tabular["Meaning"].map(mean_dic)
-tabular["Meaning"] = tabular["Meaning"].map(lambda x: "\\qu{" + x + "}")
-export_table(tabular, label="pxinw", caption="Loss of \\rc{w} in \ikpeng", sources=sources,index=False)
+tabular.index.name = ""
+tabular.index = tabular.index.map(trans_dic)
+export_table(
+    tabular, label="pxinw", caption="Loss of \\rc{w} in \ikpeng", sources=sources
+)
 
 # prepare overviews of class-switching 'go down' (formerly also 'to defecate')
 pyd.filters = {}
@@ -310,16 +303,6 @@ gd_df = temp_df1
 gd_df.fillna("", inplace=True)
 gd_df["Form"] = gd_df["Form"].str.replace("+", "", regex=True)
 sort_lg(gd_df)
-
-# export_csv(
-#     gd_df.replace({"Language_ID": name_dic}).rename(
-#         columns={"Language_ID": "Language"}
-#     ),
-#     label,
-#     "Reflexes of \**ɨpɨtə* 'to go down'",
-#     sources=raw_sources,
-# )
-
 gd_df["Class"] = gd_df.apply(
     lambda x: decorate_gloss_string(x["Class"])
     if x["Class"] not in ["?", "–"]
@@ -329,33 +312,12 @@ gd_df["Class"] = gd_df.apply(
 add_obj_markdown(gd_df)
 repl_lg_id(gd_df)
 gd_df.set_index("Language", drop=True, inplace=True)
-export_table(gd_df, label="godown", caption=r"Reflexes of \rc{ɨpɨtə} \qu{to go down}", sources=sources)
-
-# print("\nClass membership of 'to defecate':")
-# s_df = v_df[v_df["Parameter_ID"] == "defecate"]
-# sources = extract_sources(s_df)
-# s_df.drop(
-#     columns=["Parameter_ID", "Cog_Cert", "Comment", "Cognateset_ID"], inplace=True
-# )
-# s_df["Form"] = s_df["Form"].str.replace("+", "", regex=True)
-# sort_lg(s_df)
-# print(s_df)
-# s_df["Class"] = s_df.apply(
-#     lambda x: pynt.get_expex_code(x["Class"])
-#     if x["Class"] not in ["?", "–"]
-#     else x["Class"],
-#     axis=1,
-# )
-# add_obj_markdown(s_df)
-# repl_lg_id(s_df)
-# s_df.set_index("Language", drop=True, inplace=True)
-# tabular = print_latex(s_df, keep_index=True)
-# save_float(
-#     tabular,
-#     "defecate",
-#     r"Reflexes of \qu{to defecate} " + sources,
-#     short=r"Reflexes of \qu{to defecate} ",
-# )
+export_table(
+    gd_df,
+    label="godown",
+    caption=r"Reflexes of \rc{ɨpɨtə} \qu{to go down}",
+    sources=sources,
+)
 
 
 # various cognate segment aligned tables of individual verbs
@@ -377,37 +339,24 @@ print_aligned_table(
 )
 
 # some paradigms for 'to come'
-pyd.x = ["Language_ID"]
-pyd.y = ["Inflection"]
-pyd.y_sort = person
-pyd.x_sort = lg_list
-pyd.filters = {
+lg_list = ["ara", "tri", "kax"]
+pyd = pyradigms.Pyradigm(infl_data, x="Language_ID", y="Inflection", sort_orders={"Language_ID": lg_list, "Inflection": person}, filters= {
     "Meaning_ID": ["come"],
     "Inflection": person,
-    "Language_ID": ["ara", "tri", "kax"],
-}
-table = pyd.compose_paradigm(infl_data)
-sources = get_sources(infl_data)
-
+    "Language_ID": lg_list,
+})
+table = pyd.compose_paradigm()
+sources = get_sources(pyd)
 table.rename(columns=shorthand_dic, inplace=True)
-table.index = table.index.map(pynt.get_expex_code)
-table.index.name = ""
-table = table.applymap(objectify)
-table = print_latex(table, keep_index=True)
-
-save_float(
-    table,
-    "comepara",
-    r"\rc{(ət-)epɨ} \qu{to come} in paradigms " + sources,
-    short=r"\rc{(ət-)epɨ} \qu{to come} in paradigms",
-)
+table = glossify_index(table)
+export_table(table, label="comepara", caption=r"\rc{(ət-)epɨ} \qu{to come} in paradigms", sources=sources)
 
 # comparison of intransitive and transitive 'to bathe'
 df_b = pd.read_csv("../data/bathe_data.csv")
 df_b["Parameter_ID"] = df_b["Transitivity"].apply(lambda x: "bathe" + "_" + x.lower())
 df_b.drop(columns=["Transitivity"], inplace=True)
 df_b.index = df_b.index + 1
-sources = extract_sources(df_b, keep=True)
+sources = src(combine_sources(list(df_b["Source"])), mode="biblatex", parens=True)
 tr = df_b[df_b["Parameter_ID"] == "bathe_tr"]
 intr = df_b[df_b["Parameter_ID"] == "bathe_intr"]
 intr_1 = intr[intr["Cognateset_ID"] == "DETRZ1+bathe_2"]
@@ -454,6 +403,9 @@ for table in bathe_tables:
         fuzzy=table[-1],
         do_sources=False,
     )
+    input(tabular)
+    tabular = print_latex(tabular, keep_index=True)
+    input(tabular)
     if table[2] == "bathe_intr_1":
         bathe_out += r"""\begin{subtable}[t]{.49\linewidth}
 \centering
@@ -475,9 +427,7 @@ for table in bathe_tables:
     )
 bathe_out += r"""\end{subtable}
 \end{table}"""
-f = open(f"../documents/floats/bathe.tex", "w")
-f.write(bathe_out)
-f.close()
+dump(bathe_out, f"../documents/floats/bathe.tex")
 
 # overview of what extensions affected what verbs
 infl_data = infl_data[infl_data["Inflection"] == "1"]
