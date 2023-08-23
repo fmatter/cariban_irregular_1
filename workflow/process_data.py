@@ -340,16 +340,27 @@ print_aligned_table(
 
 # some paradigms for 'to come'
 lg_list = ["ara", "tri", "kax"]
-pyd = pyradigms.Pyradigm(infl_data, x="Language_ID", y="Inflection", sort_orders={"Language_ID": lg_list, "Inflection": person}, filters= {
-    "Meaning_ID": ["come"],
-    "Inflection": person,
-    "Language_ID": lg_list,
-})
+pyd = pyradigms.Pyradigm(
+    infl_data,
+    x="Language_ID",
+    y="Inflection",
+    sort_orders={"Language_ID": lg_list, "Inflection": person},
+    filters={
+        "Meaning_ID": ["come"],
+        "Inflection": person,
+        "Language_ID": lg_list,
+    },
+)
 table = pyd.compose_paradigm()
 sources = get_sources(pyd)
 table.rename(columns=shorthand_dic, inplace=True)
 table = glossify_index(table)
-export_table(table, label="comepara", caption=r"\rc{(ət-)epɨ} \qu{to come} in paradigms", sources=sources)
+export_table(
+    table,
+    label="comepara",
+    caption=r"\rc{(ət-)epɨ} \qu{to come} in paradigms",
+    sources=sources,
+)
 
 # comparison of intransitive and transitive 'to bathe'
 df_b = pd.read_csv("../data/bathe_data.csv")
