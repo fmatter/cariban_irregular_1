@@ -5,6 +5,8 @@ pd.options.mode.chained_assignment = None
 import pynterlinear as pynt
 from segments import Profile, Tokenizer
 
+
+lg_dict = {x["Shorthand"]: x["Name"] for x in cah.languages.values()}
 lg_list = list(cah.lg_order().keys())
 
 cognate_list = ["go", "say", "come", "be_1", "be_2", "go_down", "bathe_intr"]

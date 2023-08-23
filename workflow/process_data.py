@@ -3,8 +3,10 @@ import pyradigms
 from pylingdocs.helpers import decorate_gloss_string
 
 from helpers import (
+    combine_form_meaning,
     combine_sources,
-    export_csv,
+    delatexify,
+    export_table,
     get_obj_str,
     get_sources,
     infl_data,
@@ -12,6 +14,7 @@ from helpers import (
     name_dic,
     objectify,
     plain_trans_dic,
+    sort_lg,
     print_latex,
     print_shorthand,
     reconstructed_form_table,
@@ -20,6 +23,9 @@ from helpers import (
     shorthand_dic,
     src,
     trans_dic,
+    v_df,
+    add_obj_markdown,
+    repl_lg_id
 )
 
 verb_list = [
@@ -38,8 +44,6 @@ person = ["1", "2", "1+2", "3"]  # relevant person values
 for lg, meanings in {
     "hix": ["fall", "be_afraid", "walk", "cut_self", "be"],
     "tri": ["sleep", "see_self", "bathe_intr", "yawn", "go"],
-    # "mak": ["eat", "arrive", "go", "be"]
-    # "yuk": ["wash_self", "sleep", "fall"],
 }.items():
     pyd = pyradigms.Pyradigm(
         infl_data[infl_data["Verb_Cognateset_ID"] != "be_1"],
@@ -48,32 +52,18 @@ for lg, meanings in {
         filters={"Language_ID": [lg], "Meaning_ID": meanings, "Inflection": person},
         sort_orders={"Inflection": person, "Meaning_ID": meanings},
     )
-    tabular = pyd.compose_paradigm(
-        multi_index=False,
-    )
-    label = lg + "intro"
-    tabular_raw = tabular.rename(columns=mean_dic)
-    tabular_raw.columns = [repl_latex(f"'{col}'") for col in tabular_raw.columns]
-    export_csv(
-        tabular_raw,
-        label,
-        f"Some {name_dic[lg]} verbs",
-        keep_index=True,
-        sources=get_sources(pyd, latexify=False),
-    )
-    sources = get_sources(pyd)
+    tabular = pyd.compose_paradigm()
     tabular.index = tabular.index.map(decorate_gloss_string)
     tabular.index.name = None
     tabular.rename(columns=trans_dic, inplace=True)
     tabular = tabular.apply(lambda x: x.apply(objectify))
     tabular.columns.names = [None]
-    save_float(
-        print_latex(tabular, keep_index=True),
-        label,
-        f"Some {print_shorthand(lg)} verbs " + sources,
-        short=f"Some {print_shorthand(lg)} verbs",
+    export_table(
+        df=tabular,
+        label=lg + "intro",
+        caption=f"Some {print_shorthand(lg)} verbs",
+        sources=get_sources(pyd),
     )
-
 
 # regular pekodian sa verbs
 entries = []
@@ -88,33 +78,18 @@ for lg, meaning in {"ebak": "go_up", "ara": "dance", "ikp": "run"}.items():
     sources_list.extend(get_sources(pyd, combine=False))
 
 tabular = pd.concat(entries, axis=1)
-
-label = "pekreg"
 tabular.index.names = [None]
-export_csv(
-    tabular.rename(columns=name_dic, level="Language_ID").rename(
-        columns=plain_trans_dic, level="Meaning_ID"
-    ),
-    label,
-    "Regular Pekodian Sa verbs",
-    keep_index=True,
-    sources=sources_list,
-)
-
-
 tabular = tabular.apply(lambda x: x.apply(objectify, obj_string=get_obj_str(x.name)))
 tabular.rename(columns=trans_dic, level="Meaning_ID", inplace=True)
 tabular.rename(columns=shorthand_dic, level="Language_ID", inplace=True)
 tabular.columns.names = [None, None]
 tabular.index = tabular.index.map(decorate_gloss_string)
 tabular.columns = [" ".join([x, y]) for x, y in tabular.columns]
-
-save_float(
-    print_latex(tabular, keep_index=True),
-    label,
-    "Regular Pekodian \gl{s_a_} verbs "
-    + src(combine_sources(sources_list), parens=True, mode="biblatex"),
-    short="Regular Pekodian \gl{s_a_} verbs",
+export_table(
+    tabular,
+    label="pekreg",
+    caption="Regular Pekodian \gl{s_a_} verbs",
+    sources=sources_list,
 )
 
 
@@ -143,15 +118,6 @@ pyd.sort_orders = {
     "Inflection": ["1", "2", "1+2", "3"],
 }
 tabular = pyd.compose_paradigm(with_multi_index=True)
-label = "pwaireg"
-
-export_csv(
-    tabular.rename(columns=name_dic, level="Language_ID"),
-    label,
-    "Regular 'to fall' (Sa) and 'to sleep' (Sp) in Proto-Waiwaian",
-    sources=get_sources(pyd, latexify=False),
-)
-
 tabular = tabular.apply(lambda x: x.apply(objectify, obj_string=get_obj_str(x.name[0])))
 tabular.rename(
     columns={"sleep": r"\qu{to sleep}", "fall": "\qu{to fall}"},
@@ -162,12 +128,12 @@ tabular.rename(columns=shorthand_dic, level="Language_ID", inplace=True)
 tabular.index = tabular.index.map(decorate_gloss_string)
 tabular.index.names = [None]
 tabular.columns.names = [None, None]
-save_float(
-    print_latex(tabular, keep_index=True),
-    label,
-    "Regular \qu{to fall} (\gl{s_a_}) and \qu{to sleep} (\gl{s_p_}) in \PWai "
-    + get_sources(pyd),
-    short="Regular \PWai verbs",
+export_table(
+    tabular,
+    label="pwaireg",
+    caption="Regular \qu{to fall} (\gl{s_a_}) and \qu{to sleep} (\gl{s_p_}) in \PWai",
+    sources=get_sources(pyd),
+    # short_caption="Regular \\PWai verbs",
 )
 
 # conservative proto-waiwaian verbs
@@ -199,16 +165,6 @@ pyd = pyradigms.Pyradigm(
     },
 )
 tabular = pyd.compose_paradigm(with_multi_index=True)
-sources = get_sources(pyd)
-
-export_csv(
-    tabular.rename(columns=name_dic, level="Language_ID").rename(
-        columns=plain_trans_dic, level="Language_ID"
-    ),
-    label,
-    "Regular Proto-Tiriyoan Sa verbs",
-    sources=get_sources(pyd, latexify=False),
-)
 
 tabular = tabular.apply(lambda x: x.apply(objectify, obj_string=get_obj_str(x.name[1])))
 
@@ -218,13 +174,7 @@ tabular.rename(columns=shorthand_dic, level="Language_ID", inplace=True)
 tabular.index = tabular.index.map(decorate_gloss_string)
 tabular.index.names = [None]
 tabular.columns.names = [None, None]
-save_float(
-    print_latex(tabular, keep_index=True),
-    label,
-    "Regular \PTir \gl{s_a_} verbs " + sources,
-    short="Regular \PTir \gl{s_a_} verbs",
-)
-exit()
+export_table(df=tabular, label="ptirreg", caption="Regular \PTir \gl{s_a_} verbs", sources=get_sources(pyd))
 
 # conservative proto-tiriyoan verbs
 reconstructed_form_table(
@@ -244,7 +194,6 @@ aku_verbs = infl_data[
 ]
 aku_verbs["Form"] = aku_verbs["Form"].apply(lambda x: x.split("-", 1)[1])
 aku_verbs["Meaning"] = aku_verbs["Meaning_ID"].map(mean_dic)
-
 aku_verbs["String"] = aku_verbs.apply(combine_form_meaning, axis=1)
 
 k_list = aku_verbs[aku_verbs["Prefix_Cognateset_ID"] == "k"]["String"].reset_index(
@@ -254,8 +203,8 @@ t_list = aku_verbs[aku_verbs["Prefix_Cognateset_ID"] == "1t"]["String"].reset_in
     drop=True
 )
 
-raw_sources = get_sources(aku_verbs, latexify=False)
-sources = extract_sources(aku_verbs)
+raw_sources = combine_sources(list(aku_verbs["Source"]))
+sources = src(raw_sources, mode="biblatex", parens=True)
 aku_verbs = pd.DataFrame.from_dict(
     {r"first person \obj{k-}": k_list, r"first person \obj{t͡ʃ-}": t_list}
 )
@@ -271,67 +220,38 @@ save_float(
 aku_verbs = aku_verbs.applymap(delatexify)
 aku_verbs.columns = map(repl_latex, aku_verbs.columns)
 
-export_csv(
-    aku_verbs,
-    label,
-    "Regular Akuriyo Sa verbs",
-    sources=raw_sources,
-)
-
 
 # regular carijo and yukpa verbs
-pyd.x = ["Meaning_ID"]
-pyd.y = ["Inflection"]
-pyd.y_sort = person
+pyd = pyradigms.Pyradigm(
+    infl_data, x="Meaning_ID", y="Inflection", sort_orders={"Inflection": person}
+)
 for lg, meanings in {
     "car": ["arrive", "dance"],
     "yuk": ["wash_self", "sleep", "fall"],
 }.items():
     pyd.filters = {"Language_ID": [lg], "Meaning_ID": meanings}
-    tabular = pyd.compose_paradigm(infl_data, multi_index=False)
-    label = lg + "reg"
-    export_csv(
-        tabular.rename(columns=plain_trans_dic),
-        label,
-        f"Regular {name_dic[lg]} verbs",
-        keep_index=True,
-        sources=get_sources(infl_data, latexify=False),
-    )
-    sources = get_sources(infl_data)
-    tabular.index = tabular.index.map(pynt.get_expex_code)
+    tabular = pyd.compose_paradigm()
+    tabular.index = tabular.index.map(decorate_gloss_string)
     tabular.index.name = None
     tabular.rename(columns=trans_dic, inplace=True)
     tabular = tabular.apply(lambda x: x.apply(objectify))
     tabular.columns.names = [None]
-
-    save_float(
-        print_latex(tabular, keep_index=True),
-        label,
-        f"Regular {print_shorthand(lg)} verbs " + sources,
-        short=f"Regular {print_shorthand(lg)} verbs",
-    )
+    export_table(df=tabular, sources=get_sources(pyd), label=lg + "reg", caption=f"Regular {print_shorthand(lg)} verbs")
 
 # comparison of werikyana set 2 paradigms of Sa verbs
 prog_df = infl_data[infl_data["Inflection"].str.contains("PROG")]
 # remove prog suffix
 prog_df["Inflection"] = prog_df["Inflection"].str.replace(".PROG", "")
-pyd.x = ["Meaning_ID"]
-pyd.y = ["Inflection"]
-pyd.z = []
-pyd.filters = {}
-pyd.y_sort = person
-table = pyd.compose_paradigm(prog_df)
+pyd = pyradigms.Pyradigm(
+    prog_df, x="Meaning_ID", y="Inflection", sort_orders={"Inflection": person}
+)
+table = pyd.compose_paradigm()
 table.index.name = None
-table.index = table.index.map(pynt.get_expex_code)
+table.index = table.index.map(decorate_gloss_string)
 table = table[["come", "dream", "go"]]
 table.columns = table.columns.map(lambda x: f"\\qu{{to {x}}}")
 table = table.applymap(objectify)
-save_float(
-    print_latex(table, keep_index=True),
-    label="kaxprog",
-    caption="\\kaxui \gl{s_a_} verbs in the Progressive (Spike Gildea, p.c.)",
-    short="\\kaxui \gl{s_a_} verbs in the Progressive",
-)
+export_table(table, label="kaxprog", caption="\\kaxui \gl{s_a_} verbs in the Progressive (Spike Gildea, p.c.)", short_caption="\\kaxui \gl{s_a_} verbs in the Progressive")
 
 
 infl_data = infl_data[~(pd.isnull(infl_data["Verb_Cognateset_ID"]))]
@@ -346,51 +266,34 @@ meanings = [
     "capuchin_monkey",
     "sleep",
 ]
-pyd.x = ["Language_ID"]
-pyd.y = ["Parameter_ID"]
-pyd.filters = {"Language_ID": lgs, "Parameter_ID": meanings}
-pyd.x_sort = lgs
-pyd.y_sort = meanings
-tabular = pyd.compose_paradigm(forms)
-label = "pxinw"
-export_csv(
-    tabular.rename(columns=name_dic),
-    label,
-    "Loss of \**w* in Ikpeng",
-    keep_index=True,
-    sources=get_sources(forms, latexify=False),
+pyd = pyradigms.Pyradigm(
+    forms,
+    x="Language_ID",
+    y="Parameter_ID",
+    filters={"Language_ID": lgs, "Parameter_ID": meanings},
+    sort_orders={"Language_ID": lgs, "Parameter_ID": meanings},
 )
-sources = get_sources(forms)
+tabular = pyd.compose_paradigm()
+sources = get_sources(pyd)
 tabular = tabular.apply(lambda x: x.apply(objectify, obj_string=get_obj_str(x.name)))
 tabular.columns = tabular.columns.map(print_shorthand)
-
 tabular.index.name = "Meaning"
 tabular.reset_index(inplace=True)
 tabular["Meaning"] = tabular["Meaning"].map(mean_dic)
 tabular["Meaning"] = tabular["Meaning"].map(lambda x: "\\qu{" + x + "}")
-
-save_float(
-    print_latex(tabular),
-    label,
-    r"Loss of \rc{w} in \ikpeng " + sources,
-    short=r"Loss of \rc{w} in \ikpeng",
-)
+export_table(tabular, label="pxinw", caption="Loss of \\rc{w} in \ikpeng", sources=sources,index=False)
 
 # prepare overviews of class-switching 'go down' (formerly also 'to defecate')
-label = "godown"
 pyd.filters = {}
 
 gd_df = v_df[v_df["Parameter_ID"] == "go_down"]
-sources = extract_sources(gd_df, keep=True)
-raw_sources = extract_sources(gd_df, latexify=False)
-
 grouped = gd_df.groupby(gd_df.Cog_Cert)
 temp_df1 = grouped.get_group(1.0)
 temp_df2 = grouped.get_group(0.5)
-temp_df1["Segments"] = temp_df1.apply(lambda x: segmentify(x["Form"]), axis=1)
-temp_df1["Cognateset_ID"] = temp_df1["Cognateset_ID"].map(str2numcog)
-temp_df1 = calculate_alignment(temp_df1, fuzzy=True)
-temp_df1["Cognateset_ID"] = temp_df1["Cognateset_ID"].map(num2strcog)
+# temp_df1["Segments"] = temp_df1.apply(lambda x: segmentify(x["Form"]), axis=1)
+# temp_df1["Cognateset_ID"] = temp_df1["Cognateset_ID"].map(str2numcog)
+# temp_df1 = calculate_alignment(temp_df1, fuzzy=True)
+# temp_df1["Cognateset_ID"] = temp_df1["Cognateset_ID"].map(num2strcog)
 temp_df1.rename(columns={"Cognateset_ID1": "Cognateset_ID"}, inplace=True)
 temp_df1["Class"] = temp_df1.apply(
     lambda x: "(" + x["Class"] + ")" if "DETRZ" in x["Cognateset_ID"] else x["Class"],
@@ -400,7 +303,7 @@ temp_df2["Form"] = temp_df2.apply(lambda x: "(" + x["Form"] + ")", axis=1)
 for i, row in temp_df2.iterrows():
     temp_df1 = temp_df1.append(row)
 temp_df1.drop(
-    columns=["Cognateset_ID", "Comment", "Cog_Cert", "Parameter_ID", "Segments"],
+    columns=["Cognateset_ID", "Comment", "Cog_Cert", "Parameter_ID"],
     inplace=True,
 )
 gd_df = temp_df1
@@ -408,17 +311,17 @@ gd_df.fillna("", inplace=True)
 gd_df["Form"] = gd_df["Form"].str.replace("+", "", regex=True)
 sort_lg(gd_df)
 
-export_csv(
-    gd_df.replace({"Language_ID": name_dic}).rename(
-        columns={"Language_ID": "Language"}
-    ),
-    label,
-    "Reflexes of \**ɨpɨtə* 'to go down'",
-    sources=raw_sources,
-)
+# export_csv(
+#     gd_df.replace({"Language_ID": name_dic}).rename(
+#         columns={"Language_ID": "Language"}
+#     ),
+#     label,
+#     "Reflexes of \**ɨpɨtə* 'to go down'",
+#     sources=raw_sources,
+# )
 
 gd_df["Class"] = gd_df.apply(
-    lambda x: pynt.get_expex_code(x["Class"])
+    lambda x: decorate_gloss_string(x["Class"])
     if x["Class"] not in ["?", "–"]
     else x["Class"],
     axis=1,
@@ -426,13 +329,7 @@ gd_df["Class"] = gd_df.apply(
 add_obj_markdown(gd_df)
 repl_lg_id(gd_df)
 gd_df.set_index("Language", drop=True, inplace=True)
-tabular = print_latex(gd_df, keep_index=True)
-save_float(
-    tabular,
-    label,
-    r"Reflexes of \rc{ɨpɨtə} \qu{to go down} " + sources,
-    short=r"Reflexes of \rc{ɨpɨtə} \qu{to go down}",
-)
+export_table(gd_df, label="godown", caption=r"Reflexes of \rc{ɨpɨtə} \qu{to go down}", sources=sources)
 
 # print("\nClass membership of 'to defecate':")
 # s_df = v_df[v_df["Parameter_ID"] == "defecate"]
