@@ -86,7 +86,7 @@ tabular = glossify_index(tabular)
 export_table(
     tabular,
     label="pekreg",
-    caption="Regular Pekodian \gl{s_a_} verbs",
+    caption="Regular Pekodian \gl{sa} verbs",
     sources=sources_list,
 )
 
@@ -98,7 +98,7 @@ reconstructed_form_table(
     lgs,
     "PPek",
     verbs,
-    r"Verbs preserving \gl{1}\gl{s_a_} \rc{w-} in \PPek",
+    r"Verbs preserving \gl{1}\gl{sa} \rc{w-} in \PPek",
     "ppekverbs",
     verb_list,
 )
@@ -123,7 +123,7 @@ tabular = glossify_index(tabular)
 export_table(
     tabular,
     label="pwaireg",
-    caption="Regular \qu{to fall} (\gl{s_a_}) and \qu{to sleep} (\gl{s_p_}) in \PWai",
+    caption="Regular \qu{to fall} (\gl{sa}) and \qu{to sleep} (\gl{sp}) in \PWai",
     sources=get_sources(pyd),
     short_caption="Regular \\PWai verbs",
 )
@@ -134,7 +134,7 @@ reconstructed_form_table(
     lgs,
     "PWai",
     verbs,
-    r"Verbs preserving \gl{1}\gl{s_a_} \rc{w-} in \PWai",
+    r"Verbs preserving \gl{1}\gl{sa} \rc{w-} in \PWai",
     "pwaiverbs",
     verb_list,
 )
@@ -167,7 +167,7 @@ tabular.columns.names = [None, None]
 export_table(
     df=tabular,
     label="ptirreg",
-    caption="Regular \PTir \gl{s_a_} verbs",
+    caption="Regular \PTir \gl{sa} verbs",
     sources=get_sources(pyd),
 )
 
@@ -176,7 +176,7 @@ reconstructed_form_table(
     ["PTir", "tri", "aku"],
     "PTir",
     ["go", "say", "come", "be_1", "be_2"],
-    r"Verbs preserving \gl{1}\gl{s_a_} \rc{w-} in \PTir",
+    r"Verbs preserving \gl{1}\gl{sa} \rc{w-} in \PTir",
     "ptirverbs",
     verb_list,
 )
@@ -205,7 +205,7 @@ aku_verbs.fillna("", inplace=True)
 export_table(
     aku_verbs,
     label="aku1sa",
-    caption=r"Regular \akuriyo \gl{1}\gl{s_a_} markers",
+    caption=r"Regular \akuriyo \gl{1}\gl{sa} markers",
     sources=sources,
     index=False,
 )
@@ -242,8 +242,8 @@ table.columns = table.columns.map(lambda x: f"\\qu{{to {x}}}")
 export_table(
     table,
     label="kaxprog",
-    caption="\\kaxui \gl{s_a_} verbs in the Progressive (Spike Gildea, p.c.)",
-    short_caption="\\kaxui \gl{s_a_} verbs in the Progressive",
+    caption="\\kaxui \gl{sa} verbs in the Progressive (Spike Gildea, p.c.)",
+    short_caption="\\kaxui \gl{sa} verbs in the Progressive",
 )
 
 
@@ -414,9 +414,7 @@ for table in bathe_tables:
         fuzzy=table[-1],
         do_sources=False,
     )
-    input(tabular)
     tabular = print_latex(tabular, keep_index=True)
-    input(tabular)
     if table[2] == "bathe_intr_1":
         bathe_out += r"""\begin{subtable}[t]{.49\linewidth}
 \centering
@@ -636,21 +634,21 @@ apalai_data["Verb"] = apalai_data.apply(combine_form_meaning, axis=1)
 apalai_data.drop(columns=["Form", "Meaning"], inplace=True)
 
 apalai_data.rename(
-    columns={"% Sa": "% \gl{s_a_} verb tokens", "% Words": "% word tokens"},
+    columns={"% Sa": "% \gl{sa} verb tokens", "% Words": "% word tokens"},
     inplace=True,
 )
 
 save_float(
     print_latex(
-        apalai_data[["Verb", "Count", "% \gl{s_a_} verb tokens"]],
+        apalai_data[["Verb", "Count", "% \gl{sa} verb tokens"]],
         formatters={
-            "% \gl{s_a_} verb tokens": "{:,.2%}".format,
+            "% \gl{sa} verb tokens": "{:,.2%}".format,
             "% word tokens": "{:,.2%}".format,
         },
     ),
     label,
-    r"Frequency counts of \gl{s_a_} verbs in three \apalai texts from \textcite{koehns1994textos} (163 \gl{s_a_} verbs, 1070 words)",
-    short=r"Frequency counts of \gl{s_a_} verbs in \apalai",
+    r"Frequency counts of \gl{sa} verbs in three \apalai texts from \textcite{koehns1994textos} (163 \gl{sa} verbs, 1070 words)",
+    short=r"Frequency counts of \gl{sa} verbs in \apalai",
 )
 
 
@@ -826,8 +824,8 @@ res.columns = res.columns.map(pynt.get_expex_code)
 save_float(
     print_latex(res, keep_index=True),
     "participles",
-    "Participles of \gl{s_a_} and \gl{s_p_} verbs " + get_sources(dv_df),
-    short="Participles of \gl{s_a_} and \gl{s_p_} verbs",
+    "Participles of \gl{sa} and \gl{sp} verbs " + get_sources(dv_df),
+    short="Participles of \gl{sa} and \gl{sp} verbs",
 )
 
 # nominalizations
@@ -840,8 +838,8 @@ res.columns = res.columns.map(pynt.get_expex_code)
 save_float(
     print_latex(res, keep_index=True),
     "nominalizations",
-    "Nominalizations of \gl{s_a_} and \gl{s_p_} verbs " + get_sources(dv_df),
-    short="Nominalizations of \gl{s_a_} and \gl{s_p_} verbs",
+    "Nominalizations of \gl{sa} and \gl{sp} verbs " + get_sources(dv_df),
+    short="Nominalizations of \gl{sa} and \gl{sp} verbs",
 )
 
 # imperatives
@@ -854,8 +852,8 @@ res.columns = res.columns.map(pynt.get_expex_code)
 save_float(
     print_latex(res, keep_index=True),
     "imperatives",
-    "Imperatives of \gl{s_a_} and \gl{s_p_} verbs " + get_sources(dv_df),
-    short="Imperatives of \gl{s_a_} and \gl{s_p_} verbs",
+    "Imperatives of \gl{sa} and \gl{sp} verbs " + get_sources(dv_df),
+    short="Imperatives of \gl{sa} and \gl{sp} verbs",
 )
 pyd.content_string = "Form"
 
