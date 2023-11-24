@@ -199,8 +199,7 @@
 "go","go","ebak",3,"n-ətə-","3sa","meiraDBebakairi","nâ-tâ-0; nâ-tâ-wâ-dai","No other verb has nâ-; *ge* ‘say’ does not become *ke*."
 "go","go","ebak","1+2","kɨ-tə-","kut","meiraDBebakairi","ki-tâ-im; ki-tâ-0; ki-tâ-li",
 "go","go","ebak","IMP","itə-",,"meiraDBebakairi","i-dâ-0","Still no *-kə*."
-"say","say","ebak",1,"u-gue-","1w","meiraDBebakairi","u-gue-ly; u-ge-aki; u-ge-0",
-"say","say","ebak",1,"u-ge-","1w","meiraDBebakairi","u-ge-ly",
+"say","say","ebak",1,"u-ge-","1w","meiraDBebakairi","u-ge-ly; u-ge-aki; u-ge-0","Sometimes spelled (?) as <gue> in morphs and comments, but no labial element is mentioned in any publications."
 "say","say","ebak",2,"mɨ-ge","2sa","meiraDBebakairi","my-ge-ly; my-ge-ho; a-my-ge-aki",
 "say","say","ebak",3,"nɨ-ge","3sa","meiraDBebakairi","ny-ge-0; ny-ge-aki; ny-ge-nwâ",
 "say","say","ebak","1+2","kɨ-ke","kut","meiraDBebakairi","ky-ke-ly; ky-ke-nre; ky-ke-0",
@@ -215,7 +214,7 @@
 "go","go","wbak",2,"mə-də-","2sa","meiraDBwbakairi","mâ-dâ-li; mâ-dâ-0; mâ-dâ-raki","*ɨ -> ə after labials. pinto2022bakairi[83] interprets the vowel as part of the stem, but the same prefix is found with *ge* ‘say’."
 "go","go","wbak",3,"n-ətə-","3sa","meiraDBwbakairi","nâ-tâ-ragui; nâ-tâ-0","No other verb has nâ-."
 "go","go","wbak","1+2","kɨ-tə-","kut","meiraDBwbakairi","ky-tâ-0; ky-tâ-ly; ky-ty-agi",
-"go","go","wbak",1,"u-gue-","1w","meiraDBwbakairi","u-gue-di'e; u-gue-li; u-gue-raki",
+"say","say","wbak",1,"u-ge-","1w","meiraDBwbakairi","u-gue-di'e; u-gue-li; u-gue-raki","<gue> is <ge> in published work."
 "go","go","wbak",2,"mə-gue-","2sa","meiraDBwbakairi","mâ-gue-li; mâ-gue-raki; a-mâ-gue-li",
 "go","go","wbak","1+2","ki-ke-","kut","meiraDBwbakairi","ki-ke-li; ki-ke-ragui",
 "come","come","wbak",1,"k-əewə-","k","meiraDBwbakairi","k-âewâ-li",
@@ -242,7 +241,7 @@
 "go","go","kax","IMP","itooko",,"pc[Spike Gildea]",,
 "be","be_1","wai",1,"w-a-","1w","pc[Spike Gildea]","way",
 "be","be_2","wai",1,"w-eeʃi-","1w","pc[Spike Gildea]","weexi",
-"be","be_1","ebak",1,"w-awɨ-","1w","pinto2022bakairi[111]","u-a-uɨlɨ",
+"be","be_1","ebak",1,"w-a(wɨ)-","1w","pinto2022bakairi[111]; meiraDBebakairi","u-a-uɨlɨ; w-akynre",
 "be","be_1","ebak","1+2","kɨd-awɨ-","kut","pinto2022bakairi[112]","kɨd-a-uɨlɨ ","Segmentation supported by Meira's database."
 "be","be_2","ebak",1,"w-i-","1w","pinto2022bakairi[112]","u-i-dɨlɨ",
 "be","be_2","ebak","1+2","kɨd-i-","kut","pinto2022bakairi[112]","kɨd-i-dɨlɨ",
@@ -294,7 +293,7 @@
 "go","go","bak",3,"n-ətə-","3sa","von1892bakairi[112]","nǻta",
 "go","go","bak","1+2","k-ɨtə-","kut","von1892bakairi[112]","kχíta",
 "go","go","bak","IMP","ɨtə",,"von1892bakairi[112]","ī́ta","no -kə. Assumption that the vowel is /i/ was wrong."
-"be","be_1","bak",1,"w-a-","1w","von1892bakairi[130]","töre-wakine",
+"be","be_1","bak",1,"w-a(wɨ)-","1w","von1892bakairi[130, 400]","töre-wakine; wawí-le",
 "say","say","bak",1,"u-ge-","1w","von1892bakairi[131]","u-ɣépa",
 "say","say","bak",2,"mɨ-ge-","2sa","von1892bakairi[131]","miɣépa",
 "say","say","bak",3,"∅-ke-",,"von1892bakairi[131]","kéle",
@@ -335,9 +334,9 @@
 "bathe_intr","DETRZ1+bathe_1","PPek",1,"w-i+pɨ-","1w",,,
 "be","be_1","PPek",1,"w-ap-","1w",,,
 "be","be_2","PPek",1,"w-et͡ʃi-","1w",,,
-"come","come","PPek",1,"w-epɨ-","1w",,,
+"come","come","PPek",1,"w-(əd-)epɨ-","1w",,,
 "go","go","PPek",1,"w-ɨdən-","1w",,,
-"go_down","go_down","PPek",1,"w-ɨptə-","1w",,,
+"go_down","go_down+?","PPek",1,"w-ɨptə(CV)-","1w",,,
 "say","say","PPek",1,"wɨ-ge-","1w",,,
 "bathe_intr","DETRZ1+bathe_1","PTir",1,"t͡ʃ-e+pɨ-","1t",,,
 "bathe_intr","DETRZ1+bathe_1","PTir",2,"m-e+pɨ-","2sa",,,
@@ -374,3 +373,15 @@
 "bathe_intr","DETRZ1","ebak","1+2","k-i-","k","meiraDBebakairi","k-i-dâ",
 "be","be_2","ebak","1+2","k-i-","k","meiraDBebakairi","k-i-dâ",
 "come","DETRZ+come","ebak","1+2","kɨd-əe-","kut","meiraDBebakairi","kyd-âe-dâ",
+"go_down","go_down","ebak",1,"∅-ɨtəgɨ-","1p","meiraDBebakairi","0-ytâgy-agi",
+"go_down","go_down","wbak",1,"∅-itəge-","1p","meiraDBwbakairi","0-itâgue-ragui","<gue> is <ge> in published work."
+"be","be_1","wbak",1,"w-a(wə)-","1w","meiraDBwbakairi; pinto2022bakairi[83]","w-awâ-li; u-a-to",
+"be","be_2","wbak",1,"w-i-","1w","meiraDBwbakairi","w-i-dâ",
+"bathe_intr","DETRZ1","wbak",1,"w-i-","1w","meiraDBwbakairi","w-i-tai",
+"bathe_intr","DETRZ1+bathe_1","PXin",1,"w-i+bɨ-","1w",,,
+"be","be_2","PXin",1,"w-et͡ʃi-","1w",,,
+"come","come","PXin",1,"w-(od-)ebɨ-","1w",,,
+"go","go","PXin",1,"w-ɨdon-","1w",,,
+"go_down","go_down+?","PXin",1,"w-ipto+ŋ-","1w",,,
+"say","say","PXin",1,"wɨ-ge-","1w",,,
+"be","be_1","PXin",1,"w-ap-","1w",,,

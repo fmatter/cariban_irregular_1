@@ -34,6 +34,7 @@ concept_dic = {
     "DETRZ+come": "come",
     "DETRZ1": "bathe_intr",
     "DETRZ": "come",
+    "go_down+?": "go_down",
 }
 
 infl_data["Concept"] = infl_data.apply(

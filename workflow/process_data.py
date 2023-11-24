@@ -92,7 +92,7 @@ export_table(
 
 
 # conservative pekodian verbs
-lgs = ["PPek", "ara", "ikp", "ebak"]
+lgs = ["PPek", "PXin", "ara", "ikp", "ebak", "wbak", "bak"]
 verbs = ["say", "bathe_intr", "be_1", "be_2", "come", "go_down", "go"]
 reconstructed_form_table(
     lgs,
