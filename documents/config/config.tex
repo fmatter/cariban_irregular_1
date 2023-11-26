@@ -59,6 +59,10 @@
 
 %\input{stuff/diachronica.tex}
 
+\pretocmd{\section}{\FloatBarrier}{}{}
+\pretocmd{\subsection}{\FloatBarrier}{}{}
+\pretocmd{\subsubsection}{\FloatBarrier}{}{}
+
 \usepackage[edges]{forest}
 
 \usepackage{amsfonts}
